@@ -1,0 +1,18 @@
+<!-- Scollview macht den Bildschirminhalt scrollbar -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+<!-- eigentlicher Inhalt -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bkmi.de.hftl_app.NochMehrFragment">
+
+    <!-- TODO: Hier kann getestet werden -->
+    <TextView
+        android:id="@+id/text_noch_mehr_1"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:text="@string/htmlSeite" />
+
+</FrameLayout>
+</ScrollView>
