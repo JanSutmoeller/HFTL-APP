@@ -48,9 +48,16 @@
 		<Name>Marmelade</Name>
 	</Artikel>
 
+<<<<<<< HEAD
 	<Artikel AID="B78w22711711">
 		<Name>Gitarre</Name>
 	</Artikel>
+=======
+	<Artikel AID="Bowu01">
+		<Name>Bockwurstsalat</Name>
+	</Artikel>
+
+>>>>>>> origin/master
 
 
 </Versand>
