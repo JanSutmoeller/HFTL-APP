@@ -53,11 +53,11 @@
 		<Name>Gitarre</Name>
 	</Artikel>
 
-	<Artikel AID="Bowu01">
-		<Name>Bockwurstsalat</Name>
-	</Artikel>
 
+<<<<<<< HEAD
 	<!-- hier stand kein Ziwschenspeicher von Stefan! -->
+=======
+>>>>>>> origin/master
 
 
 </Versand>
