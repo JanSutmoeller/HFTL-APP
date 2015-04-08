@@ -5,6 +5,7 @@
 
 <Versand>
 <!-- Es gibt kann nur einen Kunden zu einer Bestellung geben  -->
+<!-- Master was here -->
 
 	<Bestellung BestNr='NR123456' Kunde="K123">
 		<Datum>01.01.2011</Datum>
