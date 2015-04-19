@@ -5,10 +5,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/hftl_l_3c_n"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -36,7 +35,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".NewsActivity" />
         </activity>
-
+        <activity
+            android:name=".EinstellungActivity"
+            android:label="@string/title_activity_einstellung"
+            android:parentActivityName=".NewsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="bkmi.de.hftl_app.NewsActivity" />
+        </activity>
+        <activity
+            android:name=".NewsClickedActivity"
+            android:label="@string/title_activity_news_clicked"
+            android:parentActivityName=".NewsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="bkmi.de.hftl_app.NewsActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -16,15 +16,32 @@
     <string name="action_example">Example action</string>
     <string name="action_settings">Einstellung</string>
 
-    <!-- Der Button von der News Seite -->
-    <string name="bt_aktualisieren">Aktualisieren</string>
+    <!-- Inhalt von der News Seite -->
+    <string name="noNetwork">Es ist kein Online-Verbindung vorhanden</string>
+
+    <string name="btn_news_refresh">Aktualisieren</string>
+    <string name="list_news_empty">Keine News verfügbar</string>
 
     <!--Überschrift Activitys für Noten und Über HfTL ggf später löschen -->
     <string name="title_activity_ueber_hftl">Über die HfTL</string>
     <string name="title_activity_noten">Meine Noten</string>
+    <string name="title_activity_einstellung">Einstellung</string>
 
     <!-- Textview der einzelnen Seiten ggf Namen ändern für Eindeutigkeit-->
     <string name="htmlSeite"></string>
     <string name="todo">Hier muss noch was gemacht werden</string>
+
+    <string name="txt_einstell_cat_qis">HIS/QIS</string>
+
+    <string name="text_einstell_qis_user">Benutzername</string>
+    <string name="text_einstell_qis_pw">Password</string>
+
+    <string name="title_activity_news_clicked">Termindetails</string>
+    <string name="tv_news_clicked"></string>
+
+    <string name="hello_world">Hello world!</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

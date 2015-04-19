@@ -1,10 +1,15 @@
 package bkmi.de.hftl_app;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -27,7 +32,7 @@ public class NochMehrFragment extends Fragment {
 
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_SECTION_NUMBER = "section_number";
-    private String testString="loading";
+    private String testString = "loading";
 
     //benötigte Views
     TextView tv;
@@ -58,7 +63,8 @@ public class NochMehrFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        //++++Optionsmenü test++++
+        setHasOptionsMenu(true);
     }
 
     @Override
@@ -70,14 +76,20 @@ public class NochMehrFragment extends Fragment {
         // Views in Variablen übernehmen, scheinbar nur an dieser Stelle möglich
         tv = (TextView) view.findViewById(R.id.text_noch_mehr_1);
         tv.setText(testString);
+
+
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         try {
             URL url = new URL("https://qisweb.hispro.de/tel/rds?state=user&type=0");
             new HtmlThread().execute(url);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
-
-        return view;
     }
 
 
@@ -95,31 +107,36 @@ public class NochMehrFragment extends Fragment {
             if (urls[0] != null) {
                 try {
                     urlConnection = (HttpURLConnection) urls[0].openConnection();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            try {
-                InputStream in = null;
-                try {
+                    InputStream in = null;
                     in = new BufferedInputStream(urlConnection.getInputStream());
+                    testString = new Scanner(in, "UTF-8").useDelimiter("\\A").next();
                 } catch (IOException e) {
                     e.printStackTrace();
+                } finally {
+                    urlConnection.disconnect();
                 }
-                testString = new Scanner(in, "UTF-8").useDelimiter("\\A").next();
-
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        tv.setText(testString);
-                    }
-                });
-
-
-            } finally {
-                urlConnection.disconnect();
             }
             return Long.valueOf(1);
         }
+
+        @Override
+        protected void onPostExecute(Long aLong) {
+            super.onPostExecute(aLong);
+            getActivity().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    tv.setText(testString);
+                }
+            });
+        }
     }
+
+    //++++ Testgelände für das Optionsmenü ++++
+
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        super.onCreateOptionsMenu(menu, inflater);
+        getActivity().getMenuInflater().inflate(R.menu.mehr_settings, menu);
+    }
+
 }
