@@ -1,13 +1,11 @@
 package bkmi.de.hftl_app;
 
 import android.os.AsyncTask;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.TextView;
 
+import bkmi.de.hftl_app.Fragmente.NewsFragment;
 import bkmi.de.hftl_app.help.NewsResolver;
 
 

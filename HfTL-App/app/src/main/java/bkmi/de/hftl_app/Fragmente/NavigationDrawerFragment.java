@@ -1,4 +1,4 @@
-package bkmi.de.hftl_app;
+package bkmi.de.hftl_app.Fragmente;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -22,6 +22,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import bkmi.de.hftl_app.EinstellungActivity;
+import bkmi.de.hftl_app.R;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
@@ -111,8 +114,6 @@ public class NavigationDrawerFragment extends Fragment {
                         getString(R.string.title_section1),
                         getString(R.string.title_section2),
                         getString(R.string.title_section3),
-                        getString(R.string.title_section5),
-                        getString(R.string.title_section6),
                 }));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
@@ -244,7 +245,7 @@ public class NavigationDrawerFragment extends Fragment {
         // showGlobalContextActionBar, which controls the top-left area of the action bar.
         if (mDrawerLayout != null && isDrawerOpen()) {
             inflater.inflate(R.menu.global, menu);
-            showGlobalContextActionBar();
+            //showGlobalContextActionBar();
         }
         super.onCreateOptionsMenu(menu, inflater);
     }
@@ -260,11 +261,6 @@ public class NavigationDrawerFragment extends Fragment {
             return true;
         }
 
-        if (item.getItemId() == R.id.action_example) {
-            Toast.makeText(getActivity(), "BKMI13", Toast.LENGTH_SHORT).show();
-            return true;
-        }
-
         if (item.getItemId() == R.id.action_settings) {
             startActivity(new Intent(getActivity(), EinstellungActivity.class));
             return true;
@@ -276,14 +272,14 @@ public class NavigationDrawerFragment extends Fragment {
     /**
      * Per the navigation drawer design guidelines, updates the action bar to show the global app
      * 'context', rather than just what's in the current screen.
-     */
+
     private void showGlobalContextActionBar() {
         ActionBar actionBar = getActionBar();
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
         actionBar.setTitle(R.string.app_name);
     }
-
+     */
     private ActionBar getActionBar() {
         return ((ActionBarActivity) getActivity()).getSupportActionBar();
     }

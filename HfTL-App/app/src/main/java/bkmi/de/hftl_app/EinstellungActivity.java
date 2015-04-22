@@ -51,4 +51,5 @@ public class EinstellungActivity extends PreferenceActivity{
             }
         });
     }
+
 }

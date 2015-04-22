@@ -1,11 +1,6 @@
 package bkmi.de.hftl_app.help;
 
 
-import android.app.Activity;
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
@@ -20,14 +15,12 @@ public class NewsResolver {
 
     Document doc;
     ArrayList<HftlEvent> termine;
-    Activity activity;
 
     /*
     * Konstruktor initialisiert die übergebene URL als Document
      */
     public NewsResolver(String url) {
-        this.activity = activity;
-        if(!getHtmlAsDoc(url));
+        getHtmlAsDoc(url);
     }
 
     private boolean getHtmlAsDoc(String url) {
@@ -47,7 +40,7 @@ public class NewsResolver {
     * Erzeugt eine Liste mit den nächsten Terminen von der Hftl-Startseite
      */
     private void getHftlEvent(){
-        termine= new ArrayList<HftlEvent>();
+        termine= new ArrayList<>();
 
         Elements elements = doc.getElementsByClass("news-events-item-start");
         for(int i=0; i<elements.size(); i++){

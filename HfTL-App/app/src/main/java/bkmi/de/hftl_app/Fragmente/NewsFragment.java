@@ -1,4 +1,4 @@
-package bkmi.de.hftl_app;
+package bkmi.de.hftl_app.Fragmente;
 
 
 import android.app.Activity;
@@ -18,8 +18,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
+import bkmi.de.hftl_app.NewsActivity;
+import bkmi.de.hftl_app.NewsClickedActivity;
+import bkmi.de.hftl_app.R;
 import bkmi.de.hftl_app.help.NewsResolver;
 
 import static android.R.layout.simple_list_item_1;
