@@ -20,22 +20,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NotenActivity"
-            android:label="@string/title_activity_noten"
-            android:parentActivityName=".NewsActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".NewsActivity" />
-        </activity>
-        <activity
-            android:name=".UeberHftlActivity"
-            android:label="@string/title_activity_ueber_hftl"
-            android:parentActivityName=".NewsActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".NewsActivity" />
-        </activity>
-        <activity
             android:name=".EinstellungActivity"
             android:label="@string/title_activity_einstellung"
             android:parentActivityName=".NewsActivity" >

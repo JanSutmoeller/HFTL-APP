@@ -1,32 +1,19 @@
 package bkmi.de.hftl_app;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.os.AsyncTask;
-import android.support.v4.app.ListFragment;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
 
-import bkmi.de.hftl_app.help.NewsResolver;
-
-import static android.R.layout.simple_list_item_1;
+import bkmi.de.hftl_app.Fragmente.NavigationDrawerFragment;
+import bkmi.de.hftl_app.Fragmente.NewsFragment;
+import bkmi.de.hftl_app.Fragmente.NotenFragment;
+import bkmi.de.hftl_app.Fragmente.StundenplanFragment;
 
 
 /**
@@ -80,10 +67,12 @@ public class NewsActivity extends ActionBarActivity
             case 0:
                 fragment = NewsFragment.newInstance(position + 1);
                 break;
-            case 3:
-                fragment = NochMehrFragment.newInstance(position + 1);
+            case 1:
+                fragment = NotenFragment.newInstance(position + 1);
                 break;
-
+            case 2:
+                fragment = StundenplanFragment.newInstance(position + 1);
+                break;
         }
 
 
@@ -96,29 +85,15 @@ public class NewsActivity extends ActionBarActivity
      * Hier erfolgt die Auswahl des Titels
      */
     public void onSectionAttached(int number) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
         switch (number) {
             case 1:
                 mTitle = getString(R.string.title_section1);
                 break;
             case 2:
                 mTitle = getString(R.string.title_section2);
-                //Aufruf einer neuen Activty
-                //Ich glaube als Fragment wäre es besser
-                intent = new Intent(this, NotenActivity.class);
-                startActivity(intent);
                 break;
             case 3:
                 mTitle = getString(R.string.title_section3);
-                //noch eine Activity
-                intent = new Intent(this, UeberHftlActivity.class);
-                startActivity(intent);
-                break;
-            case 4:
-                mTitle = getString(R.string.title_section5);
-                break;
-            case 5:
-                mTitle = getString(R.string.title_section6);
                 break;
         }
     }
@@ -156,12 +131,6 @@ public class NewsActivity extends ActionBarActivity
         if (id == R.id.action_settings) {
             intent = new Intent(this, EinstellungActivity.class);
             startActivity(intent);
-            return true;
-        }
-
-        // Reagiert auf den Menüeintrag vom NochMehrFragment
-        if (id == R.id.toast) {
-            Toast.makeText(this, "möpmöp", Toast.LENGTH_SHORT).show();
             return true;
         }
 
