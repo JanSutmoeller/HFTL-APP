@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[paper=a4, fontsize=12pt, liststotoc,bibtotoc]{scrartcl} % A4 paper and 11pt font size
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[german]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0,0,.5}
+\usepackage[colorlinks,linkcolor=darkblue,citecolor=red,urlcolor=blue]{hyperref}
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+%\fancyhead{T} % No page header - if you want one, create it in the same way as the footers below
+\fancyhead[L]{Drogen - unbemannte Rauschobjekte}
+\fancyhead[C]{}
+\fancyhead[R]{Hausarbeit}
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{Codewort: Findus} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{1pt} % Remove header underlines
+\renewcommand{\footrulewidth}{1pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+\setlength{\footheight}{8mm}
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\author{Jan Sutmöller} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+\bibliographystyle{unsrt}
+
+%%%%%%%%%%%eigene Sachen%%%%%%%
+\flushbottom 
+\usepackage{graphicx}
+\usepackage{microtype}    
+% Abkürzungsverzeichniss
+\usepackage[printonlyused]{acronym}
+\usepackage{wrapfig}
+% Inhaltsverzeichnis auch in Time New Roman
+\addtokomafont{sectioning}{\rmfamily}
+\usepackage[section]{placeins}
+
+\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%	Begin des eigentlichen Dokuments  %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+%\maketitle % Print the title
+\include{01_Titel/01_titel}
+%\part im Inhaltsverzeichnis nicht nummerieren
+\makeatletter
+\let\partbackup\l@part
+\renewcommand*\l@part[2]{\partbackup{#1}{}}
+
+\newpage
+
+%Seitennummerierung neu beginnen, Zahlen [arabic], röm.Zahlen [roman,Roman], Buchstaben [alph,Alph]
+\pagenumbering{arabic}
+
+\cleardoublepage\pdfbookmark{Inhaltsverzeichniss}{toc}
+
+\tableofcontents
+\listoffigures
+\pagestyle{fancy}
+\newpage
+
+\input{02_Einleitung/einleitung}
+\input{03_WasSindUAV/Was_Sind_UAV}
+\newpage
+\input{04_Drohne_DJI/DJI}
+\input{05_rechtliches/rechtliches}
+\input{06_Fazit/Fazit}
+
+\newpage
+%\section*{Abkürzungsverzeichnis}
+\addsec{Abkürzungsverzeichnis}
+
+\begin{acronym}[UV-Licht]
+\acro{UAV}{Unmanned aerial vehicle}
+\acro{V2}{Vergeltungswaffe 2}
+\acro{RP-1}{Radio Plane 1}
+\acro{MQ-9}{General Atomics MQ-9}
+\acro{GPS}{Global Positioning System}
+\acro{LuftVG}{Luftverkehrsgesetz}
+\acro{LuftVO}{Luftverkehrsordnung}
+\acro{UV-Licht}{ultraviolettes Licht}
+\acro{DNA}{deoxyribonucleic acid}
+\end{acronym}
+
+
+
+\bibliography{literatur}
+\newpage
+
+
+\include{Abbildungen/abbildungen}
+
+
+\end{document}
+
+
+
