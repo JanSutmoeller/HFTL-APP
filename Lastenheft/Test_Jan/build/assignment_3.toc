@@ -1,9 +1,0 @@
-\select@language {german}
-\contentsline {section}{\numberline {1}Einleitung}{4}{section.1}
-\contentsline {section}{\numberline {2}Was sind Drohnen?}{4}{section.2}
-\contentsline {subsection}{\numberline {2.1}Geschichte}{4}{subsection.2.1}
-\contentsline {subsubsection}{\numberline {2.1.1}Heading on level 3 (subsubsection)}{4}{subsubsection.2.1.1}
-\contentsline {paragraph}{\nonumberline Heading on level 4 (paragraph)}{4}{section*.3}
-\contentsline {section}{\numberline {3}Lists}{5}{section.3}
-\contentsline {subsection}{\numberline {3.1}Example of list (3*itemize)}{5}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Example of list (enumerate)}{5}{subsection.3.2}

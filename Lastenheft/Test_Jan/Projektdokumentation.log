@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.22)  24 APR 2015 15:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.22)  24 APR 2015 15:34
 entering extended mode
 **Projektdokumentation.tex
 
@@ -1072,30 +1072,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\mt-msb.cfg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-
-LaTeX Warning: File `img/HFTL-Logo.pdf' not found on input line 6.
-
-
-! Package pdftex.def Error: File `img/HFTL-Logo.pdf' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 \includegraphics[scale=0.5]{img/HFTL-Logo.pdf}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 6.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
-File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `cmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
+<img/HFTL-Logo.pdf, id=79, 478.00987pt x 264.18701pt>
+File: img/HFTL-Logo.pdf Graphic file (type pdf)
+ <use img/HFTL-Logo.pdf>
+Package pdftex.def Info: img/HFTL-Logo.pdf used on input line 6.
+(pdftex.def)             Requested size: 239.00435pt x 132.09317pt.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
 (Font)              Font shape `T1/futs/b/n' tried instead on input line 31.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <17.28> not available
@@ -1110,7 +1091,8 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 2--66
 ) [1
 
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Jan/Desktop/GitH
+ub/HFTL-APP/HFTL-APP/Lastenheft/Test_Jan/img/HFTL-Logo.pdf>]
 LaTeX Font Info:    Try loading font information for T1+cmss on input line 95.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
@@ -1183,9 +1165,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--53
 
  []
 
-[3] [4] [5])
+[3]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 92.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [4] [5])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 106.
- [6]
+
+[6]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 106.
 
 (C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Lastenheft\Test_Jan\Projektdokum
@@ -1199,21 +1191,21 @@ Package rerunfilecheck Info: File `Projektdokumentation.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 106.
  ) 
 Here is how much of TeX's memory you used:
- 11266 strings out of 493921
- 173775 string characters out of 3144882
+ 11270 strings out of 493921
+ 173866 string characters out of 3144882
  326539 words of memory out of 3000000
- 14145 multiletter control sequences out of 15000+200000
+ 14149 multiletter control sequences out of 15000+200000
  112363 words of font info for 176 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  39i,14n,56p,525b,521s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc} <C:\Users
-\Jan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk><C
+ <C:\Users\Jan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ec
+tt1200.pk>{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on Projektdokumentation.pdf (7 pages, 90137 bytes).
+Output written on Projektdokumentation.pdf (7 pages, 102977 bytes).
 PDF statistics:
- 184 PDF objects out of 1000 (max. 8388607)
+ 182 PDF objects out of 1000 (max. 8388607)
  27 named destinations out of 1000 (max. 500000)
- 45209 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 45214 words of extra memory for PDF output out of 51595 (max. 10000000)
 
