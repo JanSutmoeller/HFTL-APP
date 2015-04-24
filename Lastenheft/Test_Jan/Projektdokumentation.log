@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.22)  24 APR 2015 13:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.22)  24 APR 2015 14:29
 entering extended mode
 **Projektdokumentation.tex
 
@@ -1191,11 +1191,11 @@ Package rerunfilecheck Info: File `Projektdokumentation.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 106.
  ) 
 Here is how much of TeX's memory you used:
- 11274 strings out of 493921
- 173907 string characters out of 3144882
+ 11270 strings out of 493921
+ 173866 string characters out of 3144882
  327591 words of memory out of 3000000
  14149 multiletter control sequences out of 15000+200000
- 112633 words of font info for 179 fonts, out of 3000000 for 9000
+ 112363 words of font info for 176 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  39i,14n,56p,525b,521s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Jan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ec
@@ -1203,7 +1203,7 @@ tt1200.pk>{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on Projektdokumentation.pdf (7 pages, 102956 bytes).
+Output written on Projektdokumentation.pdf (7 pages, 103226 bytes).
 PDF statistics:
  182 PDF objects out of 1000 (max. 8388607)
  27 named destinations out of 1000 (max. 500000)
