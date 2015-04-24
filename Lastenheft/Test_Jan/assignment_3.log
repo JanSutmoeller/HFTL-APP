@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.22)  24 APR 2015 12:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.22)  24 APR 2015 12:20
 entering extended mode
 **assignment_3.tex
 
@@ -937,9 +937,7 @@ Package scrkbase Info: You've told me to extend the font selection of the
 Package: placeins 2005/04/18  v 2.2
 )
 (C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Lastenheft\Test_Jan\assignment_3
-.aux
-(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Lastenheft\Test_Jan\01_Titel/01_
-titel.aux))
+.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
 LaTeX Font Info:    ... okay on input line 78.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
@@ -1105,16 +1103,16 @@ Package microtype Info: Loading generic settings for font family
 Package tocbasic Info: character protrusion at toc deactivated on input line 95
 .
 
-(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Lastenheft\Test_Jan\assignment_3
-.toc)
+
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
+
 \tf@toc=\write5
 Package tocbasic Info: character protrusion at lof deactivated on input line 96
 .
 
-(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Lastenheft\Test_Jan\assignment_3
-.lof)
-\tf@lof=\write6
+Package hyperref Warning: old lof file detected, not used; run LaTeX again.
 
+\tf@lof=\write6
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
  Make it at least 14.49998pt.
@@ -1163,20 +1161,20 @@ Package rerunfilecheck Info: File `assignment_3.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 106.
  ) 
 Here is how much of TeX's memory you used:
- 11250 strings out of 493921
- 173116 string characters out of 3144882
- 326583 words of memory out of 3000000
- 14123 multiletter control sequences out of 15000+200000
+ 11243 strings out of 493921
+ 172594 string characters out of 3144882
+ 326150 words of memory out of 3000000
+ 14122 multiletter control sequences out of 15000+200000
  106395 words of font info for 184 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 39i,14n,56p,626b,397s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,14n,56p,626b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on assignment_3.pdf (5 pages, 86651 bytes).
+Output written on assignment_3.pdf (5 pages, 82429 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
+ 125 PDF objects out of 1000 (max. 8388607)
  25 named destinations out of 1000 (max. 500000)
  44190 words of extra memory for PDF output out of 51595 (max. 10000000)
 
