@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Versand SYSTEM "Versand.dtd">
+
+
+<Versand>
+<!-- Es gibt kann nur einen Kunden zu einer Bestellung geben  -->
+<!-- Master was here -->
+
+	<Bestellung BestNr='NR123456' Kunde="K123">
+		<Datum>01.01.2011</Datum>
+		<Preis>213,12</Preis>
+		<Bestellposition ArtID="A123789">12</Bestellposition>
+		<!-- Artikelanzahl zeigt per IDREF auf einen "globalen" Artikel  -->		
+	</Bestellung>
+	
+	<Bestellung BestNr='NR1234568' Kunde="K123">
+		<Datum>01.01.2011</Datum>
+		<Preis>213,12</Preis>
+		<Bestellposition ArtID="A123789">12</Bestellposition>		
+	</Bestellung>
+	
+	
+	<Kunde KID="K123">
+		<Name>Krause</Name>
+	</Kunde>
+	
+	<Artikel AID="A123789">
+		<Name>Laptop</Name>
+	</Artikel>
+	
+	<Artikel AID="A1237812">
+		<Name>Wurst</Name>
+	</Artikel>
+
+	<Artikel AID="A12378111">
+		<Name>Kaese</Name>
+	</Artikel>
+	
+	<Artikel AID="A178111">
+		<Name>Kaese</Name>
+	</Artikel>
+	
+	<Artikel AID="B7878111">
+		<Name>Salami</Name>
+	</Artikel>
+	
+	<Artikel AID="B78711">
+		<Name>Marmelade</Name>
+	</Artikel>
+
+
+	<Artikel AID="B78w22711711">
+		<Name>Gitarre</Name>
+	</Artikel>
+	
+	<Artikel AID="B2711711">
+		<Name>GitarMÖPMÖPre</Name>
+	</Artikel>
+	
+	<Artikel AID="B2711711">
+		<Name>wfawrfasölfmksöldkngfasögfkitarMÖPMÖPre</Name>
+	</Artikel>
+	
+	<Artikel AID="B2711711">
+		<Name>ölfmksöldkngfasögfkitarMÖPMÖPre</Name>
+	</Artikel>
+
+
+<<<<<<< HEAD
+	<!-- hier stand kein Ziwschenspeicher von Stefan! -->
+=======
+>>>>>>> origin/master
+
+
+</Versand>
