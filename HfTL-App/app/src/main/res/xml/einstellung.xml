@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        <PreferenceCategory
+            android:title="@string/txt_einstell_cat_qis">
+            <EditTextPreference
+                android:key="username"
+                android:title="@string/text_einstell_qis_user"
+                android:defaultValue=""/>
+            <EditTextPreference
+                android:key="password"
+                android:title="@string/text_einstell_qis_pw"
+                android:password="true"/>
+        </PreferenceCategory>
+    </PreferenceScreen>

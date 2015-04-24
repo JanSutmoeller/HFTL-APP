@@ -1,18 +1,19 @@
 package bkmi.de.hftl_app;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
+
+import bkmi.de.hftl_app.Fragmente.NavigationDrawerFragment;
+import bkmi.de.hftl_app.Fragmente.NewsFragment;
+import bkmi.de.hftl_app.Fragmente.NotenFragment;
+import bkmi.de.hftl_app.Fragmente.StundenplanFragment;
 
 
 /**
@@ -52,18 +53,36 @@ public class NewsActivity extends ActionBarActivity
                 (DrawerLayout) findViewById(R.id.drawer_layout));
     }
 
+    /**
+     * Hier erfolgt die Auswahl vom Navigation Drawer
+     */
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
+        Fragment fragment;
         FragmentManager fragmentManager = getSupportFragmentManager();
+        onSectionAttached(position + 1);
+        switch (position) {
+            default:
+            case 0:
+                fragment = NewsFragment.newInstance(position + 1);
+                break;
+            case 1:
+                fragment = NotenFragment.newInstance(position + 1);
+                break;
+            case 2:
+                fragment = StundenplanFragment.newInstance(position + 1);
+                break;
+        }
+
+
         fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+                .replace(R.id.container, fragment)
                 .commit();
     }
 
     /**
-     * Hier erfolgt die Auswahl vom Navigation Drawer
-     * @param number Wird vom NavigationDrawerFragment übergeben...oder so ähnlich
+     * Hier erfolgt die Auswahl des Titels
      */
     public void onSectionAttached(int number) {
         switch (number) {
@@ -72,30 +91,9 @@ public class NewsActivity extends ActionBarActivity
                 break;
             case 2:
                 mTitle = getString(R.string.title_section2);
-                //Aufruf einer neuen Activty
-                //Ich glaube als Fragment wäre es besser
-                intent = new Intent(this, NotenActivity.class);
-                startActivity(intent);
                 break;
             case 3:
                 mTitle = getString(R.string.title_section3);
-                //noch eine Activity
-                intent = new Intent(this, UeberHftlActivity.class);
-                startActivity(intent);
-                break;
-            case 4:
-                mTitle = getString(R.string.title_section5);
-                //TODO Der Aufrauf sollte im onNavigationDrawerItemSelected ablaufen...aber wie??? Möglicherweise eine getFragment-Methode oder so
-                //Hier wird ein neues Fragment anstelle des alten erstellt
-                Fragment fragment = (Fragment) NochMehrFragment.newInstance(number);
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.container, fragment )
-                       .commit();
-
-                break;
-            case 5:
-                mTitle = getString(R.string.title_section6);
                 break;
         }
     }
@@ -131,52 +129,20 @@ public class NewsActivity extends ActionBarActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            intent = new Intent(this, EinstellungActivity.class);
+            startActivity(intent);
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
+
+
     //
     //Ende Optionsmenü
 
     /**
      * A placeholder fragment containing a simple view.
      */
-    public static class PlaceholderFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private static final String ARG_SECTION_NUMBER = "section_number";
-
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_news, container, false);
-            return rootView;
-        }
-
-        @Override
-        public void onAttach(Activity activity) {
-            super.onAttach(activity);
-            ((NewsActivity) activity).onSectionAttached(
-                    getArguments().getInt(ARG_SECTION_NUMBER));
-        }
-    }
-
 }
+
