@@ -1,4 +1,4 @@
-\section{Projektbeschreibung}
+\section{Lastenheft}
 
 \subsection{Einführung und Zielbestimmung}
 
@@ -23,7 +23,7 @@ Hier geben Sie einen kurzen Überblick über die Gründe und den erwarteten Nutz
 \subsection{Produktübersicht und Einsatz}
 
 \subsubsection{\textbf{aktuelle Situation}}\
-\\
+
    \begin{itemize}
       \item \textbf{Noten}
       \begin{itemize}
@@ -45,8 +45,8 @@ Hier geben Sie einen kurzen Überblick über die Gründe und den erwarteten Nutz
       	\item https://www.hft-leipzig.de/de/studierende/service/news.html
       	\item kein Login notwendig, öffentlich zugänglich
       \end{itemize}
-   \end{itemize}
-
+   \end{itemize}\
+\\
 
 \subsubsection{\textbf{Beschreibung des SOLL-Konzepts}}\
 \\
@@ -93,33 +93,31 @@ Hier geben Sie einen kurzen Überblick über die Gründe und den erwarteten Nutz
 			\end{itemize}
 \end{itemize}				
 
-\subsubsection{Beschreibung von Schnittstellen und Techniken}
+\subsubsection{textbf{Beschreibung von Schnittstellen und Techniken}}
 
-Sollen vorhandene Daten in die neue Software übernommen werden? 
-•	Übernahme von Altdaten 
+News werden mittels (HTML-)Parser aus der HfTL-Seite ausgelesen. Die Noten und Stundenpläne werden aus dem QIS-System ausgelesen. Dazu ist ein gesicherter Login nötig.
 
 
-\subsubsection{Abkürzungen, Nomenklatur, fachliche Zusammenhänge, Datenhierarchie}
+\subsubsection{\textbf{Abkürzungen, Nomenklatur, fachliche Zusammenhänge, Datenhierarchie}}
 ????????????????????
 
 \subsection{Produktdetails}
 
-\subsubsection{funktionale Anforderungen}
+\subsubsection{\textbf{funktionale Anforderungen}}
 
-Zeigen Sie alle Funktionen auf, die Sie von den Erweiterungen erwarten. Beson-ders hilfreich sind Skizzen oder Mockups, welche die Funktionalität visualisie-ren. Gehen Sie außerdem ein auf: 
-•	Benutzeroberfläche
-•	Logik
-•	Rechte
-•	Mehrsprachigkeit
+Die APP soll sich mittels regelmäßiger Abfragen der HfTL-Homepage, sowie von QIS die News, Noten und Stunden- und ggf. Raumbelegungspläne ziehen und diese für den Nutzer lokal auf dem Smartphone speichern und darstellen. Es soll sichergestellt werden das auf sensible Daten wie z.B. Noten auch nur autorisierte Nutzer Zugang zu bekommen. Die APP soll in der deutschen Sprache dargestellt werden. Evtl. wird sie im Nachgang in andere Sprachen übersetzt. 
 
-\subsubsection{nichtfunktionale Anforderungen(Leistungen, Daten}
+\subsubsection{\textbf{nichtfunktionale Anforderungen(Leistungen, Daten}}
 
-Neben Angaben zur Leistungsfähigkeit der Erweiterungen fließen hier auch be-reits vertragliche Erwägungen zwischen Ihnen und dem Entwickler mit ein, falls dieser die Erweiterung auch warten soll. Gehen Sie hier auf die Nutzerzahl ein, welche die Erweiterung gleichzeitig bewältigen soll, sowie die voraussichtlichen Datenmengen. Soll die Erweiterung leicht änderbar sein oder das Prinzip leicht übertragbar? Wie einfach sollen Installation und Wartung sein? Sollen diese vom Auftragnehmer oder vom Auftraggeber durchgeführt werden (können)?
-•	Nutzerzahl
-•	Antwortzeiten
-•	Konformitäten, Änderbarkeit, Übertragbarkeit
-•	Installation, Wartbarkeit 
-
+Die Oberfläche sollte möglichst intuitiv zu benutzen sein. Da bei der Nutzergruppe von Studenten mit Erfahrung im Umgang mit solchen APP's ausgegangen werden kann, wird auch die Oberfläche dementsprechend gestaltet.
+Kategorien (News,Noten,Stundenplan) sollen die Übersichtlichkeit erhöhen.
+Die Logindaten werden verschlüsselt auf dem Smartphone gespeichert und auch verschlüsselt übertragen.
+Es wird von einer maximalen Nutzerzahl von 1000 Studenten ausgegangen.
+Die Reaktionszeit/Programmstart der APP soll möglichst gering gehalten werden.
+Das Datenaufkommen soll möglichst gering ausfallen.
+Die Zuverlässigkeit sollte sich durch eine kleine MTBF (mean time between failure) darstellen.
+Durch eine durchgehende und vollständige Dokumentation soll eine Wartung auch durch spätere Matrikel oder Administratoren der Hochschule möglich sein.
+Eine Implementierung weiterer Funktionen soll auch im Nachhinein möglich sein.
 
 \subsection{Qualitätsanforderungen}
 
@@ -135,15 +133,25 @@ o	Zertifizierung
 
 \subsection{Betrieb}
 
-Wie und wo soll die Software betrieben werden? Wer soll sie warten und wie schnell soll der Support reagieren können? Soll eine Webanwendung intern oder von einem Dienstleister gehostet werden? Welche sonstigen Supportleistungen erwarten Sie? In Bezug auf die Verfügbarkeit und die Wartung geben Sie hier Min-destverfügbarkeiten und geforderte Antwortzeiten vom Support an. 
-•	interner / externer Betrieb
-•	Wartungsleistungen
-•	Supportleistungen
-•	Verfügbarkeit
-•	Reaktionszeit des Supports 
+Der Wirkbetrieb soll nach Möglichkeit über den Android-Playstore realisiert werden. Falls es dabei zu Lizenz- und Kostenproblemen kommt, wird die APP als .apk über die HfTL-Hoomepage verteilt.
+Supportleistungen werden in der Projektphase über das Projektteam geleistet. Nach Fertigstellung muss das weitere Vorgehen noch geregelt werden. Die Wartung wird zunächst vom Projektteam übernommen. Nach Übergabe an die Hochschule liegt auch die Wartung in der Verantwortung der Hochschule.
 
 \subsection{Projektorganisation}
 
+Das Projektteam besteht aus: 
+
+	\begin{itemize}
+		\item Stephan Kaden 
+		\item Stefan Czogalla
+		\item Maik Lorenz
+		\item Patrick Kunze
+		\item Jan Sutmöller
+		\item Georg Ebert
+		\item Andrej Dederer
+		\item Christoph Matthies
+	\end{itemize}
+	
+	
 Wie soll die Zusammenarbeit zwischen Ihnen und dem Entwickler gestaltet sein? 
 •	Mitwirkungsleistungen des Kunden, Abgrenzung der Verantwortlichkeiten
 •	Test- und Abnahmekonzepte
