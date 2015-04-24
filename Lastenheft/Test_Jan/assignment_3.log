@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.22)  22 APR 2015 21:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.22)  24 APR 2015 11:08
 entering extended mode
 **assignment_3.tex
 
@@ -1442,7 +1442,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
 Here is how much of TeX's memory you used:
  11636 strings out of 493921
  179093 string characters out of 3144882
- 330781 words of memory out of 3000000
+ 330773 words of memory out of 3000000
  14282 multiletter control sequences out of 15000+200000
  119828 words of font info for 272 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1451,7 +1451,7 @@ Here is how much of TeX's memory you used:
 m Files (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on assignment_3.pdf (15 pages, 5980036 bytes).
+Output written on assignment_3.pdf (15 pages, 5980042 bytes).
 PDF statistics:
  357 PDF objects out of 1000 (max. 8388607)
  92 named destinations out of 1000 (max. 500000)
