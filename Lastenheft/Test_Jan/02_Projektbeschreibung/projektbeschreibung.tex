@@ -22,16 +22,16 @@ Hier geben Sie einen kurzen Überblick über die Gründe und den erwarteten Nutz
  
 \subsection{Produktübersicht und Einsatz}
 
-\subsubsection{aktuelle Situation}
-
+\subsubsection{\textbf{aktuelle Situation}}\
+\\
    \begin{itemize}
-      \item Noten
+      \item \textbf{Noten}
       \begin{itemize}
          \item sind auf QIS hinterlegt
          \item Für Zugriff muss man via Browser auf die Seite zugreifen und sich einloggen
          \item für iPhone Nutzer gibt es eine kostenpflichtige APP (Grades), die Noten aus QIS auslesen kann
       \end{itemize}
-      \item Stundenpläne
+      \item \textbf{Stundenpläne}
       \begin{itemize}
       	\item sind auf QIS hinterlegt
       	\item sind ohne Login einsehbar ----Ist das so??????
@@ -39,7 +39,7 @@ Hier geben Sie einen kurzen Überblick über die Gründe und den erwarteten Nutz
       	\item der Stundenplan kann als iCal heruntergeladen werden
       	\item ebenso sind die Teletutorien hier zu finden
       \end{itemize}
-      \item News
+      \item \textbf{News}
       \begin{itemize}
       	\item News stehen gesondert auf der HFTL-Homepage
       	\item https://www.hft-leipzig.de/de/studierende/service/news.html
@@ -47,16 +47,51 @@ Hier geben Sie einen kurzen Überblick über die Gründe und den erwarteten Nutz
       \end{itemize}
    \end{itemize}
 
-Beschreiben Sie, wie Sie aktuell arbeiten, und was bisher nicht optimal oder in Ih-rem Sinne funktioniert. 
-•	Beschreibung des Ist-Zustands: 
-o	Wie wird bisher gearbeitet?
-o	Mit welchen Tools oder Systemen?
-o	Welche Problembereiche und Schwachstellen gibt es?
 
-\subsubsection{Beschreibung des SOLL-Konzepts}
-
-•	Hier nur Kurzbeschreibungen der Erweiterungen oder Plugins in Listen-form
-•	Auch Prozessbeschreibungen
+\subsubsection{\textbf{Beschreibung des SOLL-Konzepts}}\
+\\
+\begin{itemize}
+		\item \textbf{Noten}
+			\begin{itemize}
+				\item APP soll die Noten lokal auf dem Smartphone nach Semester aufgeschlüsselt anzeigen
+				\item Login über die APP
+					\begin{itemize}
+						\item Anmeldung über gesicherte, verschlüsslte Übertragung
+						\item verschlüsselte Speicherung der Daten auf dem Smartphone
+					\end{itemize}
+				\item Pull-Nachrichten (Einstellbares Intervall und/oder manuell)
+				\item Push-Benachrichtigung
+					\begin{itemize}
+						\item Nutzer wird mit Hinweismeldung informiert, wenn Noten aktualisiert wurden					
+					\end{itemize}
+				\item Optional:
+					\begin{itemize}
+						\item Klassenspiegel
+							\begin{itemize}
+								\item Notenverteilung
+								\item Anzahl der Teilnehmer
+								\item Notenschnitt
+							\end{itemize}
+						\item Anzeige der Creditpoints
+							\begin{itemize}
+								\item zu erreichende Creditpoints
+								\item erreichte Creditpoints
+							\end{itemize}
+					\end{itemize}
+			\end{itemize}
+		\item \textbf{Stundenpläne}
+			\begin{itemize}
+				\item Stundenplan nur für zum Nutzer passenden Studiengang
+				\item Pull-Nachrichten (Einstellbares Intervall und/oder manuelle Abfrage)
+				\item Nutzer wird mittels Push-Benachrichtigung informiert falls sich Stundenpläne geändert haben
+				\item Synchronisierung mit dem Kalender auf dem Smartphone
+			\end{itemize}
+		\item \textbf{News}
+			\begin{itemize}
+				\item Pull-Nachrichten (einstellbares Intervall und/oder manuelle Aktualisierung)
+				\item News von: \url{https://www.hft-leipzig.de/de/studierende/service/news.html} 
+			\end{itemize}
+\end{itemize}				
 
 \subsubsection{Beschreibung von Schnittstellen und Techniken}
 
