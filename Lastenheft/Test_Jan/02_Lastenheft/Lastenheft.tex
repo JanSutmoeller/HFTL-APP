@@ -1,0 +1,172 @@
+\section{Lastenheft}
+
+\subsection{Einführung und Zielbestimmung}
+
+\subsubsection{Beschreibung des Unternehmens}
+Die Hochschule für Telekommunikation Leipzig (HfTL) ist eine private, staatlich anerkannte Fachhochschule. Träger der HfTL ist die HFTL Trägergesellschaft mbH, eine Beteiligungsgesellschaft der Deutschen Telekom AG. Die Schule befindet sich im Leipziger Stadtteil Connewitz. Es werden sowohl Direkt- als auch duale Studiengänge und berufsbegleitende Studiengänge angeboten.
+
+\subsubsection{Beschreibung und Hintergrund der geplanten Softwareentwicklung}
+Im Rahmen des Studienmoduls Software-Engineering erarbeiten mehrere Gruppen ein Projekt zur Entwicklung einer neuen Software. Die Leistung wird als Prüfungsleistung anerkannt.
+Dieses Projekt wird von der BKMI13 entwickelt. Da es derzeit noch keine Möglichkeit gibt Noten und Stundenpläne auf dem Smartphone komfortabel anzuzeigen, erschien der Nutzen für eine APP mit diesen Funktionen als sehr sinnvoll.
+\\
+\\
+Das kam aus der Vorlage:
+Hier geben Sie einen kurzen Überblick über die Gründe und den erwarteten Nutzen der zu entwickelnden Software. Folgende Punkte sollten berücksichtigt werden:
+•	Technische und betriebswirtschaftliche Ziele
+•	Budgetvorgaben 
+•	Kurze Beschreibung der Implementierungsidee (bei Neuentwicklung eines Programms aus einem Entwurf) oder 
+•	Kurze Beschreibung der Anpassungen (bei vorhandener Software oder vorhandenen Webanwendungen)
+•	Einführung, Betrieb, Wartung 
+
+
+ 
+\subsection{Produktübersicht und Einsatz}
+
+\subsubsection{\textbf{aktuelle Situation}}\
+
+   \begin{itemize}
+      \item \textbf{Noten}
+      \begin{itemize}
+         \item sind auf QIS hinterlegt
+         \item Für Zugriff muss man via Browser auf die Seite zugreifen und sich einloggen
+         \item für iPhone Nutzer gibt es eine kostenpflichtige APP (Grades), die Noten aus QIS auslesen kann
+      \end{itemize}
+      \item \textbf{Stundenpläne}
+      \begin{itemize}
+      	\item sind auf QIS hinterlegt
+      	\item sind ohne Login einsehbar ----Ist das so??????
+      	\item man muss sich umständlich zu seinem entsprechenden Studiengang durchklicken
+      	\item der Stundenplan kann als iCal heruntergeladen werden
+      	\item ebenso sind die Teletutorien hier zu finden
+      \end{itemize}
+      \item \textbf{News}
+      \begin{itemize}
+      	\item News stehen gesondert auf der HFTL-Homepage
+      	\item https://www.hft-leipzig.de/de/studierende/service/news.html
+      	\item kein Login notwendig, öffentlich zugänglich
+      \end{itemize}
+   \end{itemize}\
+\\
+
+\subsubsection{\textbf{Beschreibung des SOLL-Konzepts}}\
+\\
+\begin{itemize}
+		\item \textbf{Noten}
+			\begin{itemize}
+				\item APP soll die Noten lokal auf dem Smartphone nach Semester aufgeschlüsselt anzeigen
+				\item Login über die APP
+					\begin{itemize}
+						\item Anmeldung über gesicherte, verschlüsslte Übertragung
+						\item verschlüsselte Speicherung der Daten auf dem Smartphone
+					\end{itemize}
+				\item Pull-Nachrichten (Einstellbares Intervall und/oder manuell)
+				\item Push-Benachrichtigung
+					\begin{itemize}
+						\item Nutzer wird mit Hinweismeldung informiert, wenn Noten aktualisiert wurden					
+					\end{itemize}
+				\item Optional:
+					\begin{itemize}
+						\item Klassenspiegel
+							\begin{itemize}
+								\item Notenverteilung
+								\item Anzahl der Teilnehmer
+								\item Notenschnitt
+							\end{itemize}
+						\item Anzeige der Creditpoints
+							\begin{itemize}
+								\item zu erreichende Creditpoints
+								\item erreichte Creditpoints
+							\end{itemize}
+					\end{itemize}
+			\end{itemize}
+		\item \textbf{Stundenpläne}
+			\begin{itemize}
+				\item Stundenplan nur für zum Nutzer passenden Studiengang
+				\item Pull-Nachrichten (Einstellbares Intervall und/oder manuelle Abfrage)
+				\item Nutzer wird mittels Push-Benachrichtigung informiert falls sich Stundenpläne geändert haben
+				\item Synchronisierung mit dem Kalender auf dem Smartphone
+			\end{itemize}
+		\item \textbf{News}
+			\begin{itemize}
+				\item Pull-Nachrichten (einstellbares Intervall und/oder manuelle Aktualisierung)
+				\item News von: \url{https://www.hft-leipzig.de/de/studierende/service/news.html} 
+			\end{itemize}
+\end{itemize}				
+
+\subsubsection{textbf{Beschreibung von Schnittstellen und Techniken}}
+
+News werden mittels (HTML-)Parser aus der HfTL-Seite ausgelesen. Die Noten und Stundenpläne werden aus dem QIS-System ausgelesen. Dazu ist ein gesicherter Login nötig.
+
+
+\subsubsection{\textbf{Abkürzungen, Nomenklatur, fachliche Zusammenhänge, Datenhierarchie}}
+????????????????????
+
+\subsection{Produktdetails}
+
+\subsubsection{\textbf{funktionale Anforderungen}}
+
+Die APP soll sich mittels regelmäßiger Abfragen der HfTL-Homepage, sowie von QIS die News, Noten und Stunden- und ggf. Raumbelegungspläne ziehen und diese für den Nutzer lokal auf dem Smartphone speichern und darstellen. Es soll sichergestellt werden das auf sensible Daten wie z.B. Noten auch nur autorisierte Nutzer Zugang zu bekommen. Die APP soll in der deutschen Sprache dargestellt werden. Evtl. wird sie im Nachgang in andere Sprachen übersetzt. 
+
+\subsubsection{\textbf{nichtfunktionale Anforderungen(Leistungen, Daten}}
+
+Die Oberfläche sollte möglichst intuitiv zu benutzen sein. Da bei der Nutzergruppe von Studenten mit Erfahrung im Umgang mit solchen APP's ausgegangen werden kann, wird auch die Oberfläche dementsprechend gestaltet.
+Kategorien (News,Noten,Stundenplan) sollen die Übersichtlichkeit erhöhen.
+Die Logindaten werden verschlüsselt auf dem Smartphone gespeichert und auch verschlüsselt übertragen.
+Es wird von einer maximalen Nutzerzahl von 1000 Studenten ausgegangen.
+Die Reaktionszeit/Programmstart der APP soll möglichst gering gehalten werden.
+Das Datenaufkommen soll möglichst gering ausfallen.
+Die Zuverlässigkeit sollte sich durch eine kleine MTBF (mean time between failure) darstellen.
+Durch eine durchgehende und vollständige Dokumentation soll eine Wartung auch durch spätere Matrikel oder Administratoren der Hochschule möglich sein.
+Eine Implementierung weiterer Funktionen soll auch im Nachhinein möglich sein.
+
+\subsection{Qualitätsanforderungen}
+
+Gehen Sie hier auf mögliche Qualitätsstandards ein, welche die Software zum Bei-spiel im Rahmen einer Zertifizierung oder interner Richtlinien erfüllen soll. 
+•	Anforderungen an den Anbieter 
+o	Leistungsfähigkeit
+o	Erfahrung
+o	Unternehmensgröße (Größere Unternehmen haben möglicherweise mehr Ressourcen, kleine Unternehmen sind flexibler und haben kür-zere Kommunikationswege.)
+o	Zertifizierung
+•	Risikoakzeptanz (Haben Sie die Möglichkeit, Neues auszuprobieren, oder müssen Sie bestimmte Standards einhalten und Richtlinien erfüllen?) 
+•	Gesetzesvorgaben
+•	interne Richtlinien
+
+\subsection{Betrieb}
+
+Der Wirkbetrieb soll nach Möglichkeit über den Android-Playstore realisiert werden. Falls es dabei zu Lizenz- und Kostenproblemen kommt, wird die APP als .apk über die HfTL-Hoomepage verteilt.
+Supportleistungen werden in der Projektphase über das Projektteam geleistet. Nach Fertigstellung muss das weitere Vorgehen noch geregelt werden. Die Wartung wird zunächst vom Projektteam übernommen. Nach Übergabe an die Hochschule liegt auch die Wartung in der Verantwortung der Hochschule.
+
+\subsection{Projektorganisation}
+
+Das Projektteam besteht aus: 
+
+	\begin{itemize}
+		\item Stephan Kaden		(Projektleiter) 
+		\item Stefan Czogalla 	(stellvertr. Projektleiter)
+		\item Maik Lorenz		(Tests, Protokolle)
+		\item Patrick Kunze		(Protokolle)
+		\item Jan Sutmöller		(Versionsverwaltung,Dokumentation)
+		\item Georg Ebert		(Programmierung)
+		\item Andrej Dederer	(UML)
+		\item Christoph Matthies(UML)
+	\end{itemize}
+	
+	
+Auftraggeber ist Profn. Dr.-Ing. Sabine Wieland. Als Dozentin der Hochschule wird Frau Wieland laufende Einsicht in die Arbeit des Projektteams erhalten. Kommunikation findet über Email statt. Desweiteren hat Frau Wieland die Möglichkeit den Fortschritt in der Versionsverwaltung GitHub zu verfolgen.
+
+Wie soll die Zusammenarbeit zwischen Ihnen und dem Entwickler gestaltet sein? 
+•	Mitwirkungsleistungen des Kunden, Abgrenzung der Verantwortlichkeiten
+•	Test- und Abnahmekonzepte
+•	Lieferumfang
+•	Anforderungen an die Dokumentation
+
+\subsection{zeitliche Vorgaben und Deadlines}
+
+Das Projekt beginnt mit Start des 4. Leistungssemesters in der 12.KW 2015.
+Die Testphase wird in der 35.KW beginnen.
+
+Rollout-Termin der APP ist die 38.KW 
+
+\subsection{Ergänzungen}
+
+??????????
