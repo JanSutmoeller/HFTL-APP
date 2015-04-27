@@ -141,8 +141,10 @@ public class NewsActivity extends ActionBarActivity
     //
     //Ende Optionsmenü
 
-    /**
-     * A placeholder fragment containing a simple view.
-     */
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
 }
 

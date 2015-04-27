@@ -11,6 +11,7 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.support.annotation.Nullable;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,11 +34,13 @@ import static android.R.layout.simple_list_item_1;
 public class NewsFragment extends ListFragment {
 
     public static final String TERMINDETAIL= "Details";
+    public static final String ARRAYSPEICHER = "Array";
 
     NewsResolver newsResolver;
     Intent intent;
     String stringArray[];
     Button button1;
+    ArrayAdapter<String> arrayAdapter;
 
     /**
      * The fragment argument representing the section number for this
@@ -64,7 +67,7 @@ public class NewsFragment extends ListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_news, container, false);
-        zeigeNews();
+        //zeigeNews();
 
         return rootView;
     }
@@ -89,6 +92,24 @@ public class NewsFragment extends ListFragment {
         super.onAttach(activity);
         ((NewsActivity) activity).onSectionAttached(
                 getArguments().getInt(ARG_SECTION_NUMBER));
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        if(savedInstanceState!=null){
+            stringArray=savedInstanceState.getStringArray(ARRAYSPEICHER);
+            arrayAdapter = new ArrayAdapter<String>(getActivity(), simple_list_item_1, stringArray);
+            setListAdapter(arrayAdapter);
+            return;
+        }
+        zeigeNews();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putStringArray(ARRAYSPEICHER, stringArray);
     }
 
     @Override
@@ -136,12 +157,10 @@ public class NewsFragment extends ListFragment {
 
     class NewsHelper extends AsyncTask<String, Integer, Long> {
 
-        ArrayAdapter<String> arrayAdapter;
-
 
         @Override
         protected Long doInBackground(String... params) {
-            newsResolver = new NewsResolver("https://www.hft-leipzig.de/de/start.html");
+            newsResolver = new NewsResolver("https://www.hft-leipzig.de/de/studieninteressierte/service/news.html");
             stringArray = newsResolver.getTermineStringArray();
 
             return null;

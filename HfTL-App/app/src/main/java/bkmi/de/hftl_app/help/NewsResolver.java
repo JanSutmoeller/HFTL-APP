@@ -42,14 +42,12 @@ public class NewsResolver {
     private void getHftlEvent(){
         termine= new ArrayList<>();
 
-        Elements elements = doc.getElementsByClass("news-events-item-start");
+        Elements elements = doc.getElementsByClass("news-list-item");
         for(int i=0; i<elements.size(); i++){
             HftlEvent termin = new HftlEvent();
-            termin.month= elements.get(i).child(0).child(0).text();
-            termin.day= elements.get(i).child(0).child(1).text();
             termin.time= elements.get(i).child(0).ownText();
-            termin.text=elements.get(i).child(1).child(1).ownText();
-            termin.url="https://www.hft-leipzig.de/"+elements.get(i).child(1).child(0).child(0).attr("href");
+            termin.url="https://www.hft-leipzig.de/"+elements.get(i).child(1).child(0).attr("href");
+            termin.text=elements.get(i).child(1).child(0).ownText();
             termine.add(termin);
         }
     }
@@ -63,11 +61,11 @@ public class NewsResolver {
         if(termine.size()==0) return null; //Falls keine Termine anstehen
 
         String[] s = new String[termine.size()+1];
-        s[0]="Die nächsten Termin sind:";   // Für die ListView das erste Element,
+        s[0]="Die aktuellen News sind:";   // Für die ListView das erste Element,
 
         int i = 1;
         for(HftlEvent termin:termine ){
-            s[i++]= "Am " + termin.day + ". " + termin.month + " um " + termin.time + ":\n" + termin.text + "\nFür mehr Infos klicken." ;
+            s[i++]= "Am " + termin.time + ":\n" + termin.text + "\nFür mehr Infos antippen." ;
         }
 
         return s;
@@ -87,12 +85,10 @@ public class NewsResolver {
         String[] s=new String[6];
         Elements elements = doc.getElementsByClass("news-single-item");
 
-        s[0]=elements.get(0).child(0).text()+"\n";   //Überschrift
-        s[1]=elements.get(0).child(1).text()+"\n";   //Subhead
-        s[2]=elements.get(0).child(2).ownText()+"\n";//Zeit
-        s[3]=elements.get(0).child(3).ownText();//Ort
-        s[4]=elements.get(0).child(4).ownText()+"\n";//Adresse
-        s[5]=elements.get(0).child(5).text();   //Text
+        s[0]=elements.get(0).child(1).text()+"\n";   //Überschrift
+        s[1]=elements.get(0).child(2).text()+"\n";   //Subhead
+        s[2]=elements.get(0).child(0).text();//Zeit
+        s[3]=elements.get(0).child(3).text();   //Text
 
         return s;
     }

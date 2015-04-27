@@ -14,34 +14,24 @@
     tools:context="bkmi.de.hftl_app.NewsClickedActivity">
 
     <TextView
-        android:textStyle="bold"
-        android:textSize="@dimen/abc_text_size_headline_material"
+        android:textSize="@dimen/abc_text_size_small_material"
         android:id="@+id/tv_news_clicked1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
         android:textStyle="bold"
-        android:textSize="@dimen/abc_text_size_subhead_material"
+        android:textSize="@dimen/abc_text_size_headline_material"
         android:id="@+id/tv_news_clicked2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
         android:textStyle="bold"
+        android:textSize="@dimen/abc_text_size_subhead_material"
         android:id="@+id/tv_news_clicked3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
-        android:textStyle="bold"
         android:id="@+id/tv_news_clicked4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:textStyle="bold"
-        android:id="@+id/tv_news_clicked5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/tv_news_clicked6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

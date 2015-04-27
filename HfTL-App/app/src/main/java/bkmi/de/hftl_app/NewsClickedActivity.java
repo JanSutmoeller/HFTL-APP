@@ -1,5 +1,6 @@
 package bkmi.de.hftl_app;
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -15,8 +16,7 @@ public class NewsClickedActivity extends ActionBarActivity {
     TextView tv2;
     TextView tv3;
     TextView tv4;
-    TextView tv5;
-    TextView tv6;
+    ProgressDialog ladebalken;
     String url;
 
 
@@ -32,9 +32,6 @@ public class NewsClickedActivity extends ActionBarActivity {
         tv2 = (TextView) findViewById(R.id.tv_news_clicked2);
         tv3 = (TextView) findViewById(R.id.tv_news_clicked3);
         tv4 = (TextView) findViewById(R.id.tv_news_clicked4);
-        tv5 = (TextView) findViewById(R.id.tv_news_clicked5);
-        tv6 = (TextView) findViewById(R.id.tv_news_clicked6);
-
         new DetailHelper().execute();
 
 
@@ -43,6 +40,13 @@ public class NewsClickedActivity extends ActionBarActivity {
     class DetailHelper extends AsyncTask<String, Integer, Long>{
 
         String[] s;
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            ladebalken = ProgressDialog.show(NewsClickedActivity.this, "Bitte warten", "Nachricht wird geladen", true, false);
+        }
+
         @Override
         protected Long doInBackground(String... params) {
 
@@ -55,15 +59,14 @@ public class NewsClickedActivity extends ActionBarActivity {
         @Override
         protected void onPostExecute(Long aLong) {
             super.onPostExecute(aLong);
+            ladebalken.dismiss();
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    tv1.setText(s[0]);
-                    tv2.setText(s[1]);
-                    tv3.setText(s[2]);
+                    tv1.setText(s[2]);
+                    tv2.setText(s[0]);
+                    tv3.setText(s[1]);
                     tv4.setText(s[3]);
-                    tv5.setText(s[4]);
-                    tv6.setText(s[5]);
                 }
             });
 
