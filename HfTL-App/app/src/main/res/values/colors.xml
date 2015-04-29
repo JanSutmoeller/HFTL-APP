@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Definition nach CI der HftL und Deutschen Telekom AG -->
+<resources>
+    <item name="magenta" type="color">#E20074</item>
+    <item name="weiss" type="color">#ffffff</item>
+    <item name="schwarz" type="color">#000000</item>
+    <item name="grau01" type="color">#A4A4A4</item>
+    <item name="grau02" type="color">#7C7C7C</item>
+    <item name="grau03" type="color">#6c6c6c</item>
+    <item name="grau04" type="color">#ededed</item>
+    <item name="grau05" type="color">#4b4b4b</item>
+    <item name="grau06" type="color">#d0d0d0</item>
+    <item name="gelb" type="color">#fcc167</item>
+    <item name="orange" type="color">#eda95a</item>
+    <item name="violett" type="color">#9f4c97</item>
+    <item name="hellblau" type="color">#64b9e4</item>
+    <item name="dunkelblau" type="color">#427bab</item>
+    <item name="petrol" type="color">#408f9a</item>
+    <item name="grün" type="color">#babd5a</item>
+
+    <integer-array name="telekomcolors">
+        <item>@color/magenta</item>
+        <item>@color/weiss</item>
+        <item>@color/schwarz</item>
+        <item>@color/grau01</item>
+        <item>@color/grau02</item>
+        <item>@color/grau03</item>
+        <item>@color/grau04</item>
+        <item>@color/grau05</item>
+        <item>@color/grau06</item>
+        <item>@color/gelb</item>
+        <item>@color/orange</item>
+        <item>@color/violett</item>
+        <item>@color/hellblau</item>
+        <item>@color/dunkelblau</item>
+        <item>@color/petrol</item>
+        <item>@color/grün</item>
+
+
+
+    </integer>
+
+
+
+
+
+
+
+
+
+
+</resources>
