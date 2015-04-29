@@ -10,7 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_news_refresh"
-        android:id="@+id/newsbutton"/>
+        android:id="@+id/newsbutton"
+        android:background="@color/magenta"
+        />
 
     <ListView
         android:layout_width="wrap_content"

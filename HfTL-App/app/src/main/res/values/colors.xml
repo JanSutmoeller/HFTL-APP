@@ -19,6 +19,9 @@
     <item name="petrol" type="color">#408f9a</item>
     <item name="grün" type="color">#babd5a</item>
 
+<!-- Aufruf der Farben
+    Bsp: <   <Button   android:background="@color/magenta"     /> -->
+
     <integer-array name="telekomcolors">
         <item>@color/magenta</item>
         <item>@color/weiss</item>
