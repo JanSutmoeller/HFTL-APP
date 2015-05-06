@@ -3,10 +3,9 @@
         <PreferenceCategory
             android:title="@string/txt_einstell_cat_qis">
             <EditTextPreference
-                android:key="username"
-                android:title="@string/text_einstell_qis_user"
-                android:defaultValue=""/>
-            <EditTextPreference
+                android:key="@string/key_username"
+                android:title="@string/text_einstell_qis_user"/>
+            <EditTextPreferenceSecure
                 android:key="password"
                 android:title="@string/text_einstell_qis_pw"
                 android:password="true"/>

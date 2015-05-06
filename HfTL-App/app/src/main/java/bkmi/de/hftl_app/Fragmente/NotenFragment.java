@@ -1,14 +1,21 @@
 package bkmi.de.hftl_app.Fragmente;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import bkmi.de.hftl_app.NewsActivity;
 import bkmi.de.hftl_app.R;
+import bkmi.de.hftl_app.help.NotenResolver;
+import bkmi.de.hftl_app.help.TextSecure;
 
 public class NotenFragment extends Fragment {
 
@@ -17,6 +24,8 @@ public class NotenFragment extends Fragment {
      * fragment.
      */
     private static final String ARG_SECTION_NUMBER = "section_number";
+
+    TextView tv;
 
     /**
      * Erstellt ein neues NotenFragment.
@@ -51,6 +60,8 @@ public class NotenFragment extends Fragment {
         super.onAttach(activity);
         ((NewsActivity) activity).onSectionAttached(
                 getArguments().getInt(ARG_SECTION_NUMBER));
+        NotenHelper nh = new NotenHelper();
+        nh.execute("bla");
         }
 
     @Override
@@ -58,5 +69,50 @@ public class NotenFragment extends Fragment {
         super.onDetach();
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
 
+        tv = (TextView) getActivity().findViewById(R.id.test);
+
+        /*Beispiel wie man auf verschlüsselte Daten zugreift
+
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        String test = sp.getString("password", "");
+        TextSecure ts = null;
+        try {
+            ts = new TextSecure(getActivity());
+            tv.setText(ts.decrypt(test));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        */
+
+
+    }
+    class NotenHelper extends AsyncTask<String, Integer, Long> {
+
+        String s;
+        @Override
+        protected void onPostExecute(Long aLong) {
+            super.onPostExecute(aLong);
+
+            //ListView befüllen
+            getActivity().runOnUiThread(
+                    new Runnable() {
+                @Override
+                public void run() {
+                    tv.setText(s);
+                }
+            });
+        }
+
+        @Override
+        protected Long doInBackground(String... params) {
+            NotenResolver nr= new NotenResolver(getActivity());
+            s=nr.getNoten();
+            return null;
+        }
+
+        }
 }

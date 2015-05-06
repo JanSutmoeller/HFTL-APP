@@ -24,4 +24,5 @@ dependencies {
     compile 'com.google.android.gms:play-services:7.0.0'
     compile 'com.android.support:support-v4:22.0.0'
     compile files('jsoup-1.8.1/jsoup-1.8.1.jar')
+
 }
