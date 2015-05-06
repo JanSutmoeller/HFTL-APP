@@ -25,6 +25,7 @@
     <string name="todo">Hier muss noch was gemacht werden</string>
 
     <!-- Inhalt vom Einstellungsmenü-->
+    <string name="key_username">username</string>
     <string name="txt_einstell_cat_qis">HIS/QIS</string>
     <string name="text_einstell_qis_user">Benutzername</string>
     <string name="text_einstell_qis_pw">Password</string>
