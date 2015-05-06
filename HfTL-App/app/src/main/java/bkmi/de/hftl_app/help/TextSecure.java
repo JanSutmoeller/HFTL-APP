@@ -6,6 +6,7 @@ import android.util.Base64;
 
 import java.security.*;
 import java.security.spec.AlgorithmParameterSpec;
+import java.util.Arrays;
 
 import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;
@@ -39,9 +40,9 @@ public class TextSecure {
 
     public AlgorithmParameterSpec getIV()
     {
-        byte bla[]= new byte[16];
-        byte[] iv = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, };
-        bla = getIMEI(context).getBytes();
+        byte bla[]= getIMEI(context).getBytes();
+        byte[] iv;
+        iv = java.util.Arrays.copyOf(bla, 16);
         IvParameterSpec ivParameterSpec;
         ivParameterSpec = new IvParameterSpec(iv);
 
