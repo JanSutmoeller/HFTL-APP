@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HfTL-App.iml" filepath="$PROJECT_DIR$/HfTL-App.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/jsoup-1.8.1/jsoup-1.8.1.iml" filepath="$PROJECT_DIR$/app/jsoup-1.8.1/jsoup-1.8.1.iml" />
     </modules>
   </component>
 </project>
+
