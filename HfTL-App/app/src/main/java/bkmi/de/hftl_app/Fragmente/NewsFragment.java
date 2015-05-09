@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -19,6 +20,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import bkmi.de.hftl_app.NewsActivity;
 import bkmi.de.hftl_app.NewsClickedActivity;
@@ -68,6 +70,22 @@ public class NewsFragment extends ListFragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_news, container, false);
         //zeigeNews();
+
+
+        // Custom Typeface - Einbinden der Schriftarten nach CI/CD
+
+        //Überschrift "hl" mit ORCA
+
+        TextView hl = (TextView) rootView.findViewById(R.id.hl_News);
+        Typeface headline = Typeface.createFromAsset(getActivity().getAssets(), "fonts/OCRA.TTF");
+        hl.setTypeface(headline);
+
+
+
+
+
+
+
 
         return rootView;
     }

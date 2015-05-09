@@ -1,6 +1,7 @@
 package bkmi.de.hftl_app;
 
 import android.app.ProgressDialog;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -28,10 +29,24 @@ public class NewsClickedActivity extends ActionBarActivity {
         final Bundle extras = getIntent().getExtras();
         url=extras.getString(NewsFragment.TERMINDETAIL);
 
-        tv1 = (TextView) findViewById(R.id.tv_news_clicked1);
-        tv2 = (TextView) findViewById(R.id.tv_news_clicked2);
-        tv3 = (TextView) findViewById(R.id.tv_news_clicked3);
-        tv4 = (TextView) findViewById(R.id.tv_news_clicked4);
+        tv1 = (TextView) findViewById(R.id.tv_news_date);
+        Typeface datum = Typeface.createFromAsset(this.getAssets(), "fonts/TeleGrotNorm.ttf");
+        tv1.setTypeface(datum);
+
+
+        tv2 = (TextView) findViewById(R.id.tv_news_hl1);
+        Typeface headline1 = Typeface.createFromAsset(this.getAssets(), "fonts/OCRA.TTF");
+        tv2.setTypeface(headline1);
+
+        tv3 = (TextView) findViewById(R.id.tv_news_hl2);
+        Typeface headline2 = Typeface.createFromAsset(this.getAssets(), "fonts/TeleGrotNorm.ttf");
+        tv3.setTypeface(headline2);
+
+
+        tv4 = (TextView) findViewById(R.id.tv_news_content);
+        Typeface inhalt = Typeface.createFromAsset(this.getAssets(), "fonts/TeleGrotNorm.ttf");
+        tv4.setTypeface(inhalt);
+
         new DetailHelper().execute();
 
 

@@ -1,30 +1,71 @@
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/bkmi.de.hftl_app"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
     <!--tools:context=".NewsFragment"-->
 
-    <Button
+    <GridLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_news_refresh"
-        android:id="@+id/newsbutton"
-        android:background="@color/magenta"
-        />
+        android:layout_height="125dp"
+        android:background="@color/weiss"
+        android:rowCount="4"
+        android:columnCount="4"
+        android:id="@+id/TOP_wrapper"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="194dp"
+            android:layout_height="48dp"
+            android:id="@+id/imageView"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:src="@drawable/logo_hftl"
+            android:padding="8dp"/>
+
+        <Button
+            android:layout_width="148dp"
+            android:layout_height="48dp"
+            android:id="@+id/newsbutton"
+            android:text="@string/btn_news_refresh"
+            android:layout_column="3"
+            android:layout_row="0"
+            android:padding="8dp"
+            android:background="@color/grün"
+            android:textColor="@color/weiss"
+            android:layout_gravity="center"
+         />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="News aus der HFT-Leipzig"
+            android:id="@+id/hl_News"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:width="180dp"
+            android:padding="8dp"
+            android:textColor="@color/grün"
+            android:textStyle="bold" />
+
+    </GridLayout>
+
+
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textFilterEnabled="true"
-        android:id="@+id/android:list"/>
+        android:id="@+id/android:list"
+        android:padding="8dp"
+              />
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/android:empty"
         android:text="@string/list_news_empty"/>
-
 </LinearLayout>
-
