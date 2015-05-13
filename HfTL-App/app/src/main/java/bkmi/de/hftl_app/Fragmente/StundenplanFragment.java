@@ -3,7 +3,7 @@ package bkmi.de.hftl_app.Fragmente;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,10 +24,10 @@ public class StundenplanFragment extends Fragment {
     private static final String ARG_SECTION_NUMBER = "section_number";
 
     /**
-     * Erstellt ein neues NotenFragment.
+     * Erstellt ein neues StundenplanFragment.
      */
-    public static NotenFragment newInstance(int sectionNumber) {
-        NotenFragment fragment = new NotenFragment();
+    public static StundenplanFragment newInstance(int sectionNumber) {
+        StundenplanFragment fragment = new StundenplanFragment();
         Bundle args = new Bundle();
         args.putInt(ARG_SECTION_NUMBER, sectionNumber);
         fragment.setArguments(args);
@@ -48,7 +48,7 @@ public class StundenplanFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_noten, container, false);
+        return inflater.inflate(R.layout.fragment_stundenplan, container, false);
     }
 
     @Override
