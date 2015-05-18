@@ -13,10 +13,10 @@
     <string name="action_settings">Einstellung</string>
 
     <!-- Inhalt von der News Seite -->
-    <string name="noNetwork">Es ist kein Online-Verbindung vorhanden</string>
+    <string name="noNetwork">Keine Online-Verbindung!</string>
 
     <string name="btn_news_refresh">Aktualisieren</string>
-    <string name="list_news_empty">Keine News verfügbar</string>
+    <string name="list_news_empty">Keine News verfügbar!</string>
 
     <!--Überschrift Activitys -->
     <string name="title_activity_einstellung">Einstellung</string>
@@ -31,6 +31,6 @@
     <string name="text_einstell_qis_pw">Passwort</string>
 
     <!-- Inhalt von der Noten Seite -->
-    <string name="noUsernamePassword">Benutzername und/oder Passwort nicht eingetragen!\nMöchten Sie die Daten jetzt eintragen?</string>
-    <string name="wrongUsernamePassword">Benutzername und/oder Passwort falsch!\nMöchten Sie die Daten jetzt ändern?</string>
+    <string name="noUsernamePassword">Benutzername/Passwort nicht eingetragen!\nDaten jetzt eintragen?</string>
+    <string name="wrongUsernamePassword">Benutzername/Passwort falsch!\nDaten jetzt ändern?</string>
 </resources>
