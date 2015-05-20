@@ -8,11 +8,11 @@ Dozentin des Moduls ist Profn. Dr.-Ing. Sabine Wieland.
 
 studentische Ansprechpartner:
 
-Stephan Kaden
-Stefan Czogalla
-Maik Lorenz
-Georg Ebert
-Jan Sutmöller
-Andrej Dederer
-Patrick Kunze
+Stephan Kaden,
+Stefan Czogalla,
+Maik Lorenz,
+Georg Ebert,
+Jan Sutmöller,
+Andrej Dederer,
+Patrick Kunze,
 Christoph Matthies
