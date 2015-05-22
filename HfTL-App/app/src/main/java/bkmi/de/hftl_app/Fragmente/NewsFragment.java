@@ -80,11 +80,10 @@ public class NewsFragment extends ListFragment {
         Typeface headline = Typeface.createFromAsset(getActivity().getAssets(), "fonts/OCRA.TTF");
         hl.setTypeface(headline);
 
-
-
-
-
-
+        /*
+        TextView bp = (TextView) rootView.findViewById(R.id.bp_News);
+        Typeface bulletpoint = Typeface.createFromAsset(getActivity().getAssets(), "fonts/WINGDNG3.TTF");
+        bp.setTypeface(bulletpoint);*/
 
 
         return rootView;
@@ -133,7 +132,7 @@ public class NewsFragment extends ListFragment {
     @Override
     public void onStart() {
         super.onStart();
-        button1 = (Button) getView().findViewById(R.id.newsbutton);
+        button1 = (Button) getView().findViewById(R.id.button_refresh_news);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

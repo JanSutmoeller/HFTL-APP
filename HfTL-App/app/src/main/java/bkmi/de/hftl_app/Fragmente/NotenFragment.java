@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.TextView;
+import android.graphics.Typeface;
 
 import bkmi.de.hftl_app.NewsActivity;
 import bkmi.de.hftl_app.R;
@@ -52,7 +54,21 @@ public class NotenFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_noten, container, false);
+
+        //zeige Notenview
+
+        View notenView = inflater.inflate(R.layout.fragment_noten, container, false);
+
+        // Custom Typeface - Einbinden der Schriftarten nach CI/CD
+
+        //Überschrift "hl" mit ORCA
+
+        TextView hl = (TextView) notenView.findViewById(R.id.hl_Noten);
+        Typeface headline = Typeface.createFromAsset(getActivity().getAssets(), "fonts/OCRA.TTF");
+        hl.setTypeface(headline);
+
+
+        return notenView;
     }
 
     @Override
@@ -73,7 +89,7 @@ public class NotenFragment extends Fragment {
     public void onStart() {
         super.onStart();
 
-        tv = (TextView) getActivity().findViewById(R.id.test);
+       // tv = (TextView) getActivity().findViewById(R.id.test);
 
         /*Beispiel wie man auf verschlüsselte Daten zugreift
 

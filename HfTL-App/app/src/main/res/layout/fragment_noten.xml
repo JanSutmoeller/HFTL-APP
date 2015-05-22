@@ -1,15 +1,83 @@
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:foo="http://schemas.android.com/bkmi.de.hftl_app"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="bkmi.de.hftl_app.Fragmente.NotenFragment">
+    <!--tools:context=".NewsFragment"-->
 
-    <TextView android:id="@+id/test" android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/todo" />
+    <!-- LinearLayout "header" für die Überschrift -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/weiss"
+        android:id="@+id/noten_header"
+        android:padding="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Noten_headline"
+            android:id="@+id/hl_Noten"
+            android:width="180dp"
+            android:textColor="@color/grün"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <!-- // LinearLayout "header" für die Überschrift -->
 
-</FrameLayout>
-</ScrollView>
+    <!-- LinearLayout "footer" für das Logo und Button  -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/weiss"
+        android:id="@+id/noten_footer"
+        android:padding="8dp"
+        android:layout_alignParentBottom="true">
+
+        <!-- Logo der HFTL -->
+        <ImageView
+            android:layout_width="194dp"
+            android:layout_height="48dp"
+            android:id="@+id/Logo"
+            android:src="@drawable/logo_hftl"
+            android:padding="4dp"
+            android:contentDescription="Logo der HFTL"/>
+
+        <!-- Button "Aktualisierung" -->
+        <Button
+            android:layout_width="148dp"
+            android:layout_height="48dp"
+            android:id="@+id/noten_refresh"
+            android:text="@string/btn_news_refresh"
+            android:padding="4dp"
+            android:background="@color/grün"
+            android:textColor="@color/weiss"
+            android:layout_gravity="end"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"/>
+
+    </LinearLayout>
+    <!-- // LinearLayout "footer" für das Logo und Button  -->
+
+    <!-- ListView für die übergebenen Noten-Items -->
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textFilterEnabled="true"
+        android:id="@+id/android:list"
+        android:padding="4dp"
+        android:layout_below="@id/noten_header"
+        android:layout_above="@id/noten_footer"/>
+    <!-- // ListView für die übergebenen Noten-Items -->
+
+    <!-- ListView für empty List -->
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/android:empty"
+        android:text="@string/list_news_empty"
+        android:layout_below="@id/android:list"
+        android:layout_above="@id/noten_footer"/>
+    <!-- // ListView für empty List -->
+</RelativeLayout>

@@ -39,7 +39,7 @@ public class NewsClickedActivity extends ActionBarActivity {
         tv2.setTypeface(headline1);
 
         tv3 = (TextView) findViewById(R.id.tv_news_hl2);
-        Typeface headline2 = Typeface.createFromAsset(this.getAssets(), "fonts/TeleGrotNorm.ttf");
+        Typeface headline2 = Typeface.createFromAsset(this.getAssets(), "fonts/TeleGrotFett.ttf");
         tv3.setTypeface(headline2);
 
 
