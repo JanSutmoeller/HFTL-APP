@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.22)  24 APR 2015 15:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.22)  3 MAY 2015 19:10
 entering extended mode
 **Projektdokumentation.tex
 
-(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Lastenheft\Test_Jan\Projektdokum
-entation.tex
+(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Dokumentation\erste_Ausarbeitung
+_Jan\Projektdokumentation.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -936,10 +936,14 @@ Package scrkbase Info: You've told me to extend the font selection of the
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\placeins\placeins.sty"
 Package: placeins 2005/04/18  v 2.2
 )
-(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Lastenheft\Test_Jan\Projektdokum
-entation.aux
-(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Lastenheft\Test_Jan\01_Titel/01_
-titel.aux))
+(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Dokumentation\erste_Ausarbeitung
+_Jan\Projektdokumentation.aux
+(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Dokumentation\erste_Ausarbeitung
+_Jan\01_Titel/01_titel.aux)
+
+LaTeX Warning: Label `img:grafik-dummy' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
 LaTeX Font Info:    ... okay on input line 78.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
@@ -1017,10 +1021,10 @@ LaTeX Info: Redefining \ref on input line 78.
 LaTeX Info: Redefining \pageref on input line 78.
 LaTeX Info: Redefining \nameref on input line 78.
 
-(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Lastenheft\Test_Jan\Projektdokum
-entation.out)
-(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Lastenheft\Test_Jan\Projektdokum
-entation.out)
+(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Dokumentation\erste_Ausarbeitung
+_Jan\Projektdokumentation.out)
+(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Dokumentation\erste_Ausarbeitung
+_Jan\Projektdokumentation.out)
 \@outlinefile=\write4
 LaTeX Info: Redefining \microtypecontext on input line 78.
 Package microtype Info: Generating PDF output.
@@ -1037,11 +1041,12 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Lastenheft\Test_Jan\01_Titel/01_
-titel.tex
+(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Dokumentation\erste_Ausarbeitung
+_Jan\01_Titel/01_titel.tex
 LaTeX Font Info:    Try loading font information for FML+futmi on input line 2.
 
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fourier\fmlfutmi.fd"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fourier\fmlfutmi.fd"
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
@@ -1072,7 +1077,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\mt-msb.cfg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<img/HFTL-Logo.pdf, id=79, 478.00987pt x 264.18701pt>
+<img/HFTL-Logo.pdf, id=95, 478.00987pt x 264.18701pt>
 File: img/HFTL-Logo.pdf Graphic file (type pdf)
  <use img/HFTL-Logo.pdf>
 Package pdftex.def Info: img/HFTL-Logo.pdf used on input line 6.
@@ -1092,10 +1097,9 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 2--66
 
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Jan/Desktop/GitH
-ub/HFTL-APP/HFTL-APP/Lastenheft/Test_Jan/img/HFTL-Logo.pdf>]
+ub/HFTL-APP/HFTL-APP/Dokumentation/erste_Ausarbeitung_Jan/img/HFTL-Logo.pdf>]
 LaTeX Font Info:    Try loading font information for T1+cmss on input line 95.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 Package microtype Info: Loading generic settings for font family
@@ -1105,8 +1109,8 @@ Package microtype Info: Loading generic settings for font family
 Package tocbasic Info: character protrusion at toc deactivated on input line 95
 .
 
-(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Lastenheft\Test_Jan\Projektdokum
-entation.toc
+(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Dokumentation\erste_Ausarbeitung
+_Jan\Projektdokumentation.toc
 Overfull \hbox (8.91566pt too wide) in paragraph at lines 11--11
  [][] [][][]\T1/futs/b/n/12 Abkürzungen, No-men-kla-tur, fach-li-che Zu-sam-men
 -hän-ge, Da-ten-hier- 
@@ -1117,8 +1121,18 @@ Overfull \hbox (8.91566pt too wide) in paragraph at lines 11--11
 Package tocbasic Info: character protrusion at lof deactivated on input line 96
 .
 
-(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Lastenheft\Test_Jan\Projektdokum
-entation.lof)
+(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Dokumentation\erste_Ausarbeitung
+_Jan\Projektdokumentation.lof
+LaTeX Font Info:    Try loading font information for TS1+futs on input line 3.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fourier\ts1futs.fd"
+File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `futs' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+)
 \tf@lof=\write6
 
 
@@ -1136,19 +1150,8 @@ l.98 \newpage
 
 
 ]
-(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Lastenheft\Test_Jan\02_Lastenhef
-t/Lastenheft.tex
-LaTeX Font Info:    Try loading font information for TS1+futs on input line 15.
-
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fourier\ts1futs.fd"
-File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `futs' (encoding: TS1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
+(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Dokumentation\erste_Ausarbeitung
+_Jan\02_Lastenheft/Lastenheft.tex
 Underfull \hbox (badness 10000) in paragraph at lines 9--20
 
  []
@@ -1175,27 +1178,71 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [4] [5])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 106.
-
 [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 106.
+(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Dokumentation\erste_Ausarbeitung
+_Jan\03_Bedienungsanleitung/Bedienungsanleitung.tex
+<03_Bedienungsanleitung/img/appstore.jpg, id=163, 625.8582pt x 214.6419pt>
+File: 03_Bedienungsanleitung/img/appstore.jpg Graphic file (type jpg)
 
-(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Lastenheft\Test_Jan\Projektdokum
-entation.aux
-(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Lastenheft\Test_Jan\01_Titel/01_
-titel.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 106.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 106.
+<use 03_Bedienungsanleitung/img/appstore.jpg>
+Package pdftex.def Info: 03_Bedienungsanleitung/img/appstore.jpg used on input 
+line 15.
+(pdftex.def)             Requested size: 312.92833pt x 107.32068pt.
+
+<03_Bedienungsanleitung/img/hftlapp.png, id=164, 247.67531pt x 412.54124pt>
+File: 03_Bedienungsanleitung/img/hftlapp.png Graphic file (type png)
+
+<use 03_Bedienungsanleitung/img/hftlapp.png>
+Package pdftex.def Info: 03_Bedienungsanleitung/img/hftlapp.png used on input l
+ine 24.
+(pdftex.def)             Requested size: 134.44064pt x 223.9335pt.
+
+Underfull \hbox (badness 5832) in paragraph at lines 30--44
+\T1/futs/m/n/12 (+20) Ihr Kon-to kon-fi-gu-riert ha-ben, kön-nen
+ []
+
+
+Underfull \hbox (badness 2359) in paragraph at lines 30--44
+\T1/futs/m/n/12 (+20) Sie Touch-Down star-ten, in-dem Sie auf
+ []
+
+[7 <C:/Users/Jan/Desktop/GitHub/HFTL-APP/HFTL-APP/Dokumentation/erste_Ausarbeit
+ung_Jan/03_Bedienungsanleitung/img/appstore.jpg> <C:/Users/Jan/Desktop/GitHub/H
+FTL-APP/HFTL-APP/Dokumentation/erste_Ausarbeitung_Jan/03_Bedienungsanleitung/im
+g/hftlapp.png>]
+<03_Bedienungsanleitung/img/perfekt.jpg, id=171, 271.0125pt x 152.57pt>
+File: 03_Bedienungsanleitung/img/perfekt.jpg Graphic file (type jpg)
+
+<use 03_Bedienungsanleitung/img/perfekt.jpg>
+Package pdftex.def Info: 03_Bedienungsanleitung/img/perfekt.jpg used on input l
+ine 60.
+(pdftex.def)             Requested size: 271.01183pt x 152.56963pt.
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
+ [8 <C:/Users/Jan/Desktop/GitHub/HFTL-APP/HFTL-APP/Dokumentation/erste_Ausarbei
+tung_Jan/03_Bedienungsanleitung/img/perfekt.jpg>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
+
+(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Dokumentation\erste_Ausarbeitung
+_Jan\Projektdokumentation.aux
+(C:\Users\Jan\Desktop\GitHub\HFTL-APP\HFTL-APP\Dokumentation\erste_Ausarbeitung
+_Jan\01_Titel/01_titel.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
 Package rerunfilecheck Info: File `Projektdokumentation.out' has not changed.
-(rerunfilecheck)             Checksum: 3C415A25340995EC755233E77647C0FC;1565.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 106.
+(rerunfilecheck)             Checksum: 0C01326534DA9388E1ACDBE112F210FA;1810.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 11270 strings out of 493921
- 173866 string characters out of 3144882
- 326539 words of memory out of 3000000
- 14149 multiletter control sequences out of 15000+200000
- 112363 words of font info for 176 fonts, out of 3000000 for 9000
+ 11356 strings out of 493921
+ 176064 string characters out of 3144882
+ 327684 words of memory out of 3000000
+ 14179 multiletter control sequences out of 15000+200000
+ 114793 words of font info for 203 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  39i,14n,56p,525b,521s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Jan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ec
@@ -1203,9 +1250,9 @@ tt1200.pk>{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on Projektdokumentation.pdf (7 pages, 102977 bytes).
+Output written on Projektdokumentation.pdf (9 pages, 301807 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
- 45214 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 222 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
+ 45261 words of extra memory for PDF output out of 51595 (max. 10000000)
 
