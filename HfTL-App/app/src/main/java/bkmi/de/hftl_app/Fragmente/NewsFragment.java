@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -19,6 +20,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import bkmi.de.hftl_app.NewsActivity;
 import bkmi.de.hftl_app.NewsClickedActivity;
@@ -69,6 +71,21 @@ public class NewsFragment extends ListFragment {
         View rootView = inflater.inflate(R.layout.fragment_news, container, false);
         //zeigeNews();
 
+
+        // Custom Typeface - Einbinden der Schriftarten nach CI/CD
+
+        //Überschrift "hl" mit ORCA
+
+        TextView hl = (TextView) rootView.findViewById(R.id.hl_News);
+        Typeface headline = Typeface.createFromAsset(getActivity().getAssets(), "fonts/OCRA.TTF");
+        hl.setTypeface(headline);
+
+        /*
+        TextView bp = (TextView) rootView.findViewById(R.id.bp_News);
+        Typeface bulletpoint = Typeface.createFromAsset(getActivity().getAssets(), "fonts/WINGDNG3.TTF");
+        bp.setTypeface(bulletpoint);*/
+
+
         return rootView;
     }
 
@@ -115,7 +132,7 @@ public class NewsFragment extends ListFragment {
     @Override
     public void onStart() {
         super.onStart();
-        button1 = (Button) getView().findViewById(R.id.newsbutton);
+        button1 = (Button) getView().findViewById(R.id.button_refresh_news);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

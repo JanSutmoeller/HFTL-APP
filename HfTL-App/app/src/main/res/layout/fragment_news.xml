@@ -1,30 +1,98 @@
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/bkmi.de.hftl_app"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
     <!--tools:context=".NewsFragment"-->
 
-    <Button
+    <!-- header für die Überschrift -->
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_news_refresh"
-        android:id="@+id/newsbutton"
-        android:background="@color/magenta"
-        />
+        android:background="@color/weiss"
+        android:id="@+id/news_header"
+        android:padding="8dp">
 
+        <!-- Dummy TextView für den bulletpoint (Windings) -->
+       <!-- <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bp_News"
+            android:text="u"
+            android:textColor="@color/grün"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"/>
+            -->
+        <!-- Überschrift -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/News_headline"
+            android:id="@+id/hl_News"
+            android:width="180dp"
+            android:textColor="@color/grün"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <!-- // header für die Überschrift -->
+
+    <!-- footer für das Logo und Button  -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/weiss"
+        android:id="@+id/news_footer"
+        android:padding="4dp"
+        android:layout_alignParentBottom="true">
+
+        <!-- Logo der HFTL -->
+        <ImageView
+            android:layout_width="192dp"
+            android:layout_height="48dp"
+            android:id="@+id/Logo"
+            android:src="@drawable/logo_hftl"
+            android:padding="4dp"
+            android:layout_gravity="center"
+            android:contentDescription="Logo der HFTL"/>
+
+        <!-- Button "Aktualisieren" -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:id="@+id/button_refresh_news"
+            android:text="@string/btn_news_refresh"
+            android:padding="8dp"
+            android:background="@color/grün"
+            android:textColor="@color/weiss"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:layout_gravity="right|center_vertical"
+            />
+
+    </LinearLayout>
+    <!-- // footer für das Logo und Button  -->
+
+    <!-- ListView für die übergebenen News-Items -->
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textFilterEnabled="true"
-        android:id="@+id/android:list"/>
+        android:id="@+id/android:list"
+        android:padding="4dp"
+        android:layout_below="@id/news_header"
+        android:layout_above="@id/news_footer"/>
+    <!-- // ListView für die übergebenen News-Items -->
 
+    <!-- ListView für empty List -->
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/android:empty"
-        android:text="@string/list_news_empty"/>
-
-</LinearLayout>
-
+        android:text="@string/list_news_empty"
+        android:layout_below="@id/android:list"
+        android:layout_above="@id/news_footer"/>
+    <!-- // ListView für empty List -->
+</RelativeLayout>
