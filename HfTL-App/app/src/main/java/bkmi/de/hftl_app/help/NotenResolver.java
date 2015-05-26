@@ -29,7 +29,7 @@ public class NotenResolver {
     HttpsURLConnection connection;
     CookieManager cookieManager;
 
-    public NotenResolver(Context context) {
+    public NotenResolver(Context context) throws wrongUserdataException{
         this.context = context;
 
         s="";   //Testzwecke
@@ -42,29 +42,24 @@ public class NotenResolver {
     }
 
     //Login im QIS durchführen
-    private boolean init() {
+    private void init() throws wrongUserdataException{
 
         String user;
         String password;
 
         //Zugriff auf die Daten in den Einstellungen
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
-        user = sp.getString("username", "Fehler");
 
         //Entschlüsseln
         TextSecure ts;
         try {
             ts = new TextSecure(context);
             password = ts.decrypt(sp.getString("password", ""));
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
+            user = ts.decrypt(sp.getString("username", ""));
 
-        //Hier erfolgt der eigentliche Login über eine HTTP Post methode
-        String urlParameters = "asdf=" + user + "&fdsa=" + password;
+            //Hier erfolgt der eigentliche Login über eine HTTP Post methode
+            String urlParameters = "asdf=" + user + "&fdsa=" + password;
 
-        try {
             url = new URL("https://qisweb.hispro.de/tel/rds?state=user&type=1&;category=auth.login&startpage=portal.vm&breadCrumbSource=portal");
             connection = (HttpsURLConnection) url.openConnection();
             connection.setRequestMethod("POST");
@@ -80,24 +75,28 @@ public class NotenResolver {
             writer.flush();
             connection.getContent();
 
-            //TODO Hier muss noch überprüft werden ob der Login erfolgreich war
-
-            return true;
-
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return false;
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
+        //testen ob Login erfolgreich
+        if(!testeZugang()) throw new wrongUserdataException();
+
     }
 
     //Zugriff auf Noten
-    public String getNoten() {
+    public String getNoten() throws wrongUserdataException{
 
         Element element;
         Elements elements;
 
+        //testen ob Login erfolgreich
+        if(!testeZugang()) throw new wrongUserdataException();
+
+        //Navigation zur richtigen Seite
         String notenspiegelInfo= qisNavigation();
 
+        //eigentliche Abfrage der Noten --- es werden nur die Elemente ausgewertet die "/QIS/images//his_info3.gif" als src haben. Siehe Html-Code von QIS
         url = null;
         try {
             url = new URL(notenspiegelInfo);
@@ -106,7 +105,9 @@ public class NotenResolver {
 
             elements = doc.getElementsByAttributeValue("src", "/QIS/images//his_info3.gif");
             for (Element ele : elements) {
+                //Zwei Elemente Nach oben, siehe Html-Code
                 element = ele.parent().parent().parent();
+                //Die beiden Werte für Fach und Note
                 s += "Fach: " + element.child(1).ownText()+ " Note: " + element.child(3).ownText() + "\n";
             }
         } catch (IOException e) {
@@ -145,28 +146,32 @@ public class NotenResolver {
             // iterate HttpCookie object
         } catch (IOException e1) {
             e1.printStackTrace();
+
         }
 
         return "FEHLER";
     }
 
-    //Die Methode soll als Platzhalter für die Login-kontrolle dienen
-    //TODO Programmierung :-)
-    private String testeZugang() {
-
-        /*
-        BufferedReader reader;
-            try (OutputStreamWriter writer = new OutputStreamWriter(connection.getOutputStream())) {
-                writer.write(urlParameters);
-                writer.flush();
-                reader = new BufferedReader(
-                        new InputStreamReader(connection.getInputStream()));
-                for (String line; (line = reader.readLine()) != null;)
-                    s+=line;
+    //Die Methode kontrolliert ob der Login auf der QIS-Seite erfolgreich war
+    //falls Login erfolgreich wird true zurückgegeben
+    private boolean testeZugang(){
+        Elements e;
+        String seite = "https://qisweb.hispro.de/tel/rds?state=user&type=0&category=menu.browse&breadCrumbSource=portal&startpage=portal.vm";
+        try {
+            url = new URL(seite);
+            connection = (HttpsURLConnection) url.openConnection();
+            doc = Jsoup.parse(connection.getInputStream(), "UTF-8", seite);
+            e = doc.getElementsByAttribute("href");
+            if(e.size()<22) {
+                return false;
             }
-            reader.close();
-         */
 
-        return "möp";
+        }
+        catch (Exception e1){
+            e1.printStackTrace();
+            return false;
+        }
+        return true;
     }
 }
+
