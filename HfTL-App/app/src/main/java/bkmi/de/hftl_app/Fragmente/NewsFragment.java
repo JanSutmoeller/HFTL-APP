@@ -25,6 +25,7 @@ import android.widget.TextView;
 import bkmi.de.hftl_app.NewsActivity;
 import bkmi.de.hftl_app.NewsClickedActivity;
 import bkmi.de.hftl_app.R;
+import bkmi.de.hftl_app.help.CustomAdapter;
 import bkmi.de.hftl_app.help.NewsResolver;
 
 import static android.R.layout.simple_list_item_1;
@@ -43,6 +44,9 @@ public class NewsFragment extends ListFragment {
     String stringArray[];
     Button button1;
     ArrayAdapter<String> arrayAdapter;
+    String headlineList[];
+    String dateList[];
+    String contentList[];
 
     /**
      * The fragment argument representing the section number for this
@@ -92,15 +96,12 @@ public class NewsFragment extends ListFragment {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-
-        switch (position){
-            case 0:
-                break;
-            default:
-                intent = new Intent(getActivity(), NewsClickedActivity.class);
-                intent.putExtra(TERMINDETAIL, newsResolver.getUrlAsString(position-1));
-                startActivity(intent);
-                break;
+             switch (position){
+                default:
+                    intent = new Intent(getActivity(), NewsClickedActivity.class);
+                    intent.putExtra(TERMINDETAIL, newsResolver.getUrlAsString(position));
+                    startActivity(intent);
+                    break;
         }
     }
 
@@ -178,7 +179,11 @@ public class NewsFragment extends ListFragment {
         @Override
         protected Long doInBackground(String... params) {
             newsResolver = new NewsResolver("https://www.hft-leipzig.de/de/studieninteressierte/service/news.html");
-            stringArray = newsResolver.getTermineStringArray();
+            dateList=newsResolver.writeNewsListDate();
+            headlineList=newsResolver.writeNewsListHeadline();
+            contentList=newsResolver.writeNewsListContent();
+
+
 
             return null;
         }
@@ -187,11 +192,12 @@ public class NewsFragment extends ListFragment {
         protected void onPostExecute(Long aLong) {
             super.onPostExecute(aLong);
 
-            arrayAdapter = new ArrayAdapter<String>(getActivity(), simple_list_item_1, stringArray);
+           // arrayAdapter = new ArrayAdapter<String>(getActivity(), simple_list_item_1, stringArray);
             getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    setListAdapter(arrayAdapter);
+                  //  setListAdapter(arrayAdapter);
+                    setListAdapter(new CustomAdapter(getActivity(), dateList, headlineList, contentList));
                 }
             });
         }

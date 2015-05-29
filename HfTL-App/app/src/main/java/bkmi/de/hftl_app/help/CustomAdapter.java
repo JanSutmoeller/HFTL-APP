@@ -1,4 +1,5 @@
 package bkmi.de.hftl_app.help;
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,26 +10,30 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import bkmi.de.hftl_app.Fragmente.NewsFragment;
 import bkmi.de.hftl_app.NewsActivity;
 import bkmi.de.hftl_app.R;
 
 public class CustomAdapter extends BaseAdapter{
-    String [] result;
+    String [] date;
+    String [] headline;
+    String [] content;
     Context context;
-    int [] imageId;
+    int [] image;
     private static LayoutInflater inflater=null;
-    public CustomAdapter(NewsActivity mainActivity, String[] prgmNameList, int[] prgmImages) {
+    public CustomAdapter(Activity mainActivity, String[] dateList, String[] headlineList, String[] contentList) {
         // TODO Auto-generated constructor stub
-        result=prgmNameList;
+        date=dateList;
+        content=contentList;
+        headline=headlineList;
         context=mainActivity;
-        imageId=prgmImages;
         inflater = ( LayoutInflater )context.
                 getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
     @Override
     public int getCount() {
         // TODO Auto-generated method stub
-        return result.length;
+        return date.length;
     }
 
     @Override
@@ -45,8 +50,9 @@ public class CustomAdapter extends BaseAdapter{
 
     public class Holder
     {
-        TextView tv;
-        ImageView img;
+        TextView tv_date;
+        TextView tv_headline;
+        TextView tv_content;
     }
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
@@ -54,17 +60,14 @@ public class CustomAdapter extends BaseAdapter{
         Holder holder=new Holder();
         View rowView;
         rowView = inflater.inflate(R.layout.news_list, null);
-        holder.tv=(TextView) rowView.findViewById(R.id.textView1);
-        holder.img=(ImageView) rowView.findViewById(R.id.imageView1);
-        holder.tv.setText(result[position]);
-        holder.img.setImageResource(imageId[position]);
-        rowView.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                Toast.makeText(context, "You Clicked "+result[position], Toast.LENGTH_LONG).show();
-            }
-        });
+        holder.tv_date=(TextView) rowView.findViewById(R.id.newslist_date);
+        holder.tv_date.setText(date[position]);
+        holder.tv_headline=(TextView) rowView.findViewById(R.id.newslist_headline);
+        holder.tv_headline.setText(headline[position]);
+        holder.tv_content=(TextView) rowView.findViewById(R.id.newslist_content);
+        holder.tv_content.setText(content[position]);
+
+
         return rowView;
     }
 

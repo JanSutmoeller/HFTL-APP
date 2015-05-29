@@ -47,29 +47,73 @@ public class NewsResolver {
             HftlEvent termin = new HftlEvent();
             termin.time= elements.get(i).child(0).ownText();
             termin.url="https://www.hft-leipzig.de/"+elements.get(i).child(1).child(0).attr("href");
-            termin.text=elements.get(i).child(1).child(0).ownText();
+          //  termin.text=elements.get(i).child(1).child(0).ownText();
+            termin.text=elements.get(i).child(2).text();
+            termin.head=elements.get(i).child(1).text();
+
             termine.add(termin);
         }
+        if(elements.size()==0){
+            //TODO: Ausgabe in NewsList, wenn Offline
+
+        }
     }
+
+
 
     /*
     * Erzeugt eine String-Array mit allen Terminen
      */
+    /*
     public String[] getTermineStringArray(){
 
         getHftlEvent();
         if(termine.size()==0) return null; //Falls keine Termine anstehen
 
-        String[] s = new String[termine.size()+1];
+        String[] s = new String[termine.size()];
         s[0]="Die aktuellen News sind:";   // Für die ListView das erste Element,
 
-        int i = 1;
+        int i = 0;
         for(HftlEvent termin:termine ){
             s[i++]= "Am " + termin.time + ":\n" + termin.text + "\nFür mehr Infos antippen." ;
         }
 
         return s;
+    }*/
+    public String[] writeNewsListDate(){
+        getHftlEvent();
+        int i = 0;
+        String[] s = new String[termine.size()];
+        for(HftlEvent termin:termine ){
+            s[i++]=termin.time;
+        }
+
+        return s;
     }
+    public String[] writeNewsListHeadline(){
+        getHftlEvent();
+        int i = 0;
+        String[] s = new String[termine.size()];
+        for(HftlEvent termin:termine ){
+            s[i++]=termin.head;
+        }
+
+        return s;
+    }
+    public String[] writeNewsListContent(){
+        getHftlEvent();
+        int i = 0;
+        String[] s = new String[termine.size()];
+        for(HftlEvent termin:termine ){
+            s[i++]=termin.text;
+        }
+
+        return s;
+    }
+
+
+
+
 
     /*
     * Gibt die URL des Termines an Position "position" zurück, wird für die Detailanzeige benötigt.
@@ -87,8 +131,8 @@ public class NewsResolver {
 
         s[0]=elements.get(0).child(1).text()+"\n";   //Überschrift
         s[1]=elements.get(0).child(2).text()+"\n";   //Subhead
-        s[2]=elements.get(0).child(0).text();//Zeit
-        s[3]=elements.get(0).child(3).text();   //Text
+        s[2]=elements.get(0).child(0).text();        //Zeit
+        s[3]=elements.get(0).child(3).text();        //Text
 
         return s;
     }

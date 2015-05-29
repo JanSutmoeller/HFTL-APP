@@ -10,4 +10,5 @@ public class HftlEvent {
     public String time;
     public String text;
     public String url;
+    public String head;
 }

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.widget.DrawerLayout;
+import android.content.Context;
 
 import bkmi.de.hftl_app.Fragmente.NavigationDrawerFragment;
 import bkmi.de.hftl_app.Fragmente.NewsFragment;
@@ -23,6 +24,8 @@ import bkmi.de.hftl_app.Fragmente.StundenplanFragment;
 
 public class NewsActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+
+    Context context;
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -42,6 +45,8 @@ public class NewsActivity extends ActionBarActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
+
+        context=this;
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
