@@ -4,7 +4,8 @@
             android:title="@string/txt_einstell_cat_qis">
             <EditTextPreferenceSecure
                 android:key="@string/key_username"
-                android:title="@string/text_einstell_qis_user"/>
+                android:title="@string/text_einstell_qis_user"
+                android:inputType="number"/>
             <EditTextPreferenceSecure
                 android:key="password"
                 android:title="@string/text_einstell_qis_pw"

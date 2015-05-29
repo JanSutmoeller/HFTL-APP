@@ -2,6 +2,8 @@ package bkmi.de.hftl_app.help;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteStatement;
 import android.preference.PreferenceManager;
 
 import org.jsoup.Jsoup;
@@ -16,6 +18,9 @@ import java.net.CookieManager;
 import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
+
+import bkmi.de.hftl_app.Database.NotenDB;
+import bkmi.de.hftl_app.Database.NotenTabelle;
 
 /**
  * Klasse die eine Verbindung zu HIS/QIS aufbaut und dort die Noten abfragt
@@ -85,7 +90,7 @@ public class NotenResolver {
     }
 
     //Zugriff auf Noten
-    public String getNoten() throws wrongUserdataException{
+    public boolean getNoten() throws wrongUserdataException{
 
         Element element;
         Elements elements;
@@ -99,22 +104,47 @@ public class NotenResolver {
         //eigentliche Abfrage der Noten --- es werden nur die Elemente ausgewertet die "/QIS/images//his_info3.gif" als src haben. Siehe Html-Code von QIS
         url = null;
         try {
+            NotenDB notenDB = NotenDB.getInstance(context);
+
+            SQLiteDatabase sqLiteDatabase = notenDB.getWritableDatabase();
+            sqLiteDatabase.delete("notendatenbank", null, null);
+            SQLiteStatement sqLiteStatement = sqLiteDatabase.compileStatement(NotenTabelle.SQL_INSERT_Noten);
             url = new URL(notenspiegelInfo);
             connection = (HttpsURLConnection) url.openConnection();
             doc = Jsoup.parse(connection.getInputStream(), "UTF-8", notenspiegelInfo);
 
             elements = doc.getElementsByAttributeValue("src", "/QIS/images//his_info3.gif");
+            if(elements.size()==0){
+                sqLiteStatement.bindString(1 , "keine Noten vorhanden");
+                sqLiteStatement.bindString(2, "");
+                sqLiteStatement.bindString(3 , "");
+                sqLiteStatement.bindString(4, "");
+
+                sqLiteStatement.executeInsert();
+
+            }
             for (Element ele : elements) {
                 //Zwei Elemente Nach oben, siehe Html-Code
                 element = ele.parent().parent().parent();
-                //Die beiden Werte für Fach und Note
-                s += "Fach: " + element.child(1).ownText()+ " Note: " + element.child(3).ownText() + "\n";
+
+                /*Speichert die Werte in der "notendatenbank"
+                Wert 1 --> Fach
+                Wert 2 --> Semester
+                Wert 3 --> Note
+                Wert 4 --> Link zum Notenspiegel
+                 */
+                sqLiteStatement.bindString(1 , element.child(1).ownText());
+                sqLiteStatement.bindString(2, element.child(2).ownText());
+                sqLiteStatement.bindString(3 , element.child(3).ownText());
+                sqLiteStatement.bindString(4, element.child(3).child(0).attr("href"));
+
+                sqLiteStatement.executeInsert();  //Schreiben der Werte in die DB
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        return s;
+        return true;
 
     }
 

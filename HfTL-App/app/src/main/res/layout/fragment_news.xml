@@ -60,16 +60,17 @@
 
         <!-- Button "Aktualisieren" -->
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="48dp"
             android:id="@+id/button_refresh_news"
             android:text="@string/btn_news_refresh"
-            android:padding="8dp"
+            android:padding="4dp"
             android:background="@color/grün"
             android:textColor="@color/weiss"
-            android:gravity="center"
-            android:textSize="16dp"
-            android:layout_gravity="right|center_vertical"
+            android:layout_gravity="end"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="8dp"
             />
 
     </LinearLayout>
