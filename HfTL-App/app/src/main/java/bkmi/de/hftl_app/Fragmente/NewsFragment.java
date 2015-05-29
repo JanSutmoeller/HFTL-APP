@@ -143,7 +143,7 @@ public class NewsFragment extends ListFragment {
 
     private void zeigeNews() {
 
-        if(isOnline()){
+        if(isOnline(getActivity())){
             NewsHelper nh = new NewsHelper();
             nh.execute();
         }
@@ -164,9 +164,9 @@ public class NewsFragment extends ListFragment {
     }
 
     //Netzwerkstatus abrufen
-    public boolean isOnline() {
+    public static boolean isOnline(Context context) {
         ConnectivityManager cm =
-                (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+                (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netInfo = cm.getActiveNetworkInfo();
         return netInfo != null && netInfo.isConnectedOrConnecting();
     }

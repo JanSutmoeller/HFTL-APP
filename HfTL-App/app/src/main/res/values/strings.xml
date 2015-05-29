@@ -13,11 +13,10 @@
     <string name="action_settings">Einstellung</string>
 
     <!-- Inhalt von der News Seite -->
-<<<<<<< HEAD
+
     <string name="News_headline">News aus der HFT-Leipzig</string>
     <string name="noNetwork">Keine Online-Verbindung!</string>
 
->>>>>>> c17c85fc024bd003c4ac84b65c9b1d1bf2cc1086
     <string name="btn_news_refresh">Aktualisieren</string>
     <string name="list_news_empty">Keine News verfügbar!</string>
 
@@ -35,10 +34,6 @@
     <string name="txt_einstell_cat_qis">HIS/QIS</string>
     <string name="text_einstell_qis_user">Benutzername</string>
     <string name="text_einstell_qis_pw">Passwort</string>
-<<<<<<< HEAD
-
-=======
->>>>>>> c17c85fc024bd003c4ac84b65c9b1d1bf2cc1086
 
     <!-- Inhalt von der Noten Seite -->
     <string name="noUsernamePassword">Benutzername/Passwort nicht eingetragen!\nDaten jetzt eintragen?</string>

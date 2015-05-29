@@ -5,15 +5,23 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 import android.graphics.Typeface;
+import android.widget.Toast;
+
+import bkmi.de.hftl_app.Database.NotenDB;
+import bkmi.de.hftl_app.Database.NotenTabelle;
 import bkmi.de.hftl_app.EinstellungActivity;
 import bkmi.de.hftl_app.NewsActivity;
 import bkmi.de.hftl_app.R;
@@ -21,7 +29,9 @@ import bkmi.de.hftl_app.help.NotenResolver;
 import bkmi.de.hftl_app.help.TextSecure;
 import bkmi.de.hftl_app.help.wrongUserdataException;
 
-public class NotenFragment extends Fragment {
+import static android.R.layout.simple_list_item_1;
+
+public class NotenFragment extends ListFragment {
 
     /**
      * The fragment argument representing the section number for this
@@ -29,7 +39,10 @@ public class NotenFragment extends Fragment {
      */
     private static final String ARG_SECTION_NUMBER = "section_number";
 
-    TextView tv;
+    NotenDB notenDB;
+    String stringArray[];
+    ArrayAdapter<String> arrayAdapter;
+    Button button;
 
     /**
      * Erstellt ein neues NotenFragment.
@@ -78,7 +91,10 @@ public class NotenFragment extends Fragment {
         super.onAttach(activity);
         ((NewsActivity) activity).onSectionAttached(
                 getArguments().getInt(ARG_SECTION_NUMBER));
-        }
+
+        notenDB = NotenDB.getInstance(getActivity());
+
+    }
 
     @Override
     public void onDetach() {
@@ -88,63 +104,161 @@ public class NotenFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        button = (Button) getView().findViewById(R.id.noten_refresh);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!testeBenutzerdaten()) {
+                    keineBenutzerdaten();
+                } else {
+                    if(NewsFragment.isOnline(getActivity())) {
+                        NotenHelper nh = new NotenHelper();
+                        nh.execute("");
+                    }
+                    else {
+                        Toast toast = Toast.makeText(getActivity(), "keine Online-Verbindung!", Toast.LENGTH_LONG);
+                        toast.show();
+                    }
+                }
+            }
+        });
 
-       // tv = (TextView) getActivity().findViewById(R.id.test);
+        //Prüfen ob Datenbank befüllt
 
-
-        //Kontrolle ob Benutzername und Passwort befüllt sind
-        if(!testeBenutzerdaten()){
-            AlertDialog.Builder adb = new AlertDialog.Builder(getActivity());
-            adb.setMessage(R.string.noUsernamePassword);
-            adb.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(getActivity(), EinstellungActivity.class);
-                    startActivity(intent);
-                } });
-            adb.setNegativeButton("abbrechen", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                } });
-            adb.show();
-            tv.setText("keine Daten vorhanden");
+        Cursor cursor = notenDB.getReadableDatabase().query(NotenTabelle.TABLE_NAME, NotenTabelle.NOTENABFRAGE, null, null, null, null, null);
+        if (cursor.getCount() > 0) {
+            cursor.close();
+            setzeListview(true);
         }
-
-        //falls Benutzername/Password vorhanden --> Noten abfragen
-        else{
-            NotenHelper nh = new NotenHelper();
-            nh.execute("bla");
+        //falls Datenbank leer --> Benutzerdaten eingegeben?
+        else {
+            if (!testeBenutzerdaten()) {
+                keineBenutzerdaten();
+            }
+            //wenn Benutzerdaten richtig Noten abrufen
+            else {
+                if(NewsFragment.isOnline(getActivity())) {
+                    NotenHelper nh = new NotenHelper();
+                    nh.execute("");
+                }
+            }
         }
     }
 
     private boolean testeBenutzerdaten() {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        String username = sp.getString("username","");
-        String password = sp.getString("password","");
+        String username = sp.getString("username", "");
+        String password = sp.getString("password", "");
         TextSecure ts;
         try {
             ts = new TextSecure(getActivity());
-            password= ts.decrypt(password);
-            username= ts.decrypt(username);
+            password = ts.decrypt(password);
+            username = ts.decrypt(username);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return !(username.equals("") || password.equals(""));
+        return !("".equals(username) || "".equals(password));
+    }
+
+    //gibt die Noten als Stringarray zurück...kann noch geändert werden
+    private String[] getNoten() {
+        Cursor cursor = notenDB.getReadableDatabase().query(NotenTabelle.TABLE_NAME, NotenTabelle.NOTENABFRAGE, null, null, null, null, NotenTabelle.SEMSETER);
+        cursor.moveToFirst();
+
+        int i = 0;
+        String[] s = new String[cursor.getCount()];
+        while (!cursor.isAfterLast()) {
+            s[i++] = cursor.getString(0);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return s;
+    }
+
+    //gibt das Semester als Stringarray zurück...kann noch geändert werden
+    private String[] getSemester() {
+        Cursor cursor = notenDB.getReadableDatabase().query(NotenTabelle.TABLE_NAME, NotenTabelle.SEMESTERABFRAGE, null, null, null, null, NotenTabelle.SEMSETER);
+        cursor.moveToFirst();
+
+        int i = 0;
+        String[] s = new String[cursor.getCount()];
+        while (!cursor.isAfterLast()) {
+            s[i++] = cursor.getString(0);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return s;
+    }
+
+    //gibt das Fach als Stringarray zurück...kann noch geändert werden
+    private String[] getFach() {
+        Cursor cursor = notenDB.getReadableDatabase().query(NotenTabelle.TABLE_NAME, NotenTabelle.FACHABFRAGE, null, null, null, null, NotenTabelle.SEMSETER);
+        cursor.moveToFirst();
+
+        int i = 0;
+        String[] s = new String[cursor.getCount()];
+        while (!cursor.isAfterLast()) {
+            s[i++] = cursor.getString(0);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return s;
+    }
+
+    //Fragt die Datenbank ab und befüllt das Listview
+    //Parameter = true wenn die Methode aus dem Hauptprogramm/Thread aufgerufen wird
+    private void setzeListview(boolean bool) {
+        String[] noten = getNoten();
+        String[] semester = getSemester();
+        String[] fach = getFach();
+        stringArray = new String[noten.length];
+
+        for (int i = 0; i < noten.length; i++) {
+            String temp = "";
+            temp += fach[i] + "\n";
+            temp += noten[i] + "\n";
+            temp += semester[i];
+            stringArray[i] = temp;
+        }
+
+        arrayAdapter = new ArrayAdapter<>(getActivity(), simple_list_item_1, stringArray);
+        if (bool) setListAdapter(arrayAdapter);
+        else {
+            getActivity().runOnUiThread(
+                    new Runnable() {
+                        @Override
+                        public void run() {
+                            setListAdapter(arrayAdapter);
+                        }
+                    });
+
+        }
+    }
+
+    //Gibt eine Warnmeldung aus falls die Benutzerdaten falsch sind
+    private void keineBenutzerdaten() {
+        AlertDialog.Builder adb = new AlertDialog.Builder(getActivity());
+        adb.setMessage(R.string.noUsernamePassword);
+        adb.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(getActivity(), EinstellungActivity.class);
+                startActivity(intent);
+            }
+        });
+        adb.setNegativeButton("abbrechen", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+        adb.show();
     }
 
     class NotenHelper extends AsyncTask<String, Integer, Long> {
 
-        String s;
         @Override
         protected void onPostExecute(Long aLong) {
             super.onPostExecute(aLong);
 
-            //ListView befüllen
-            getActivity().runOnUiThread(
-                    new Runnable() {
-                @Override
-                public void run() {
-                    tv.setText(s);
-                }
-            });
+            setzeListview(false);
         }
 
         @Override
@@ -152,7 +266,7 @@ public class NotenFragment extends Fragment {
             NotenResolver nr;
             try {
                 nr = new NotenResolver(getActivity());
-                s=nr.getNoten();
+                nr.getNoten();
             } catch (wrongUserdataException e) {
                 getActivity().runOnUiThread(
                         new Runnable() {
@@ -171,13 +285,13 @@ public class NotenFragment extends Fragment {
                                     }
                                 });
                                 adb.show();
-                                s="keine Daten vorhanden";
+                                setListAdapter(null);
                             }
-                            });
-                        }
+                        });
+            }
 
             return null;
         }
 
-        }
+    }
 }
