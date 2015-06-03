@@ -164,13 +164,13 @@ public class NotenResolver {
             connection = (HttpsURLConnection) url.openConnection();
             doc = Jsoup.parse(connection.getInputStream(), "UTF-8", seite);
             e = doc.getElementsByAttribute("href");
-            seite= e.get(28).attr("href");//Suche Notenspiegel
+            seite= e.get(30).attr("href");//Suche Notenspiegel
 
             url = new URL(seite);
             connection = (HttpsURLConnection) url.openConnection();
             doc = Jsoup.parse(connection.getInputStream(), "UTF-8", seite);
             e = doc.getElementsByAttribute("href");
-            return e.get(29).attr("href");//Suche Leistung anzeigen
+            return e.get(31).attr("href");//Suche Leistung anzeigen
 
 
             // iterate HttpCookie object
