@@ -17,7 +17,9 @@
 \contentsline {subsection}{\numberline {1.6}Projektorganisation}{5}{subsection.1.6}
 \contentsline {subsection}{\numberline {1.7}zeitliche Vorgaben und Deadlines}{6}{subsection.1.7}
 \contentsline {subsection}{\numberline {1.8}Erg\IeC {\"a}nzungen}{6}{subsection.1.8}
-\contentsline {section}{\numberline {2}Benutzerhandbuch}{7}{section.2}
-\contentsline {subsection}{\numberline {2.1}Einf\IeC {\"u}hrung}{7}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Hauptbildschirm}{7}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}E-Mail}{8}{subsection.2.3}
+\contentsline {section}{\numberline {2}Benutzerhandbuch}{8}{section.2}
+\contentsline {subsection}{\numberline {2.1}Funktionsumfang}{8}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Startbildschirm}{9}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Newsansicht}{10}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Noten}{11}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Stundenplan}{13}{subsection.2.5}
