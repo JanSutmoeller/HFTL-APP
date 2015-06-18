@@ -11,4 +11,13 @@
                 android:title="@string/text_einstell_qis_pw"
                 android:password="true"/>
         </PreferenceCategory>
+        <PreferenceCategory
+            android:title="@string/txt_einstell_cat_stunden">
+            <ListPreference
+                android:title="Studiengang"
+                android:summary="Bitte Studiengang auswählen"
+                android:key="studiengang"
+                android:entries="@array/listeStudiengang"
+                android:entryValues="@array/werteStudiengang"/>
+        </PreferenceCategory>
     </PreferenceScreen>

@@ -9,7 +9,6 @@ import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -99,6 +98,7 @@ public class NotenFragment extends ListFragment {
     @Override
     public void onDetach() {
         super.onDetach();
+        notenDB.close();
     }
 
     @Override

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listeStudiengang">
+        <item>BIKT, Matrikel 12 (Bachelor of Engineering)</item>
+        <item>BIKT, Matrikel 13 (Bachelor of Engineering)</item>
+        <item>BIKT, Matrikel 14 (Bachelor of Engineering)</item>
+        <item>BKMI, Matrikel 12 (Bachelor of Engineering)</item>
+        <item>BKMI, Matrikel 13 (Bachelor of Engineering)</item>
+        <item>BKMI, Matrikel 14 (Bachelor of Engineering)</item>
+        <item>BTKI, Matrikel 11 (Bachelor of Engineering)</item>
+        <item>BWI, Matrikel 12 (Bachelor of Science)</item>
+        <item>BWI, Matrikel 13 (Bachelor of Science)</item>
+        <item>BWI, Matrikel 14 (Bachelor of Science)</item>
+    </string-array>
+    <string-array name="werteStudiengang">
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=103</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=111</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=125</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=102</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=112</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=126&amp;r_zuordabstgv.phaseid=</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=89&amp;r_zuordabstgv.phaseid=</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=101&amp;r_zuordabstgv.phaseid=</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=113&amp;r_zuordabstgv.phaseid=</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=127&amp;r_zuordabstgv.phaseid=</item>
+    </string-array>
+</resources>
