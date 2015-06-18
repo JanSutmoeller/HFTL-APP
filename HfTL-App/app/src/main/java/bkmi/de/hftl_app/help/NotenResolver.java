@@ -152,7 +152,7 @@ public class NotenResolver {
     //gibt die URL als String zurück
     private String qisNavigation() {
         Elements e;
-        String seite = "https://qisweb.hispro.de/tel/rds?state=user&type=0&category=menu.browse&breadCrumbSource=portal&startpage=portal.vm";
+        String seite = "https://qisweb.hispro.de/tel/rds?state=user&type=0&category=menu.browse&breadCrumbSource=portal&startpage=portal.vm&chco=y";
         try {
              url = new URL(seite);
             connection = (HttpsURLConnection) url.openConnection();
@@ -164,13 +164,13 @@ public class NotenResolver {
             connection = (HttpsURLConnection) url.openConnection();
             doc = Jsoup.parse(connection.getInputStream(), "UTF-8", seite);
             e = doc.getElementsByAttribute("href");
-            seite= e.get(30).attr("href");//Suche Notenspiegel
+            seite= e.get(29).attr("href");//Suche Notenspiegel
 
             url = new URL(seite);
             connection = (HttpsURLConnection) url.openConnection();
             doc = Jsoup.parse(connection.getInputStream(), "UTF-8", seite);
-            e = doc.getElementsByAttribute("href");
-            return e.get(31).attr("href");//Suche Leistung anzeigen
+            e = doc.getElementsByAttributeValue("src", "/QIS/images//his_info3.gif");
+            return e.get(0).parent().attr("href");//Suche Leistung anzeigen
 
 
             // iterate HttpCookie object
@@ -186,13 +186,13 @@ public class NotenResolver {
     //falls Login erfolgreich wird true zurückgegeben
     private boolean testeZugang(){
         Elements e;
-        String seite = "https://qisweb.hispro.de/tel/rds?state=user&type=0&category=menu.browse&breadCrumbSource=portal&startpage=portal.vm";
+        String seite = "https://qisweb.hispro.de/tel/rds?state=user&type=0&category=menu.browse&breadCrumbSource=portal&startpage=portal.vm&chco=y";
         try {
             url = new URL(seite);
             connection = (HttpsURLConnection) url.openConnection();
             doc = Jsoup.parse(connection.getInputStream(), "UTF-8", seite);
             e = doc.getElementsByAttribute("href");
-            if(e.size()<22) {
+            if(e.size()<23) {
                 return false;
             }
 
