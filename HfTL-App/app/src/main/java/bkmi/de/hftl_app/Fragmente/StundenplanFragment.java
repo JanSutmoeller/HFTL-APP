@@ -2,24 +2,31 @@ package bkmi.de.hftl_app.Fragmente;
 
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
+import android.widget.Button;
+import android.widget.Spinner;
 
-import bkmi.de.hftl_app.EinstellungActivity;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+
 import bkmi.de.hftl_app.NewsActivity;
 import bkmi.de.hftl_app.R;
-import bkmi.de.hftl_app.help.NotenResolver;
+
+import bkmi.de.hftl_app.help.StundenplanEvent;
 import bkmi.de.hftl_app.help.StundenplanResolver;
-import bkmi.de.hftl_app.help.wrongUserdataException;
+import bkmi.de.hftl_app.help.stundenplanException;
+
 
 import static android.R.layout.simple_list_item_1;
 
@@ -34,6 +41,10 @@ public class StundenplanFragment extends ListFragment {
      * fragment.
      */
     private static final String ARG_SECTION_NUMBER = "section_number";
+    private static final String STUNDENPLANSPEICHER = "stundenplan";
+    Spinner spinner;
+    Button button, buttonVor, buttonZuruck;
+    StundenplanEvent events[][];
 
     /**
      * Erstellt ein neues StundenplanFragment.
@@ -53,7 +64,6 @@ public class StundenplanFragment extends ListFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -71,38 +81,212 @@ public class StundenplanFragment extends ListFragment {
     }
 
     @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        if(savedInstanceState!=null){
+            events=(StundenplanEvent[][])savedInstanceState.getSerializable(STUNDENPLANSPEICHER);
+            erstelleStundenplan();
+            return;
+        }
+        events= new StundenplanEvent[7][];
+
+        erzeugeDropdown();
+
+        //Listner zum Button hinzufügen
+        button = (Button) getActivity().findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(events[spinner.getSelectedItemPosition()]==null) new StundenplanHelper().execute(spinner.getSelectedItem().toString());
+                else erstelleStundenplan();
+            }
+        });
+        buttonVor = (Button) getActivity().findViewById(R.id.button_vor);
+        buttonVor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (spinner.getSelectedItemPosition() < 6) {
+                    spinner.setSelection(spinner.getSelectedItemPosition() + 1);
+                    if(events[spinner.getSelectedItemPosition()]==null) new StundenplanHelper().execute(spinner.getSelectedItem().toString());
+                    else erstelleStundenplan();
+                    if (spinner.getSelectedItemPosition() == 6) buttonVor.setEnabled(false);
+                    else buttonVor.setEnabled(true);
+                }
+
+            }
+        });
+
+        buttonZuruck = (Button) getActivity().findViewById(R.id.button_zurueck);
+        buttonZuruck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (spinner.getSelectedItemPosition() > 0) {
+                    spinner.setSelection(spinner.getSelectedItemPosition() - 1);
+                    if(events[spinner.getSelectedItemPosition()]==null) new StundenplanHelper().execute(spinner.getSelectedItem().toString());
+                    else erstelleStundenplan();
+                    if (spinner.getSelectedItemPosition() == 0) buttonVor.setEnabled(false);
+                    else buttonVor.setEnabled(true);
+
+                }
+            }
+        });
+        buttonZuruck.setEnabled(false);
+
+        new StundenplanHelper().execute(""); // Stundenplan wird abgerufen
+    }
+
+    @Override
     public void onDetach() {
         super.onDetach();
     }
 
     @Override
     public void onStart() {
+
+        //Todo kontrolle Studiengang
         super.onStart();
-        StundenplanHelper sh = new StundenplanHelper();
-        sh.execute("");
+
+    }
+
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putSerializable(STUNDENPLANSPEICHER, events);
+    }
+
+    private void erzeugeDropdown() {
+        spinner = (Spinner) getActivity().findViewById(R.id.spinner);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                if (spinner.getSelectedItemPosition() == 0) buttonZuruck.setEnabled(false);
+                else buttonZuruck.setEnabled(true);
+                if (spinner.getSelectedItemPosition() == 6) buttonVor.setEnabled(false);
+                else buttonVor.setEnabled(true);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        List<String> list = new ArrayList<String>();
+        String temp;
+
+        Calendar calendar = Calendar.getInstance();     //heutiges Datum
+        calendar.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);    //Kalender auf Montag setzen
+        Date date = calendar.getTime();
+        SimpleDateFormat formatEins = new SimpleDateFormat("ww  dd.MM.yyyy");
+        SimpleDateFormat formatZwei = new SimpleDateFormat(" - dd.MM.yyyy");
+        temp = "Woche:" + formatEins.format(date);
+
+        calendar.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY); //Kalender aus Sonntag setzen
+        date = calendar.getTime();
+        temp += formatZwei.format(date);
+
+        list.add(temp);
+        for (int i = 0; i < 6; i++) {
+            calendar.add(Calendar.DATE, 1); //Kalender steht auf Sonntag --> ein Tag addieren = Montag der nächsten Woche
+            date = calendar.getTime();
+            temp = "Woche:" + formatEins.format(date);
+            calendar.add(Calendar.DATE, 6); //Kalender steht auf Montag --> sechs Tage addieren = Sontag der selben Woche
+            date = calendar.getTime();
+            temp += formatZwei.format(date);
+            list.add(temp);
+        }
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, list);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(dataAdapter);
+    }
+
+    protected void erstelleStundenplan(){
+        Calendar calendar1= Calendar.getInstance();
+        Calendar calendar2= Calendar.getInstance();
+        ArrayList<String> liste=new ArrayList<String>();
+        //String data[] = new String[events[spinner.getSelectedItemPosition()].length+7];
+        StundenplanEvent tempevent;
+        String temp;
+
+        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
+
+        if (events[spinner.getSelectedItemPosition()][0].isKeineDaten()){
+            setListAdapter(new ArrayAdapter<>(getActivity(), simple_list_item_1, new String[]{"keine Daten"}));
+            return;
+        }
+
+        //data[0]=format.format(events[spinner.getSelectedItemPosition()][0].getDate().getTime());
+        tempevent=events[spinner.getSelectedItemPosition()][0];
+        liste.add(format.format(tempevent.getDate().getTime()));
+        temp=tempevent.getFach() + "\n";
+        temp+=tempevent.getUhrzeitStart() + "-" + tempevent.getUhrzeitEnde() + ", " + tempevent.getRaum() + "\n";
+        temp+=tempevent.getKategorie();
+        liste.add(temp);
+
+        for (int i=1; i<events[spinner.getSelectedItemPosition()].length; i++){
+            calendar1.setTime(events[spinner.getSelectedItemPosition()][i-1].getDate());
+            tempevent=events[spinner.getSelectedItemPosition()][i];
+            calendar2.setTime(tempevent.getDate());
+            if(calendar1.get(Calendar.DAY_OF_WEEK)!=calendar2.get(Calendar.DAY_OF_WEEK)){
+                //data[i+j]=format.format(events[spinner.getSelectedItemPosition()][i-1].getDate());
+                liste.add(format.format(events[spinner.getSelectedItemPosition()][i].getDate()));
+                //j++;
+            }
+            temp=tempevent.getFach() + "\n";
+            temp+=tempevent.getUhrzeitStart() + "-" + tempevent.getUhrzeitEnde() + ", " + tempevent.getRaum() + "\n";
+            temp+=tempevent.getKategorie();
+            liste.add(temp);
+            //data[i+j]=temp;
+        }
+        /*for (StundenplanEvent event: events[spinner.getSelectedItemPosition()] ){
+                temp=event.getFach() + "\n";
+                temp+=event.getUhrzeitStart() + "-" + event.getUhrzeitEnde() + ", " + event.getRaum() + "\n";
+                temp+=event.getKategorie();
+                data[i++]=temp;
+            }
+        */
+            setListAdapter(new ArrayAdapter<>(getActivity(), simple_list_item_1, liste));
+
     }
 
     class StundenplanHelper extends AsyncTask<String, Integer, Long> {
-        String[] stringArray;
+        ProgressDialog ladebalken;
 
         @Override
         protected void onPostExecute(Long aLong) {
             super.onPostExecute(aLong);
-            getActivity().runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    setListAdapter(new ArrayAdapter<>(getActivity(), simple_list_item_1, stringArray));
-                }
-            });
+
+            if (getActivity() == null) return;
+            erstelleStundenplan();
+            ladebalken.dismiss();
 
         }
 
         @Override
         protected Long doInBackground(String... params) {
             StundenplanResolver sr = new StundenplanResolver(getActivity());
-            stringArray = sr.icalAusgeben();
+            try {
+                if (params[0].equals("")) {
+                    events[0] = sr.erzeugeStundenplan(null);
+                }
+                else {
+                    events[spinner.getSelectedItemPosition()] = sr.erzeugeStundenplan(params[0]);
+                }
+            } catch (stundenplanException e) {
+                StundenplanEvent event = new StundenplanEvent();
+                event.setKeineDaten(true);
+                StundenplanEvent hilfsArray[] = new StundenplanEvent[1];
+                hilfsArray[0]=event;
+                events[spinner.getSelectedItemPosition()] = hilfsArray;
+            }
+
             return null;
         }
 
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            ladebalken = ProgressDialog.show(getActivity(), "Bitte warten", "Stundenplan wird geladen", true, false);
+        }
     }
 }

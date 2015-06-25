@@ -193,6 +193,7 @@ public class NewsFragment extends ListFragment {
             super.onPostExecute(aLong);
 
            // arrayAdapter = new ArrayAdapter<String>(getActivity(), simple_list_item_1, stringArray);
+            if(getActivity()==null) return;
             getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
