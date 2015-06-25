@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="listeStudiengang">
+        <item>BIKT, Matrikel 11 (Bachelor of Engineering)</item>
         <item>BIKT, Matrikel 12 (Bachelor of Engineering)</item>
         <item>BIKT, Matrikel 13 (Bachelor of Engineering)</item>
         <item>BIKT, Matrikel 14 (Bachelor of Engineering)</item>
+        <item>BIKTM, Matrikel 12 (Master of Engineering)</item>
+        <item>BIKTM, Matrikel 13 (Master of Engineering)</item>
+        <item>BIKTM, Matrikel 14 (Master of Engineering)</item>
         <item>BKMI, Matrikel 12 (Bachelor of Engineering)</item>
         <item>BKMI, Matrikel 13 (Bachelor of Engineering)</item>
         <item>BKMI, Matrikel 14 (Bachelor of Engineering)</item>
@@ -11,17 +15,71 @@
         <item>BWI, Matrikel 12 (Bachelor of Science)</item>
         <item>BWI, Matrikel 13 (Bachelor of Science)</item>
         <item>BWI, Matrikel 14 (Bachelor of Science)</item>
+        <item>DKMI, Matrikel 13 (Bachelor of Engineering)</item>
+        <item>DKMI, Matrikel 14 (Bachelor of Engineering)</item>
+        <item>DTKI, Matrikel 12 (Bachelor of Engineering)</item>
+        <item>DWI, Matrikel 12 (Bachelor of Science)</item>
+        <item>DWI, Matrikel 13 (Bachelor of Science)</item>
+        <item>DWI, Matrikel 14 (Bachelor of Science)</item>
+        <item>IKT, Matrikel 12 (Bachelor of Engineering)</item>
+        <item>IKT, Matrikel 13 (Bachelor of Engineering)</item>
+        <item>IKTM, Matrikel 11 (Master of Engineering)</item>
+        <item>IKTM, Matrikel 13 (Master of Engineering)</item>
+        <item>IKTM, Matrikel 14 (Master of Engineering)</item>
+        <item>KMI, Matrikel 12 (Bachelor of Engineering)</item>
+        <item>KMI, Matrikel 13 (Bachelor of Engineering)</item>
+        <item>KMI, Matrikel 14 (Bachelor of Engineering)</item>
+        <item>NT, Matrikel 10 (Bachelor of Engineering)</item>
+        <item>NT, Matrikel 11 (Bachelor of Engineering)</item>
+        <item>TKI, Matrikel 11 (Bachelor of Engineering)</item>
+        <item>WI, Matrikel 11 (Bachelor of Science)</item>
+        <item>WI, Matrikel 12 (Bachelor of Science)</item>
+        <item>WI, Matrikel 13 (Bachelor of Science)</item>
+        <item>WI, Matrikel 14 (Bachelor of Science)</item>
+        <item>WIM, Matrikel 12 (Master of Science)</item>
+        <item>WIM, Matrikel 13 (Master of Science)</item>
+        <item>WIM, Matrikel 14 (Master of Science)</item>
+
+
     </string-array>
     <string-array name="werteStudiengang">
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=93</item>
         <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=103</item>
         <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=111</item>
         <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=125</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=100</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=114</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=128</item>
         <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=102</item>
         <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=112</item>
-        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=126&amp;r_zuordabstgv.phaseid=</item>
-        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=89&amp;r_zuordabstgv.phaseid=</item>
-        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=101&amp;r_zuordabstgv.phaseid=</item>
-        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=113&amp;r_zuordabstgv.phaseid=</item>
-        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=127&amp;r_zuordabstgv.phaseid=</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=126</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=89</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=101</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=113</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=127</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=109</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=123</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=98</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=99</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=110</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=124</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=95</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=106</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=86</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=117</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=122</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=96</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=107</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=120</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=145</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=83</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=84</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=85</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=94</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=108</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=121</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=104</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=115</item>
+        <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=129</item>
     </string-array>
 </resources>

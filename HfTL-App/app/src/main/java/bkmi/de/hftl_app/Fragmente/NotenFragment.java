@@ -224,6 +224,7 @@ public class NotenFragment extends ListFragment {
         arrayAdapter = new ArrayAdapter<>(getActivity(), simple_list_item_1, stringArray);
         if (bool) setListAdapter(arrayAdapter);
         else {
+            if(getActivity()==null) return;
             getActivity().runOnUiThread(
                     new Runnable() {
                         @Override
