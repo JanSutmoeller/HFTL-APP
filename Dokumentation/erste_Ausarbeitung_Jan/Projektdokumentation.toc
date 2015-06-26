@@ -1,6 +1,6 @@
 \select@language {german}
 \contentsline {section}{\nonumberline Abbildungsverzeichnis}{2}{section*.2}
-\contentsline {section}{\numberline {1}Lastenheft}{3}{section.1}
+\contentsline {section}{\numberline {1}Software Requirements Specification}{3}{section.1}
 \contentsline {subsection}{\numberline {1.1}Einf\IeC {\"u}hrung}{3}{subsection.1.1}
 \contentsline {subsubsection}{\numberline {1.1.1}\textbf {Zweck}}{3}{subsubsection.1.1.1}
 \contentsline {subsubsection}{\numberline {1.1.2}\textbf {Hintergr\IeC {\"u}nde und Ziele des Projekts}}{3}{subsubsection.1.1.2}
