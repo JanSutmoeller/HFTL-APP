@@ -14,14 +14,13 @@ import bkmi.de.hftl_app.Fragmente.NewsFragment;
 import bkmi.de.hftl_app.NewsActivity;
 import bkmi.de.hftl_app.R;
 
-public class CustomAdapter extends BaseAdapter{
+public class CustomAdapterNews extends BaseAdapter{
     String [] date;
     String [] headline;
     String [] content;
     Context context;
-    int [] image;
     private static LayoutInflater inflater=null;
-    public CustomAdapter(Activity mainActivity, String[] dateList, String[] headlineList, String[] contentList) {
+    public CustomAdapterNews(Activity mainActivity, String[] dateList, String[] headlineList, String[] contentList) {
         // TODO Auto-generated constructor stub
         date=dateList;
         content=contentList;

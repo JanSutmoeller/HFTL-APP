@@ -59,27 +59,6 @@ public class NewsResolver {
         }
     }
 
-
-
-    /*
-    * Erzeugt eine String-Array mit allen Terminen
-     */
-    /*
-    public String[] getTermineStringArray(){
-
-        getHftlEvent();
-        if(termine.size()==0) return null; //Falls keine Termine anstehen
-
-        String[] s = new String[termine.size()];
-        s[0]="Die aktuellen News sind:";   // Für die ListView das erste Element,
-
-        int i = 0;
-        for(HftlEvent termin:termine ){
-            s[i++]= "Am " + termin.time + ":\n" + termin.text + "\nFür mehr Infos antippen." ;
-        }
-
-        return s;
-    }*/
     public String[] writeNewsListDate(){
         getHftlEvent();
         int i = 0;
