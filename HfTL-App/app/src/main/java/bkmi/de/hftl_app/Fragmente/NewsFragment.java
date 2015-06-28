@@ -25,7 +25,7 @@ import android.widget.TextView;
 import bkmi.de.hftl_app.NewsActivity;
 import bkmi.de.hftl_app.NewsClickedActivity;
 import bkmi.de.hftl_app.R;
-import bkmi.de.hftl_app.help.CustomAdapter;
+import bkmi.de.hftl_app.help.CustomAdapterNews;
 import bkmi.de.hftl_app.help.NewsResolver;
 
 import static android.R.layout.simple_list_item_1;
@@ -83,12 +83,6 @@ public class NewsFragment extends ListFragment {
         TextView hl = (TextView) rootView.findViewById(R.id.hl_News);
         Typeface headline = Typeface.createFromAsset(getActivity().getAssets(), "fonts/OCRA.TTF");
         hl.setTypeface(headline);
-
-        /*
-        TextView bp = (TextView) rootView.findViewById(R.id.bp_News);
-        Typeface bulletpoint = Typeface.createFromAsset(getActivity().getAssets(), "fonts/WINGDNG3.TTF");
-        bp.setTypeface(bulletpoint);*/
-
 
         return rootView;
     }
@@ -198,7 +192,7 @@ public class NewsFragment extends ListFragment {
                 @Override
                 public void run() {
                   //  setListAdapter(arrayAdapter);
-                    setListAdapter(new CustomAdapter(getActivity(), dateList, headlineList, contentList));
+                    setListAdapter(new CustomAdapterNews(getActivity(), dateList, headlineList, contentList));
                 }
             });
         }

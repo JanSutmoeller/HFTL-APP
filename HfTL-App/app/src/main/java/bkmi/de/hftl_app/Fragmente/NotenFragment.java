@@ -24,6 +24,7 @@ import bkmi.de.hftl_app.Database.NotenTabelle;
 import bkmi.de.hftl_app.EinstellungActivity;
 import bkmi.de.hftl_app.NewsActivity;
 import bkmi.de.hftl_app.R;
+import bkmi.de.hftl_app.help.CustomAdapterNoten;
 import bkmi.de.hftl_app.help.NotenResolver;
 import bkmi.de.hftl_app.help.TextSecure;
 import bkmi.de.hftl_app.help.wrongUserdataException;
@@ -39,9 +40,12 @@ public class NotenFragment extends ListFragment {
     private static final String ARG_SECTION_NUMBER = "section_number";
 
     NotenDB notenDB;
-    String stringArray[];
     ArrayAdapter<String> arrayAdapter;
     Button button;
+    String [] fachList;
+    String [] notenList;
+    String [] versuchList;
+    String [] semesterList;
 
     /**
      * Erstellt ein neues NotenFragment.
@@ -125,7 +129,7 @@ public class NotenFragment extends ListFragment {
 
         //Prüfen ob Datenbank befüllt
 
-        Cursor cursor = notenDB.getReadableDatabase().query(NotenTabelle.TABLE_NAME, NotenTabelle.NOTENABFRAGE, null, null, null, null, null);
+        Cursor cursor = notenDB.getReadableDatabase().query(NotenTabelle.TABLE_NAME, NotenTabelle.NOTENABFRAGE, null, null, null, null, null, null);
         if (cursor.getCount() > 0) {
             cursor.close();
             setzeListview(true);
@@ -162,7 +166,7 @@ public class NotenFragment extends ListFragment {
 
     //gibt die Noten als Stringarray zurück...kann noch geändert werden
     private String[] getNoten() {
-        Cursor cursor = notenDB.getReadableDatabase().query(NotenTabelle.TABLE_NAME, NotenTabelle.NOTENABFRAGE, null, null, null, null, NotenTabelle.SEMSETER);
+        Cursor cursor = notenDB.getReadableDatabase().query(NotenTabelle.TABLE_NAME, NotenTabelle.NOTENABFRAGE, null, null, null, null, NotenTabelle.SEMESTER);
         cursor.moveToFirst();
 
         int i = 0;
@@ -177,11 +181,35 @@ public class NotenFragment extends ListFragment {
 
     //gibt das Semester als Stringarray zurück...kann noch geändert werden
     private String[] getSemester() {
-        Cursor cursor = notenDB.getReadableDatabase().query(NotenTabelle.TABLE_NAME, NotenTabelle.SEMESTERABFRAGE, null, null, null, null, NotenTabelle.SEMSETER);
+        Cursor cursor = notenDB.getReadableDatabase().query(NotenTabelle.TABLE_NAME, NotenTabelle.SEMESTERABFRAGE, null, null, null, null, NotenTabelle.SEMESTER);
         cursor.moveToFirst();
-
         int i = 0;
         String[] s = new String[cursor.getCount()];
+        String[] vgl = new String[1];
+        vgl[0]="";
+        while (!cursor.isAfterLast()) {
+            s[i] =  cursor.getString(0);
+            if(s[i].equals(vgl[0])){
+                s[i] = null;
+                vgl[0] = cursor.getString(0);
+            }
+            else
+                vgl[0]=s[i];
+            i++;
+           cursor.moveToNext();
+
+        }
+        cursor.close();
+        return s;
+    }
+
+    //gibt das Fach als Stringarray zurück...kann noch geändert werden
+    private String[] getFach() {
+        Cursor cursor = notenDB.getReadableDatabase().query(NotenTabelle.TABLE_NAME, NotenTabelle.FACHABFRAGE, null, null, null, null,  NotenTabelle.SEMESTER);
+        cursor.moveToFirst();
+        int i = 0;
+        String[] s = new String[cursor.getCount()];
+
         while (!cursor.isAfterLast()) {
             s[i++] = cursor.getString(0);
             cursor.moveToNext();
@@ -190,9 +218,9 @@ public class NotenFragment extends ListFragment {
         return s;
     }
 
-    //gibt das Fach als Stringarray zurück...kann noch geändert werden
-    private String[] getFach() {
-        Cursor cursor = notenDB.getReadableDatabase().query(NotenTabelle.TABLE_NAME, NotenTabelle.FACHABFRAGE, null, null, null, null, NotenTabelle.SEMSETER);
+    //gibt die Versuche als Stringarray zurück...kann noch geändert werden
+    private String[] getVersuche() {
+        Cursor cursor = notenDB.getReadableDatabase().query(NotenTabelle.TABLE_NAME, NotenTabelle.VERSUCHABFRAGE, null, null, null, null, NotenTabelle.SEMESTER);
         cursor.moveToFirst();
 
         int i = 0;
@@ -208,28 +236,19 @@ public class NotenFragment extends ListFragment {
     //Fragt die Datenbank ab und befüllt das Listview
     //Parameter = true wenn die Methode aus dem Hauptprogramm/Thread aufgerufen wird
     private void setzeListview(boolean bool) {
-        String[] noten = getNoten();
-        String[] semester = getSemester();
-        String[] fach = getFach();
-        stringArray = new String[noten.length];
+         notenList = getNoten();
+         semesterList = getSemester();
+         fachList = getFach();
+         versuchList = getVersuche();
 
-        for (int i = 0; i < noten.length; i++) {
-            String temp = "";
-            temp += fach[i] + "\n";
-            temp += noten[i] + "\n";
-            temp += semester[i];
-            stringArray[i] = temp;
-        }
-
-        arrayAdapter = new ArrayAdapter<>(getActivity(), simple_list_item_1, stringArray);
-        if (bool) setListAdapter(arrayAdapter);
+        if (bool) setListAdapter(new CustomAdapterNoten(getActivity(),semesterList, fachList, versuchList, notenList));
         else {
             if(getActivity()==null) return;
             getActivity().runOnUiThread(
                     new Runnable() {
                         @Override
                         public void run() {
-                            setListAdapter(arrayAdapter);
+                            setListAdapter(new CustomAdapterNoten(getActivity(),semesterList, fachList, versuchList, notenList));
                         }
                     });
 
