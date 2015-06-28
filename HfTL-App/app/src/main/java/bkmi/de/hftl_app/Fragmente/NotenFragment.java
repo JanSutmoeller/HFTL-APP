@@ -241,7 +241,7 @@ public class NotenFragment extends ListFragment {
          fachList = getFach();
          versuchList = getVersuche();
 
-        if (bool) setListAdapter(arrayAdapter);
+        if (bool) setListAdapter(new CustomAdapterNoten(getActivity(),semesterList, fachList, versuchList, notenList));
         else {
             if(getActivity()==null) return;
             getActivity().runOnUiThread(
