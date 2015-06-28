@@ -10,7 +10,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/weiss"
+        android:background="@color/grau04"
         android:id="@+id/noten_header"
         android:padding="8dp">
         <TextView
@@ -30,7 +30,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/weiss"
+        android:background="@color/grau04"
         android:id="@+id/noten_footer"
         android:padding="4dp"
         android:layout_alignParentBottom="true">
@@ -42,21 +42,26 @@
             android:id="@+id/Logo"
             android:src="@drawable/logo_hftl"
             android:padding="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="25dp"
             android:layout_gravity="center"
             android:contentDescription="Logo der HFTL"/>
 
         <!-- Button "Aktualisierung" -->
         <Button
             android:layout_width="match_parent"
+            android:minWidth="64dp"
+            android:maxWidth="194dp"
             android:layout_height="48dp"
+            android:minHeight="36dp"
             android:id="@+id/noten_refresh"
             android:text="@string/btn_news_refresh"
-            android:padding="4dp"
+            android:padding="8dp"
             android:background="@color/grün"
             android:textColor="@color/weiss"
             android:layout_gravity="end"
             android:layout_marginStart="25dp"
-            android:layout_marginLeft="25dp"
+            android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"/>
 
     </LinearLayout>
@@ -69,6 +74,7 @@
         android:textFilterEnabled="true"
         android:id="@+id/android:list"
         android:padding="4dp"
+        android:divider="@null"
         android:layout_below="@id/noten_header"
         android:layout_above="@id/noten_footer"/>
     <!-- // ListView für die übergebenen Noten-Items -->
