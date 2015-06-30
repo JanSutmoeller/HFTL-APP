@@ -73,7 +73,7 @@ public class CustomAdapterNoten extends BaseAdapter{
         holder.tv_mark=(TextView) rowView.findViewById(R.id.notenlist_note);
         if (mark[position].equals("5,0" ))
             holder.tv_mark.setTextColor(context.getResources().getColor(R.color.magenta));
-        if (mark[position].equals("4,0" ) |
+        else if (mark[position].equals("4,0" ) |
             mark[position].equals("3,9" ) |
             mark[position].equals("3,8" ) |
             mark[position].equals("3,7" ) |
