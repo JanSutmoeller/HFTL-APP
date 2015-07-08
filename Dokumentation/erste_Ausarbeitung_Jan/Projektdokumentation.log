@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.25)  21 JUN 2015 20:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.25)  8 JUL 2015 12:41
 entering extended mode
 **Projektdokumentation.tex
 
@@ -984,6 +984,14 @@ Package scrkbase Info: You've told me to extend the font selection of the
 ("C:\Program Files\MiKTeX 2.9\tex\latex\placeins\placeins.sty"
 Package: placeins 2005/04/18  v 2.2
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
+Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
+)
 \c@subsubsubsection=\count117
 
 (C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
@@ -1006,52 +1014,52 @@ LaTeX Warning: Label `img:grafik-dummy' multiply defined.
 LaTeX Warning: Label `img:grafik-dummy' multiply defined.
 
 )
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 121.
-LaTeX Font Info:    Try loading font information for FML+futm on input line 121
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 123.
+LaTeX Font Info:    Try loading font information for FML+futm on input line 123
 .
  ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmlfutm.fd"
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 121.
-LaTeX Font Info:    Try loading font information for FMS+futm on input line 121
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 123.
+LaTeX Font Info:    Try loading font information for FMS+futm on input line 123
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmsfutm.fd"
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 121.
-LaTeX Font Info:    Try loading font information for FMX+futm on input line 121
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 123.
+LaTeX Font Info:    Try loading font information for FMX+futm on input line 123
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmxfutm.fd"
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 121.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 121.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 123.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 123.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Try loading font information for T1+futs on input line 121.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Try loading font information for T1+futs on input line 123.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\t1futs.fd"
@@ -1072,7 +1080,7 @@ File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 \everyMPtoPDFconversion=\toks33
 )
 \AtBeginShipoutBox=\box32
-Package hyperref Info: Link coloring ON on input line 121.
+Package hyperref Info: Link coloring ON on input line 123.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -1081,16 +1089,16 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count124
 )
-LaTeX Info: Redefining \ref on input line 121.
-LaTeX Info: Redefining \pageref on input line 121.
-LaTeX Info: Redefining \nameref on input line 121.
+LaTeX Info: Redefining \ref on input line 123.
+LaTeX Info: Redefining \pageref on input line 123.
+LaTeX Info: Redefining \nameref on input line 123.
 
 (C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
 Projektdokumentation.out)
 (C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
 Projektdokumentation.out)
 \@outlinefile=\write4
-LaTeX Info: Redefining \microtypecontext on input line 121.
+LaTeX Info: Redefining \microtypecontext on input line 123.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1141,7 +1149,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-msb.cfg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<img/HFTL-Logo.pdf, id=243, 478.00987pt x 264.18701pt>
+<img/HFTL-Logo.pdf, id=239, 478.00987pt x 264.18701pt>
 File: img/HFTL-Logo.pdf Graphic file (type pdf)
  <use img/HFTL-Logo.pdf>
 Package pdftex.def Info: img/HFTL-Logo.pdf used on input line 6.
@@ -1162,7 +1170,7 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 2--66
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Admin/Documents/
 GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_Jan/img/HFTL-Logo.pdf>]
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 138.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 140.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
@@ -1172,22 +1180,22 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package tocbasic Info: character protrusion at toc deactivated on input line 13
-8.
+Package tocbasic Info: character protrusion at toc deactivated on input line 14
+0.
 
 (C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
 Projektdokumentation.tocpdfTeX warning (ext4): destination with the same identi
 fier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.44 ...}tssicherung}{8}{subsubsubsection.1.4.6.2}
+l.42 ...C {\"a}tsmerkmale}{9}{subsubsection.4.6.1}
                                                    [1
 
 
 ])
 \tf@toc=\write5
-Package tocbasic Info: character protrusion at lof deactivated on input line 13
-9.
+Package tocbasic Info: character protrusion at lof deactivated on input line 14
+1.
 
 (C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
 Projektdokumentation.lof)
@@ -1202,7 +1210,7 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
 [2]
 (C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
 02_Lastenheft/Lastenheft.tex
-LaTeX Font Info:    Font shape `T1/futs/bx/sc' in size <12> not available
+LaTeX Font Info:    Font shape `T1/futs/bx/sc' in size <14.4> not available
 (Font)              Font shape `T1/futs/b/sc' tried instead on input line 5.
 Package acronym Info: Label `acro:HfTL' newly defined as it shall be overridden
 
@@ -1218,7 +1226,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [3]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 74.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 75.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -1230,19 +1238,23 @@ Package microtype Info: Loading generic settings for font family
  [4]
 Package acronym Info: Label `acro:SoSe15' newly defined as it shall be overridd
 en
-although it is yet undefined on input line 108.
+although it is yet undefined on input line 109.
  [5]
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
-[6] [7] [8]
+[6] [7]
+Package acronym Info: Label `acro:CI/CD' newly defined as it shall be overridde
+n
+although it is yet undefined on input line 200.
+ [8]
 Package acronym Info: Label `acro:.apk' newly defined as it shall be overridden
 
-although it is yet undefined on input line 252.
+although it is yet undefined on input line 257.
 Package acronym Info: Label `acro:MTBF' newly defined as it shall be overridden
 
-although it is yet undefined on input line 263.
+although it is yet undefined on input line 268.
  [9] [10]) [11]
 (C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
 03_Bedienungsanleitung/Bedienungsanleitung.tex
@@ -1260,7 +1272,7 @@ File: 03_Bedienungsanleitung/img/appstore.jpg Graphic file (type jpg)
 
 <use 03_Bedienungsanleitung/img/appstore.jpg>
 Package pdftex.def Info: 03_Bedienungsanleitung/img/appstore.jpg used on input 
-line 35.
+line 40.
 (pdftex.def)             Requested size: 312.92833pt x 107.32068pt.
  [13 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
 _Jan/03_Bedienungsanleitung/img/appstore.jpg>]
@@ -1269,7 +1281,7 @@ File: 03_Bedienungsanleitung/img/start2.jpg Graphic file (type jpg)
 
 <use 03_Bedienungsanleitung/img/start2.jpg>
 Package pdftex.def Info: 03_Bedienungsanleitung/img/start2.jpg used on input li
-ne 47.
+ne 52.
 (pdftex.def)             Requested size: 348.10097pt x 390.86078pt.
  [14 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
 _Jan/03_Bedienungsanleitung/img/start2.jpg>]
@@ -1278,16 +1290,16 @@ File: 03_Bedienungsanleitung/img/news.jpg Graphic file (type jpg)
 
 <use 03_Bedienungsanleitung/img/news.jpg>
 Package pdftex.def Info: 03_Bedienungsanleitung/img/news.jpg used on input line
- 69.
+ 74.
 (pdftex.def)             Requested size: 327.02219pt x 390.86078pt.
  [15 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
 _Jan/03_Bedienungsanleitung/img/news.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 79--86
+Underfull \hbox (badness 10000) in paragraph at lines 84--91
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--86
+Underfull \hbox (badness 10000) in paragraph at lines 84--91
 
  []
 
@@ -1297,7 +1309,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--86
 File: 03_Bedienungsanleitung/img/einstellungen.jpg Graphic file (type jpg)
  <use 03_Bedienungsanleitung/img/einstellungen.jpg>
 Package pdftex.def Info: 03_Bedienungsanleitung/img/einstellungen.jpg used on i
-nput line 91.
+nput line 96.
 (pdftex.def)             Requested size: 188.95547pt x 370.38284pt.
 
 <03_Bedienungsanleitung/img/account.jpg, id=441, 404.26031pt x 743.02594pt>
@@ -1305,7 +1317,7 @@ File: 03_Bedienungsanleitung/img/account.jpg Graphic file (type jpg)
 
 <use 03_Bedienungsanleitung/img/account.jpg>
 Package pdftex.def Info: 03_Bedienungsanleitung/img/account.jpg used on input l
-ine 97.
+ine 102.
 (pdftex.def)             Requested size: 202.12965pt x 371.51205pt.
  [16 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
 _Jan/03_Bedienungsanleitung/img/einstellungen.jpg> <C:/Users/Admin/Documents/Gi
@@ -1316,7 +1328,7 @@ File: 03_Bedienungsanleitung/img/noten.jpg Graphic file (type jpg)
 
 <use 03_Bedienungsanleitung/img/noten.jpg>
 Package pdftex.def Info: 03_Bedienungsanleitung/img/noten.jpg used on input lin
-e 108.
+e 113.
 (pdftex.def)             Requested size: 232.62085pt x 446.72238pt.
  [17 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
 _Jan/03_Bedienungsanleitung/img/noten.jpg>]
@@ -1324,34 +1336,34 @@ _Jan/03_Bedienungsanleitung/img/noten.jpg>]
 File: 03_Bedienungsanleitung/img/stundenplan.jpg Graphic file (type jpg)
 <use 03_Bedienungsanleitung/img/stundenplan.jpg>
 Package pdftex.def Info: 03_Bedienungsanleitung/img/stundenplan.jpg used on inp
-ut line 121.
+ut line 126.
 (pdftex.def)             Requested size: 229.45901pt x 446.72238pt.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 150.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 153.
  [18 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
 _Jan/03_Bedienungsanleitung/img/stundenplan.jpg>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 150.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 153.
 
 (C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
 Projektdokumentation.aux
 (C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
 01_Titel/01_titel.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 150.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 150.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 153.
 Package rerunfilecheck Info: File `Projektdokumentation.out' has not changed.
-(rerunfilecheck)             Checksum: 71A6F1B9244AE073D7B3E09C3D438EB5;5159.
+(rerunfilecheck)             Checksum: D7B3831F412233785AB24E0BD449C73A;4646.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 150.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
  ) 
 Here is how much of TeX's memory you used:
- 11784 strings out of 493921
- 181539 string characters out of 3147282
- 336284 words of memory out of 3000000
- 14520 multiletter control sequences out of 15000+200000
- 120522 words of font info for 218 fonts, out of 3000000 for 9000
+ 11831 strings out of 493921
+ 181852 string characters out of 3147282
+ 335930 words of memory out of 3000000
+ 14550 multiletter control sequences out of 15000+200000
+ 121489 words of font info for 226 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  39i,14n,56p,758b,594s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Admin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
@@ -1359,9 +1371,9 @@ ectt1200.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files/Mi
 KTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts
 /type1/adobe/utopia/putri8a.pfb>
-Output written on Projektdokumentation.pdf (19 pages, 563606 bytes).
+Output written on Projektdokumentation.pdf (19 pages, 565418 bytes).
 PDF statistics:
- 525 PDF objects out of 1000 (max. 8388607)
- 96 named destinations out of 1000 (max. 500000)
- 46094 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 526 PDF objects out of 1000 (max. 8388607)
+ 97 named destinations out of 1000 (max. 500000)
+ 46086 words of extra memory for PDF output out of 51595 (max. 10000000)
 
