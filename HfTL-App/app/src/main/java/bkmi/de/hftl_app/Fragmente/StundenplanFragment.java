@@ -23,6 +23,7 @@ import java.util.List;
 import bkmi.de.hftl_app.NewsActivity;
 import bkmi.de.hftl_app.R;
 
+import bkmi.de.hftl_app.help.CustomAdapterStundenplan;
 import bkmi.de.hftl_app.help.StundenplanEvent;
 import bkmi.de.hftl_app.help.StundenplanResolver;
 import bkmi.de.hftl_app.help.stundenplanException;
@@ -42,6 +43,11 @@ public class StundenplanFragment extends ListFragment {
      */
     private static final String ARG_SECTION_NUMBER = "section_number";
     private static final String STUNDENPLANSPEICHER = "stundenplan";
+    String [] fachList;
+    String [] dateList;
+    String [] timeList;
+    String [] categoryList;
+    String [] roomList;
     Spinner spinner;
     Button button, buttonVor, buttonZuruck;
     StundenplanEvent events[][];
@@ -206,36 +212,51 @@ public class StundenplanFragment extends ListFragment {
         ArrayList<String> liste=new ArrayList<String>();
         //String data[] = new String[events[spinner.getSelectedItemPosition()].length+7];
         StundenplanEvent tempevent;
-        String temp;
+
+        dateList = new String[events[spinner.getSelectedItemPosition()].length];
+        fachList = new String[events[spinner.getSelectedItemPosition()].length];
+        timeList = new String[events[spinner.getSelectedItemPosition()].length];
+        roomList = new String[events[spinner.getSelectedItemPosition()].length];
+        categoryList = new String[events[spinner.getSelectedItemPosition()].length];
 
         SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
 
-        if (events[spinner.getSelectedItemPosition()][0].isKeineDaten()){
+       if (events[spinner.getSelectedItemPosition()][0].isKeineDaten()){
             setListAdapter(new ArrayAdapter<>(getActivity(), simple_list_item_1, new String[]{"keine Daten"}));
+
             return;
         }
 
         //data[0]=format.format(events[spinner.getSelectedItemPosition()][0].getDate().getTime());
         tempevent=events[spinner.getSelectedItemPosition()][0];
-        liste.add(format.format(tempevent.getDate().getTime()));
-        temp=tempevent.getFach() + "\n";
-        temp+=tempevent.getUhrzeitStart() + "-" + tempevent.getUhrzeitEnde() + ", " + tempevent.getRaum() + "\n";
-        temp+=tempevent.getKategorie();
-        liste.add(temp);
+        dateList[0] = format.format(tempevent.getDate().getTime());
+        fachList[0] = tempevent.getFach();
+        timeList[0] = tempevent.getUhrzeitStart() + " - " + tempevent.getUhrzeitEnde()+ " Uhr, ";
+        categoryList[0] = tempevent.getKategorie();
+        roomList[0] = tempevent.getRaum();
 
         for (int i=1; i<events[spinner.getSelectedItemPosition()].length; i++){
             calendar1.setTime(events[spinner.getSelectedItemPosition()][i-1].getDate());
             tempevent=events[spinner.getSelectedItemPosition()][i];
             calendar2.setTime(tempevent.getDate());
+            roomList[i] = tempevent.getRaum();
+            fachList[i] = tempevent.getFach();
+            timeList[i] = tempevent.getUhrzeitStart() + " - " + tempevent.getUhrzeitEnde() + " Uhr, ";
+            categoryList[i] = tempevent.getKategorie();
             if(calendar1.get(Calendar.DAY_OF_WEEK)!=calendar2.get(Calendar.DAY_OF_WEEK)){
                 //data[i+j]=format.format(events[spinner.getSelectedItemPosition()][i-1].getDate());
-                liste.add(format.format(events[spinner.getSelectedItemPosition()][i].getDate()));
+                dateList[i]=format.format(events[spinner.getSelectedItemPosition()][i].getDate());
                 //j++;
             }
-            temp=tempevent.getFach() + "\n";
-            temp+=tempevent.getUhrzeitStart() + "-" + tempevent.getUhrzeitEnde() + ", " + tempevent.getRaum() + "\n";
-            temp+=tempevent.getKategorie();
-            liste.add(temp);
+            else
+                dateList[i]=null;
+           //fachList=tempevent.getFach() + "\n";
+           //timeList = tempevent.getUhrzeitStart() + "-" + tempevent.getUhrzeitEnde();
+           // temp+=tempevent.getUhrzeitStart() + "-" + tempevent.getUhrzeitEnde() + ", " + tempevent.getRaum() + "\n";
+           //categoryList=tempevent.getKategorie();
+            //temp+=tempevent.getKategorie();
+           // roomList=tempevent.getRaum();
+            //getView(dateList,fachList, timeList, roomList, categoryList);
             //data[i+j]=temp;
         }
         /*for (StundenplanEvent event: events[spinner.getSelectedItemPosition()] ){
@@ -245,7 +266,8 @@ public class StundenplanFragment extends ListFragment {
                 data[i++]=temp;
             }
         */
-            setListAdapter(new ArrayAdapter<>(getActivity(), simple_list_item_1, liste));
+        setListAdapter(new CustomAdapterStundenplan(getActivity(), dateList, fachList, timeList, roomList,  categoryList));
+            //setListAdapter(new ArrayAdapter<>(getActivity(), simple_list_item_1, liste));
 
     }
 
