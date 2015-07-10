@@ -34,13 +34,15 @@
         <ImageView
             android:layout_width="194dp"
             android:layout_height="48dp"
-            android:id="@+id/imageView"
+            android:id="@+id/Logo"
             android:src="@drawable/logo_hftl"
             android:padding="4dp"
             android:layout_marginLeft="4dp"
-            android:layout_marginRight="25dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
             android:layout_gravity="center"
-            android:contentDescription="Logo der HFTL" />
+            android:contentDescription="Logo der HFTL"/>
 
    <!--     <Button
             android:layout_width="match_parent"
@@ -58,13 +60,6 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp" /> -->
     </LinearLayout>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="go"
-        android:id="@+id/button"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -78,8 +73,8 @@
             android:layout_height="25dp"
             android:layout_gravity="center"
             android:layout_margin="8dp"
-            android:background="@drawable/bulletpoint_rev"
-            android:id="@+id/button_zurueck" />
+            android:background="@drawable/custom_zurbutton"
+            android:id="@+id/button_zurueck"/>
         <Spinner
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -92,8 +87,8 @@
             android:layout_height="25dp"
             android:layout_gravity="center"
             android:layout_margin="8dp"
-            android:background="@drawable/bulletpoint"
-            android:id="@+id/button_vor" />
+            android:background="@drawable/custom_vorbutton"
+            android:id="@+id/button_vor"/>
     </LinearLayout>
 
     <ListView

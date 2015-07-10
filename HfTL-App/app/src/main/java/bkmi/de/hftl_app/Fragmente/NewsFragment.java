@@ -42,7 +42,7 @@ public class NewsFragment extends ListFragment {
     NewsResolver newsResolver;
     Intent intent;
     String stringArray[];
-    Button button1;
+    Button button;
     ArrayAdapter<String> arrayAdapter;
     String headlineList[];
     String dateList[];
@@ -127,8 +127,8 @@ public class NewsFragment extends ListFragment {
     @Override
     public void onStart() {
         super.onStart();
-        button1 = (Button) getView().findViewById(R.id.button_refresh_news);
-        button1.setOnClickListener(new View.OnClickListener() {
+        button = (Button) getView().findViewById(R.id.button_refresh_news);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 zeigeNews();

@@ -51,7 +51,7 @@ public class StundenplanFragment extends ListFragment {
     String [] categoryList;
     String [] roomList;
     Spinner spinner;
-    Button button, buttonVor, buttonZuruck;
+    Button buttonVor, buttonZuruck;
     StundenplanEvent events[][]=null;
 
     /**
@@ -105,25 +105,18 @@ public class StundenplanFragment extends ListFragment {
         erzeugeDropdown();
         events= new StundenplanEvent[7][];
 
-        //Listner zum Button hinzufügen
-        button = (Button) getActivity().findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(events[spinner.getSelectedItemPosition()]==null) new StundenplanHelper().execute(spinner.getSelectedItem().toString());
-                else erstelleStundenplan();
-            }
-        });
         buttonVor = (Button) getActivity().findViewById(R.id.button_vor);
         buttonVor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                buttonVor.setPressed(true);
                 if (spinner.getSelectedItemPosition() < 6) {
                     spinner.setSelection(spinner.getSelectedItemPosition() + 1);
-                    //if(events[spinner.getSelectedItemPosition()]==null) new StundenplanHelper().execute(spinner.getSelectedItem().toString());
-                    //else erstelleStundenplan();
-                    if (spinner.getSelectedItemPosition() == 6) buttonVor.setEnabled(false);
-                    else buttonVor.setEnabled(true);
+                    if (spinner.getSelectedItemPosition() == 6)
+                        buttonVor.setEnabled(false);
+                    else
+                        buttonVor.setEnabled(true);
+
                 }
 
             }
@@ -133,17 +126,17 @@ public class StundenplanFragment extends ListFragment {
         buttonZuruck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                buttonZuruck.setPressed(true);
                 if (spinner.getSelectedItemPosition() > 0) {
                     spinner.setSelection(spinner.getSelectedItemPosition() - 1);
-                    //if(events[spinner.getSelectedItemPosition()]==null) new StundenplanHelper().execute(spinner.getSelectedItem().toString());
-                    //else erstelleStundenplan();
-                    if (spinner.getSelectedItemPosition() == 0) buttonVor.setEnabled(false);
-                    else buttonVor.setEnabled(true);
-
+                    if (spinner.getSelectedItemPosition() == 0)
+                        buttonZuruck.setEnabled(false);
+                    else
+                        buttonZuruck.setEnabled(true);
                 }
             }
         });
-        buttonZuruck.setEnabled(false);
+
 
        // new StundenplanHelper().execute(""); // Stundenplan wird abgerufen
     }
@@ -171,10 +164,14 @@ public class StundenplanFragment extends ListFragment {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                if (spinner.getSelectedItemPosition() == 0) buttonZuruck.setEnabled(false);
-                else buttonZuruck.setEnabled(true);
-                if (spinner.getSelectedItemPosition() == 6) buttonVor.setEnabled(false);
-                else buttonVor.setEnabled(true);
+                if (spinner.getSelectedItemPosition() == 0)
+                    buttonZuruck.setEnabled(false);
+                else
+                    buttonZuruck.setEnabled(true);
+                if (spinner.getSelectedItemPosition() == 6)
+                    buttonVor.setEnabled(false);
+                else
+                    buttonVor.setEnabled(true);
                 if(events[spinner.getSelectedItemPosition()]==null) new StundenplanHelper().execute(spinner.getSelectedItem().toString());
                 else erstelleStundenplan();
             }

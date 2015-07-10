@@ -50,28 +50,36 @@
 
         <!-- Logo der HFTL -->
         <ImageView
-            android:layout_width="192dp"
+            android:layout_width="194dp"
             android:layout_height="48dp"
             android:id="@+id/Logo"
             android:src="@drawable/logo_hftl"
             android:padding="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
             android:layout_gravity="center"
             android:contentDescription="Logo der HFTL"/>
 
         <!-- Button "Aktualisieren" -->
         <Button
             android:layout_width="match_parent"
+            android:minWidth="64dp"
+            android:maxWidth="194dp"
             android:layout_height="48dp"
+            android:minHeight="36dp"
             android:id="@+id/button_refresh_news"
             android:text="@string/btn_news_refresh"
-            android:padding="4dp"
-            android:background="@color/grün"
+            android:padding="8dp"
+            android:background="@drawable/custom_button"
             android:textColor="@color/weiss"
             android:layout_gravity="end"
-            android:layout_marginStart="25dp"
-            android:layout_marginLeft="25dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginRight="8dp"
-            />
+            android:layout_marginEnd="8dp"/>
+
 
     </LinearLayout>
     <!-- // footer für das Logo und Button  -->
@@ -83,6 +91,7 @@
         android:textFilterEnabled="true"
         android:id="@+id/android:list"
         android:padding="4dp"
+        android:divider="@color/grau06"
         android:layout_below="@id/news_header"
         android:layout_above="@id/news_footer"/>
     <!-- // ListView für die übergebenen News-Items -->
