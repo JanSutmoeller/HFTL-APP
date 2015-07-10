@@ -3,6 +3,7 @@ package bkmi.de.hftl_app.Fragmente;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -13,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.Date;
 import java.text.SimpleDateFormat;
@@ -50,7 +52,7 @@ public class StundenplanFragment extends ListFragment {
     String [] roomList;
     Spinner spinner;
     Button button, buttonVor, buttonZuruck;
-    StundenplanEvent events[][];
+    StundenplanEvent events[][]=null;
 
     /**
      * Erstellt ein neues StundenplanFragment.
@@ -75,8 +77,13 @@ public class StundenplanFragment extends ListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View stundenPlanView = inflater.inflate(R.layout.fragment_stundenplan, container, false);
+
+        TextView hl = (TextView) stundenPlanView.findViewById(R.id.hl_Stundenplan);
+        Typeface headline = Typeface.createFromAsset(getActivity().getAssets(), "fonts/OCRA.TTF");
+        hl.setTypeface(headline);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_stundenplan, container, false);
+        return stundenPlanView;
     }
 
     @Override
@@ -95,9 +102,8 @@ public class StundenplanFragment extends ListFragment {
             erstelleStundenplan();
             return;
         }
-        events= new StundenplanEvent[7][];
-
         erzeugeDropdown();
+        events= new StundenplanEvent[7][];
 
         //Listner zum Button hinzufügen
         button = (Button) getActivity().findViewById(R.id.button);
@@ -114,8 +120,8 @@ public class StundenplanFragment extends ListFragment {
             public void onClick(View v) {
                 if (spinner.getSelectedItemPosition() < 6) {
                     spinner.setSelection(spinner.getSelectedItemPosition() + 1);
-                    if(events[spinner.getSelectedItemPosition()]==null) new StundenplanHelper().execute(spinner.getSelectedItem().toString());
-                    else erstelleStundenplan();
+                    //if(events[spinner.getSelectedItemPosition()]==null) new StundenplanHelper().execute(spinner.getSelectedItem().toString());
+                    //else erstelleStundenplan();
                     if (spinner.getSelectedItemPosition() == 6) buttonVor.setEnabled(false);
                     else buttonVor.setEnabled(true);
                 }
@@ -129,8 +135,8 @@ public class StundenplanFragment extends ListFragment {
             public void onClick(View v) {
                 if (spinner.getSelectedItemPosition() > 0) {
                     spinner.setSelection(spinner.getSelectedItemPosition() - 1);
-                    if(events[spinner.getSelectedItemPosition()]==null) new StundenplanHelper().execute(spinner.getSelectedItem().toString());
-                    else erstelleStundenplan();
+                    //if(events[spinner.getSelectedItemPosition()]==null) new StundenplanHelper().execute(spinner.getSelectedItem().toString());
+                    //else erstelleStundenplan();
                     if (spinner.getSelectedItemPosition() == 0) buttonVor.setEnabled(false);
                     else buttonVor.setEnabled(true);
 
@@ -139,7 +145,7 @@ public class StundenplanFragment extends ListFragment {
         });
         buttonZuruck.setEnabled(false);
 
-        new StundenplanHelper().execute(""); // Stundenplan wird abgerufen
+       // new StundenplanHelper().execute(""); // Stundenplan wird abgerufen
     }
 
     @Override
@@ -169,6 +175,8 @@ public class StundenplanFragment extends ListFragment {
                 else buttonZuruck.setEnabled(true);
                 if (spinner.getSelectedItemPosition() == 6) buttonVor.setEnabled(false);
                 else buttonVor.setEnabled(true);
+                if(events[spinner.getSelectedItemPosition()]==null) new StundenplanHelper().execute(spinner.getSelectedItem().toString());
+                else erstelleStundenplan();
             }
 
             @Override
@@ -183,9 +191,9 @@ public class StundenplanFragment extends ListFragment {
         Calendar calendar = Calendar.getInstance();     //heutiges Datum
         calendar.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);    //Kalender auf Montag setzen
         Date date = calendar.getTime();
-        SimpleDateFormat formatEins = new SimpleDateFormat("ww  dd.MM.yyyy");
+        SimpleDateFormat formatEins = new SimpleDateFormat("ww: dd.MM.yyyy");
         SimpleDateFormat formatZwei = new SimpleDateFormat(" - dd.MM.yyyy");
-        temp = "Woche:" + formatEins.format(date);
+        temp = "KW " + formatEins.format(date);
 
         calendar.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY); //Kalender aus Sonntag setzen
         date = calendar.getTime();
@@ -195,7 +203,7 @@ public class StundenplanFragment extends ListFragment {
         for (int i = 0; i < 6; i++) {
             calendar.add(Calendar.DATE, 1); //Kalender steht auf Sonntag --> ein Tag addieren = Montag der nächsten Woche
             date = calendar.getTime();
-            temp = "Woche:" + formatEins.format(date);
+            temp = "KW " + formatEins.format(date);
             calendar.add(Calendar.DATE, 6); //Kalender steht auf Montag --> sechs Tage addieren = Sontag der selben Woche
             date = calendar.getTime();
             temp += formatZwei.format(date);
@@ -212,6 +220,7 @@ public class StundenplanFragment extends ListFragment {
         ArrayList<String> liste=new ArrayList<String>();
         //String data[] = new String[events[spinner.getSelectedItemPosition()].length+7];
         StundenplanEvent tempevent;
+        //if(events[spinner.getSelectedItemPosition()]==null) return;
 
         dateList = new String[events[spinner.getSelectedItemPosition()].length];
         fachList = new String[events[spinner.getSelectedItemPosition()].length];
@@ -219,7 +228,7 @@ public class StundenplanFragment extends ListFragment {
         roomList = new String[events[spinner.getSelectedItemPosition()].length];
         categoryList = new String[events[spinner.getSelectedItemPosition()].length];
 
-        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
+        SimpleDateFormat format = new SimpleDateFormat("EEEE, dd.MM.yyyy");
 
        if (events[spinner.getSelectedItemPosition()][0].isKeineDaten()){
             setListAdapter(new ArrayAdapter<>(getActivity(), simple_list_item_1, new String[]{"keine Daten"}));
