@@ -16,6 +16,7 @@ import java.io.OutputStreamWriter;
 import java.net.CookieHandler;
 import java.net.CookieManager;
 import java.net.URL;
+import java.net.UnknownHostException;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -34,7 +35,7 @@ public class NotenResolver {
     HttpsURLConnection connection;
     CookieManager cookieManager;
 
-    public NotenResolver(Context context) throws wrongUserdataException{
+    public NotenResolver(Context context){
         this.context = context;
 
         s="";   //Testzwecke
@@ -43,11 +44,10 @@ public class NotenResolver {
         cookieManager = new CookieManager();
         CookieHandler.setDefault(cookieManager);
 
-        init();
     }
 
     //Login im QIS durchführen
-    private void init() throws wrongUserdataException{
+    private void init() throws wrongUserdataException,UnknownHostException{
 
         String user;
         String password;
@@ -74,11 +74,15 @@ public class NotenResolver {
             connection.setRequestProperty("Content-Type",
                     "application/x-www-form-urlencoded");
             connection.setRequestProperty("Content-Length", String.valueOf(urlParameters.length()));
-            OutputStreamWriter writer = new OutputStreamWriter(connection.getOutputStream());
+            try{
+                OutputStreamWriter writer = new OutputStreamWriter(connection.getOutputStream());
+                writer.write(urlParameters);
+                writer.flush();
+                connection.getContent();}
+            catch (UnknownHostException e){
+                throw new UnknownHostException("");
+            }
 
-            writer.write(urlParameters);
-            writer.flush();
-            connection.getContent();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -90,10 +94,13 @@ public class NotenResolver {
     }
 
     //Zugriff auf Noten
-    public boolean getNoten() throws wrongUserdataException{
+    public boolean getNoten() throws wrongUserdataException, UnknownHostException{
+
 
         Element element;
         Elements elements;
+
+        init();
 
         //testen ob Login erfolgreich
         if(!testeZugang()) throw new wrongUserdataException();
@@ -142,6 +149,8 @@ public class NotenResolver {
                 sqLiteStatement.bindString(5 , element.child(6).ownText());
 
                 sqLiteStatement.executeInsert();  //Schreiben der Werte in die DB
+
+
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -187,7 +196,7 @@ public class NotenResolver {
 
     //Die Methode kontrolliert ob der Login auf der QIS-Seite erfolgreich war
     //falls Login erfolgreich wird true zurückgegeben
-    private boolean testeZugang(){
+    private boolean testeZugang() throws UnknownHostException {
         Elements e;
         String seite = "https://qisweb.hispro.de/tel/rds?state=user&type=0&category=menu.browse&breadCrumbSource=portal&startpage=portal.vm&chco=y";
         try {
@@ -199,6 +208,9 @@ public class NotenResolver {
                 return false;
             }
 
+        }
+        catch (UnknownHostException e2) {
+            throw new UnknownHostException("");
         }
         catch (Exception e1){
             e1.printStackTrace();

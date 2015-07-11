@@ -36,8 +36,10 @@
     <string name="txt_einstell_cat_stunden">Stundenplan</string>
     <string name="text_einstell_qis_user">Benutzername</string>
     <string name="text_einstell_qis_pw">Passwort</string>
+    <string name="txt_einstell_cat_service">Noten Push-Service</string>
 
     <!-- Inhalt von der Noten Seite -->
     <string name="noUsernamePassword">Benutzername/Passwort nicht eingetragen!\nDaten jetzt eintragen?</string>
     <string name="wrongUsernamePassword">Benutzername/Passwort falsch!\nDaten jetzt ändern?</string>
+
 </resources>
