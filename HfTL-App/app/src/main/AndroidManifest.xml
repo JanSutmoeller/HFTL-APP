@@ -39,6 +39,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="bkmi.de.hftl_app.NewsActivity" />
         </activity>
+        <service android:name=".Service.NotenService"
+            android:label="HfTL-App Noten Service">
+            <intent-filter>
+                <action android:name="..EinstellungActivity"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

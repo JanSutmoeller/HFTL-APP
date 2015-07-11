@@ -19,6 +19,8 @@ import android.widget.TextView;
 import android.graphics.Typeface;
 import android.widget.Toast;
 
+import java.net.UnknownHostException;
+
 import bkmi.de.hftl_app.Database.NotenDB;
 import bkmi.de.hftl_app.Database.NotenTabelle;
 import bkmi.de.hftl_app.EinstellungActivity;
@@ -289,6 +291,9 @@ public class NotenFragment extends ListFragment {
                                 setListAdapter(null);
                             }
                         });
+            }
+            catch (UnknownHostException e){
+                e.printStackTrace();
             }
 
             return null;
