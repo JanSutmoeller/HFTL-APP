@@ -55,7 +55,7 @@ public class StundenplanResolver {
             // Es wird im übergebenen String nach der KW und dem Jahr gesucht
             // Siehe Javadoc Class Pattern
             String temp="";
-            Pattern pattern = Pattern.compile("(?<=:)\\d{2}");
+            Pattern pattern = Pattern.compile("(?<=KW\\s)\\d{2}");
             Matcher matcher = pattern.matcher(woche);
             if(matcher.find())
                 temp=matcher.group() + "_";

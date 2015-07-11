@@ -25,7 +25,7 @@ import android.widget.TextView;
 import bkmi.de.hftl_app.NewsActivity;
 import bkmi.de.hftl_app.NewsClickedActivity;
 import bkmi.de.hftl_app.R;
-import bkmi.de.hftl_app.help.CustomAdapter;
+import bkmi.de.hftl_app.help.CustomAdapterNews;
 import bkmi.de.hftl_app.help.NewsResolver;
 
 import static android.R.layout.simple_list_item_1;
@@ -42,7 +42,7 @@ public class NewsFragment extends ListFragment {
     NewsResolver newsResolver;
     Intent intent;
     String stringArray[];
-    Button button1;
+    Button button;
     ArrayAdapter<String> arrayAdapter;
     String headlineList[];
     String dateList[];
@@ -83,12 +83,6 @@ public class NewsFragment extends ListFragment {
         TextView hl = (TextView) rootView.findViewById(R.id.hl_News);
         Typeface headline = Typeface.createFromAsset(getActivity().getAssets(), "fonts/OCRA.TTF");
         hl.setTypeface(headline);
-
-        /*
-        TextView bp = (TextView) rootView.findViewById(R.id.bp_News);
-        Typeface bulletpoint = Typeface.createFromAsset(getActivity().getAssets(), "fonts/WINGDNG3.TTF");
-        bp.setTypeface(bulletpoint);*/
-
 
         return rootView;
     }
@@ -133,8 +127,8 @@ public class NewsFragment extends ListFragment {
     @Override
     public void onStart() {
         super.onStart();
-        button1 = (Button) getView().findViewById(R.id.button_refresh_news);
-        button1.setOnClickListener(new View.OnClickListener() {
+        button = (Button) getView().findViewById(R.id.button_refresh_news);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 zeigeNews();
@@ -178,7 +172,7 @@ public class NewsFragment extends ListFragment {
 
         @Override
         protected Long doInBackground(String... params) {
-            newsResolver = new NewsResolver("https://www.hft-leipzig.de/de/studieninteressierte/service/news.html");
+            newsResolver = new NewsResolver("https://www.hft-leipzig.de/de/hochschule/service/news.html");
             dateList=newsResolver.writeNewsListDate();
             headlineList=newsResolver.writeNewsListHeadline();
             contentList=newsResolver.writeNewsListContent();
@@ -198,7 +192,7 @@ public class NewsFragment extends ListFragment {
                 @Override
                 public void run() {
                   //  setListAdapter(arrayAdapter);
-                    setListAdapter(new CustomAdapter(getActivity(), dateList, headlineList, contentList));
+                    setListAdapter(new CustomAdapterNews(getActivity(), dateList, headlineList, contentList));
                 }
             });
         }

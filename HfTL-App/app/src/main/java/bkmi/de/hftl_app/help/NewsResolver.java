@@ -45,41 +45,19 @@ public class NewsResolver {
         Elements elements = doc.getElementsByClass("news-list-item");
         for(int i=0; i<elements.size(); i++){
             HftlEvent termin = new HftlEvent();
-            termin.time= elements.get(i).child(0).ownText();
-            termin.url="https://www.hft-leipzig.de/"+elements.get(i).child(1).child(0).attr("href");
-          //  termin.text=elements.get(i).child(1).child(0).ownText();
-            termin.text=elements.get(i).child(2).text();
-            termin.head=elements.get(i).child(1).text();
+
+            termin.time= elements.get(i).child(1).text();                                                       //Parsen des Datums
+            termin.url="https://www.hft-leipzig.de/"+elements.get(i).child(2).child(0).child(0).attr("href");   //Parsen des Links zur News
+            termin.head=elements.get(i).child(2).child(0).child(0).ownText();                                   //Parsen der Überschrift
+            termin.text=elements.get(i).child(2).child(1).ownText();                                            //Parsen des Textes
 
             termine.add(termin);
         }
         if(elements.size()==0){
             //TODO: Ausgabe in NewsList, wenn Offline
-
         }
     }
 
-
-
-    /*
-    * Erzeugt eine String-Array mit allen Terminen
-     */
-    /*
-    public String[] getTermineStringArray(){
-
-        getHftlEvent();
-        if(termine.size()==0) return null; //Falls keine Termine anstehen
-
-        String[] s = new String[termine.size()];
-        s[0]="Die aktuellen News sind:";   // Für die ListView das erste Element,
-
-        int i = 0;
-        for(HftlEvent termin:termine ){
-            s[i++]= "Am " + termin.time + ":\n" + termin.text + "\nFür mehr Infos antippen." ;
-        }
-
-        return s;
-    }*/
     public String[] writeNewsListDate(){
         getHftlEvent();
         int i = 0;
@@ -87,9 +65,9 @@ public class NewsResolver {
         for(HftlEvent termin:termine ){
             s[i++]=termin.time;
         }
-
         return s;
     }
+
     public String[] writeNewsListHeadline(){
         getHftlEvent();
         int i = 0;
@@ -97,9 +75,9 @@ public class NewsResolver {
         for(HftlEvent termin:termine ){
             s[i++]=termin.head;
         }
-
         return s;
     }
+
     public String[] writeNewsListContent(){
         getHftlEvent();
         int i = 0;
@@ -107,13 +85,8 @@ public class NewsResolver {
         for(HftlEvent termin:termine ){
             s[i++]=termin.text;
         }
-
         return s;
     }
-
-
-
-
 
     /*
     * Gibt die URL des Termines an Position "position" zurück, wird für die Detailanzeige benötigt.

@@ -126,6 +126,7 @@ public class NotenResolver {
                 sqLiteStatement.bindString(2, "");
                 sqLiteStatement.bindString(3 , "");
                 sqLiteStatement.bindString(4, "");
+                sqLiteStatement.bindString(5, "");
 
                 sqLiteStatement.executeInsert();
 
@@ -139,11 +140,13 @@ public class NotenResolver {
                 Wert 2 --> Semester
                 Wert 3 --> Note
                 Wert 4 --> Link zum Notenspiegel
+                Wert 5 --> Anzahl der Versuche
                  */
                 sqLiteStatement.bindString(1 , element.child(1).ownText());
                 sqLiteStatement.bindString(2, element.child(2).ownText());
                 sqLiteStatement.bindString(3 , element.child(3).ownText());
                 sqLiteStatement.bindString(4, element.child(3).child(0).attr("href"));
+                sqLiteStatement.bindString(5 , element.child(6).ownText());
 
                 sqLiteStatement.executeInsert();  //Schreiben der Werte in die DB
 

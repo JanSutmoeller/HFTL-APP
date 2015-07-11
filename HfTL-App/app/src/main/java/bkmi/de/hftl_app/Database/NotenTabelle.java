@@ -10,8 +10,9 @@ public final class NotenTabelle {
     //Namen der einzelnen Spalten
     public static final String FACH = "fach";
     public static final String NOTE = "note";
-    public static final String SEMSETER = "semester";
+    public static final String SEMESTER = "semester";
     public static final String LINK = "link";
+    public static final String VERSUCH = "versuch";
 
     //Datenbank erzeugen
     public static final String SQL_CREATE =
@@ -20,6 +21,7 @@ public final class NotenTabelle {
                 "note TEXT NOT NULL, " +
                 "semester TEXT NOT NULL, " +
                 "link TEXT NOT NULL, " +
+                "versuch TEXT NOT NULL, " +
                 "_id INTEGER PRIMARY KEY AUTOINCREMENT " +
                 ");";
 
@@ -30,11 +32,11 @@ public final class NotenTabelle {
     //Werte einfügen
     public static final String SQL_INSERT_Noten =
             "INSERT INTO notendatenbank " +
-                    "(fach, semester, note, link) " +
-                    "VALUES (?,?,?,?)";
+                    "(fach, semester, note, link, versuch) " +
+                    "VALUES (?,?,?,?,?)";
 
     public static final String[] NOTENABFRAGE1 =
-    {FACH, NOTE, SEMSETER, LINK  };
+    {FACH, NOTE, SEMESTER, LINK, VERSUCH};
 
     public static final String[] NOTENABFRAGE =
             {NOTE};
@@ -43,5 +45,8 @@ public final class NotenTabelle {
             {FACH};
 
     public static final String[] SEMESTERABFRAGE =
-            {SEMSETER};
+            {SEMESTER};
+
+    public static final String[] VERSUCHABFRAGE =
+            {VERSUCH};
 }
