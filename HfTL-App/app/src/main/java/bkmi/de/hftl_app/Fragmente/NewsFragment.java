@@ -172,7 +172,7 @@ public class NewsFragment extends ListFragment {
 
         @Override
         protected Long doInBackground(String... params) {
-            newsResolver = new NewsResolver("https://www.hft-leipzig.de/de/hochschule/service/news.html");
+            newsResolver = new NewsResolver("https://www.hft-leipzig.de/de/start.html");
             dateList=newsResolver.writeNewsListDate();
             headlineList=newsResolver.writeNewsListHeadline();
             contentList=newsResolver.writeNewsListContent();
