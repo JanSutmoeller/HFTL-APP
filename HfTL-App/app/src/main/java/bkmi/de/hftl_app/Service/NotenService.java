@@ -95,6 +95,7 @@ class ThreadTest extends Thread {
                 manager.notify(nNotificationId, nBuilder.build());
             }
 
+
             //Datenbank schließen
             cursor.close();
             notenDB.close();}
