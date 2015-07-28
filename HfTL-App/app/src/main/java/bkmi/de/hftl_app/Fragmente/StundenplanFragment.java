@@ -154,8 +154,6 @@ public class StundenplanFragment extends ListFragment {
 
     @Override
     public void onStart() {
-
-        //Todo kontrolle Studiengang
         super.onStart();
 
     }

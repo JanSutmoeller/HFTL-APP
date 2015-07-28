@@ -56,17 +56,19 @@ public class EinstellungActivity extends PreferenceActivity {
         listener = new SharedPreferences.OnSharedPreferenceChangeListener() {
             public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
 
-                //Wenn der Wert in der Service Checkbox true ist mache die Auswahlliste Sichtbar
+                //Wurde die Checkbox angeklicket?
                 if (key.equals("service_checkbox")) {
+                    //Wenn der Wert in der Service Checkbox true ist mache die Auswahlliste Sichtbar
                     if (shared.getBoolean("service_checkbox", false)) {
+                        //Falls keine Benutzerdaten eingetragen sind wird eine Fehlermeldung ausgegeben und die Checkbox wieder auf false geschalten
                         if (!testeBenutzerdaten()) {
                             keineBenutzerdaten();
                             check.setChecked(false);
                             return;
                         }
+                        //Falls die Benutzerdaten richtig sind wird das Dropdownmenü für den Intervall aktiviert und die Pushnachricht gestartet
                         list.setEnabled(true);
                         long time = Long.parseLong(shared.getString("service_intervall", "3600000"));
-                        Log.d("test", "Zeit: "+ time);
 
                         alarmMgr = (AlarmManager) getApplicationContext().getSystemService(Context.ALARM_SERVICE);
                         Intent intent = new Intent(getApplicationContext(), NotenService.class);
@@ -74,9 +76,8 @@ public class EinstellungActivity extends PreferenceActivity {
 
                         alarmMgr.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime(), time, pIntent);
 
-                        //getApplicationContext().startService(intent);
-
                     } else {
+                        //Falls die Checkbox deaktiviert wurde wird das Dropdownmenü deaktiviert und die Pushnachricht ausgeschalten
                         list.setEnabled(false);
                         Intent intent = new Intent(getApplicationContext(), NotenService.class);
                         PendingIntent pIntent = PendingIntent.getService(getApplicationContext(), 0, intent, 0);
@@ -85,11 +86,14 @@ public class EinstellungActivity extends PreferenceActivity {
 
                     }
                 }
+                //Wurde Serviceintervall angeklicket?
                 if(key.equals("service_intervall")){
+                    //Der laufende Alarmmanger wird gecancelt und ein neuer mit der neuen Zeitspanne wird aktiviert
                     Intent intent = new Intent(getApplicationContext(), NotenService.class);
                     PendingIntent pIntent = PendingIntent.getService(getApplicationContext(), 0, intent, 0);
                     alarmMgr = (AlarmManager) getApplicationContext().getSystemService(Context.ALARM_SERVICE);
                     alarmMgr.cancel(pIntent);
+
                     alarmMgr = (AlarmManager) getApplicationContext().getSystemService(Context.ALARM_SERVICE);
                     long time = Long.parseLong(shared.getString("service_intervall", "3600000"));
                     alarmMgr.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime(), time, pIntent);
