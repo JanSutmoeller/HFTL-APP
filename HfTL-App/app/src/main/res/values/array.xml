@@ -84,7 +84,7 @@
     </string-array>
 
     <string-array name="listeNotenIntervall">
-        <item>einmal Stunde</item>
+        <item>einmal pro Stunde</item>
         <item>einmal pro Tag</item>
         <item>einmal pro Woche</item>
     </string-array>
