@@ -50,7 +50,7 @@
 
 \newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
 
-\author{Jan Sutmöller} % Your name
+\author{BKMI 13} % Your name
 
 \date{\normalsize\today} % Today's date or a custom date
 \bibliographystyle{unsrt}
@@ -65,6 +65,8 @@
 % Inhaltsverzeichnis auch in Time New Roman
 \addtokomafont{sectioning}{\rmfamily}
 \usepackage[section]{placeins}
+\usepackage{pdflscape}		%Seiten teilweise auf Querformat drehen
+\usepackage[final]{pdfpages} 		%Einfügen von bestehenden .pdf Seitem
   
 \setcounter{secnumdepth}{4} %damit im Dokument tiefer gegliedert wird
 \setcounter{tocdepth}{4}	%damit im Inhaltsverzeichnis tiefer gegliedert wird
@@ -133,7 +135,7 @@
 %Seitennummerierung neu beginnen, Zahlen [arabic], röm.Zahlen [roman,Roman], Buchstaben [alph,Alph]
 \pagenumbering{arabic}
 
-\cleardoublepage\pdfbookmark{Inhaltsverzeichniss}{toc} %Inhaltsverzeichnis im PDF
+\cleardoublepage\pdfbookmark{Inhaltsverzeichnis}{toc} %Inhaltsverzeichnis im PDF
 
 \tableofcontents
 \listoffigures
@@ -143,6 +145,7 @@
 \input{02_Lastenheft/Lastenheft}
 \newpage
 \input{03_Bedienungsanleitung/Bedienungsanleitung}
+\input{04_Anhang/Anhang}
 
 
 
