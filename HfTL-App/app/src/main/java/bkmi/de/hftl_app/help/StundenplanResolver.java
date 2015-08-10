@@ -140,6 +140,8 @@ public class StundenplanResolver {
             stundenplan[i].setUhrzeitEnde(String.format("%02d:%02d", event.getDateEnd().getValue().getHours(), event.getDateEnd().getValue().getMinutes())); //Enduhrzeit auslesen
             stundenplan[i].setRaum(event.getLocation().getValue()); //Raum auslesen
             stundenplan[i].setKategorie(event.getCategories().get(0).getValues().get(0)); //Vorlesungstyp auslesen
+            stundenplan[i].setKalenderStart(event.getDateStart().getValue().getTime()); //Millisekunden für die Kalendersync
+            stundenplan[i].setKalenderEnde(event.getDateEnd().getValue().getTime());
             i++;
         }
 

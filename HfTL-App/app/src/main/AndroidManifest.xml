@@ -5,7 +5,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
 
     <application
         android:allowBackup="true"
@@ -14,8 +15,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".NewsActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,33 +25,45 @@
         </activity>
         <activity
             android:name=".EinstellungActivity"
-            android:screenOrientation="portrait"
             android:label="@string/title_activity_einstellung"
-            android:parentActivityName=".NewsActivity" >
+            android:parentActivityName=".NewsActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="bkmi.de.hftl_app.NewsActivity" />
         </activity>
         <activity
             android:name=".NewsClickedActivity"
-            android:screenOrientation="portrait"
             android:label="@string/title_activity_news_clicked"
-            android:parentActivityName=".NewsActivity" >
+            android:parentActivityName=".NewsActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="bkmi.de.hftl_app.NewsActivity" />
         </activity>
-        <service android:name=".Service.NotenService"
-            android:label="HfTL-App Noten Service">
+
+        <service
+            android:name=".Service.NotenService"
+            android:label="HfTL-App Noten Service" >
             <intent-filter>
-                <action android:name="..EinstellungActivity"/>
+                <action android:name="..EinstellungActivity" />
             </intent-filter>
         </service>
-        <receiver android:name=".Service.NotenBroadcast">
+
+        <receiver android:name=".Service.NotenBroadcast" >
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+
+        <activity
+            android:name=".Impressum"
+            android:label="@string/title_activity_impressum"
+            android:parentActivityName=".EinstellungActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="bkmi.de.hftl_app.EinstellungActivity" />
+        </activity>
     </application>
 
 </manifest>

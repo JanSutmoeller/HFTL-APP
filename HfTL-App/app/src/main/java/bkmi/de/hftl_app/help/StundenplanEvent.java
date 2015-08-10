@@ -12,6 +12,8 @@ public class StundenplanEvent implements Serializable {
     private String kategorie;
     private boolean keineDaten=false;
     private Date date;
+    private long kalenderStart;
+    private long kalenderEnde;
 
     public String getFach() {
         return Fach;
@@ -67,5 +69,21 @@ public class StundenplanEvent implements Serializable {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public long getKalenderStart() {
+        return kalenderStart;
+    }
+
+    public void setKalenderStart(long kalenderStart) {
+        this.kalenderStart = kalenderStart;
+    }
+
+    public long getKalenderEnde() {
+        return kalenderEnde;
+    }
+
+    public void setKalenderEnde(long kalenderEnde) {
+        this.kalenderEnde = kalenderEnde;
     }
 }

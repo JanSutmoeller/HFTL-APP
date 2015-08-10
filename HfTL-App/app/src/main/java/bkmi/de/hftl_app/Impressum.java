@@ -2,8 +2,9 @@ package bkmi.de.hftl_app;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
+import android.widget.TextView;
 
 
 public class Impressum extends ActionBarActivity {
@@ -12,27 +13,12 @@ public class Impressum extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_impressum);
+
+        TextView textView = (TextView) findViewById(R.id.textView14);
+        textView.setText(Html.fromHtml(
+                        "<a href=\"https://www.hft-leipzig.de/de/kontakt/impressum.html\">https://www.hft-leipzig.de/de/kontakt/impressum.html</a> "
+                        ));
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_impressum, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

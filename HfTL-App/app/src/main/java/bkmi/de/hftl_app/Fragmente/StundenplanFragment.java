@@ -4,15 +4,22 @@ package bkmi.de.hftl_app.Fragmente;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.provider.CalendarContract;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -20,12 +27,14 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.TimeZone;
 
 import bkmi.de.hftl_app.EinstellungActivity;
 import bkmi.de.hftl_app.NewsActivity;
@@ -51,14 +60,14 @@ public class StundenplanFragment extends ListFragment {
      */
     private static final String ARG_SECTION_NUMBER = "section_number";
     private static final String STUNDENPLANSPEICHER = "stundenplan";
-    String [] fachList;
-    String [] dateList;
-    String [] timeList;
-    String [] categoryList;
-    String [] roomList;
+    String[] fachList;
+    String[] dateList;
+    String[] timeList;
+    String[] categoryList;
+    String[] roomList;
     Spinner spinner;
     Button buttonVor, buttonZuruck;
-    StundenplanEvent events[][]=null;
+    StundenplanEvent events[][] = null;
 
     /**
      * Erstellt ein neues StundenplanFragment.
@@ -77,6 +86,7 @@ public class StundenplanFragment extends ListFragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        setHasOptionsMenu(true);
         super.onCreate(savedInstanceState);
     }
 
@@ -103,13 +113,13 @@ public class StundenplanFragment extends ListFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        if(savedInstanceState!=null){
-            events=(StundenplanEvent[][])savedInstanceState.getSerializable(STUNDENPLANSPEICHER);
+        if (savedInstanceState != null) {
+            events = (StundenplanEvent[][]) savedInstanceState.getSerializable(STUNDENPLANSPEICHER);
             erstelleStundenplan();
             return;
         }
         erzeugeDropdown();
-        events= new StundenplanEvent[7][];
+        events = new StundenplanEvent[7][];
 
         buttonVor = (Button) getActivity().findViewById(R.id.button_vor);
         buttonVor.setOnClickListener(new View.OnClickListener() {
@@ -144,7 +154,7 @@ public class StundenplanFragment extends ListFragment {
         });
 
 
-       // new StundenplanHelper().execute(""); // Stundenplan wird abgerufen
+        // new StundenplanHelper().execute(""); // Stundenplan wird abgerufen
     }
 
     @Override
@@ -181,11 +191,11 @@ public class StundenplanFragment extends ListFragment {
                 else
                     buttonVor.setEnabled(true);
                 //wenn das Datum zum ersten mal aufgerufen wird, muss der Stundenplan gedownloadet werden
-                if(pruefeStudiengang()){
-                if(events[spinner.getSelectedItemPosition()]==null) new StundenplanHelper().execute(spinner.getSelectedItem().toString());
-                else erstelleStundenplan();
-                }
-                else keinStudiengang();
+                if (pruefeStudiengang()) {
+                    if (events[spinner.getSelectedItemPosition()] == null)
+                        new StundenplanHelper().execute(spinner.getSelectedItem().toString());
+                    else erstelleStundenplan();
+                } else keinStudiengang();
             }
 
             @Override
@@ -241,11 +251,11 @@ public class StundenplanFragment extends ListFragment {
 
     //Prüft ob ein Studiengang ausgewähl wurde
     private boolean pruefeStudiengang() {
-        SharedPreferences sp= PreferenceManager.getDefaultSharedPreferences(this.getActivity());
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this.getActivity());
         String studiengang = sp.getString("studiengang", "");
 
         //Falls der Studiengang leer ist wird false zurück gegeben
-        if("".equals(studiengang)) return false;
+        if ("".equals(studiengang)) return false;
         return true;
     }
 
@@ -295,6 +305,52 @@ public class StundenplanFragment extends ListFragment {
         }
     }
 
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_stundenplan, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_sync) {
+            synchronisiereKalender();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void synchronisiereKalender() {
+
+
+        long calID = 1;
+        if (!events[spinner.getSelectedItemPosition()][0].isKeineDaten()) {
+            for (int i = 0; i < events[spinner.getSelectedItemPosition()].length; i++) {
+                StundenplanEvent tempevent = events[spinner.getSelectedItemPosition()][i];
+                ContentResolver cr = getActivity().getContentResolver();
+                ContentValues values = new ContentValues();
+                values.put(CalendarContract.Events.DTSTART, tempevent.getKalenderStart());
+                values.put(CalendarContract.Events.DTEND, tempevent.getKalenderEnde());
+                values.put(CalendarContract.Events.TITLE, tempevent.getFach());
+                values.put(CalendarContract.Events.EVENT_LOCATION, tempevent.getRaum());
+                values.put(CalendarContract.Events.DESCRIPTION, tempevent.getKategorie());
+                values.put(CalendarContract.Events.CALENDAR_ID, calID);
+                values.put(CalendarContract.Events.EVENT_TIMEZONE, TimeZone.getDefault().toString());
+                Uri uri = cr.insert(CalendarContract.Events.CONTENT_URI, values);
+            }
+            Toast toast = Toast.makeText(getActivity(), "Stundenplan erfolgreich eingefügt", Toast.LENGTH_LONG);
+            toast.show();
+        }
+        else {
+            Toast toast = Toast.makeText(getActivity(), "keine Daten vorhanden", Toast.LENGTH_LONG);
+            toast.show();
+        }
+
+    }
+
     class StundenplanHelper extends AsyncTask<String, Integer, Long> {
         ProgressDialog ladebalken;
 
@@ -314,15 +370,14 @@ public class StundenplanFragment extends ListFragment {
             try {
                 if (params[0].equals("")) {
                     events[0] = sr.erzeugeStundenplan(null);
-                }
-                else {
+                } else {
                     events[spinner.getSelectedItemPosition()] = sr.erzeugeStundenplan(params[0]);
                 }
             } catch (stundenplanException e) {
                 StundenplanEvent event = new StundenplanEvent();
                 event.setKeineDaten(true);
                 StundenplanEvent hilfsArray[] = new StundenplanEvent[1];
-                hilfsArray[0]=event;
+                hilfsArray[0] = event;
                 events[spinner.getSelectedItemPosition()] = hilfsArray;
             }
 

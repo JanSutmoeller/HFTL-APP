@@ -36,4 +36,12 @@
                 android:entryValues="@array/werteNotenIntervall"
                 android:defaultValue="3600000"/>
         </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/txt_einstell_cat_allgemein">
+        <PreferenceScreen android:key="impressum" android:title="Impressum">
+        <intent android:action="android.intent.action.VIEW"
+            android:targetPackage="bkmi.de.hftl_app"
+            android:targetClass="bkmi.de.hftl_app.Impressum"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
     </PreferenceScreen>
