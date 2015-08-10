@@ -11,6 +11,7 @@
 
     <!--Text für den Button oben rechts -->
     <string name="action_settings">Einstellung</string>
+    <string name="action_sync">Mit Kalender synchronisieren</string>
 
     <!-- Inhalt von der News Seite -->
     <string name="News_headline">News aus der HFT-Leipzig</string>
@@ -38,9 +39,13 @@
     <string name="text_einstell_qis_user">Benutzername</string>
     <string name="text_einstell_qis_pw">Passwort</string>
     <string name="txt_einstell_cat_service">Noten Push-Service</string>
+    <string name="txt_einstell_cat_allgemein">Allgemein</string>
 
     <!-- Inhalt von der Noten Seite -->
     <string name="noUsernamePassword">Benutzername/Passwort nicht eingetragen!\nDaten jetzt eintragen?</string>
     <string name="wrongUsernamePassword">Benutzername/Passwort falsch!\nDaten jetzt ändern?</string>
+    <string name="title_activity_impressum">Impressum</string>
+
+    <string name="hello_world">Hello world!</string>
 
 </resources>
