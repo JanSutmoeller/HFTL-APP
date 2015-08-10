@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
     <application
         android:allowBackup="true"
@@ -39,6 +40,17 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="bkmi.de.hftl_app.NewsActivity" />
         </activity>
+        <service android:name=".Service.NotenService"
+            android:label="HfTL-App Noten Service">
+            <intent-filter>
+                <action android:name="..EinstellungActivity"/>
+            </intent-filter>
+        </service>
+        <receiver android:name=".Service.NotenBroadcast">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \BOOKMARK [0][-]{toc.0}{Inhaltsverzeichniss}{}% 1
 \BOOKMARK [1][-]{section*.2}{Abbildungsverzeichnis}{toc.0}% 2
 \BOOKMARK [1][-]{section.1}{Einf\374hrung}{toc.0}% 3
@@ -81,3 +82,66 @@
 \BOOKMARK [3][-]{subsubsection.6.7.2}{CustomAdapterNews.java}{subsection.6.7}% 81
 \BOOKMARK [3][-]{subsubsection.6.7.3}{CustomAdapterNoten.java}{subsection.6.7}% 82
 \BOOKMARK [3][-]{subsubsection.6.7.4}{CustomAdapterStundenplan}{subsection.6.7}% 83
+=======
+\BOOKMARK [0][-]{toc.0}{Inhaltsverzeichnis}{}% 1
+\BOOKMARK [1][-]{section.1}{Einf\374hrung}{toc.0}% 2
+\BOOKMARK [2][-]{subsection.1.1}{Zweck}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.2}{Hintergr\374nde und Ziele des Projekts}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.3}{Produktumfang}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.4}{Musskriterien}{section.1}% 6
+\BOOKMARK [2][-]{subsection.1.5}{Abgrenzungskriterien}{section.1}% 7
+\BOOKMARK [3][-]{subsubsection.1.5.1}{Kostenrahmen}{subsection.1.5}% 8
+\BOOKMARK [2][-]{subsection.1.6}{Definitionen, Akronyme, Abk\374rzungen}{section.1}% 9
+\BOOKMARK [2][-]{subsection.1.7}{Referenzen}{section.1}% 10
+\BOOKMARK [1][-]{section.2}{Allgemeine \334bersicht}{toc.0}% 11
+\BOOKMARK [2][-]{subsection.2.1}{Beschreibung der Ausgangssituation \(Ist-Zustand\) }{section.2}% 12
+\BOOKMARK [2][-]{subsection.2.2}{Produkteinsatz}{section.2}% 13
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Anwendungsbereiche}{subsection.2.2}% 14
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Zielgruppen, Qualifikationsniveau}{subsection.2.2}% 15
+\BOOKMARK [2][-]{subsection.2.3}{Produktfunktionalit\344t}{section.2}% 16
+\BOOKMARK [2][-]{subsection.2.4}{Randbedingungen}{section.2}% 17
+\BOOKMARK [2][-]{subsection.2.5}{Annahmen und Abh\344ngigkeiten}{section.2}% 18
+\BOOKMARK [2][-]{subsection.2.6}{Verz\366gerungen}{section.2}% 19
+\BOOKMARK [1][-]{section.3}{Anwendungsszenarien}{toc.0}% 20
+\BOOKMARK [2][-]{subsection.3.1}{Beschreibung aus der Nutzersicht}{section.3}% 21
+\BOOKMARK [1][-]{section.4}{Anforderungen}{toc.0}% 22
+\BOOKMARK [2][-]{subsection.4.1}{Fachkonzept}{section.4}% 23
+\BOOKMARK [3][-]{subsubsection.4.1.1}{\334berblick \374ber das Gesamtsystem}{subsection.4.1}% 24
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Verwendete Bibliotheken von Drittanbieteren}{subsection.4.1}% 25
+\BOOKMARK [2][-]{subsection.4.2}{Anforderungen an die Datenhaltung}{section.4}% 26
+\BOOKMARK [3][-]{subsubsection.4.2.1}{allgemeine Beschreibung der Daten}{subsection.4.2}% 27
+\BOOKMARK [2][-]{subsection.4.3}{Anforderungen an die Benutzeroberfl\344che}{section.4}% 28
+\BOOKMARK [3][-]{subsubsection.4.3.1}{allgemeine Anforderungen an die Oberfl\344che}{subsection.4.3}% 29
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Berechtigungen}{subsection.4.3}% 30
+\BOOKMARK [3][-]{subsubsection.4.3.3}{Bildschirmlayout}{subsection.4.3}% 31
+\BOOKMARK [3][-]{subsubsection.4.3.4}{Dialogstruktur, Dialogabl\344ufe}{subsection.4.3}% 32
+\BOOKMARK [2][-]{subsection.4.4}{Leistungsanforderungen}{section.4}% 33
+\BOOKMARK [2][-]{subsection.4.5}{Anfordeungen f\374r Inbetriebnahme und Einsatz}{section.4}% 34
+\BOOKMARK [3][-]{subsubsection.4.5.1}{Sicherheitsziele}{subsection.4.5}% 35
+\BOOKMARK [3][-]{subsubsection.4.5.2}{Installationsprozedur}{subsection.4.5}% 36
+\BOOKMARK [3][-]{subsubsection.4.5.3}{Pilot- bzw. Probebetrieb}{subsection.4.5}% 37
+\BOOKMARK [3][-]{subsubsection.4.5.4}{Fehlerreaktion, Garantie, Service, \273Wiederanlauf\253}{subsection.4.5}% 38
+\BOOKMARK [3][-]{subsubsection.4.5.5}{Schulungen}{subsection.4.5}% 39
+\BOOKMARK [2][-]{subsection.4.6}{Qualit\344tsanforderungen}{section.4}% 40
+\BOOKMARK [3][-]{subsubsection.4.6.1}{Qualit\344tsmerkmale}{subsection.4.6}% 41
+\BOOKMARK [3][-]{subsubsection.4.6.2}{Qualit\344tssicherung}{subsection.4.6}% 42
+\BOOKMARK [3][-]{subsubsection.4.6.3}{Qualit\344tsnachweise}{subsection.4.6}% 43
+\BOOKMARK [3][-]{subsubsection.4.6.4}{Offenlegung der Qualit\344tskontrollpl\344ne}{subsection.4.6}% 44
+\BOOKMARK [3][-]{subsubsection.4.6.5}{Berichte, Protokolle zum Nachweis des Vorgehens gem\344\337 der Qualit\344tskontrollpl\344ne}{subsection.4.6}% 45
+\BOOKMARK [2][-]{subsection.4.7}{Anforderung an die Entwicklung}{section.4}% 46
+\BOOKMARK [3][-]{subsubsection.4.7.1}{Entwicklungs-Umgebung}{subsection.4.7}% 47
+\BOOKMARK [3][-]{subsubsection.4.7.2}{Projekt-Organisation}{subsection.4.7}% 48
+\BOOKMARK [3][-]{subsubsection.4.7.3}{Projekt-Planung}{subsection.4.7}% 49
+\BOOKMARK [3][-]{subsubsection.4.7.4}{\304nderungsmanagement}{subsection.4.7}% 50
+\BOOKMARK [3][-]{subsubsection.4.7.5}{Testanforderungen}{subsection.4.7}% 51
+\BOOKMARK [1][-]{section.5}{Anhang}{toc.0}% 52
+\BOOKMARK [2][-]{subsection.5.1}{Benutzerhandbuch}{section.5}% 53
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Funktionsumfang}{subsection.5.1}% 54
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Startbildschirm}{subsection.5.1}% 55
+\BOOKMARK [3][-]{subsubsection.5.1.3}{Newsansicht}{subsection.5.1}% 56
+\BOOKMARK [3][-]{subsubsection.5.1.4}{Noten}{subsection.5.1}% 57
+\BOOKMARK [3][-]{subsubsection.5.1.5}{Stundenplan}{subsection.5.1}% 58
+\BOOKMARK [2][-]{subsection.5.2}{Gantt}{section.5}% 59
+\BOOKMARK [2][-]{subsection.5.3}{App-Layout}{section.5}% 60
+\BOOKMARK [2][-]{subsection.5.4}{Testprotokollentwurf}{section.5}% 61
+>>>>>>> master

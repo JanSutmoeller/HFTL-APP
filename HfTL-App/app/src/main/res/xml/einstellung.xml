@@ -20,4 +20,20 @@
                 android:entries="@array/listeStudiengang"
                 android:entryValues="@array/werteStudiengang"/>
         </PreferenceCategory>
+        <PreferenceCategory
+            android:title="@string/txt_einstell_cat_service">
+            <CheckBoxPreference
+                android:title="Service gestartet"
+                android:defaultValue="false"
+                android:key="service_checkbox"
+                android:id="@+id/checkbox_service"/>
+            <ListPreference
+                android:id="@+id/dropdown_service"
+                android:title="Intervall"
+                android:summary="Bitte Zeitintervall auswählen"
+                android:key="service_intervall"
+                android:entries="@array/listeNotenIntervall"
+                android:entryValues="@array/werteNotenIntervall"
+                android:defaultValue="3600000"/>
+        </PreferenceCategory>
     </PreferenceScreen>

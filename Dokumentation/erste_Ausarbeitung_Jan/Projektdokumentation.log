@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.30)  9 AUG 2015 19:59
+=======
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.25)  10 AUG 2015 19:04
+>>>>>>> master
 entering extended mode
 **Projektdokumentation.tex
 
@@ -1018,6 +1022,7 @@ Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
 (C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pppdftex.def
 File: pppdftex.def 2015/06/15 v0.4y Pdfpages driver for pdfTeX (AM)
 )
+<<<<<<< HEAD
 \AM@pagebox=\box33
 \AM@toc@title=\toks33
 \c@AM@survey=\count128
@@ -1032,6 +1037,19 @@ n\01_Titel/01_titel.aux)
 
 LaTeX Warning: Label `img:grafik-dummy' multiply defined.
 
+=======
+\AM@pagebox=\box31
+\AM@toc@title=\toks32
+\c@AM@survey=\count120
+\AM@templatesizebox=\box32
+)
+\c@subsubsubsection=\count121
+
+(C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
+Projektdokumentation.aux
+(C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
+01_Titel/01_titel.aux)
+>>>>>>> master
 
 LaTeX Warning: Label `img:grafik-dummy' multiply defined.
 
@@ -1048,6 +1066,7 @@ LaTeX Warning: Label `img:grafik-dummy' multiply defined.
 LaTeX Warning: Label `img:grafik-dummy' multiply defined.
 
 )
+<<<<<<< HEAD
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 170.
 LaTeX Font Info:    ... okay on input line 170.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 170.
@@ -1064,6 +1083,24 @@ LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 170.
 LaTeX Font Info:    Try loading font information for FML+futm on input line 170
 .
  (C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\fourier\fmlfutm.fd
+=======
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 123.
+LaTeX Font Info:    Try loading font information for FML+futm on input line 123
+.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmlfutm.fd"
+>>>>>>> master
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
 LaTeX Font Info:    ... okay on input line 170.
@@ -1184,7 +1221,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
+<<<<<<< HEAD
 <img/HFTL-Logo.pdf, id=335, 478.00987pt x 264.18701pt>
+=======
+<img/HFTL-Logo.pdf, id=247, 478.00987pt x 264.18701pt>
+>>>>>>> master
 File: img/HFTL-Logo.pdf Graphic file (type pdf)
  <use img/HFTL-Logo.pdf>
 Package pdftex.def Info: img/HFTL-Logo.pdf used on input line 6.
@@ -1218,6 +1259,7 @@ Package microtype Info: Loading generic settings for font family
 Package tocbasic Info: character protrusion at toc deactivated on input line 18
 7.
 
+<<<<<<< HEAD
 (C:\Users\Student\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Ja
 n\Projektdokumentation.tocpdfTeX warning (ext4): destination with the same iden
 tifier (name{page.1}) has been already used, duplicate ignored
@@ -1235,6 +1277,20 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 18
 (C:\Users\Student\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Ja
 n\Projektdokumentation.lof)
 \tf@lof=\write6
+=======
+(C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
+Projektdokumentation.tocpdfTeX warning (ext4): destination with the same identi
+fier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.42 ...{\"a}tssicherung}{10}{subsubsection.4.6.2}
+                                                   [1
+
+
+])
+\tf@toc=\write5
+
+>>>>>>> master
 
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
@@ -1242,9 +1298,15 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
 [3]
 (C:\Users\Student\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Ja
 n\02_Lastenheft/Lastenheft.tex
+=======
+[2]
+(C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
+02_Lastenheft/Lastenheft.tex
+>>>>>>> master
 LaTeX Font Info:    Font shape `T1/futs/bx/sc' in size <14.4> not available
 (Font)              Font shape `T1/futs/b/sc' tried instead on input line 5.
 Package acronym Info: Label `acro:HfTL' newly defined as it shall be overridden
@@ -1253,7 +1315,11 @@ although it is yet undefined on input line 9.
 LaTeX Font Info:    Try loading font information for TS1+futs on input line 19.
 
 
+<<<<<<< HEAD
 (C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\fourier\ts1futs.fd
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\ts1futs.fd"
+>>>>>>> master
 File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
 )
 Package microtype Info: Loading generic settings for font family
@@ -1267,7 +1333,11 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
 [4]
+=======
+[3]
+>>>>>>> master
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 75.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -1283,7 +1353,11 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
 [5]
+=======
+[4]
+>>>>>>> master
 Package acronym Info: Label `acro:SoSe15' newly defined as it shall be overridd
 en
 although it is yet undefined on input line 109.
@@ -1294,7 +1368,11 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
 [6]
+=======
+[5]
+>>>>>>> master
 Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
@@ -1305,7 +1383,22 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
 [7]
+=======
+[6]
+
+Package Fancyhdr Warning: \headheight is too small (13.6pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7]
+Package acronym Info: Label `acro:CI/CD' newly defined as it shall be overridde
+n
+although it is yet undefined on input line 200.
+
+>>>>>>> master
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
  Make it at least 14.49998pt.
@@ -1313,9 +1406,18 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
+<<<<<<< HEAD
 Package acronym Info: Label `acro:CI/CD' newly defined as it shall be overridde
 n
 although it is yet undefined on input line 200.
+=======
+Package acronym Info: Label `acro:.apk' newly defined as it shall be overridden
+
+although it is yet undefined on input line 257.
+Package acronym Info: Label `acro:MTBF' newly defined as it shall be overridden
+
+although it is yet undefined on input line 268.
+>>>>>>> master
 
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
@@ -1324,37 +1426,97 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  This may cause the page layout to be inconsistent, however.
 
 [9]
+<<<<<<< HEAD
 Package acronym Info: Label `acro:.apk' newly defined as it shall be overridden
 
 although it is yet undefined on input line 257.
 Package acronym Info: Label `acro:MTBF' newly defined as it shall be overridden
+=======
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-although it is yet undefined on input line 268.
 
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
+>>>>>>> master
 
+[10] <04_Anhang/files/swe_organigramm.pdf, id=424, 597.23125pt x 845.1575pt>
+File: 04_Anhang/files/swe_organigramm.pdf Graphic file (type pdf)
+
+<<<<<<< HEAD
+=======
+<use 04_Anhang/files/swe_organigramm.pdf>
+Package pdftex.def Info: 04_Anhang/files/swe_organigramm.pdf used on input line
+ 351.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: 04_Anhang/files/swe_organigramm.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/swe_organigramm.pdf>
+Package pdftex.def Info: 04_Anhang/files/swe_organigramm.pdf used on input line
+ 351.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+
+<04_Anhang/files/swe_organigramm.pdf, id=427, page=1, 597.23125pt x 845.1575pt>
+File: 04_Anhang/files/swe_organigramm.pdf Graphic file (type pdf)
+<use 04_Anhang/files/swe_organigramm.pdf, page 1>
+Package pdftex.def Info: 04_Anhang/files/swe_organigramm.pdf, page1 used on inp
+ut line 351.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: 04_Anhang/files/swe_organigramm.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/swe_organigramm.pdf, page 1>
+Package pdftex.def Info: 04_Anhang/files/swe_organigramm.pdf, page1 used on inp
+ut line 351.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: 04_Anhang/files/swe_organigramm.pdf Graphic file (type pdf)
+>>>>>>> master
+
+<use 04_Anhang/files/swe_organigramm.pdf, page 1>
+Package pdftex.def Info: 04_Anhang/files/swe_organigramm.pdf, page1 used on inp
+ut line 351.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+
+<<<<<<< HEAD
 [10]
+=======
+>>>>>>> master
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
 [11])
+=======
+[11]
+File: 04_Anhang/files/swe_organigramm.pdf Graphic file (type pdf)
+ <use 04_Anhang/files/swe_organigramm.pdf, page 1>
+Package pdftex.def Info: 04_Anhang/files/swe_organigramm.pdf, page1 used on inp
+ut line 351.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+ [12 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
+_Jan/04_Anhang/files/swe_organigramm.pdf>])
+>>>>>>> master
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
 [12]
 (C:\Users\Student\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Ja
 n\03_Bedienungsanleitung/Bedienungsanleitung.tex
 <03_Bedienungsanleitung/img/Logo_HFTl_App.png, id=542, 90.3375pt x 90.3375pt>
+=======
+[13]
+(C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
+03_Bedienungsanleitung/Bedienungsanleitung.tex
+<03_Bedienungsanleitung/img/Logo_HFTl_App.png, id=448, 90.3375pt x 90.3375pt>
+>>>>>>> master
 File: 03_Bedienungsanleitung/img/Logo_HFTl_App.png Graphic file (type png)
 
 <use 03_Bedienungsanleitung/img/Logo_HFTl_App.png>
@@ -1368,9 +1530,15 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
 [13 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitun
 g_Jan/03_Bedienungsanleitung/img/Logo_HFTl_App.png>]
 <03_Bedienungsanleitung/img/appstore.jpg, id=549, 625.8582pt x 214.6419pt>
+=======
+[14 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_
+Jan/03_Bedienungsanleitung/img/Logo_HFTl_App.png>]
+<03_Bedienungsanleitung/img/appstore.jpg, id=455, 625.8582pt x 214.6419pt>
+>>>>>>> master
 File: 03_Bedienungsanleitung/img/appstore.jpg Graphic file (type jpg)
 
 <use 03_Bedienungsanleitung/img/appstore.jpg>
@@ -1384,9 +1552,15 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
 [14 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitun
 g_Jan/03_Bedienungsanleitung/img/appstore.jpg>]
 <03_Bedienungsanleitung/img/start2.jpg, id=554, 435.12563pt x 488.57532pt>
+=======
+[15 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_
+Jan/03_Bedienungsanleitung/img/appstore.jpg>]
+<03_Bedienungsanleitung/img/start2.jpg, id=460, 435.12563pt x 488.57532pt>
+>>>>>>> master
 File: 03_Bedienungsanleitung/img/start2.jpg Graphic file (type jpg)
 
 <use 03_Bedienungsanleitung/img/start2.jpg>
@@ -1400,9 +1574,15 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
 [15 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitun
 g_Jan/03_Bedienungsanleitung/img/start2.jpg>]
 <03_Bedienungsanleitung/img/news.jpg, id=559, 408.77719pt x 488.57532pt>
+=======
+[16 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_
+Jan/03_Bedienungsanleitung/img/start2.jpg>]
+<03_Bedienungsanleitung/img/news.jpg, id=465, 408.77719pt x 488.57532pt>
+>>>>>>> master
 File: 03_Bedienungsanleitung/img/news.jpg Graphic file (type jpg)
 
 <use 03_Bedienungsanleitung/img/news.jpg>
@@ -1416,8 +1596,13 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
 [16 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitun
 g_Jan/03_Bedienungsanleitung/img/news.jpg>]
+=======
+[17 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_
+Jan/03_Bedienungsanleitung/img/news.jpg>]
+>>>>>>> master
 Underfull \hbox (badness 10000) in paragraph at lines 84--91
 
  []
@@ -1428,7 +1613,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--91
  []
 
 
+<<<<<<< HEAD
 <03_Bedienungsanleitung/img/einstellungen.png, id=564, 376.40625pt x 668.4975pt
+=======
+<03_Bedienungsanleitung/img/einstellungen.jpg, id=470, 377.91188pt x 740.7675pt
+>>>>>>> master
 >
 File: 03_Bedienungsanleitung/img/einstellungen.png Graphic file (type png)
  <use 03_Bedienungsanleitung/img/einstellungen.png>
@@ -1436,8 +1625,13 @@ Package pdftex.def Info: 03_Bedienungsanleitung/img/einstellungen.png used on i
 nput line 96.
 (pdftex.def)             Requested size: 188.20265pt x 334.24792pt.
 
+<<<<<<< HEAD
 <03_Bedienungsanleitung/img/account.png, id=565, 376.40625pt x 668.4975pt>
 File: 03_Bedienungsanleitung/img/account.png Graphic file (type png)
+=======
+<03_Bedienungsanleitung/img/account.jpg, id=471, 404.26031pt x 743.02594pt>
+File: 03_Bedienungsanleitung/img/account.jpg Graphic file (type jpg)
+>>>>>>> master
 
 <use 03_Bedienungsanleitung/img/account.png>
 Package pdftex.def Info: 03_Bedienungsanleitung/img/account.png used on input l
@@ -1450,12 +1644,21 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
 [17 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitun
 g_Jan/03_Bedienungsanleitung/img/einstellungen.png> <C:/Users/Student/Documents
 /GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_Jan/03_Bedienungsanleitung/im
 g/account.png>]
 <03_Bedienungsanleitung/img/noten.png, id=572, 376.40625pt x 668.4975pt>
 File: 03_Bedienungsanleitung/img/noten.png Graphic file (type png)
+=======
+[18 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_
+Jan/03_Bedienungsanleitung/img/einstellungen.jpg> <C:/Users/Admin/Documents/Git
+Hub/HFTL-APP/Dokumentation/erste_Ausarbeitung_Jan/03_Bedienungsanleitung/img/ac
+count.jpg>]
+<03_Bedienungsanleitung/img/noten.jpg, id=477, 387.69844pt x 744.53156pt>
+File: 03_Bedienungsanleitung/img/noten.jpg Graphic file (type jpg)
+>>>>>>> master
 
 <use 03_Bedienungsanleitung/img/noten.png>
 Package pdftex.def Info: 03_Bedienungsanleitung/img/noten.png used on input lin
@@ -1468,6 +1671,7 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
 [18 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitun
 g_Jan/03_Bedienungsanleitung/img/noten.png>]
 <03_Bedienungsanleitung/img/stundenplan.png, id=579, 376.40625pt x 668.4975pt>
@@ -1475,6 +1679,14 @@ File: 03_Bedienungsanleitung/img/stundenplan.png Graphic file (type png)
 
 <use 03_Bedienungsanleitung/img/stundenplan.png>
 Package pdftex.def Info: 03_Bedienungsanleitung/img/stundenplan.png used on inp
+=======
+[19 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_
+Jan/03_Bedienungsanleitung/img/noten.jpg>]
+<03_Bedienungsanleitung/img/stundenplan.jpg, id=482, 382.42876pt x 744.53156pt>
+File: 03_Bedienungsanleitung/img/stundenplan.jpg Graphic file (type jpg)
+<use 03_Bedienungsanleitung/img/stundenplan.jpg>
+Package pdftex.def Info: 03_Bedienungsanleitung/img/stundenplan.jpg used on inp
+>>>>>>> master
 ut line 126.
 (pdftex.def)             Requested size: 225.84547pt x 401.1016pt.
 )
@@ -1486,16 +1698,26 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
 [19 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitun
 g_Jan/03_Bedienungsanleitung/img/stundenplan.png>]
+=======
+[20 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_
+Jan/03_Bedienungsanleitung/img/stundenplan.jpg>]
+>>>>>>> master
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
 [20]
 <04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, id=589, 722.7pt x 542.025pt>
+=======
+[21]
+<04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, id=491, 722.7pt x 542.025pt>
+>>>>>>> master
 File: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf Graphic file (type pdf)
 <use 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf>
 Package pdftex.def Info: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf used 
@@ -1508,7 +1730,11 @@ Package pdftex.def Info: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf used
 on input line 4.
 (pdftex.def)             Requested size: 722.69823pt x 542.02367pt.
 
+<<<<<<< HEAD
 <04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, id=592, page=1, 722.7pt x 54
+=======
+<04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, id=494, page=1, 722.7pt x 54
+>>>>>>> master
 2.025pt>
 File: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf Graphic file (type pdf)
  <use 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, page 1>
@@ -1528,7 +1754,11 @@ Package pdftex.def Info: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, page
 1 used on input line 4.
 (pdftex.def)             Requested size: 722.69823pt x 542.02367pt.
 
+<<<<<<< HEAD
 <04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, id=593, page=2, 722.7pt x 54
+=======
+<04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, id=495, page=2, 722.7pt x 54
+>>>>>>> master
 2.025pt>
 File: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf Graphic file (type pdf)
  <use 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, page 2>
@@ -1547,11 +1777,19 @@ File: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf Graphic file (type pdf)
 Package pdftex.def Info: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, page
 1 used on input line 4.
 (pdftex.def)             Requested size: 722.69823pt x 542.02367pt.
+<<<<<<< HEAD
  [21
 
  <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_J
 an/04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf>]
 <04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, id=605, page=3, 722.7pt x 54
+=======
+ [22
+
+ <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_Jan
+/04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf>]
+<04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, id=507, page=3, 722.7pt x 54
+>>>>>>> master
 2.025pt>
 File: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf Graphic file (type pdf)
  <use 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, page 3>
@@ -1570,9 +1808,15 @@ File: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf Graphic file (type pdf)
 Package pdftex.def Info: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, page
 2 used on input line 4.
 (pdftex.def)             Requested size: 722.69823pt x 542.02367pt.
+<<<<<<< HEAD
  [22 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitu
 ng_Jan/04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf>]
 <04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, id=612, page=4, 722.7pt x 54
+=======
+ [23 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
+_Jan/04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf>]
+<04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, id=514, page=4, 722.7pt x 54
+>>>>>>> master
 2.025pt>
 File: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf Graphic file (type pdf)
  <use 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, page 4>
@@ -1591,14 +1835,20 @@ File: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf Graphic file (type pdf)
 Package pdftex.def Info: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, page
 3 used on input line 4.
 (pdftex.def)             Requested size: 722.69823pt x 542.02367pt.
+<<<<<<< HEAD
  [23 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitu
 ng_Jan/04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf>]
+=======
+ [24 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
+_Jan/04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf>]
+>>>>>>> master
 File: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf Graphic file (type pdf)
 
 <use 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, page 4>
 Package pdftex.def Info: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, page
 4 used on input line 4.
 (pdftex.def)             Requested size: 722.69823pt x 542.02367pt.
+<<<<<<< HEAD
  [24 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitu
 ng_Jan/04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf>])
 (C:\Users\Student\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Ja
@@ -1679,6 +1929,42 @@ Overfull \hbox (5.70575pt too wide) in paragraph at lines 203--204
 []\T1/futs/m/n/12 (-20) Laden des in der zu-ge-hö-ri-gen xml de-fi-nier-ten Lay
 -outs (ac-ti-vi-ty_ news_ clicked.xml) 
  []
+=======
+ [25 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
+_Jan/04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf>]
+<04_Anhang/files/HFTL-App_Designvorlage.pdf, id=528, 597.19112pt x 845.19763pt>
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+<use 04_Anhang/files/HFTL-App_Designvorlage.pdf>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf used on inp
+ut line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/HFTL-App_Designvorlage.pdf>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf used on inp
+ut line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+
+<04_Anhang/files/HFTL-App_Designvorlage.pdf, id=531, page=1, 597.19112pt x 845.
+19763pt>
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+ <use 04_Anhang/files/HFTL-App_Designvorlage.pdf, page 1>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf, page1 used
+ on input line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/HFTL-App_Designvorlage.pdf, page 1>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf, page1 used
+ on input line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/HFTL-App_Designvorlage.pdf, page 1>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf, page1 used
+ on input line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+>>>>>>> master
 
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
@@ -1686,6 +1972,7 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
 [31]
 Underfull \hbox (badness 10000) in paragraph at lines 251--252
 
@@ -1707,6 +1994,157 @@ Overfull \hbox (20.17822pt too wide) in paragraph at lines 298--299
 []\T1/futs/m/n/12 (-20) Es wird ei-ne In-stanz der Klas-se NewsHel-per er-stell
 t, wel-che dann als Hintergrund-
  []
+=======
+[26
+
+]
+<04_Anhang/files/HFTL-App_Designvorlage.pdf, id=536, page=2, 597.19112pt x 845.
+19763pt>
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+ <use 04_Anhang/files/HFTL-App_Designvorlage.pdf, page 2>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf, page2 used
+ on input line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/HFTL-App_Designvorlage.pdf, page 2>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf, page2 used
+ on input line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/HFTL-App_Designvorlage.pdf, page 1>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf, page1 used
+ on input line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+ [27 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
+_Jan/04_Anhang/files/HFTL-App_Designvorlage.pdf>]
+<04_Anhang/files/HFTL-App_Designvorlage.pdf, id=561, page=3, 597.19112pt x 845.
+19763pt>
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+ <use 04_Anhang/files/HFTL-App_Designvorlage.pdf, page 3>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf, page3 used
+ on input line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/HFTL-App_Designvorlage.pdf, page 3>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf, page3 used
+ on input line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/HFTL-App_Designvorlage.pdf, page 2>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf, page2 used
+ on input line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+ [28 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
+_Jan/04_Anhang/files/HFTL-App_Designvorlage.pdf>]
+<04_Anhang/files/HFTL-App_Designvorlage.pdf, id=570, page=4, 597.19112pt x 845.
+19763pt>
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+ <use 04_Anhang/files/HFTL-App_Designvorlage.pdf, page 4>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf, page4 used
+ on input line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/HFTL-App_Designvorlage.pdf, page 4>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf, page4 used
+ on input line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/HFTL-App_Designvorlage.pdf, page 3>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf, page3 used
+ on input line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+ [29 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
+_Jan/04_Anhang/files/HFTL-App_Designvorlage.pdf>]
+<04_Anhang/files/HFTL-App_Designvorlage.pdf, id=580, page=5, 597.19112pt x 845.
+19763pt>
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+ <use 04_Anhang/files/HFTL-App_Designvorlage.pdf, page 5>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf, page5 used
+ on input line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/HFTL-App_Designvorlage.pdf, page 5>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf, page5 used
+ on input line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/HFTL-App_Designvorlage.pdf, page 4>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf, page4 used
+ on input line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+ [30 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
+_Jan/04_Anhang/files/HFTL-App_Designvorlage.pdf>]
+<04_Anhang/files/HFTL-App_Designvorlage.pdf, id=591, page=6, 597.19112pt x 845.
+19763pt>
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+ <use 04_Anhang/files/HFTL-App_Designvorlage.pdf, page 6>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf, page6 used
+ on input line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/HFTL-App_Designvorlage.pdf, page 6>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf, page6 used
+ on input line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/HFTL-App_Designvorlage.pdf, page 5>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf, page5 used
+ on input line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+ [31 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
+_Jan/04_Anhang/files/HFTL-App_Designvorlage.pdf>]
+File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/HFTL-App_Designvorlage.pdf, page 6>
+Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf, page6 used
+ on input line 9.
+(pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+ [32 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
+_Jan/04_Anhang/files/HFTL-App_Designvorlage.pdf>]
+<04_Anhang/files/Vorlage_Testprotokoll.pdf, id=608, 597.432pt x 845.07718pt>
+File: 04_Anhang/files/Vorlage_Testprotokoll.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/Vorlage_Testprotokoll.pdf>
+Package pdftex.def Info: 04_Anhang/files/Vorlage_Testprotokoll.pdf used on inpu
+t line 13.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+File: 04_Anhang/files/Vorlage_Testprotokoll.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/Vorlage_Testprotokoll.pdf>
+Package pdftex.def Info: 04_Anhang/files/Vorlage_Testprotokoll.pdf used on inpu
+t line 13.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+
+<04_Anhang/files/Vorlage_Testprotokoll.pdf, id=611, page=1, 597.432pt x 845.077
+18pt>
+File: 04_Anhang/files/Vorlage_Testprotokoll.pdf Graphic file (type pdf)
+ <use 04_Anhang/files/Vorlage_Testprotokoll.pdf, page 1>
+Package pdftex.def Info: 04_Anhang/files/Vorlage_Testprotokoll.pdf, page1 used 
+on input line 13.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+File: 04_Anhang/files/Vorlage_Testprotokoll.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/Vorlage_Testprotokoll.pdf, page 1>
+Package pdftex.def Info: 04_Anhang/files/Vorlage_Testprotokoll.pdf, page1 used 
+on input line 13.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+File: 04_Anhang/files/Vorlage_Testprotokoll.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/Vorlage_Testprotokoll.pdf, page 1>
+Package pdftex.def Info: 04_Anhang/files/Vorlage_Testprotokoll.pdf, page1 used 
+on input line 13.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+>>>>>>> master
 
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
@@ -1715,6 +2153,7 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  This may cause the page layout to be inconsistent, however.
 
 [33]
+<<<<<<< HEAD
 Overfull \hbox (131.26527pt too wide) in paragraph at lines 362--364
 \T1/futs/m/n/12 (-20) Dra-wer ge-schlos-sen und die Po-si-ti-on des an-geklick-
 ten Punk-tes an mCall-backs.onNavigationDrawerItemSelected()
@@ -1815,6 +2254,48 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 201.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 201.
 Package rerunfilecheck Info: File `Projektdokumentation.out' has not changed.
 (rerunfilecheck)             Checksum: 44CFFED21D6D76F7D855AC986DB23027;6398.
+=======
+<04_Anhang/files/Vorlage_Testprotokoll.pdf, id=616, page=2, 597.432pt x 845.077
+18pt>
+File: 04_Anhang/files/Vorlage_Testprotokoll.pdf Graphic file (type pdf)
+ <use 04_Anhang/files/Vorlage_Testprotokoll.pdf, page 2>
+Package pdftex.def Info: 04_Anhang/files/Vorlage_Testprotokoll.pdf, page2 used 
+on input line 13.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+File: 04_Anhang/files/Vorlage_Testprotokoll.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/Vorlage_Testprotokoll.pdf, page 2>
+Package pdftex.def Info: 04_Anhang/files/Vorlage_Testprotokoll.pdf, page2 used 
+on input line 13.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+File: 04_Anhang/files/Vorlage_Testprotokoll.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/Vorlage_Testprotokoll.pdf, page 1>
+Package pdftex.def Info: 04_Anhang/files/Vorlage_Testprotokoll.pdf, page1 used 
+on input line 13.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+ [34 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
+_Jan/04_Anhang/files/Vorlage_Testprotokoll.pdf>]
+File: 04_Anhang/files/Vorlage_Testprotokoll.pdf Graphic file (type pdf)
+
+<use 04_Anhang/files/Vorlage_Testprotokoll.pdf, page 2>
+Package pdftex.def Info: 04_Anhang/files/Vorlage_Testprotokoll.pdf, page2 used 
+on input line 13.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+ [35 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
+_Jan/04_Anhang/files/Vorlage_Testprotokoll.pdf>])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 153.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 153.
+
+(C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
+Projektdokumentation.aux
+(C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
+01_Titel/01_titel.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 153.
+Package rerunfilecheck Info: File `Projektdokumentation.out' has not changed.
+(rerunfilecheck)             Checksum: 235D6A3B1D08BA4CDFB06B769875B0F0;4769.
+>>>>>>> master
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1822,6 +2303,7 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 201.
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  14563 strings out of 493921
  221403 string characters out of 3147275
  434919 words of memory out of 3000000
@@ -1841,4 +2323,23 @@ PDF statistics:
  1049 PDF objects out of 1200 (max. 8388607)
  251 named destinations out of 1000 (max. 500000)
  55027 words of extra memory for PDF output out of 61914 (max. 10000000)
+=======
+ 12619 strings out of 493921
+ 196192 string characters out of 3147282
+ 350396 words of memory out of 3000000
+ 15289 multiletter control sequences out of 15000+200000
+ 121489 words of font info for 226 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 41i,18n,56p,758b,600s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Admin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ectt1200.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/adobe/utopia/putri8a.pfb>
+Output written on Projektdokumentation.pdf (36 pages, 1805675 bytes).
+PDF statistics:
+ 712 PDF objects out of 1000 (max. 8388607)
+ 116 named destinations out of 1000 (max. 500000)
+ 46227 words of extra memory for PDF output out of 51595 (max. 10000000)
+>>>>>>> master
 

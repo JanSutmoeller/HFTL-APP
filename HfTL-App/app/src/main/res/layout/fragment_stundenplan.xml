@@ -3,51 +3,108 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Spinner
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-    <Button
-        android:layout_width="wrap_content"
+        android:background="@color/grau04"
+        android:id="@+id/stundenplan_header"
+        android:padding="8dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Stundenplan_headline"
+            android:id="@+id/hl_Stundenplan"
+            android:width="180dp"
+            android:textColor="@color/grün"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="go"
-        android:id="@+id/button"
-        android:layout_toRightOf="@id/spinner"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
-    <Button
-        android:layout_width="wrap_content"
+        android:background="@color/grau04"
+        android:id="@+id/stundenplan_footer"
+        android:padding="4dp"
+        android:layout_alignParentBottom="true" >
+
+        <ImageView
+            android:layout_width="194dp"
+            android:layout_height="48dp"
+            android:id="@+id/Logo"
+            android:src="@drawable/logo_hftl"
+            android:padding="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="center"
+            android:contentDescription="Logo der HFTL"/>
+
+   <!--     <Button
+            android:layout_width="match_parent"
+            android:minWidth="64dp"
+            android:maxWidth="194dp"
+            android:layout_height="48dp"
+            android:minHeight="36dp"
+            android:id="@+id/button_refresh_stundenplan"
+            android:text="@string/btn_news_refresh"
+            android:padding="8dp"
+            android:background="@color/grün"
+            android:textColor="@color/weiss"
+            android:layout_gravity="end"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp" /> -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="vor"
-        android:id="@+id/button_vor"
-        android:layout_below="@+id/spinner"
-        android:layout_toRightOf="@+id/button_zurueck"
-        android:layout_toEndOf="@+id/button_zurueck" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="zurück"
-        android:id="@+id/button_zurueck"
-        android:layout_below="@+id/spinner" />
+        android:orientation="horizontal"
+        android:id="@+id/wrap_spin"
+        android:layout_below="@id/stundenplan_header">
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:background="@drawable/custom_zurbutton"
+            android:id="@+id/button_zurueck"/>
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/spinner"
+            android:dropDownSelector="@color/grün" />
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:background="@drawable/custom_vorbutton"
+            android:id="@+id/button_vor"/>
+    </LinearLayout>
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textFilterEnabled="true"
         android:id="@android:id/list"
         android:padding="4dp"
-        android:layout_below="@id/button_vor"
-        android:layout_above="@id/noten_footer"/>
+        android:layout_below="@+id/wrap_spin"
+        android:layout_above="@id/stundenplan_footer"/>
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@android:id/empty"
-        android:layout_below="@id/button_vor"
-        android:layout_above="@id/noten_footer"/>
-
-
+        android:layout_below="@+id/wrap_spin"
+        android:layout_above="@id/stundenplan_footer"/>
 
 </RelativeLayout>

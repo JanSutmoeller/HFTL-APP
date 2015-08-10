@@ -82,4 +82,18 @@
         <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=115</item>
         <item>https://qisweb.hispro.de/tel/rds?state=wplan&amp;act=stg&amp;pool=stg&amp;show=plan&amp;P.vx=kurz&amp;missing=allTerms&amp;k_parallel.parallelid=&amp;k_abstgv.abstgvnr=129</item>
     </string-array>
+
+    <string-array name="listeNotenIntervall">
+        <item>einmal pro Stunde</item>
+        <item>einmal pro Tag</item>
+        <item>einmal pro Woche</item>
+    </string-array>
+
+    <!--Zeit in Millisekunden-->
+    <string-array name="werteNotenIntervall">
+        <item>3600000</item>
+        <item>86400000</item>
+        <item>604800000</item>
+    </string-array>
+
 </resources>

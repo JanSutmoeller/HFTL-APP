@@ -1,6 +1,7 @@
 package bkmi.de.hftl_app.help;
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +17,6 @@ public class CustomAdapterNoten extends BaseAdapter{
     String [] trys;
     String [] mark;
     String [] semester;
-    String [] semesterSort;
     Context context;
     private static LayoutInflater inflater=null;
     public CustomAdapterNoten(Activity NotenFragment, String[] semesterList ,String[] subjectList, String[] trysList, String[] markList) {
@@ -28,6 +28,7 @@ public class CustomAdapterNoten extends BaseAdapter{
         context= NotenFragment;
         inflater = ( LayoutInflater )context.
                 getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
     }
     @Override
     public int getCount() {
@@ -60,20 +61,33 @@ public class CustomAdapterNoten extends BaseAdapter{
         NotenHolder holder=new NotenHolder();
         View rowView;
         rowView = inflater.inflate(R.layout.noten_list, null);
+        /*
+        Typeface teleGrotHalb = Typeface.createFromAsset(context.getAssets(), "fonts/TeleGrotHalb.ttf");
+        Typeface teleGrotNorm = Typeface.createFromAsset(context.getAssets(), "fonts/TeleGrotNorm.ttf");
+        Typeface teleGrotFett = Typeface.createFromAsset(context.getAssets(), "fonts/TeleGrotFett.ttf");
+*/
         holder.tv_semester=(TextView) rowView.findViewById(R.id.notenlist_semester);
         if(semester[position]==null){
             holder.tv_semester.setVisibility(TextView.GONE);
         }
-        else
+        else {
             holder.tv_semester.setText(semester[position]);
+      //      holder.tv_semester.setTypeface(teleGrotHalb);
+        }
+
         holder.tv_subject=(TextView) rowView.findViewById(R.id.notenlist_fach);
         holder.tv_subject.setText(subject[position]);
+   //     holder.tv_subject.setTypeface(teleGrotHalb);
+
         holder.tv_trys=(TextView) rowView.findViewById(R.id.notenlist_versuch);
         holder.tv_trys.setText("Versuch: " + trys[position]);
+     //   holder.tv_trys.setTypeface(teleGrotNorm);
+
         holder.tv_mark=(TextView) rowView.findViewById(R.id.notenlist_note);
+   //     holder.tv_mark.setTypeface(teleGrotFett);
         if (mark[position].equals("5,0" ))
             holder.tv_mark.setTextColor(context.getResources().getColor(R.color.magenta));
-        if (mark[position].equals("4,0" ) |
+        else if (mark[position].equals("4,0" ) |
             mark[position].equals("3,9" ) |
             mark[position].equals("3,8" ) |
             mark[position].equals("3,7" ) |

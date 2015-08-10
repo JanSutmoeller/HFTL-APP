@@ -13,7 +13,6 @@
     <string name="action_settings">Einstellung</string>
 
     <!-- Inhalt von der News Seite -->
-
     <string name="News_headline">News aus der HFT-Leipzig</string>
     <string name="noNetwork">Keine Online-Verbindung!</string>
     <string name="btn_news_refresh">Aktualisieren</string>
@@ -22,9 +21,13 @@
     <!-- Inhalt von der Noten Seite -->
     <string name="Noten_headline">QIS Noten Übersicht</string>
 
+    <!-- Inhalt von der Stundenplan Seite -->
+    <string name="Stundenplan_headline">QIS Wochen-Übersicht</string>
+    <string name="keinStudiengang">Kein Studiengang ausgewählt!\nStudiengang jetzt auswählen?</string>
+
     <!--Überschrift Activitys -->
     <string name="title_activity_einstellung">Einstellung</string>
-    <string name="title_activity_news_clicked">Termindetails</string>
+    <string name="title_activity_news_clicked">News-Detail</string>
 
     <string name="todo">Hier muss noch was gemacht werden</string>
 
@@ -34,8 +37,10 @@
     <string name="txt_einstell_cat_stunden">Stundenplan</string>
     <string name="text_einstell_qis_user">Benutzername</string>
     <string name="text_einstell_qis_pw">Passwort</string>
+    <string name="txt_einstell_cat_service">Noten Push-Service</string>
 
     <!-- Inhalt von der Noten Seite -->
     <string name="noUsernamePassword">Benutzername/Passwort nicht eingetragen!\nDaten jetzt eintragen?</string>
     <string name="wrongUsernamePassword">Benutzername/Passwort falsch!\nDaten jetzt ändern?</string>
+
 </resources>
