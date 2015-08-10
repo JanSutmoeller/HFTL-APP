@@ -23,6 +23,7 @@
 
     <!-- Inhalt von der Stundenplan Seite -->
     <string name="Stundenplan_headline">QIS Wochen-Übersicht</string>
+    <string name="keinStudiengang">Kein Studiengang ausgewählt!\nStudiengang jetzt auswählen?</string>
 
     <!--Überschrift Activitys -->
     <string name="title_activity_einstellung">Einstellung</string>

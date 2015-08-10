@@ -2,10 +2,15 @@ package bkmi.de.hftl_app.Fragmente;
 
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +27,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import bkmi.de.hftl_app.EinstellungActivity;
 import bkmi.de.hftl_app.NewsActivity;
 import bkmi.de.hftl_app.R;
 
@@ -148,8 +154,6 @@ public class StundenplanFragment extends ListFragment {
 
     @Override
     public void onStart() {
-
-        //Todo kontrolle Studiengang
         super.onStart();
 
     }
@@ -160,20 +164,28 @@ public class StundenplanFragment extends ListFragment {
     }
 
     private void erzeugeDropdown() {
+        //Dropdown aus XML suchen
         spinner = (Spinner) getActivity().findViewById(R.id.spinner);
+        //Listner für das Dropdownmenü
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                //Falls erste Woche deaktiviere "zurück" Button
                 if (spinner.getSelectedItemPosition() == 0)
                     buttonZuruck.setEnabled(false);
                 else
                     buttonZuruck.setEnabled(true);
+                //Falls letzte Woche deaktiviere "vor" Button
                 if (spinner.getSelectedItemPosition() == 6)
                     buttonVor.setEnabled(false);
                 else
                     buttonVor.setEnabled(true);
+                //wenn das Datum zum ersten mal aufgerufen wird, muss der Stundenplan gedownloadet werden
+                if(pruefeStudiengang()){
                 if(events[spinner.getSelectedItemPosition()]==null) new StundenplanHelper().execute(spinner.getSelectedItem().toString());
                 else erstelleStundenplan();
+                }
+                else keinStudiengang();
             }
 
             @Override
@@ -211,11 +223,36 @@ public class StundenplanFragment extends ListFragment {
         spinner.setAdapter(dataAdapter);
     }
 
-    protected void erstelleStundenplan(){
-        Calendar calendar1= Calendar.getInstance();
-        Calendar calendar2= Calendar.getInstance();
-        ArrayList<String> liste=new ArrayList<String>();
-        //String data[] = new String[events[spinner.getSelectedItemPosition()].length+7];
+    private void keinStudiengang() {
+        AlertDialog.Builder adb = new AlertDialog.Builder(getActivity());
+        adb.setMessage(R.string.keinStudiengang);
+        adb.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(getActivity(), EinstellungActivity.class);
+                startActivity(intent);
+            }
+        });
+        adb.setNegativeButton("abbrechen", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+        adb.show();
+    }
+
+    //Prüft ob ein Studiengang ausgewähl wurde
+    private boolean pruefeStudiengang() {
+        SharedPreferences sp= PreferenceManager.getDefaultSharedPreferences(this.getActivity());
+        String studiengang = sp.getString("studiengang", "");
+
+        //Falls der Studiengang leer ist wird false zurück gegeben
+        if("".equals(studiengang)) return false;
+        return true;
+    }
+
+    protected void erstelleStundenplan() {
+        Calendar calendar1 = Calendar.getInstance();
+        Calendar calendar2 = Calendar.getInstance();
+        ArrayList<String> liste = new ArrayList<String>();
         StundenplanEvent tempevent;
         //if(events[spinner.getSelectedItemPosition()]==null) return;
 
@@ -227,54 +264,35 @@ public class StundenplanFragment extends ListFragment {
 
         SimpleDateFormat format = new SimpleDateFormat("EEEE, dd.MM.yyyy");
 
-       if (events[spinner.getSelectedItemPosition()][0].isKeineDaten()){
+        if (events[spinner.getSelectedItemPosition()][0].isKeineDaten()) {
             setListAdapter(new ArrayAdapter<>(getActivity(), simple_list_item_1, new String[]{"keine Daten"}));
 
             return;
         }
 
-        //data[0]=format.format(events[spinner.getSelectedItemPosition()][0].getDate().getTime());
-        tempevent=events[spinner.getSelectedItemPosition()][0];
+        tempevent = events[spinner.getSelectedItemPosition()][0];
         dateList[0] = format.format(tempevent.getDate().getTime());
         fachList[0] = tempevent.getFach();
-        timeList[0] = tempevent.getUhrzeitStart() + " - " + tempevent.getUhrzeitEnde()+ " Uhr, ";
+        timeList[0] = tempevent.getUhrzeitStart() + " - " + tempevent.getUhrzeitEnde() + " Uhr, ";
         categoryList[0] = tempevent.getKategorie();
         roomList[0] = tempevent.getRaum();
 
-        for (int i=1; i<events[spinner.getSelectedItemPosition()].length; i++){
-            calendar1.setTime(events[spinner.getSelectedItemPosition()][i-1].getDate());
-            tempevent=events[spinner.getSelectedItemPosition()][i];
+        for (int i = 1; i < events[spinner.getSelectedItemPosition()].length; i++) {
+            calendar1.setTime(events[spinner.getSelectedItemPosition()][i - 1].getDate());
+            tempevent = events[spinner.getSelectedItemPosition()][i];
             calendar2.setTime(tempevent.getDate());
             roomList[i] = tempevent.getRaum();
             fachList[i] = tempevent.getFach();
             timeList[i] = tempevent.getUhrzeitStart() + " - " + tempevent.getUhrzeitEnde() + " Uhr, ";
             categoryList[i] = tempevent.getKategorie();
-            if(calendar1.get(Calendar.DAY_OF_WEEK)!=calendar2.get(Calendar.DAY_OF_WEEK)){
-                //data[i+j]=format.format(events[spinner.getSelectedItemPosition()][i-1].getDate());
-                dateList[i]=format.format(events[spinner.getSelectedItemPosition()][i].getDate());
-                //j++;
-            }
-            else
-                dateList[i]=null;
-           //fachList=tempevent.getFach() + "\n";
-           //timeList = tempevent.getUhrzeitStart() + "-" + tempevent.getUhrzeitEnde();
-           // temp+=tempevent.getUhrzeitStart() + "-" + tempevent.getUhrzeitEnde() + ", " + tempevent.getRaum() + "\n";
-           //categoryList=tempevent.getKategorie();
-            //temp+=tempevent.getKategorie();
-           // roomList=tempevent.getRaum();
-            //getView(dateList,fachList, timeList, roomList, categoryList);
-            //data[i+j]=temp;
-        }
-        /*for (StundenplanEvent event: events[spinner.getSelectedItemPosition()] ){
-                temp=event.getFach() + "\n";
-                temp+=event.getUhrzeitStart() + "-" + event.getUhrzeitEnde() + ", " + event.getRaum() + "\n";
-                temp+=event.getKategorie();
-                data[i++]=temp;
-            }
-        */
-        setListAdapter(new CustomAdapterStundenplan(getActivity(), dateList, fachList, timeList, roomList,  categoryList));
-            //setListAdapter(new ArrayAdapter<>(getActivity(), simple_list_item_1, liste));
+            if (calendar1.get(Calendar.DAY_OF_WEEK) != calendar2.get(Calendar.DAY_OF_WEEK)) {
+                dateList[i] = format.format(events[spinner.getSelectedItemPosition()][i].getDate());
+            } else
+                dateList[i] = null;
 
+            setListAdapter(new CustomAdapterStundenplan(getActivity(), dateList, fachList, timeList, roomList, categoryList));
+
+        }
     }
 
     class StundenplanHelper extends AsyncTask<String, Integer, Long> {

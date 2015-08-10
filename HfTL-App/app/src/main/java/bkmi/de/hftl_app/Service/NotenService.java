@@ -1,5 +1,6 @@
 package bkmi.de.hftl_app.Service;
 
+import android.app.AlarmManager;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
@@ -16,6 +17,7 @@ import java.net.UnknownHostException;
 
 import bkmi.de.hftl_app.Database.NotenDB;
 import bkmi.de.hftl_app.Database.NotenTabelle;
+import bkmi.de.hftl_app.EinstellungActivity;
 import bkmi.de.hftl_app.Fragmente.NotenFragment;
 import bkmi.de.hftl_app.NewsActivity;
 import bkmi.de.hftl_app.R;
@@ -55,7 +57,7 @@ class ThreadTest extends Thread {
     Cursor cursor;
 
     public ThreadTest(Context context) {
-        this.context=context;
+        this.context = context;
     }
 
     @Override
@@ -89,33 +91,47 @@ class ThreadTest extends Thread {
                 Intent internalIntent = new Intent(context, NewsActivity.class);
                 final PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, internalIntent, 0);
                 //Todo Layout: Bitte das Icon ändern
-                NotificationCompat.Builder nBuilder = new NotificationCompat.Builder(context).setContentTitle("HfTL-App Noten Service").setSmallIcon(R.drawable.ic_drawer).setContentText("Es sind neue Noten verfügbar").setContentIntent(pendingIntent);
+                NotificationCompat.Builder nBuilder = new NotificationCompat.Builder(context).setContentTitle("HfTL-App Noten Service").setSmallIcon(R.drawable.ic_drawer).setContentText("Es sind neue Noten verfügbar").setContentIntent(pendingIntent).setAutoCancel(true);
                 int nNotificationId = 1;
                 NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
                 manager.notify(nNotificationId, nBuilder.build());
             }
 
+
             //Datenbank schließen
             cursor.close();
-            notenDB.close();}
-        catch (UnknownHostException e){
-                Intent internalIntent = new Intent(context, NotenFragment.class);
-                final PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, internalIntent, 0);
-                //Todo Layout: Bitte das Icon ändern
-                NotificationCompat.Builder nBuilder = new NotificationCompat.Builder(context).setContentTitle("HfTL-App Noten Service").setSmallIcon(R.drawable.ic_drawer).setContentText("Fehler beim Laden der Noten").setContentIntent(pendingIntent);
-                //final Notification notification = new NotificationCompat.Builder(context).setContentTitle("HfTL-App Noten Service, es sind neue Noten verfügbar").setSmallIcon(R.drawable.hftl_l_3c_n).setContentIntent(pendingIntent).build();
-                int nNotificationId = 1;
-                NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-                manager.notify(nNotificationId, nBuilder.build());
-            }
-        catch (wrongUserdataException e) {
-            //Todo AlarmManager muss deaktiviert werden und die SharedPref anpassen!
-            //Falls Benutzername/Passwort falsch wird eine Notifcation gesenden
+            notenDB.close();
+
+        //Falls keine Internetverbindung vorhanden ist wird ein Fehler angezeigt
+        } catch (UnknownHostException e) {
             Intent internalIntent = new Intent(context, NotenFragment.class);
             final PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, internalIntent, 0);
             //Todo Layout: Bitte das Icon ändern
-            NotificationCompat.Builder nBuilder = new NotificationCompat.Builder(context).setContentTitle("HfTL-App Noten Service").setSmallIcon(R.drawable.ic_drawer).setContentText("Password/Benutzername falsch\n Service beendet").setContentIntent(pendingIntent);
+            NotificationCompat.Builder nBuilder = new NotificationCompat.Builder(context).setContentTitle("HfTL-App Noten Service").setSmallIcon(R.drawable.ic_drawer).setContentText("Fehler beim Laden der Noten").setContentIntent(pendingIntent).setAutoCancel(true);
             //final Notification notification = new NotificationCompat.Builder(context).setContentTitle("HfTL-App Noten Service, es sind neue Noten verfügbar").setSmallIcon(R.drawable.hftl_l_3c_n).setContentIntent(pendingIntent).build();
+            int nNotificationId = 1;
+            NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+            manager.notify(nNotificationId, nBuilder.build());
+
+        //Falls die benutzerdaten falsch sind wird der Push-Service beendet und ein Fehler angezeigt
+        } catch (wrongUserdataException e) {
+            //Der laufende Alarm wird deaktivert
+            AlarmManager alarmMgr;
+            Intent intent = new Intent(context, NotenService.class);
+            PendingIntent pIntent = PendingIntent.getService(context, 0, intent, 0);
+            alarmMgr = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+            alarmMgr.cancel(pIntent);
+
+            //Die Checkbox in den Einstellungen wird auch deaktiviert
+            SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+            SharedPreferences.Editor edit = sp.edit();
+            edit.putBoolean("service_checkbox", false).apply();
+
+            //Falls Benutzername/Passwort falsch wird eine Notifcation gesenden
+            Intent internalIntent = new Intent(context, EinstellungActivity.class);
+            final PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, internalIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+            //Todo Layout: Bitte das Icon ändern
+            NotificationCompat.Builder nBuilder = new NotificationCompat.Builder(context).setContentTitle("HfTL-App Noten Service").setSmallIcon(R.drawable.ic_drawer).setStyle(new NotificationCompat.BigTextStyle().bigText("Password/Benutzername falsch\nService beendet")).setContentIntent(pendingIntent).setAutoCancel(true);
             int nNotificationId = 1;
             NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
             manager.notify(nNotificationId, nBuilder.build());
