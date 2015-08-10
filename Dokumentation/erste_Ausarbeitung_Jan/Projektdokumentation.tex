@@ -23,7 +23,54 @@
 \usepackage[german]{babel} % German language/hyphenation
 \usepackage{amsmath,amsfonts,amsthm} % Math packages
 \usepackage{color}
-\definecolor{darkblue}{rgb}{0,0,.5}
+\definecolor{gruen}{rgb}{0,0.5,0}
+\definecolor{blau}{rgb}{0,0,1}
+\definecolor{lila}{rgb}{0.4,0.1,0.5}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\definecolor{grau}{rgb}{0.5,0.5,0.5}
+\definecolor{schwarz}{rgb}{0,0,0}
+\definecolor{magentat}{rgb}{0.88,0,0.45}
+\definecolor{gelbt}{rgb}{0.98,0.76,0.40}
+\definecolor{gruent}{rgb}{0.73,0.74,0.35}
+\definecolor{dunkelblaut}{rgb}{0.26,0.48,0.67}
+\definecolor{grau01t}{rgb}{0.64,0.64,0.64}
+
+\usepackage{listings}
+\lstdefinelanguage{XML}{
+morestring=[s]{"}{"},
+identifierstyle=\color{blue},
+stringstyle=\color{gruen},
+basicstyle=\ttfamily\footnotesize,
+emph={android},
+emphstyle=\color{lila},
+moredelim=[s][\color{darkblue}]{<}{\ },
+moredelim=[s][\color{darkblue}]{</}{>},
+moredelim=[l][\color{darkblue}]{/>},
+moredelim=[l][\color{darkblue}]{>},
+belowcaptionskip=1\baselineskip,
+breaklines=true,
+showstringspaces=false,
+xleftmargin=\parindent
+}
+
+\lstdefinelanguage{JAVA}{
+morekeywords={public, class, long, return, int, private, import, final, extends, static, if, else, null, void, super, while, new, boolean, protected, default, switch, break, try, catch, for, package},
+keywordstyle=\color{darkblue},
+morestring=[s]{"}{"},
+identifierstyle=\color{schwarz},
+stringstyle=\color{gruen},
+basicstyle=\ttfamily\footnotesize,
+emph={inflater, tv_date, tv_name, context, name, namelist_name, tv_mark, magenta, gruen, gelb, tv_semester, GONE, TERMINDETAIL, notenList, semesterList, fachList, versuchList, newsResolver, intent, datum, tv_category, grau01, dunkelblau, kategorie},
+emphstyle=\color{lila},
+belowcaptionskip=1\baselineskip,
+breaklines=true,
+showstringspaces=false,
+xleftmargin=\parindent,
+frame=single
+}
+
+
+
 \usepackage[colorlinks,linkcolor=darkblue,citecolor=red,urlcolor=blue]{hyperref}
 \usepackage{titlesec}
 
@@ -50,7 +97,7 @@
 
 \newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
 
-\author{Jan Sutmöller} % Your name
+\author{BKMI 13} % Your name
 
 \date{\normalsize\today} % Today's date or a custom date
 \bibliographystyle{unsrt}
@@ -65,6 +112,8 @@
 % Inhaltsverzeichnis auch in Time New Roman
 \addtokomafont{sectioning}{\rmfamily}
 \usepackage[section]{placeins}
+\usepackage{pdflscape}		%Seiten teilweise auf Querformat drehen
+\usepackage[final]{pdfpages} 		%Einfügen von bestehenden .pdf Seitem
   
 \setcounter{secnumdepth}{4} %damit im Dokument tiefer gegliedert wird
 \setcounter{tocdepth}{4}	%damit im Inhaltsverzeichnis tiefer gegliedert wird
@@ -133,16 +182,18 @@
 %Seitennummerierung neu beginnen, Zahlen [arabic], röm.Zahlen [roman,Roman], Buchstaben [alph,Alph]
 \pagenumbering{arabic}
 
-\cleardoublepage\pdfbookmark{Inhaltsverzeichniss}{toc} %Inhaltsverzeichnis im PDF
+\cleardoublepage\pdfbookmark{Inhaltsverzeichnis}{toc} %Inhaltsverzeichnis im PDF
 
 \tableofcontents
-\listoffigures
+%\listoffigures
 \pagestyle{fancy}
 \newpage
 
 \input{02_Lastenheft/Lastenheft}
 \newpage
 \input{03_Bedienungsanleitung/Bedienungsanleitung}
+\input{04_Anhang/Anhang}
+\input{05_Handbuch/Entwicklerhandbuch}
 
 
 

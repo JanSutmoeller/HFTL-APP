@@ -65,6 +65,7 @@ Außer den personellen Aufwand dürfen keine Zusätzlichen Kosten entstehen.
 \acro{SQL}{Structured Query Language}
 \acro{.apk}{Android application package}
 \acro{MTBF}{mean time between failure}
+\acro{CI/CD}{Corperate Identity/Corperate Design}
 
 \end{acronym}
 
@@ -194,10 +195,14 @@ Dazu gehören die News mit ihren Terminen und Inhalt und der Stundenplan mit den
 
 \subsection{\textbf{Anforderungen an die Benutzeroberfläche}}
 
-
-
 \subsubsection{allgemeine Anforderungen an die Oberfläche}
-\textcolor{magenta}{kommt noch von MAIK/Stefan}
+
+Das Layout richtet sich nach dem  \ac{CI/CD} der Deutschen Telekom AG, speziell dem der \acs{HfTL} Trägergesellschaft, stand 14.12.12. Entsprechend sind primär die Farben, sowie Schriftarten vorgegeben. Das Layout zieht sich einheitlich (mit funktionsbedingten Abweichungen) durch alle APP-Teile und soll eine leichte Bedienung begünstigen.
+Die Größe der einzelnen Elemente (Buttons, Zeilen, Überschriften etc.) ist an den Designempfehlungen seitens Android angelehnt. 
+Auch die Abstände zwischen den einzelnen Elementen wurden – sofern sie mit dem \ac{CI/CD} in Einklang stehen – entsprechend der Designempfehlung festgelegt.
+Die Reaktionszeit der Benutzereingaben soll mit möglich wenig Verzögerung verarbeitet und dargestellt werden.
+
+
 
 
 
@@ -219,7 +224,7 @@ Die App braucht folgende Berechtigung auf dem Smartphone:
 
 
 \subsubsection{Bildschirmlayout}
-\textcolor{magenta}{Layouterklärung von Maik/Stefan}
+siehe Anhang \ref{subsec:App-Layout}
 
 
 
@@ -295,7 +300,34 @@ Während des Projektzeitraumes werden sämtliche Meeting, Tests und Kontrollen p
 
 
 \subsubsection{Offenlegung der Qualitätskontrollpläne}
-\textcolor{magenta}{Hat Patrick da was zu???}
+
+\begin{tabular}{lll}
+	\textbf{Nr.} & \textbf{Anforderung} & \textbf{Verantwortliche} \\
+	1 & Projektrahmen festlegen & gesamtes Team \\
+	1.1 & Projektrahmen festlegen & gesamtes Team \\
+	1.2 & Architektur & gesamtes Team \\
+	1.3 & Vorgehensmodell & gesamtes Team \\
+	\\
+	1 & Vollständige Dokumentation & gesamtes Team \\
+	1.1 & UML Diagramme erstellen & AD, CM \\
+	1.2 & Installationsanleitung und Benutzerhandbuch erstellen & GE, JS \\
+	1.3 & Lasten- Pflichtenheft erstellen & SK, SC \\
+	1.4 & Protokolle & ML, PK \\
+	1.5 & Dokumentation zusammenstellen und gestalten & JS, SC \\
+	\\
+	2 & App erstellen & gesamtes Team \\
+	2.1 & Design nach HfTL-Vorgaben erstellen & ML, SC \\
+	2.2 & Programmierung der APP & GE \\	
+	\\
+	3 & Qualitätskontrolle & gesamtes Team \\
+	3.1 & Testkriterien festlegen & PK \\
+	3.2 & Testprotokollelayout erstellen & ML \\
+	3.3 & Softwaretests & ML, PK \\
+	3.4 & Kontrolle der Dokumentation & PK \\
+	\\
+	4 & Anfertigen der Präsentation & gesamte Team \\
+	4.1 & Präsentation halten & SC, ML, SK, JS \\
+\end{tabular}
 
 
 
@@ -311,11 +343,12 @@ Es liegen bei:
 
 \subsubsection{Entwicklungs-Umgebung}
 Für die Entwicklung wird Android Studio inkl. Gradle in der Version 1.x genutzt. Für die Dokumentation und Projektkoordination wird GitHub verwendet.
+Die Dokumentation wird mittels \LaTeX{} erstellt.
 
 
 
 \subsubsection{Projekt-Organisation}
-\textcolor{magenta}{Verweis auf Projektorganigramm im Anhang}
+\includepdf[pages=-,noautoscale]{04_Anhang/files/swe_organigramm.pdf}
 
 
 \subsubsection{Projekt-Planung}
@@ -325,7 +358,7 @@ Für die Entwicklung wird Android Studio inkl. Gradle in der Version 1.x genutzt
 \textcolor{magenta}{GitHub Plan????}
 
 \subsubsection{Testanforderungen}
-\textcolor{magenta}{Testprotokollentwurf}
+siehe Anhang \ref{subsec:Testprotokollentwurf}
 
 
 
