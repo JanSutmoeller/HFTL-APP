@@ -1,9 +1,13 @@
+<<<<<<< HEAD
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.30)  9 AUG 2015 19:59
+=======
 This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.25)  10 AUG 2015 19:04
+>>>>>>> master
 entering extended mode
 **Projektdokumentation.tex
 
-(C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
-Projektdokumentation.tex
+(C:\Users\Student\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Ja
+n\Projektdokumentation.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -15,67 +19,67 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrartcl.cls"
-Document Class: scrartcl 2015/02/07 v3.16 KOMA-Script document class (article)
-("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrkbase.sty"
-Package: scrkbase 2015/02/07 v3.16 KOMA-Script package (KOMA-Script-dependent b
-asics and keyval usage)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrbase.sty"
-Package: scrbase 2015/02/07 v3.16 KOMA-Script package (KOMA-Script-independent 
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrartcl.cls
+Document Class: scrartcl 2013/12/19 v3.12 KOMA-Script document class (article)
+
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrkbase.sty
+Package: scrkbase 2013/12/19 v3.12 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrbase.sty
+Package: scrbase 2013/12/19 v3.12 KOMA-Script package (KOMA-Script-independent 
 basics and keyval usage)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrlfile.sty"
-Package: scrlfile 2015/02/07 v3.16 KOMA-Script package (loading files)
-
-Package scrlfile, 2015/02/07 v3.16 KOMA-Script package (loading files)
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrlfile.sty
+Package: scrlfile 2013/12/19 v3.12 KOMA-Script package (loading files)
+Package scrlfile, 2013/12/19 v3.12 KOMA-Script package (loading files)
                   Copyright (C) Markus Kohm
 
-))) ("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\tocbasic.sty"
-Package: tocbasic 2015/02/07 v3.16 KOMA-Script package (handling toc-files)
+)))
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\tocbasic.sty
+Package: tocbasic 2013/12/19 v3.12 KOMA-Script package (handling toc-files)
 )
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `toc' on input line 116.
+(tocbasic)             for `toc' on input line 115.
 Package tocbasic Info: omitting babel extension for `lof'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 117.
+(tocbasic)             for `lof' on input line 116.
 Package tocbasic Info: omitting babel extension for `lot'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 118.
+(tocbasic)             for `lot' on input line 117.
 
 
 Class scrartcl Warning: You've used obsolete option `liststotoc'.
-(scrartcl)              Usage of this option indicates an old document
-(scrartcl)              and changes compatibility level using
-(scrartcl)              `listof=totoc,version=first'.
-(scrartcl)              If you don't want this, you should simply
-(scrartcl)              replace option `liststotoc' by `listof=totoc'.
+(scrartcl)              Usage of this option indicates an old document and
+(scrartcl)              is deprecated.
+(scrartcl)              You should simply replace
+(scrartcl)              usage of option `liststotoc' by `listof=totoc'.
 
 Class scrartcl Info: Switching compatibility level to `first'.
 
 Class scrartcl Warning: You've used obsolete option `bibtotoc'.
-(scrartcl)              Usage of this option indicates an old document
-(scrartcl)              and changes compatibility level using
-(scrartcl)              `bibliography=totoc,version=first'.
-(scrartcl)              If you don't want this, you should simply
-(scrartcl)              replace option `bibtotoc' by `bibliography=totoc'.
+(scrartcl)              Usage of this option indicates an old document and
+(scrartcl)              is deprecated.
+(scrartcl)              You should simply replace
+(scrartcl)              usage of option `bibtotoc' by `bibliography=totoc'.
 
 Class scrartcl Info: Switching compatibility level to `first'.
 Class scrartcl Info: File `scrsize12pt.clo' used to setup font sizes on input l
-ine 1564.
-("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrsize12pt.clo"
-File: scrsize12pt.clo 2015/02/07 v3.16 KOMA-Script font size class option (12pt
-)
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\typearea.sty"
-Package: typearea 2015/02/07 v3.16 KOMA-Script package (type area)
+ine 1531.
 
-Package typearea, 2015/02/07 v3.16 KOMA-Script package (type area)
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrsize12pt.
+clo
+File: scrsize12pt.clo 2013/12/19 v3.12 KOMA-Script font size class option (12pt
+)
+)
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\typearea.sty
+Package: typearea 2013/12/19 v3.12 KOMA-Script package (type area)
+Package typearea, 2013/12/19 v3.12 KOMA-Script package (type area)
                   Copyright (C) Frank Neukam, 1992-1994
                   Copyright (C) Markus Kohm, 1994-
 
@@ -101,7 +105,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 12.0pt
 (typearea)              \footskip       = 50.75pt
 (typearea)              \baselineskip   = 14.5pt
-(typearea)              on input line 1342.
+(typearea)              on input line 1330.
 )
 \c@part=\count80
 \c@section=\count81
@@ -339,7 +343,7 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fourier.sty"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\fourier\fourier.sty
 Package: fourier 2005/01/01 1.4 fourier-GUTenberg package
 Now handling font encoding FML ...
 ... no UTF-8 mapping file for font encoding FML
@@ -510,7 +514,7 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fourier-orns.sty"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\fourier\fourier-orns.sty
 Package: fourier-orns 2004/01/30 1.1 fourier-ornaments package
 )
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 50.
@@ -608,8 +612,7 @@ LaTeX Font Info:    Redeclaring math accent \hat on input line 254.
 LaTeX Font Info:    Redeclaring math accent \dot on input line 255.
 LaTeX Font Info:    Redeclaring math accent \mathring on input line 256.
 \symUfutm=\mathgroup5
-)
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2008/07/08 v3.8m The Babel package
 
 *************************************
@@ -726,6 +729,31 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count101
 ))
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
+\lst@mode=\count102
+\lst@gtempboxa=\box29
+\lst@token=\toks28
+\lst@length=\count103
+\lst@currlwidth=\dimen113
+\lst@column=\count104
+\lst@pos=\count105
+\lst@lostspace=\dimen114
+\lst@width=\dimen115
+\lst@newlines=\count106
+\lst@lineno=\count107
+\lst@maxwidth=\dimen116
+
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count108
+\lst@skipnumbers=\count109
+\lst@framebox=\box30
+)
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
@@ -783,16 +811,16 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen113
-\Hy@linkcounter=\count102
-\Hy@pagecounter=\count103
+\@linkdim=\dimen117
+\Hy@linkcounter=\count110
+\Hy@pagecounter=\count111
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count104
+\Hy@SavedSpaceFactor=\count112
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -805,17 +833,17 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count105
+\c@Hy@tempcnt=\count113
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen114
-\Fld@menulength=\count106
-\Field@Width=\dimen115
-\Fld@charsize=\dimen116
+\XeTeXLinkMargin=\dimen118
+\Fld@menulength=\count114
+\Field@Width=\dimen119
+\Fld@charsize=\dimen120
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -825,17 +853,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count107
-\c@Item=\count108
-\c@Hfootnote=\count109
+\Hy@abspage=\count115
+\c@Item=\count116
+\c@Hfootnote=\count117
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count110
-\c@bookmark@seq@number=\count111
+\Fld@listcount=\count118
+\c@bookmark@seq@number=\count119
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
@@ -851,48 +879,23 @@ Class scrartcl Warning: Usage of package `titlesec' together
 (scrartcl)              if you really need it, because it breaks several
 (scrartcl)              KOMA-Script features, i.e., option `headings' and
 (scrartcl)              the extended optional argument of the section
-(scrartcl)              commands.
+(scrartcl)              commands .
 (scrartcl)              Nevertheless, using requested
-(scrartcl)              package `titlesec' on input line 29.
+(scrartcl)              package `titlesec' on input line 76.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\titlesec\titlesec.sty
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
-\ttl@box=\box29
+\ttl@box=\box31
 \beforetitleunit=\skip55
 \aftertitleunit=\skip56
-\ttl@plus=\dimen117
-\ttl@minus=\dimen118
-\ttl@toksa=\toks28
-\titlewidth=\dimen119
-\titlewidthlast=\dimen120
-\titlewidthfirst=\dimen121
-
-
-Package titlesec Warning: Non standard sectioning command detected
-(titlesec)                Using default spacing and no format.
-
-
-Package titlesec Warning: Non standard sectioning command detected
-(titlesec)                Using default spacing and no format.
-
-
-Package titlesec Warning: Non standard sectioning command detected
-(titlesec)                Using default spacing and no format.
-
-
-Package titlesec Warning: Non standard sectioning command detected
-(titlesec)                Using default spacing and no format.
-
-
-Package titlesec Warning: Non standard sectioning command detected
-(titlesec)                Using default spacing and no format.
-
+\ttl@plus=\dimen121
+\ttl@minus=\dimen122
+\ttl@toksa=\toks29
+\titlewidth=\dimen123
+\titlewidthlast=\dimen124
+\titlewidthfirst=\dimen125
 )
-
-Package scrartcl Warning: Activating an ugly workaround for a missing
-(scrartcl)                feature of package `titlesec` on input line 29.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\sectsty\sectsty.sty"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\sectsty\sectsty.sty
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
 )
@@ -900,11 +903,11 @@ les
 Class scrartcl Warning: Usage of package `fancyhdr' together
 (scrartcl)              with a KOMA-Script class is not recommended.
 (scrartcl)              I'd suggest to use 
-(scrartcl)              package `scrlayer-scrpage'.
+(scrartcl)              package `scrpage2' or `scrlayer-scrpage'.
 (scrartcl)              Nevertheless, using requested
-(scrartcl)              package `fancyhdr' on input line 33.
+(scrartcl)              package `fancyhdr' on input line 80.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr.sty
 \fancy@headwidth=\skip57
 \f@ncyO@elh=\skip58
 \f@ncyO@erh=\skip59
@@ -929,19 +932,20 @@ File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 )
-\Gin@req@height=\dimen122
-\Gin@req@width=\dimen123
+\Gin@req@height=\dimen126
+\Gin@req@width=\dimen127
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\microtype.sty"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\microtype.sty
 Package: microtype 2013/05/23 v2.5a Micro-typographical refinements (RS)
-\MT@toks=\toks29
-\MT@count=\count112
+\MT@toks=\toks30
+\MT@count=\count120
 LaTeX Info: Redefining \textls on input line 766.
-\MT@outer@kern=\dimen124
+\MT@outer@kern=\dimen128
 LaTeX Info: Redefining \textmicrotypecontext on input line 1285.
-\MT@listname@count=\count113
+\MT@listname@count=\count121
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\microtype-pdftex.def"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\microtype-pdft
+ex.def
 File: microtype-pdftex.def 2013/05/23 v2.5a Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 915.
@@ -950,38 +954,36 @@ LaTeX Info: Redefining \lslig on input line 915.
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\microtype.cfg"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\microtype.cfg
 File: microtype.cfg 2013/05/23 v2.5a microtype main configuration file (RS)
-))
-("C:\Program Files\MiKTeX 2.9\tex\latex\acronym\acronym.sty"
+)) (C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\acronym\acronym.sty
 Package: acronym 2015/03/21 v1.41 Support for acronyms (Tobias Oetiker)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\bigfoot\suffix.sty"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\bigfoot\suffix.sty
 Package: suffix 2006/07/15 1.5a Variant command support
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\xstring\xstring.sty"
-("C:\Program Files\MiKTeX 2.9\tex\generic\xstring\xstring.tex"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\xstring\xstring.sty
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\generic\xstring\xstring.tex
 \@xs@message=\write3
-\integerpart=\count114
-\decimalpart=\count115
+\integerpart=\count122
+\decimalpart=\count123
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\AC@clearlist=\toks30
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
-\wrapoverhang=\dimen125
-\WF@size=\dimen126
-\c@WF@wrappedlines=\count116
-\WF@box=\box30
-\WF@everypar=\toks31
+\AC@clearlist=\toks31
+) (C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\wrapfig\wrapfig.sty
+\wrapoverhang=\dimen129
+\WF@size=\dimen130
+\c@WF@wrappedlines=\count124
+\WF@box=\box32
+\WF@everypar=\toks32
 Package: wrapfig 2003/01/31  v 3.6
 )
 Package scrkbase Info: You've told me to extend the font selection of the
 (scrkbase)             element `sectioning' that is an alias of element
-(scrkbase)             `disposition' on input line 66.
+(scrkbase)             `disposition' on input line 113.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\placeins\placeins.sty"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\placeins\placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
@@ -992,7 +994,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pdfpages.sty
 Package: pdfpages 2015/06/15 v0.4y Insert pages of external PDF documents (AM)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
@@ -1000,26 +1002,42 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count117
-\calc@Bcount=\count118
-\calc@Adimen=\dimen127
-\calc@Bdimen=\dimen128
+\calc@Acount=\count125
+\calc@Bcount=\count126
+\calc@Adimen=\dimen131
+\calc@Bdimen=\dimen132
 \calc@Askip=\skip67
 \calc@Bskip=\skip68
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count119
+\calc@Ccount=\count127
 \calc@Cskip=\skip69
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
-Package: eso-pic 2015/04/20 v2.0e eso-pic (RN)
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\eso-pic\eso-pic.sty
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
 )
-\AM@pagewidth=\dimen129
-\AM@pageheight=\dimen130
+\AM@pagewidth=\dimen133
+\AM@pageheight=\dimen134
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pppdftex.def
 File: pppdftex.def 2015/06/15 v0.4y Pdfpages driver for pdfTeX (AM)
 )
+<<<<<<< HEAD
+\AM@pagebox=\box33
+\AM@toc@title=\toks33
+\c@AM@survey=\count128
+\AM@templatesizebox=\box34
+)
+\c@subsubsubsection=\count129
+
+(C:\Users\Student\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Ja
+n\Projektdokumentation.aux
+(C:\Users\Student\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Ja
+n\01_Titel/01_titel.aux)
+
+LaTeX Warning: Label `img:grafik-dummy' multiply defined.
+
+=======
 \AM@pagebox=\box31
 \AM@toc@title=\toks32
 \c@AM@survey=\count120
@@ -1031,6 +1049,7 @@ File: pppdftex.def 2015/06/15 v0.4y Pdfpages driver for pdfTeX (AM)
 Projektdokumentation.aux
 (C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
 01_Titel/01_titel.aux)
+>>>>>>> master
 
 LaTeX Warning: Label `img:grafik-dummy' multiply defined.
 
@@ -1047,6 +1066,24 @@ LaTeX Warning: Label `img:grafik-dummy' multiply defined.
 LaTeX Warning: Label `img:grafik-dummy' multiply defined.
 
 )
+<<<<<<< HEAD
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 170.
+LaTeX Font Info:    Try loading font information for FML+futm on input line 170
+.
+ (C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\fourier\fmlfutm.fd
+=======
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
 LaTeX Font Info:    ... okay on input line 123.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 123.
@@ -1063,75 +1100,77 @@ LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 123.
 LaTeX Font Info:    Try loading font information for FML+futm on input line 123
 .
  ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmlfutm.fd"
+>>>>>>> master
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 123.
-LaTeX Font Info:    Try loading font information for FMS+futm on input line 123
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 170.
+LaTeX Font Info:    Try loading font information for FMS+futm on input line 170
 .
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmsfutm.fd"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\fourier\fmsfutm.fd
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 123.
-LaTeX Font Info:    Try loading font information for FMX+futm on input line 123
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 170.
+LaTeX Font Info:    Try loading font information for FMX+futm on input line 170
 .
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmxfutm.fd"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\fourier\fmxfutm.fd
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 123.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 123.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 170.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 170.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Try loading font information for T1+futs on input line 123.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Try loading font information for T1+futs on input line 170.
 
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\t1futs.fd"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\fourier\t1futs.fd
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 )
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count122
-\scratchdimen=\dimen131
-\scratchbox=\box33
-\nofMPsegments=\count123
-\nofMParguments=\count124
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count125
-\MPscratchDim=\dimen132
-\MPnumerator=\count126
-\makeMPintoPDFobject=\count127
-\everyMPtoPDFconversion=\toks34
+\scratchcounter=\count130
+\scratchdimen=\dimen135
+\scratchbox=\box35
+\nofMPsegments=\count131
+\nofMParguments=\count132
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count133
+\MPscratchDim=\dimen136
+\MPnumerator=\count134
+\makeMPintoPDFobject=\count135
+\everyMPtoPDFconversion=\toks35
 )
-\AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring ON on input line 123.
+\c@lstlisting=\count136
+\AtBeginShipoutBox=\box36
+Package hyperref Info: Link coloring ON on input line 170.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count128
+\c@section@level=\count137
 )
-LaTeX Info: Redefining \ref on input line 123.
-LaTeX Info: Redefining \pageref on input line 123.
-LaTeX Info: Redefining \nameref on input line 123.
+LaTeX Info: Redefining \ref on input line 170.
+LaTeX Info: Redefining \pageref on input line 170.
+LaTeX Info: Redefining \nameref on input line 170.
 
-(C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
-Projektdokumentation.out)
-(C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
-Projektdokumentation.out)
+(C:\Users\Student\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Ja
+n\Projektdokumentation.out)
+(C:\Users\Student\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Ja
+n\Projektdokumentation.out)
 \@outlinefile=\write4
-LaTeX Info: Redefining \microtypecontext on input line 123.
+LaTeX Info: Redefining \microtypecontext on input line 170.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1146,12 +1185,12 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-(C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
-01_Titel/01_titel.tex
+(C:\Users\Student\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Ja
+n\01_Titel/01_titel.tex
 LaTeX Font Info:    Try loading font information for FML+futmi on input line 2.
 
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmlfutmi.fd"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\fourier\fmlfutmi.fd
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
@@ -1171,7 +1210,7 @@ LaTeX Font Info:    Try loading font information for U+msa on input line 2.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-msa.cfg"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 2.
@@ -1179,10 +1218,14 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-msb.cfg"
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
+<<<<<<< HEAD
+<img/HFTL-Logo.pdf, id=335, 478.00987pt x 264.18701pt>
+=======
 <img/HFTL-Logo.pdf, id=247, 478.00987pt x 264.18701pt>
+>>>>>>> master
 File: img/HFTL-Logo.pdf Graphic file (type pdf)
  <use img/HFTL-Logo.pdf>
 Package pdftex.def Info: img/HFTL-Logo.pdf used on input line 6.
@@ -1201,21 +1244,40 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 2--66
 ) [1
 
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Admin/Documents/
-GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_Jan/img/HFTL-Logo.pdf>]
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 140.
+{C:/Users/Student/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/
+Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_Jan/img/HFTL
+-Logo.pdf>]
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 187.
 
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 Package microtype Info: Loading generic settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package tocbasic Info: character protrusion at toc deactivated on input line 14
-0.
+Package tocbasic Info: character protrusion at toc deactivated on input line 18
+7.
 
+<<<<<<< HEAD
+(C:\Users\Student\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Ja
+n\Projektdokumentation.tocpdfTeX warning (ext4): destination with the same iden
+tifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.42 ... {\"a}tsmerkmale}{10}{subsubsection.4.6.1}
+                                                   [1
+
+
+] [2])
+\tf@toc=\write5
+Package tocbasic Info: character protrusion at lof deactivated on input line 18
+8.
+
+(C:\Users\Student\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Ja
+n\Projektdokumentation.lof)
+\tf@lof=\write6
+=======
 (C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
 Projektdokumentation.tocpdfTeX warning (ext4): destination with the same identi
 fier (name{page.1}) has been already used, duplicate ignored
@@ -1228,15 +1290,23 @@ l.42 ...{\"a}tssicherung}{10}{subsubsection.4.6.2}
 ])
 \tf@toc=\write5
 
+>>>>>>> master
+
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
+[3]
+(C:\Users\Student\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Ja
+n\02_Lastenheft/Lastenheft.tex
+=======
 [2]
 (C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
 02_Lastenheft/Lastenheft.tex
+>>>>>>> master
 LaTeX Font Info:    Font shape `T1/futs/bx/sc' in size <14.4> not available
 (Font)              Font shape `T1/futs/b/sc' tried instead on input line 5.
 Package acronym Info: Label `acro:HfTL' newly defined as it shall be overridden
@@ -1245,7 +1315,11 @@ although it is yet undefined on input line 9.
 LaTeX Font Info:    Try loading font information for TS1+futs on input line 19.
 
 
+<<<<<<< HEAD
+(C:\Users\Student\AppData\Roaming\MiKTeX\2.9\tex\latex\fourier\ts1futs.fd
+=======
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\ts1futs.fd"
+>>>>>>> master
 File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
 )
 Package microtype Info: Loading generic settings for font family
@@ -1259,7 +1333,11 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
+[4]
+=======
 [3]
+>>>>>>> master
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 75.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -1275,7 +1353,11 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
+[5]
+=======
 [4]
+>>>>>>> master
 Package acronym Info: Label `acro:SoSe15' newly defined as it shall be overridd
 en
 although it is yet undefined on input line 109.
@@ -1286,7 +1368,11 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
+[6]
+=======
 [5]
+>>>>>>> master
 Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
@@ -1297,6 +1383,9 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
+[7]
+=======
 [6]
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
@@ -1309,6 +1398,7 @@ Package acronym Info: Label `acro:CI/CD' newly defined as it shall be overridde
 n
 although it is yet undefined on input line 200.
 
+>>>>>>> master
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
  Make it at least 14.49998pt.
@@ -1316,12 +1406,18 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
+<<<<<<< HEAD
+Package acronym Info: Label `acro:CI/CD' newly defined as it shall be overridde
+n
+although it is yet undefined on input line 200.
+=======
 Package acronym Info: Label `acro:.apk' newly defined as it shall be overridden
 
 although it is yet undefined on input line 257.
 Package acronym Info: Label `acro:MTBF' newly defined as it shall be overridden
 
 although it is yet undefined on input line 268.
+>>>>>>> master
 
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
@@ -1330,6 +1426,12 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  This may cause the page layout to be inconsistent, however.
 
 [9]
+<<<<<<< HEAD
+Package acronym Info: Label `acro:.apk' newly defined as it shall be overridden
+
+although it is yet undefined on input line 257.
+Package acronym Info: Label `acro:MTBF' newly defined as it shall be overridden
+=======
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1338,10 +1440,13 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
+>>>>>>> master
 
 [10] <04_Anhang/files/swe_organigramm.pdf, id=424, 597.23125pt x 845.1575pt>
 File: 04_Anhang/files/swe_organigramm.pdf Graphic file (type pdf)
 
+<<<<<<< HEAD
+=======
 <use 04_Anhang/files/swe_organigramm.pdf>
 Package pdftex.def Info: 04_Anhang/files/swe_organigramm.pdf used on input line
  351.
@@ -1366,18 +1471,26 @@ Package pdftex.def Info: 04_Anhang/files/swe_organigramm.pdf, page1 used on inp
 ut line 351.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: 04_Anhang/files/swe_organigramm.pdf Graphic file (type pdf)
+>>>>>>> master
 
 <use 04_Anhang/files/swe_organigramm.pdf, page 1>
 Package pdftex.def Info: 04_Anhang/files/swe_organigramm.pdf, page1 used on inp
 ut line 351.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 
+<<<<<<< HEAD
+[10]
+=======
+>>>>>>> master
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
+[11])
+=======
 [11]
 File: 04_Anhang/files/swe_organigramm.pdf Graphic file (type pdf)
  <use 04_Anhang/files/swe_organigramm.pdf, page 1>
@@ -1386,16 +1499,24 @@ ut line 351.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
  [12 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
 _Jan/04_Anhang/files/swe_organigramm.pdf>])
+>>>>>>> master
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
+[12]
+(C:\Users\Student\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Ja
+n\03_Bedienungsanleitung/Bedienungsanleitung.tex
+<03_Bedienungsanleitung/img/Logo_HFTl_App.png, id=542, 90.3375pt x 90.3375pt>
+=======
 [13]
 (C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
 03_Bedienungsanleitung/Bedienungsanleitung.tex
 <03_Bedienungsanleitung/img/Logo_HFTl_App.png, id=448, 90.3375pt x 90.3375pt>
+>>>>>>> master
 File: 03_Bedienungsanleitung/img/Logo_HFTl_App.png Graphic file (type png)
 
 <use 03_Bedienungsanleitung/img/Logo_HFTl_App.png>
@@ -1409,9 +1530,15 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
+[13 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitun
+g_Jan/03_Bedienungsanleitung/img/Logo_HFTl_App.png>]
+<03_Bedienungsanleitung/img/appstore.jpg, id=549, 625.8582pt x 214.6419pt>
+=======
 [14 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_
 Jan/03_Bedienungsanleitung/img/Logo_HFTl_App.png>]
 <03_Bedienungsanleitung/img/appstore.jpg, id=455, 625.8582pt x 214.6419pt>
+>>>>>>> master
 File: 03_Bedienungsanleitung/img/appstore.jpg Graphic file (type jpg)
 
 <use 03_Bedienungsanleitung/img/appstore.jpg>
@@ -1425,9 +1552,15 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
+[14 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitun
+g_Jan/03_Bedienungsanleitung/img/appstore.jpg>]
+<03_Bedienungsanleitung/img/start2.jpg, id=554, 435.12563pt x 488.57532pt>
+=======
 [15 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_
 Jan/03_Bedienungsanleitung/img/appstore.jpg>]
 <03_Bedienungsanleitung/img/start2.jpg, id=460, 435.12563pt x 488.57532pt>
+>>>>>>> master
 File: 03_Bedienungsanleitung/img/start2.jpg Graphic file (type jpg)
 
 <use 03_Bedienungsanleitung/img/start2.jpg>
@@ -1441,9 +1574,15 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
+[15 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitun
+g_Jan/03_Bedienungsanleitung/img/start2.jpg>]
+<03_Bedienungsanleitung/img/news.jpg, id=559, 408.77719pt x 488.57532pt>
+=======
 [16 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_
 Jan/03_Bedienungsanleitung/img/start2.jpg>]
 <03_Bedienungsanleitung/img/news.jpg, id=465, 408.77719pt x 488.57532pt>
+>>>>>>> master
 File: 03_Bedienungsanleitung/img/news.jpg Graphic file (type jpg)
 
 <use 03_Bedienungsanleitung/img/news.jpg>
@@ -1457,8 +1596,13 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
+[16 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitun
+g_Jan/03_Bedienungsanleitung/img/news.jpg>]
+=======
 [17 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_
 Jan/03_Bedienungsanleitung/img/news.jpg>]
+>>>>>>> master
 Underfull \hbox (badness 10000) in paragraph at lines 84--91
 
  []
@@ -1469,21 +1613,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--91
  []
 
 
+<<<<<<< HEAD
+<03_Bedienungsanleitung/img/einstellungen.png, id=564, 376.40625pt x 668.4975pt
+=======
 <03_Bedienungsanleitung/img/einstellungen.jpg, id=470, 377.91188pt x 740.7675pt
+>>>>>>> master
 >
-File: 03_Bedienungsanleitung/img/einstellungen.jpg Graphic file (type jpg)
- <use 03_Bedienungsanleitung/img/einstellungen.jpg>
-Package pdftex.def Info: 03_Bedienungsanleitung/img/einstellungen.jpg used on i
+File: 03_Bedienungsanleitung/img/einstellungen.png Graphic file (type png)
+ <use 03_Bedienungsanleitung/img/einstellungen.png>
+Package pdftex.def Info: 03_Bedienungsanleitung/img/einstellungen.png used on i
 nput line 96.
-(pdftex.def)             Requested size: 188.95547pt x 370.38284pt.
+(pdftex.def)             Requested size: 188.20265pt x 334.24792pt.
 
+<<<<<<< HEAD
+<03_Bedienungsanleitung/img/account.png, id=565, 376.40625pt x 668.4975pt>
+File: 03_Bedienungsanleitung/img/account.png Graphic file (type png)
+=======
 <03_Bedienungsanleitung/img/account.jpg, id=471, 404.26031pt x 743.02594pt>
 File: 03_Bedienungsanleitung/img/account.jpg Graphic file (type jpg)
+>>>>>>> master
 
-<use 03_Bedienungsanleitung/img/account.jpg>
-Package pdftex.def Info: 03_Bedienungsanleitung/img/account.jpg used on input l
+<use 03_Bedienungsanleitung/img/account.png>
+Package pdftex.def Info: 03_Bedienungsanleitung/img/account.png used on input l
 ine 102.
-(pdftex.def)             Requested size: 202.12965pt x 371.51205pt.
+(pdftex.def)             Requested size: 188.20265pt x 334.24792pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
@@ -1491,17 +1644,26 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
+[17 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitun
+g_Jan/03_Bedienungsanleitung/img/einstellungen.png> <C:/Users/Student/Documents
+/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_Jan/03_Bedienungsanleitung/im
+g/account.png>]
+<03_Bedienungsanleitung/img/noten.png, id=572, 376.40625pt x 668.4975pt>
+File: 03_Bedienungsanleitung/img/noten.png Graphic file (type png)
+=======
 [18 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_
 Jan/03_Bedienungsanleitung/img/einstellungen.jpg> <C:/Users/Admin/Documents/Git
 Hub/HFTL-APP/Dokumentation/erste_Ausarbeitung_Jan/03_Bedienungsanleitung/img/ac
 count.jpg>]
 <03_Bedienungsanleitung/img/noten.jpg, id=477, 387.69844pt x 744.53156pt>
 File: 03_Bedienungsanleitung/img/noten.jpg Graphic file (type jpg)
+>>>>>>> master
 
-<use 03_Bedienungsanleitung/img/noten.jpg>
-Package pdftex.def Info: 03_Bedienungsanleitung/img/noten.jpg used on input lin
+<use 03_Bedienungsanleitung/img/noten.png>
+Package pdftex.def Info: 03_Bedienungsanleitung/img/noten.png used on input lin
 e 113.
-(pdftex.def)             Requested size: 232.62085pt x 446.72238pt.
+(pdftex.def)             Requested size: 225.84547pt x 401.1016pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
@@ -1509,33 +1671,53 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
+[18 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitun
+g_Jan/03_Bedienungsanleitung/img/noten.png>]
+<03_Bedienungsanleitung/img/stundenplan.png, id=579, 376.40625pt x 668.4975pt>
+File: 03_Bedienungsanleitung/img/stundenplan.png Graphic file (type png)
+
+<use 03_Bedienungsanleitung/img/stundenplan.png>
+Package pdftex.def Info: 03_Bedienungsanleitung/img/stundenplan.png used on inp
+=======
 [19 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_
 Jan/03_Bedienungsanleitung/img/noten.jpg>]
 <03_Bedienungsanleitung/img/stundenplan.jpg, id=482, 382.42876pt x 744.53156pt>
 File: 03_Bedienungsanleitung/img/stundenplan.jpg Graphic file (type jpg)
 <use 03_Bedienungsanleitung/img/stundenplan.jpg>
 Package pdftex.def Info: 03_Bedienungsanleitung/img/stundenplan.jpg used on inp
+>>>>>>> master
 ut line 126.
-(pdftex.def)             Requested size: 229.45901pt x 446.72238pt.
+(pdftex.def)             Requested size: 225.84547pt x 401.1016pt.
 )
-(C:\Users\Admin\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Jan\
-04_Anhang/Anhang.tex
+(C:\Users\Student\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Ja
+n\04_Anhang/Anhang.tex
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
+[19 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitun
+g_Jan/03_Bedienungsanleitung/img/stundenplan.png>]
+=======
 [20 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_
 Jan/03_Bedienungsanleitung/img/stundenplan.jpg>]
+>>>>>>> master
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
+[20]
+<04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, id=589, 722.7pt x 542.025pt>
+=======
 [21]
 <04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, id=491, 722.7pt x 542.025pt>
+>>>>>>> master
 File: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf Graphic file (type pdf)
 <use 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf>
 Package pdftex.def Info: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf used 
@@ -1548,7 +1730,11 @@ Package pdftex.def Info: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf used
 on input line 4.
 (pdftex.def)             Requested size: 722.69823pt x 542.02367pt.
 
+<<<<<<< HEAD
+<04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, id=592, page=1, 722.7pt x 54
+=======
 <04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, id=494, page=1, 722.7pt x 54
+>>>>>>> master
 2.025pt>
 File: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf Graphic file (type pdf)
  <use 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, page 1>
@@ -1568,7 +1754,11 @@ Package pdftex.def Info: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, page
 1 used on input line 4.
 (pdftex.def)             Requested size: 722.69823pt x 542.02367pt.
 
+<<<<<<< HEAD
+<04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, id=593, page=2, 722.7pt x 54
+=======
 <04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, id=495, page=2, 722.7pt x 54
+>>>>>>> master
 2.025pt>
 File: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf Graphic file (type pdf)
  <use 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, page 2>
@@ -1587,11 +1777,19 @@ File: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf Graphic file (type pdf)
 Package pdftex.def Info: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, page
 1 used on input line 4.
 (pdftex.def)             Requested size: 722.69823pt x 542.02367pt.
+<<<<<<< HEAD
+ [21
+
+ <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_J
+an/04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf>]
+<04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, id=605, page=3, 722.7pt x 54
+=======
  [22
 
  <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung_Jan
 /04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf>]
 <04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, id=507, page=3, 722.7pt x 54
+>>>>>>> master
 2.025pt>
 File: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf Graphic file (type pdf)
  <use 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, page 3>
@@ -1610,9 +1808,15 @@ File: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf Graphic file (type pdf)
 Package pdftex.def Info: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, page
 2 used on input line 4.
 (pdftex.def)             Requested size: 722.69823pt x 542.02367pt.
+<<<<<<< HEAD
+ [22 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitu
+ng_Jan/04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf>]
+<04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, id=612, page=4, 722.7pt x 54
+=======
  [23 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
 _Jan/04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf>]
 <04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, id=514, page=4, 722.7pt x 54
+>>>>>>> master
 2.025pt>
 File: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf Graphic file (type pdf)
  <use 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, page 4>
@@ -1631,14 +1835,101 @@ File: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf Graphic file (type pdf)
 Package pdftex.def Info: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, page
 3 used on input line 4.
 (pdftex.def)             Requested size: 722.69823pt x 542.02367pt.
+<<<<<<< HEAD
+ [23 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitu
+ng_Jan/04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf>]
+=======
  [24 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
 _Jan/04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf>]
+>>>>>>> master
 File: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf Graphic file (type pdf)
 
 <use 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, page 4>
 Package pdftex.def Info: 04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf, page
 4 used on input line 4.
 (pdftex.def)             Requested size: 722.69823pt x 542.02367pt.
+<<<<<<< HEAD
+ [24 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitu
+ng_Jan/04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf>])
+(C:\Users\Student\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Ja
+n\05_Handbuch/Entwicklerhandbuch.tex
+File: 03_Bedienungsanleitung/img/Logo_HFTl_App.png Graphic file (type png)
+
+<use 03_Bedienungsanleitung/img/Logo_HFTl_App.png>
+Package pdftex.def Info: 03_Bedienungsanleitung/img/Logo_HFTl_App.png used on i
+nput line 6.
+(pdftex.def)             Requested size: 225.84315pt x 225.84315pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (13.6pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[25
+
+]
+Package tocbasic Info: character protrusion at toc deactivated on input line 23
+.
+
+(C:\Users\Student\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Ja
+n\Projektdokumentation.toc)
+\tf@toc=\write7
+
+
+Package Fancyhdr Warning: \headheight is too small (13.6pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 54--58
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (13.6pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+
+ []
+
+
+Overfull \hbox (2.12021pt too wide) in paragraph at lines 101--103
+[]\T1/futs/m/n/12 (-20) beinhaltet di-ver-se Hilf-sunk-tio-nen, die un-ter an-d
+e-rem zum Aus-füh-ren von Threads
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (13.6pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[28]
+
+Package Fancyhdr Warning: \headheight is too small (13.6pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[29]
+
+Package Fancyhdr Warning: \headheight is too small (13.6pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[30]
+Overfull \hbox (5.70575pt too wide) in paragraph at lines 203--204
+[]\T1/futs/m/n/12 (-20) Laden des in der zu-ge-hö-ri-gen xml de-fi-nier-ten Lay
+-outs (ac-ti-vi-ty_ news_ clicked.xml) 
+ []
+=======
  [25 <C:/Users/Admin/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitung
 _Jan/04_Anhang/files/Gant_HfTL-APP_Stand_30062015.pdf>]
 <04_Anhang/files/HFTL-App_Designvorlage.pdf, id=528, 597.19112pt x 845.19763pt>
@@ -1673,6 +1964,7 @@ File: 04_Anhang/files/HFTL-App_Designvorlage.pdf Graphic file (type pdf)
 Package pdftex.def Info: 04_Anhang/files/HFTL-App_Designvorlage.pdf, page1 used
  on input line 9.
 (pdftex.def)             Requested size: 597.18967pt x 845.19557pt.
+>>>>>>> master
 
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
@@ -1680,6 +1972,29 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+<<<<<<< HEAD
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--284
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (13.6pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[32]
+Overfull \hbox (20.17822pt too wide) in paragraph at lines 298--299
+[]\T1/futs/m/n/12 (-20) Es wird ei-ne In-stanz der Klas-se NewsHel-per er-stell
+t, wel-che dann als Hintergrund-
+ []
+=======
 [26
 
 ]
@@ -1829,6 +2144,7 @@ File: 04_Anhang/files/Vorlage_Testprotokoll.pdf Graphic file (type pdf)
 Package pdftex.def Info: 04_Anhang/files/Vorlage_Testprotokoll.pdf, page1 used 
 on input line 13.
 (pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+>>>>>>> master
 
 
 Package Fancyhdr Warning: \headheight is too small (13.6pt): 
@@ -1837,6 +2153,108 @@ Package Fancyhdr Warning: \headheight is too small (13.6pt):
  This may cause the page layout to be inconsistent, however.
 
 [33]
+<<<<<<< HEAD
+Overfull \hbox (131.26527pt too wide) in paragraph at lines 362--364
+\T1/futs/m/n/12 (-20) Dra-wer ge-schlos-sen und die Po-si-ti-on des an-geklick-
+ten Punk-tes an mCall-backs.onNavigationDrawerItemSelected()
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (13.6pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[34] <05_Handbuch/img/Noten_Toast.png, id=711, 798.73407pt x 248.42813pt>
+File: 05_Handbuch/img/Noten_Toast.png Graphic file (type png)
+
+<use 05_Handbuch/img/Noten_Toast.png>
+Package pdftex.def Info: 05_Handbuch/img/Noten_Toast.png used on input line 408
+.
+(pdftex.def)             Requested size: 399.36606pt x 124.21376pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (13.6pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[35]
+
+Package Fancyhdr Warning: \headheight is too small (13.6pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[36 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitun
+g_Jan/05_Handbuch/img/Noten_Toast.png>]
+Overfull \hbox (29.78563pt too wide) in paragraph at lines 460--462
+[]\T1/futs/m/n/12 (-20) Prüft ob in den Ein-stel-lun-gen der Stu-dien-gang ein-
+ge-tra-gen wur-de falls nein -->Fehlermeldung 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (13.6pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[37]
+
+Package Fancyhdr Warning: \headheight is too small (13.6pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[38]
+
+Package Fancyhdr Warning: \headheight is too small (13.6pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[39]
+
+Package Fancyhdr Warning: \headheight is too small (13.6pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[40]
+
+Package Fancyhdr Warning: \headheight is too small (13.6pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[41] <05_Handbuch/img/kategorie.jpg, id=802, 376.40625pt x 213.79875pt>
+File: 05_Handbuch/img/kategorie.jpg Graphic file (type jpg)
+
+<use 05_Handbuch/img/kategorie.jpg>
+Package pdftex.def Info: 05_Handbuch/img/kategorie.jpg used on input line 601.
+(pdftex.def)             Requested size: 188.20265pt x 106.89911pt.
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 201.
+
+
+Package Fancyhdr Warning: \headheight is too small (13.6pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[42 <C:/Users/Student/Documents/GitHub/HFTL-APP/Dokumentation/erste_Ausarbeitun
+g_Jan/05_Handbuch/img/kategorie.jpg>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 201.
+
+(C:\Users\Student\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Ja
+n\Projektdokumentation.aux
+(C:\Users\Student\Documents\GitHub\HFTL-APP\Dokumentation\erste_Ausarbeitung_Ja
+n\01_Titel/01_titel.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 201.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 201.
+Package rerunfilecheck Info: File `Projektdokumentation.out' has not changed.
+(rerunfilecheck)             Checksum: 44CFFED21D6D76F7D855AC986DB23027;6398.
+=======
 <04_Anhang/files/Vorlage_Testprotokoll.pdf, id=616, page=2, 597.432pt x 845.077
 18pt>
 File: 04_Anhang/files/Vorlage_Testprotokoll.pdf Graphic file (type pdf)
@@ -1877,13 +2295,35 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 153.
 Package rerunfilecheck Info: File `Projektdokumentation.out' has not changed.
 (rerunfilecheck)             Checksum: 235D6A3B1D08BA4CDFB06B769875B0F0;4769.
+>>>>>>> master
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 201.
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
+ 14563 strings out of 493921
+ 221403 string characters out of 3147275
+ 434919 words of memory out of 3000000
+ 17016 multiletter control sequences out of 15000+200000
+ 135357 words of font info for 273 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 41i,18n,59p,758b,2107s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Student\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
+0\ecsx1200.pk> <C:\Users\Student\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
+pen\ec\dpi600\ectt1000.pk> <C:\Users\Student\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ectt1200.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dv
+ips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8
+a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on Projektdokumentation.pdf (43 pages, 1619419 bytes).
+PDF statistics:
+ 1049 PDF objects out of 1200 (max. 8388607)
+ 251 named destinations out of 1000 (max. 500000)
+ 55027 words of extra memory for PDF output out of 61914 (max. 10000000)
+=======
  12619 strings out of 493921
  196192 string characters out of 3147282
  350396 words of memory out of 3000000
@@ -1901,4 +2341,5 @@ PDF statistics:
  712 PDF objects out of 1000 (max. 8388607)
  116 named destinations out of 1000 (max. 500000)
  46227 words of extra memory for PDF output out of 51595 (max. 10000000)
+>>>>>>> master
 
