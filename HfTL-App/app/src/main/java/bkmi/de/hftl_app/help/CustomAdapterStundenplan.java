@@ -81,28 +81,32 @@ public class CustomAdapterStundenplan extends BaseAdapter{
             return rowView;
         }*/
 
-        //data[0]=format.format(events[spinner.getSelectedItemPosition()][0].getDate().getTime());
+
         holder.tv_date=(TextView) rowView.findViewById(R.id.stundenplan_tag);
-    //    Typeface datumTF = Typeface.createFromAsset(context.getAssets(), "fonts/TeleGrotHalb.ttf");
+
          if (datum[position]!=null)
              holder.tv_date.setText(datum[position]);
          else
              holder.tv_date.setVisibility(TextView.GONE);
-      //  holder.tv_date.setTypeface(datumTF);
 
-        //Typeface fachTF = Typeface.createFromAsset(context.getAssets(), "fonts/TeleGrotHalb.ttf");
         holder.tv_subject=(TextView) rowView.findViewById(R.id.stundenplan_fach);
-        holder.tv_subject.setText(kategorie[position]+ " - " + fach[position]);
-      //  holder.tv_subject.setTypeface(fachTF);
+        if (fach[position].length()>36)
+            holder.tv_subject.setLines(3);
+        else
+            holder.tv_subject.setLines(2);
+        holder.tv_subject.setText(kategorie[position]+ "\n" + fach[position]);
 
-      //  Typeface zeitTF =Typeface.createFromAsset(context.getAssets(), "fonts/TeleGrotNorm.ttf");
+
         holder.tv_time=(TextView) rowView.findViewById(R.id.stundenplan_zeit);
         holder.tv_time.setText(zeit[position]);
-      //  holder.tv_time.setTypeface(zeitTF);
+
 
         holder.tv_room=(TextView) rowView.findViewById(R.id.stundenplan_raum);
-        holder.tv_room.setText(raum[position]);
-      //  holder.tv_room.setTypeface(zeitTF);
+        if (raum[position]!=null)
+            holder.tv_room.setText("Raumplanung offen");
+        else
+            holder.tv_room.setText(raum[position]);
+
 
         holder.tv_category=(TextView) rowView.findViewById(R.id.stundenplan_kategorie);
         if (kategorie[position].equals("Prüfung"))

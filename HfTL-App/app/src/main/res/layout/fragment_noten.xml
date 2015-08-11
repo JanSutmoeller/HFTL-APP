@@ -13,7 +13,7 @@
         android:background="@color/grau04"
         android:id="@+id/noten_header"
         android:padding="8dp">
-        <TextView
+        <bkmi.de.hftl_app.help.Typefaces.Ocra
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"

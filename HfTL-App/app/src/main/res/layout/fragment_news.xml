@@ -25,7 +25,7 @@
             android:textStyle="bold"/>
             -->
         <!-- Überschrift -->
-        <TextView
+        <bkmi.de.hftl_app.help.Typefaces.Ocra
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"

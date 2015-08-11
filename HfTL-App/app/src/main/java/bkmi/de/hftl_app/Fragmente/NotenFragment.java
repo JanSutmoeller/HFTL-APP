@@ -79,15 +79,6 @@ public class NotenFragment extends ListFragment {
 
         View notenView = inflater.inflate(R.layout.fragment_noten, container, false);
 
-        // Custom Typeface - Einbinden der Schriftarten nach CI/CD
-
-        //Überschrift "hl" mit ORCA
-
-        TextView hl = (TextView) notenView.findViewById(R.id.hl_Noten);
-        Typeface headline = Typeface.createFromAsset(getActivity().getAssets(), "fonts/OCRA.TTF");
-        hl.setTypeface(headline);
-
-
         return notenView;
     }
 

@@ -75,16 +75,7 @@ public class NewsFragment extends ListFragment {
         View rootView = inflater.inflate(R.layout.fragment_news, container, false);
         //zeigeNews();
 
-
-        // Custom Typeface - Einbinden der Schriftarten nach CI/CD
-
-        //Überschrift "hl" mit ORCA
-
-        TextView hl = (TextView) rootView.findViewById(R.id.hl_News);
-        Typeface headline = Typeface.createFromAsset(getActivity().getAssets(), "fonts/OCRA.TTF");
-        hl.setTypeface(headline);
-
-        return rootView;
+       return rootView;
     }
 
     @Override

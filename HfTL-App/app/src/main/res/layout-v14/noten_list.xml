@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:background="@color/grau06"
         android:id="@+id/wrapper_semester" >
-        <TextView
+        <bkmi.de.hftl_app.help.Typefaces.TeleGrotHalb
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/notenlist_semester"
@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="4dp" >
 
-                <TextView
+                <bkmi.de.hftl_app.help.Typefaces.TeleGrotHalb
                     android:id="@+id/notenlist_fach"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
                     android:textSize="18sp"
                     android:textColor="@color/schwarz" />
 
-                <TextView
+                <bkmi.de.hftl_app.help.Typefaces.TeleGrotNorm
                     android:id="@+id/notenlist_versuch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
                 android:layout_height="fill_parent"
                 android:padding="4dp" >
 
-                <TextView
+                <bkmi.de.hftl_app.help.Typefaces.TeleGrotHalb
                     android:id="@+id/notenlist_note"
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"

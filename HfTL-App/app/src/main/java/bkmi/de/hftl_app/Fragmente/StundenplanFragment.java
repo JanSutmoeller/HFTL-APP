@@ -95,10 +95,6 @@ public class StundenplanFragment extends ListFragment {
                              Bundle savedInstanceState) {
         View stundenPlanView = inflater.inflate(R.layout.fragment_stundenplan, container, false);
 
-        TextView hl = (TextView) stundenPlanView.findViewById(R.id.hl_Stundenplan);
-        Typeface headline = Typeface.createFromAsset(getActivity().getAssets(), "fonts/OCRA.TTF");
-        hl.setTypeface(headline);
-        // Inflate the layout for this fragment
         return stundenPlanView;
     }
 

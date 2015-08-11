@@ -11,26 +11,26 @@
     tools:context="bkmi.de.hftl_app.NewsClickedActivity">
 
 
-    <TextView
+    <bkmi.de.hftl_app.help.Typefaces.Ocra
         android:textStyle="bold"
-        android:textSize="@dimen/abc_text_size_headline_material"
+        android:textSize="24sp"
         android:id="@+id/tv_news_hl1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/grün"/>
 
-    <TextView
+    <bkmi.de.hftl_app.help.Typefaces.TeleGrotNorm
         android:textSize="16sp"
         android:id="@+id/tv_news_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <TextView
+    <bkmi.de.hftl_app.help.Typefaces.TeleGrotFett
         android:textSize="16sp"
         android:id="@+id/tv_news_hl2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    <TextView
+    <bkmi.de.hftl_app.help.Typefaces.TeleGrotNorm
         android:id="@+id/tv_news_content"
         android:textSize="16sp"
         android:layout_width="match_parent"

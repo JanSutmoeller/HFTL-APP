@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:background="@color/grau06"
         android:id="@+id/wrapper_tag">
-        <TextView
+        <bkmi.de.hftl_app.help.Typefaces.TeleGrotHalb
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/stundenplan_tag"
@@ -48,15 +48,17 @@
                 android:layout_marginRight="4dp"
                 >
 
-                <TextView android:id="@+id/stundenplan_fach"
+                <bkmi.de.hftl_app.help.Typefaces.TeleGrotNorm
+                    android:id="@+id/stundenplan_fach"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:gravity="left"
                     android:layout_marginLeft="8dp"
-                    android:text="Teletutoring Studienbegleitprogramm"
+                    android:text="Vorlesung - Informations- und Codierungstheorie"
                     android:textSize="18sp"
                     android:textColor="@color/schwarz"
                     />
+
 
                 <LinearLayout
                     android:id="@+id/wrapper_details"
@@ -65,14 +67,16 @@
                     android:orientation="horizontal"
                     android:layout_marginLeft="4dp">
 
-                    <TextView android:id="@+id/stundenplan_zeit"
+                    <bkmi.de.hftl_app.help.Typefaces.TeleGrotNorm
+                        android:id="@+id/stundenplan_zeit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10px"
                         android:text="18:15 - 19:15 Uhr,"
                         android:textSize="15sp"
                         android:textColor="@color/schwarz"/>
-                    <TextView android:id="@+id/stundenplan_raum"
+                    <bkmi.de.hftl_app.help.Typefaces.TeleGrotNorm
+                        android:id="@+id/stundenplan_raum"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10px"
