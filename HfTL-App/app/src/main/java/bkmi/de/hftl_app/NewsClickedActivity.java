@@ -58,9 +58,13 @@ public class NewsClickedActivity extends ActionBarActivity {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
+                    tv1=(TextView)findViewById(R.id.tv_news_date);
                     tv1.setText(s[2]);
+                    tv2=(TextView)findViewById(R.id.tv_news_hl1);
                     tv2.setText(s[0]);
+                    tv3=(TextView)findViewById(R.id.tv_news_hl2);
                     tv3.setText(s[1]);
+                    tv4=(TextView)findViewById(R.id.tv_news_content);
                     tv4.setText(s[3]);
                 }
             });
