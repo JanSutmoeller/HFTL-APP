@@ -9,6 +9,9 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import bkmi.de.hftl_app.Fragmente.NotenFragment;
 import bkmi.de.hftl_app.R;
 
@@ -48,6 +51,7 @@ public class CustomAdapterNoten extends BaseAdapter{
         return position;
     }
 
+
     public class NotenHolder
     {
         TextView tv_subject;
@@ -57,34 +61,27 @@ public class CustomAdapterNoten extends BaseAdapter{
     }
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-        // TODO Auto-generated method stub
+
         NotenHolder holder=new NotenHolder();
         View rowView;
         rowView = inflater.inflate(R.layout.noten_list, null);
-        /*
-        Typeface teleGrotHalb = Typeface.createFromAsset(context.getAssets(), "fonts/TeleGrotHalb.ttf");
-        Typeface teleGrotNorm = Typeface.createFromAsset(context.getAssets(), "fonts/TeleGrotNorm.ttf");
-        Typeface teleGrotFett = Typeface.createFromAsset(context.getAssets(), "fonts/TeleGrotFett.ttf");
-*/
+
         holder.tv_semester=(TextView) rowView.findViewById(R.id.notenlist_semester);
         if(semester[position]==null){
             holder.tv_semester.setVisibility(TextView.GONE);
         }
         else {
             holder.tv_semester.setText(semester[position]);
-      //      holder.tv_semester.setTypeface(teleGrotHalb);
         }
 
         holder.tv_subject=(TextView) rowView.findViewById(R.id.notenlist_fach);
         holder.tv_subject.setText(subject[position]);
-   //     holder.tv_subject.setTypeface(teleGrotHalb);
 
         holder.tv_trys=(TextView) rowView.findViewById(R.id.notenlist_versuch);
         holder.tv_trys.setText("Versuch: " + trys[position]);
-     //   holder.tv_trys.setTypeface(teleGrotNorm);
 
         holder.tv_mark=(TextView) rowView.findViewById(R.id.notenlist_note);
-   //     holder.tv_mark.setTypeface(teleGrotFett);
+
         if (mark[position].equals("5,0" ))
             holder.tv_mark.setTextColor(context.getResources().getColor(R.color.magenta));
         else if (mark[position].equals("4,0" ) |

@@ -20,6 +20,8 @@ import android.graphics.Typeface;
 import android.widget.Toast;
 
 import java.net.UnknownHostException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import bkmi.de.hftl_app.Database.NotenDB;
 import bkmi.de.hftl_app.Database.NotenTabelle;
@@ -178,18 +180,10 @@ public class NotenFragment extends ListFragment {
         cursor.moveToFirst();
         int i = 0;
         String[] s = new String[cursor.getCount()];
-        String[] vgl = new String[1];
-        vgl[0]="";
+
         while (!cursor.isAfterLast()) {
-            s[i] =  cursor.getString(0);
-            if(s[i].equals(vgl[0])){
-                s[i] = null;
-                vgl[0] = cursor.getString(0);
-            }
-            else
-                vgl[0]=s[i];
-            i++;
-           cursor.moveToNext();
+            s[i++] = cursor.getString(0);
+            cursor.moveToNext();
 
         }
         cursor.close();
@@ -233,6 +227,47 @@ public class NotenFragment extends ListFragment {
          semesterList = getSemester();
          fachList = getFach();
          versuchList = getVersuche();
+
+        // Sortierung der Arrays (neustes zuerst)
+
+        Pattern p = Pattern.compile("\\d{2}$"); //letzten beiden Ziffern des Semester-Eintrags (SoSe 13, WiSe 13/14, SoSe 14, WiSe 15/16)
+        String temps = "";
+        for (int i=1; i<semesterList.length; i++){
+            for(int j=0; j<semesterList.length-i;j++){
+                Matcher m = p.matcher(semesterList[j]);
+                Matcher n = p.matcher(semesterList[j+1]);
+                if((m.find())&&(n.find())){
+                    int x = Integer.parseInt(m.group());
+                    int y = Integer.parseInt(n.group());
+                    if(x<y){                    //Vergleich der letzten beiden Ziffern
+                        temps = semesterList[j];
+                        semesterList[j] = semesterList[j+1];
+                        semesterList[j+1] = temps;
+                        temps = notenList[j];
+                        notenList[j] = notenList[j+1];
+                        notenList[j+1] = temps;
+                        temps = fachList[j];
+                        fachList[j] = fachList[j+1];
+                        fachList[j+1] = temps;
+                        temps = versuchList[j];
+                        versuchList[j] = versuchList[j+1];
+                        versuchList[j+1] = temps;
+                    }
+                }
+            }
+        }
+        // Doppelte Semestereinträge auf "null" setzen, damit die zugehörige TextView verschwindet
+        String[] vgl = new String[1];
+        vgl[0]="";
+        for(int k=0; k<semesterList.length;k++){
+          if (semesterList[k].equals(vgl[0])) {
+                vgl[0] = semesterList[k];
+                semesterList[k] = null;
+            }
+            else{
+                vgl[0] = semesterList[k];
+            }
+        }
 
         if (bool) setListAdapter(new CustomAdapterNoten(getActivity(),semesterList, fachList, versuchList, notenList));
         else {

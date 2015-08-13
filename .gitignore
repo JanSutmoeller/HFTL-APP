@@ -1,3 +1,5 @@
 UML/HFTL-APP.EAP
 UML/HFTL-APP.ldb
 *.EAP
+*.gradle
+*.iml
