@@ -58,27 +58,28 @@
 \BOOKMARK [3][-]{subsubsection.5.1.5}{Stundenplan}{subsection.5.1}% 58
 \BOOKMARK [2][-]{subsection.5.2}{Gantt}{section.5}% 59
 \BOOKMARK [2][-]{subsection.5.3}{App-Layout}{section.5}% 60
-\BOOKMARK [2][-]{subsection.5.4}{Testprotokollentwurf}{section.5}% 61
-\BOOKMARK [1][-]{section.6}{Entwicklerhandbuch}{toc.0}% 62
-\BOOKMARK [2][-]{subsection.6.1}{Allgemeines}{section.6}% 63
-\BOOKMARK [2][-]{subsection.6.2}{Verwendete Software}{section.6}% 64
-\BOOKMARK [2][-]{subsection.6.3}{Aufbau des Projekts}{section.6}% 65
-\BOOKMARK [3][-]{subsubsection.6.3.1}{Manifest.XML}{subsection.6.3}% 66
-\BOOKMARK [3][-]{subsubsection.6.3.2}{Ordnerstruktur}{subsection.6.3}% 67
-\BOOKMARK [2][-]{subsection.6.4}{Activities}{section.6}% 68
-\BOOKMARK [3][-]{subsubsection.6.4.1}{NewsActivity.java}{subsection.6.4}% 69
-\BOOKMARK [3][-]{subsubsection.6.4.2}{EinstellungsActivity.java}{subsection.6.4}% 70
-\BOOKMARK [2][-]{subsection.6.5}{NewsClickedActivity.java}{section.6}% 71
-\BOOKMARK [3][-]{subsubsection.6.5.1}{Allgemein}{subsection.6.5}% 72
-\BOOKMARK [3][-]{subsubsection.6.5.2}{Klasse DetailHelper}{subsection.6.5}% 73
-\BOOKMARK [2][-]{subsection.6.6}{Fragmente}{section.6}% 74
-\BOOKMARK [3][-]{subsubsection.6.6.1}{NewsFragment}{subsection.6.6}% 75
-\BOOKMARK [3][-]{subsubsection.6.6.2}{Klasse NewsHelper}{subsection.6.6}% 76
-\BOOKMARK [3][-]{subsubsection.6.6.3}{NavigationDrawerFragment}{subsection.6.6}% 77
-\BOOKMARK [3][-]{subsubsection.6.6.4}{Notenfragment}{subsection.6.6}% 78
-\BOOKMARK [3][-]{subsubsection.6.6.5}{StundenplanFragment}{subsection.6.6}% 79
-\BOOKMARK [2][-]{subsection.6.7}{CustomAdapter}{section.6}% 80
-\BOOKMARK [3][-]{subsubsection.6.7.1}{Allgemein}{subsection.6.7}% 81
-\BOOKMARK [3][-]{subsubsection.6.7.2}{CustomAdapterNews.java}{subsection.6.7}% 82
-\BOOKMARK [3][-]{subsubsection.6.7.3}{CustomAdapterNoten.java}{subsection.6.7}% 83
-\BOOKMARK [3][-]{subsubsection.6.7.4}{CustomAdapterStundenplan}{subsection.6.7}% 84
+\BOOKMARK [2][-]{subsection.5.4}{Release-Historie}{section.5}% 61
+\BOOKMARK [2][-]{subsection.5.5}{Testprotokollentwurf}{section.5}% 62
+\BOOKMARK [1][-]{section.6}{Entwicklerhandbuch}{toc.0}% 63
+\BOOKMARK [2][-]{subsection.6.1}{Allgemeines}{section.6}% 64
+\BOOKMARK [2][-]{subsection.6.2}{Verwendete Software}{section.6}% 65
+\BOOKMARK [2][-]{subsection.6.3}{Aufbau des Projekts}{section.6}% 66
+\BOOKMARK [3][-]{subsubsection.6.3.1}{Manifest.XML}{subsection.6.3}% 67
+\BOOKMARK [3][-]{subsubsection.6.3.2}{Ordnerstruktur}{subsection.6.3}% 68
+\BOOKMARK [2][-]{subsection.6.4}{Activities}{section.6}% 69
+\BOOKMARK [3][-]{subsubsection.6.4.1}{NewsActivity.java}{subsection.6.4}% 70
+\BOOKMARK [3][-]{subsubsection.6.4.2}{EinstellungsActivity.java}{subsection.6.4}% 71
+\BOOKMARK [2][-]{subsection.6.5}{NewsClickedActivity.java}{section.6}% 72
+\BOOKMARK [3][-]{subsubsection.6.5.1}{Allgemein}{subsection.6.5}% 73
+\BOOKMARK [3][-]{subsubsection.6.5.2}{Klasse DetailHelper}{subsection.6.5}% 74
+\BOOKMARK [2][-]{subsection.6.6}{Fragmente}{section.6}% 75
+\BOOKMARK [3][-]{subsubsection.6.6.1}{NewsFragment}{subsection.6.6}% 76
+\BOOKMARK [3][-]{subsubsection.6.6.2}{Klasse NewsHelper}{subsection.6.6}% 77
+\BOOKMARK [3][-]{subsubsection.6.6.3}{NavigationDrawerFragment}{subsection.6.6}% 78
+\BOOKMARK [3][-]{subsubsection.6.6.4}{Notenfragment}{subsection.6.6}% 79
+\BOOKMARK [3][-]{subsubsection.6.6.5}{StundenplanFragment}{subsection.6.6}% 80
+\BOOKMARK [2][-]{subsection.6.7}{CustomAdapter}{section.6}% 81
+\BOOKMARK [3][-]{subsubsection.6.7.1}{Allgemein}{subsection.6.7}% 82
+\BOOKMARK [3][-]{subsubsection.6.7.2}{CustomAdapterNews.java}{subsection.6.7}% 83
+\BOOKMARK [3][-]{subsubsection.6.7.3}{CustomAdapterNoten.java}{subsection.6.7}% 84
+\BOOKMARK [3][-]{subsubsection.6.7.4}{CustomAdapterStundenplan}{subsection.6.7}% 85
