@@ -296,9 +296,8 @@ public class StundenplanFragment extends ListFragment {
             } else
                 dateList[i] = null;
 
-            setListAdapter(new CustomAdapterStundenplan(getActivity(), dateList, fachList, timeList, roomList, categoryList));
-
         }
+        setListAdapter(new CustomAdapterStundenplan(getActivity(), dateList, fachList, timeList, roomList, categoryList));
     }
 
     @Override
