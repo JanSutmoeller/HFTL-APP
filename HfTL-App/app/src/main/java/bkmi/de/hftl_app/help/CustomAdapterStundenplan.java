@@ -90,10 +90,10 @@ public class CustomAdapterStundenplan extends BaseAdapter{
              holder.tv_date.setVisibility(TextView.GONE);
 
         holder.tv_subject=(TextView) rowView.findViewById(R.id.stundenplan_fach);
-        if (fach[position].length()>36)
+      /*  if (fach[position].length()>36)
             holder.tv_subject.setLines(3);
         else
-            holder.tv_subject.setLines(2);
+            holder.tv_subject.setLines(2);*/
         holder.tv_subject.setText(kategorie[position]+ "\n" + fach[position]);
 
 
