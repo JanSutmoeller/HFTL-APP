@@ -102,7 +102,7 @@ public class CustomAdapterStundenplan extends BaseAdapter{
 
 
         holder.tv_room=(TextView) rowView.findViewById(R.id.stundenplan_raum);
-        if (raum[position]!=null)
+        if (raum[position].equals(""))
             holder.tv_room.setText("Raumplanung offen");
         else
             holder.tv_room.setText(raum[position]);

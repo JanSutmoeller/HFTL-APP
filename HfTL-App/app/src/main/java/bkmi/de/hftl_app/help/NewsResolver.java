@@ -21,6 +21,7 @@ public class NewsResolver {
      */
     public NewsResolver(String url) {
         getHtmlAsDoc(url);
+        getHftlEvent();
     }
 
     private boolean getHtmlAsDoc(String url) {
@@ -59,7 +60,6 @@ public class NewsResolver {
     }
 
     public String[] writeNewsListDate(){
-        getHftlEvent();
         int i = 0;
         String[] s = new String[termine.size()];
         for(HftlEvent termin:termine ){
@@ -69,7 +69,6 @@ public class NewsResolver {
     }
 
     public String[] writeNewsListHeadline(){
-        getHftlEvent();
         int i = 0;
         String[] s = new String[termine.size()];
         for(HftlEvent termin:termine ){
@@ -79,7 +78,6 @@ public class NewsResolver {
     }
 
     public String[] writeNewsListContent(){
-        getHftlEvent();
         int i = 0;
         String[] s = new String[termine.size()];
         for(HftlEvent termin:termine ){
