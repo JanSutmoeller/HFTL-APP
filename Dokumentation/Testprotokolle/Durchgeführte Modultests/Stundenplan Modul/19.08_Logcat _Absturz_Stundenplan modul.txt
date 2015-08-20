@@ -1,0 +1,101 @@
+08-19 15:17:00.269    2595-2612/bkmi.de.hftl_app W/EGL_emulation? eglSurfaceAttrib not implemented
+08-19 15:17:00.270    2595-2612/bkmi.de.hftl_app W/OpenGLRenderer? Failed to set EGL_SWAP_BEHAVIOR on surface 0xa4cb4140, error=EGL_SUCCESS
+08-19 15:17:00.928    2595-2607/bkmi.de.hftl_app I/art? Background sticky concurrent mark sweep GC freed 12612(545KB) AllocSpace objects, 9(1609KB) LOS objects, 8% free, 11MB/12MB, paused 13.409ms total 90.282ms
+08-19 15:17:00.936    2595-2607/bkmi.de.hftl_app W/art? Suspending all threads took: 7.997ms
+08-19 15:17:01.129    2595-2602/bkmi.de.hftl_app W/art? Suspending all threads took: 12.484ms
+08-19 15:17:01.553    2595-2607/bkmi.de.hftl_app I/art? Background sticky concurrent mark sweep GC freed 24183(783KB) AllocSpace objects, 1(17KB) LOS objects, 3% free, 11MB/12MB, paused 2.210ms total 131.124ms
+08-19 15:17:01.667    2595-2602/bkmi.de.hftl_app W/art? Suspending all threads took: 5.727ms
+08-19 15:17:01.681    2595-2607/bkmi.de.hftl_app I/art? Background sticky concurrent mark sweep GC freed 3574(114KB) AllocSpace objects, 0(0B) LOS objects, 0% free, 12MB/12MB, paused 5.713ms total 58.172ms
+08-19 15:17:01.879    2595-2607/bkmi.de.hftl_app I/art? Background partial concurrent mark sweep GC freed 14167(629KB) AllocSpace objects, 1(20KB) LOS objects, 14% free, 11MB/13MB, paused 2.738ms total 187.738ms
+08-19 15:17:02.137    2595-2602/bkmi.de.hftl_app W/art? Suspending all threads took: 12.682ms
+08-19 15:17:18.364    2595-2612/bkmi.de.hftl_app W/EGL_emulation? eglSurfaceAttrib not implemented
+08-19 15:17:18.364    2595-2612/bkmi.de.hftl_app W/OpenGLRenderer? Failed to set EGL_SWAP_BEHAVIOR on surface 0xa4c8b660, error=EGL_SUCCESS
+08-19 15:17:18.387    2595-2611/bkmi.de.hftl_app W/System.err? java.net.UnknownHostException: Unable to resolve host "qisweb.hispro.de": No address associated with hostname
+08-19 15:17:18.387    2595-2611/bkmi.de.hftl_app W/System.err? at java.net.InetAddress.lookupHostByName(InetAddress.java:457)
+08-19 15:17:18.387    2595-2611/bkmi.de.hftl_app W/System.err? at java.net.InetAddress.getAllByNameImpl(InetAddress.java:252)
+08-19 15:17:18.387    2595-2611/bkmi.de.hftl_app W/System.err? at java.net.InetAddress.getAllByName(InetAddress.java:215)
+08-19 15:17:18.387    2595-2611/bkmi.de.hftl_app W/System.err? at com.android.okhttp.HostResolver$1.getAllByName(HostResolver.java:29)
+08-19 15:17:18.387    2595-2611/bkmi.de.hftl_app W/System.err? at com.android.okhttp.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:232)
+08-19 15:17:18.387    2595-2611/bkmi.de.hftl_app W/System.err? at com.android.okhttp.internal.http.RouteSelector.next(RouteSelector.java:124)
+08-19 15:17:18.387    2595-2611/bkmi.de.hftl_app W/System.err? at com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:272)
+08-19 15:17:18.387    2595-2611/bkmi.de.hftl_app W/System.err? at com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:211)
+08-19 15:17:18.388    2595-2611/bkmi.de.hftl_app W/System.err? at com.android.okhttp.internal.http.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:382)
+08-19 15:17:18.388    2595-2611/bkmi.de.hftl_app W/System.err? at com.android.okhttp.internal.http.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:106)
+08-19 15:17:18.388    2595-2611/bkmi.de.hftl_app W/System.err? at com.android.okhttp.internal.http.HttpURLConnectionImpl.getOutputStream(HttpURLConnectionImpl.java:217)
+08-19 15:17:18.388    2595-2611/bkmi.de.hftl_app W/System.err? at com.android.okhttp.internal.http.DelegatingHttpsURLConnection.getOutputStream(DelegatingHttpsURLConnection.java:218)
+08-19 15:17:18.388    2595-2611/bkmi.de.hftl_app W/System.err? at com.android.okhttp.internal.http.HttpsURLConnectionImpl.getOutputStream(HttpsURLConnectionImpl.java:25)
+08-19 15:17:18.388    2595-2611/bkmi.de.hftl_app W/System.err? at bkmi.de.hftl_app.help.StundenplanResolver.findeIcal(StundenplanResolver.java:105)
+08-19 15:17:18.388    2595-2611/bkmi.de.hftl_app W/System.err? at bkmi.de.hftl_app.help.StundenplanResolver.erstelleIcal(StundenplanResolver.java:70)
+08-19 15:17:18.393    2595-2611/bkmi.de.hftl_app W/System.err? at bkmi.de.hftl_app.help.StundenplanResolver.erzeugeStundenplan(StundenplanResolver.java:129)
+08-19 15:17:18.393    2595-2611/bkmi.de.hftl_app W/System.err? at bkmi.de.hftl_app.Fragmente.StundenplanFragment$StundenplanHelper.doInBackground(StundenplanFragment.java:370)
+08-19 15:17:18.395    2595-2611/bkmi.de.hftl_app W/System.err? at bkmi.de.hftl_app.Fragmente.StundenplanFragment$StundenplanHelper.doInBackground(StundenplanFragment.java:350)
+08-19 15:17:18.395    2595-2611/bkmi.de.hftl_app W/System.err? at android.os.AsyncTask$2.call(AsyncTask.java:292)
+08-19 15:17:18.395    2595-2611/bkmi.de.hftl_app W/System.err? at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+08-19 15:17:18.395    2595-2611/bkmi.de.hftl_app W/System.err? at android.os.AsyncTask$SerialExecutor$1.run(AsyncTask.java:231)
+08-19 15:17:18.395    2595-2611/bkmi.de.hftl_app W/System.err? at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1112)
+08-19 15:17:18.397    2595-2611/bkmi.de.hftl_app W/System.err? at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:587)
+08-19 15:17:18.398    2595-2611/bkmi.de.hftl_app W/System.err? at java.lang.Thread.run(Thread.java:818)
+08-19 15:17:18.398    2595-2611/bkmi.de.hftl_app W/System.err? Caused by: android.system.GaiException: android_getaddrinfo failed: EAI_NODATA (No address associated with hostname)
+08-19 15:17:18.398    2595-2611/bkmi.de.hftl_app W/System.err? at libcore.io.Posix.android_getaddrinfo(Native Method)
+08-19 15:17:18.398    2595-2611/bkmi.de.hftl_app W/System.err? at libcore.io.ForwardingOs.android_getaddrinfo(ForwardingOs.java:55)
+08-19 15:17:18.398    2595-2611/bkmi.de.hftl_app W/System.err? at java.net.InetAddress.lookupHostByName(InetAddress.java:438)
+08-19 15:17:18.403    2595-2611/bkmi.de.hftl_app W/System.err? ... 23 more
+08-19 15:17:18.403    2595-2611/bkmi.de.hftl_app W/System.err? java.net.MalformedURLException: Protocol not found:
+08-19 15:17:18.403    2595-2611/bkmi.de.hftl_app W/System.err? at java.net.URL.<init>(URL.java:176)
+08-19 15:17:18.403    2595-2611/bkmi.de.hftl_app W/System.err? at java.net.URL.<init>(URL.java:125)
+08-19 15:17:18.403    2595-2611/bkmi.de.hftl_app W/System.err? at bkmi.de.hftl_app.help.StundenplanResolver.erstelleIcal(StundenplanResolver.java:70)
+08-19 15:17:18.721    2595-2611/bkmi.de.hftl_app W/System.err? at bkmi.de.hftl_app.help.StundenplanResolver.erzeugeStundenplan(StundenplanResolver.java:129)
+08-19 15:17:18.721    2595-2611/bkmi.de.hftl_app W/System.err? at bkmi.de.hftl_app.Fragmente.StundenplanFragment$StundenplanHelper.doInBackground(StundenplanFragment.java:370)
+08-19 15:17:18.721    2595-2611/bkmi.de.hftl_app W/System.err? at bkmi.de.hftl_app.Fragmente.StundenplanFragment$StundenplanHelper.doInBackground(StundenplanFragment.java:350)
+08-19 15:17:18.721    2595-2611/bkmi.de.hftl_app W/System.err? at android.os.AsyncTask$2.call(AsyncTask.java:292)
+08-19 15:17:18.721    2595-2611/bkmi.de.hftl_app W/System.err? at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+08-19 15:17:18.721    2595-2611/bkmi.de.hftl_app W/System.err? at android.os.AsyncTask$SerialExecutor$1.run(AsyncTask.java:231)
+08-19 15:17:18.722    2595-2611/bkmi.de.hftl_app W/System.err? at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1112)
+08-19 15:17:18.722    2595-2611/bkmi.de.hftl_app W/System.err? at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:587)
+08-19 15:17:18.722    2595-2611/bkmi.de.hftl_app W/System.err? at java.lang.Thread.run(Thread.java:818)
+    --------- beginning of crash
+08-19 15:17:18.724    2595-2611/bkmi.de.hftl_app E/AndroidRuntime? FATAL EXCEPTION: AsyncTask #1
+    Process: bkmi.de.hftl_app, PID: 2595
+    java.lang.RuntimeException: An error occured while executing doInBackground()
+            at android.os.AsyncTask$3.done(AsyncTask.java:304)
+            at java.util.concurrent.FutureTask.finishCompletion(FutureTask.java:355)
+            at java.util.concurrent.FutureTask.setException(FutureTask.java:222)
+            at java.util.concurrent.FutureTask.run(FutureTask.java:242)
+            at android.os.AsyncTask$SerialExecutor$1.run(AsyncTask.java:231)
+            at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1112)
+            at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:587)
+            at java.lang.Thread.run(Thread.java:818)
+     Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'java.util.List biweekly.ICalendar.getEvents()' on a null object reference
+            at bkmi.de.hftl_app.help.StundenplanResolver.erzeugeStundenplan(StundenplanResolver.java:131)
+            at bkmi.de.hftl_app.Fragmente.StundenplanFragment$StundenplanHelper.doInBackground(StundenplanFragment.java:370)
+            at bkmi.de.hftl_app.Fragmente.StundenplanFragment$StundenplanHelper.doInBackground(StundenplanFragment.java:350)
+            at android.os.AsyncTask$2.call(AsyncTask.java:292)
+            at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+            at android.os.AsyncTask$SerialExecutor$1.run(AsyncTask.java:231)
+            at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1112)
+            at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:587)
+            at java.lang.Thread.run(Thread.java:818)
+08-19 15:17:22.288    2595-2595/bkmi.de.hftl_app E/WindowManager? android.view.WindowLeaked: Activity bkmi.de.hftl_app.NewsActivity has leaked window com.android.internal.policy.impl.PhoneWindow$DecorView{1299143e V.E..... R......D 0,0-1026,483} that was originally added here
+            at android.view.ViewRootImpl.<init>(ViewRootImpl.java:363)
+            at android.view.WindowManagerGlobal.addView(WindowManagerGlobal.java:271)
+            at android.view.WindowManagerImpl.addView(WindowManagerImpl.java:85)
+            at android.app.Dialog.show(Dialog.java:298)
+            at android.app.ProgressDialog.show(ProgressDialog.java:116)
+            at android.app.ProgressDialog.show(ProgressDialog.java:104)
+            at bkmi.de.hftl_app.Fragmente.StundenplanFragment$StundenplanHelper.onPreExecute(StundenplanFragment.java:386)
+            at android.os.AsyncTask.executeOnExecutor(AsyncTask.java:591)
+            at android.os.AsyncTask.execute(AsyncTask.java:539)
+            at bkmi.de.hftl_app.Fragmente.StundenplanFragment$3.onItemSelected(StundenplanFragment.java:192)
+            at android.widget.AdapterView.fireOnSelected(AdapterView.java:914)
+            at android.widget.AdapterView.dispatchOnItemSelected(AdapterView.java:903)
+            at android.widget.AdapterView.access$300(AdapterView.java:48)
+            at android.widget.AdapterView$SelectionNotifier.run(AdapterView.java:873)
+            at android.os.Handler.handleCallback(Handler.java:739)
+            at android.os.Handler.dispatchMessage(Handler.java:95)
+            at android.os.Looper.loop(Looper.java:135)
+            at android.app.ActivityThread.main(ActivityThread.java:5257)
+            at java.lang.reflect.Method.invoke(Native Method)
+            at java.lang.reflect.Method.invoke(Method.java:372)
+            at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+            at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+08-19 15:17:24.168    2595-2611/? I/Process? Sending signal. PID: 2595 SIG: 9
