@@ -1,5 +1,5 @@
 \newpage
-\section{Entwicklerhandbuch}
+\subsection{Entwicklerhandbuch}
 
 \begin{figure}[h]
 	\centering
@@ -23,7 +23,7 @@
 \tableofcontents
 \newpage
 
-\subsection{Allgemeines}
+\subsubsection{Allgemeines}
 Dieses Dokument dient lediglich als Hilfswerkzeug zur (Weiter-)Entwicklung und Wartung der HfTL-App. In diesem Dokument ist der grobe Aufbau, sowie die wichtigsten verwendeten Funktion mitsamt zugehörigen Quelltext erklärt.
 \\[1em]
 Dieses Dokument ist keine Programmieranleitung.
@@ -33,7 +33,7 @@ Es empfiehlt sich, gewisse Grundkenntnisse in objektorientierter Programmierung 
 Standard-Methoden und Klassen sind nicht im Detail erklärt, da das den Rahmen dieses Dokuments sprengen würde. Für tiefer greifende Informationen wird die \href{http://developer.android.com/reference/packages.html}{Android-API} empfohlen.
 
 
-\subsection{Verwendete Software}
+\subsubsection{Verwendete Software}
 \paragraph{AndroidStudio}
 \ \\[1em]
 AndroidStudio ist die Standard-Entwicklungsumgebung für Android. Es bietet bereits ein fertiges Gerüst für eine funktionsfähige App an. Das Programm bietet Klassenbibliotheken, Debugger und selbst ein Emulator mit dessen Hilfe Android-Endgeräte auf dem PC virtuell dargestellt werden können.\\
@@ -49,8 +49,8 @@ Das Programm kann kostenlos auf der Seite des Herstellers  (\href{http://www.gim
 
 \paragraph{Microsoft Office}
 
-\subsection{Aufbau des Projekts}
-\subsubsection{Manifest.XML}
+\subsubsection{Aufbau des Projekts}
+\subsubsubsection{Manifest.XML}
 Diese Datei ist für jede Android-App zwingend notwendig. Hier werden grundsätzliche Dinge definiert, z.B. Welche Berechtigung diese App benötigt und auf welche Hardware im laufenden Zustand zugegriffen werden muss.
 \\\
 Des Weiteren wird hier auch das package für den Javaquellcode definiert:\\\
@@ -76,7 +76,7 @@ Die folgenden Tags wurden bei der App nicht verwendet, sind aber theoretisch fü
 \end{lstlisting}
 Das wäre ein Tag, um im laufenden Betrieb auf die Kamera des Telefons zuzugreifen.
 
-\subsubsection{Ordnerstruktur}
+\subsubsubsection{Ordnerstruktur}
 \begin{description}
 \item[Database]~\par
 \begin{itemize}
@@ -117,8 +117,8 @@ Ressourcen
 \end{itemize}
 
 
-\subsection{Activities}
-\subsubsection{NewsActivity.java}
+\subsubsection{Activities}
+\subsubsubsection{NewsActivity.java}
 Klasse wird mit Fragment extended
 NavigationDrawerFragment wird benötigt um die Interaktion mit Fragmenten zur Anzeige zu ermöglichen
 Intent wird benötigt, um andere Activities neben der News Activity zu handlen.
@@ -163,7 +163,7 @@ Durch das Laden des Layouts für das mNavigationDrawerFragment (durch setUp) wir
 \end{itemize}
 
 
-\subsubsection{EinstellungsActivity.java}
+\subsubsubsection{EinstellungsActivity.java}
  
 \item[onCreate()]~\par
 \begin{itemize}
@@ -193,9 +193,9 @@ Durch das Laden des Layouts für das mNavigationDrawerFragment (durch setUp) wir
 \item Funktion zum Ausgeben, dass die Anmeldeinformationen falsch eingegeben wurden
 \end{itemize}
 
-\subsection{NewsClickedActivity.java}
+\subsubsection{NewsClickedActivity.java}
 \lstset{language=JAVA}
-\subsubsection{Allgemein}
+\subsubsubsection{Allgemein}
 Diese Activity wird geladen, sobald in der News-Übersicht (NewsActivity.java) ein Eintrag geöffnet wird. \\
 Der Inhalt wird durch NewsResolver und dessen Funktion getDetailsStringArray in das String-Array s geladen.
 \item[onCreate()]~\par
@@ -220,7 +220,7 @@ Der Inhalt wird durch NewsResolver und dessen Funktion getDetailsStringArray in 
 \end{itemize}
 \end{itemize}
 
-\subsubsection{Klasse DetailHelper}
+\subsubsubsection{Klasse DetailHelper}
 \item[onPreExecute()]~\par
 \begin{itemize}
 \item Anzeige eines ProgressDialogs, um den Anwender zu informieren
@@ -243,8 +243,8 @@ Der Inhalt wird durch NewsResolver und dessen Funktion getDetailsStringArray in 
 \end{lstlisting}
 \end{itemize}
 \newpage
-\subsection{Fragmente}
-\subsubsection{NewsFragment}
+\subsubsection{Fragmente}
+\subsubsubsection{NewsFragment}
 Initialisierung erfolgt durch „NewInstance“, die aus der NewsActivity heraus gerufen wird. (siehe Funktionsaufruf -> onNavigationDrawerItemSelected)
 Durch das .commit wird diese neue Instanz der Klasse dann geladen.
 \paragraph{Überschriebene Funktionen:}
@@ -298,7 +298,7 @@ Durch das .commit wird diese neue Instanz der Klasse dann geladen.
 \item Es wird eine Instanz der Klasse NewsHelper erstellt, welche dann als Hintergrund-Task ausgeführt wird, um ein Einfrieren der App zu verhindern.
 \end{itemize}
 \end{itemize}
-\subsubsection{Klasse NewsHelper}
+\subsubsubsection{Klasse NewsHelper}
 \begin{itemize}
 \item Klasse mit asynchroner Task-Ausführung
 \item Nach dem Aufruf der Methode \textit{zeigeNews} wird durch den Unterfunktionsaufruf \textit{.execute} zunächst die Funktion \textit{doInBackground} ausgeführt, wo eine neue Instanz des NewsResolvers erstellt wird.
@@ -333,7 +333,7 @@ setListAdapter(new CustomAdapterNews(getActivity(), ...);
 \end{lstlisting}
 \end{itemize}
 
-\subsubsection{NavigationDrawerFragment}
+\subsubsubsection{NavigationDrawerFragment}
 Dieses Fragment bildet das Menü auf dem linken Rand der App ab und aktiviert den Button mit dem man in die Einstellungen gelangt.
 
 \item[onCreate()]~\par
@@ -383,7 +383,7 @@ Hier wird der Button, über den man zu den Einstellungen gelangt, aktiviert und 
 \item[NavigationDrawerCallbacks()]~\par
 Hier wird die ausgewählte Menüpunkt-ID an die Activity übergeben.
 
-\subsubsection{Notenfragment}
+\subsubsubsection{Notenfragment}
 \item[onCreateView()]~\par
 \begin{itemize}
 \item Laden des entsprechenden XML-Layouts \textit{fragment\_ noten.xml}
@@ -435,7 +435,7 @@ Anschließend werden diese String-Arrays an den \textit{CustomAdapterNoten.java}
  
 -- NotenHelper (Class)
 
-\subsubsection{StundenplanFragment}
+\subsubsubsection{StundenplanFragment}
 
 \item[newInstance()]~\par
 Erstellt ein StundenplanFragment und "'steckt"' die aktive Position (aus dem Navigation Drawer) in das "'Bundle args"' welches als Argument im Fragment übergeben wird.
@@ -479,8 +479,8 @@ falls ein Fehler auftritt wird ein Event erstellt in dem keine Daten sind
 
 
 \newpage
-\subsection{CustomAdapter} 
-\subsubsection{Allgemein} 
+\subsubsection{CustomAdapter} 
+\subsubsubsection{Allgemein} 
 Die CustomAdapter kommen da zum Einsatz, wo eine ListView genutzt und individuell befüllt werden muss. \\
 Alle CustomAdapter entstehen durch Vererbung aus der Klasse BaseAdapter.java (\href{http://developer.android.com/reference/android/widget/BaseAdapter.html}{s. AndroidAPI}). Entsprechend sind einige Methoden vorgegeben, die initialisiert werden müssen (mit Rückgabewert), jedoch für die HfTL-App nicht (zwingend) von Bedeutung sind:
 \begin{lstlisting}
@@ -543,10 +543,10 @@ Der nun befüllte Container wird nun als rowView übergeben.
 \begin{lstlisting}
    return rowView;
 \end{lstlisting}
-\subsubsection{CustomAdapterNews.java} 
+\subsubsubsection{CustomAdapterNews.java} 
 Dies ist der simpelste CustomAdapter der HfTL-App. Er wird verwendet um die News-Liste (also die Übersicht der News aus der HfTL-Homepage) zu formatieren.\\
 Dabei werden drei String-Arrays (date, headline, content) in das zugehörige TextView der rowView übergeben. Der Inhalt dieser Arrays wird mittels der Klasse Newshelper, die wiederum die Methoden der Klasse NewsResolver aufruft, befüllt.
-\subsubsection{CustomAdapterNoten.java}
+\subsubsubsection{CustomAdapterNoten.java}
 Dieser CustomAdapter wird für die Befüllung der ListView des Notenfragments benutzt.\\
 Hier werden vier String-Arrays (\textcolor{lila}{subject}, \textcolor{lila}{trys}, \textcolor{lila}{mark}, \textcolor{lila}{semester}) mit den Daten aus der Notendatenbank befüllt.\\
 Entsprechend des Inhalts, werden die zugehörigen TextViews noch gesondert formatiert.\\
@@ -579,7 +579,7 @@ Auch für die jeweiligen Noten gibt es eine gesonderte Formatierung:
              (context.getResources().getColor(R.color.gruen));
 \end{lstlisting}
 
-\subsubsection{CustomAdapterStundenplan}
+\subsubsubsection{CustomAdapterStundenplan}
 Dieser CustomAdapter befüllt die ListView des StundenPlanfragments.\\
 Hier werden fünf StringArrays(\textcolor{lila}{datum},\textcolor{lila}{fach},\textcolor{lila}{zeit},\textcolor{lila}{raum},\textcolor{lila}{kategorie}) übergeben, die zuvor mittels der Methode \textit{erstelleStundenplan()} des StundenplanFragments aus dem HTML-Code der QiS/HiS-Seite ausgelesen wurden.\\
 Auch hier gibt es ein einige spezifische Formatierungen, abhängig vom übergebenen Inhalt.\\
