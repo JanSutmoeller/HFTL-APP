@@ -8,10 +8,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
-import android.util.Log;
 
 import java.net.UnknownHostException;
 
@@ -90,13 +91,13 @@ class ThreadTest extends Thread {
                 //Todo start von Notenfragment
                 Intent internalIntent = new Intent(context, NewsActivity.class);
                 final PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, internalIntent, 0);
-                //Todo Layout: Bitte das Icon ändern
-                NotificationCompat.Builder nBuilder = new NotificationCompat.Builder(context).setContentTitle("HfTL-App Noten Service").setSmallIcon(R.drawable.ic_drawer).setContentText("Es sind neue Noten verfügbar").setContentIntent(pendingIntent).setAutoCancel(true);
+                NotificationCompat.Builder nBuilder = new NotificationCompat.Builder(context).setContentTitle("HfTL-App Noten Service").setSmallIcon(R.drawable.icon1).setContentText("Es sind neue Noten verfügbar").setContentIntent(pendingIntent).setAutoCancel(true);
                 int nNotificationId = 1;
                 NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+                Bitmap bm = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher);
+                nBuilder.setLargeIcon(bm);
                 manager.notify(nNotificationId, nBuilder.build());
             }
-
 
             //Datenbank schließen
             cursor.close();
@@ -106,10 +107,10 @@ class ThreadTest extends Thread {
         } catch (UnknownHostException e) {
             Intent internalIntent = new Intent(context, NotenFragment.class);
             final PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, internalIntent, 0);
-            //Todo Layout: Bitte das Icon ändern
-            NotificationCompat.Builder nBuilder = new NotificationCompat.Builder(context).setContentTitle("HfTL-App Noten Service").setSmallIcon(R.drawable.ic_drawer).setContentText("Fehler beim Laden der Noten").setContentIntent(pendingIntent).setAutoCancel(true);
-            //final Notification notification = new NotificationCompat.Builder(context).setContentTitle("HfTL-App Noten Service, es sind neue Noten verfügbar").setSmallIcon(R.drawable.hftl_l_3c_n).setContentIntent(pendingIntent).build();
-            int nNotificationId = 1;
+            NotificationCompat.Builder nBuilder = new NotificationCompat.Builder(context).setContentTitle("HfTL-App Noten Service").setSmallIcon(R.drawable.icon1).setContentText("Fehler beim Laden der Noten").setContentIntent(pendingIntent).setAutoCancel(true);
+            Bitmap bm = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher);
+            nBuilder.setLargeIcon(bm);
+            int nNotificationId = 20;
             NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
             manager.notify(nNotificationId, nBuilder.build());
 
@@ -130,9 +131,10 @@ class ThreadTest extends Thread {
             //Falls Benutzername/Passwort falsch wird eine Notifcation gesenden
             Intent internalIntent = new Intent(context, EinstellungActivity.class);
             final PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, internalIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-            //Todo Layout: Bitte das Icon ändern
-            NotificationCompat.Builder nBuilder = new NotificationCompat.Builder(context).setContentTitle("HfTL-App Noten Service").setSmallIcon(R.drawable.ic_drawer).setStyle(new NotificationCompat.BigTextStyle().bigText("Password/Benutzername falsch\nService beendet")).setContentIntent(pendingIntent).setAutoCancel(true);
-            int nNotificationId = 1;
+            NotificationCompat.Builder nBuilder = new NotificationCompat.Builder(context).setContentTitle("HfTL-App Noten Service").setSmallIcon(R.drawable.icon1).setStyle(new NotificationCompat.BigTextStyle().bigText("Password/Benutzername falsch\nService beendet")).setContentIntent(pendingIntent).setAutoCancel(true);
+            Bitmap bm = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher);
+            nBuilder.setLargeIcon(bm);
+            int nNotificationId = 10;
             NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
             manager.notify(nNotificationId, nBuilder.build());
         }

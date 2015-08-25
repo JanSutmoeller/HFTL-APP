@@ -3,6 +3,7 @@ package bkmi.de.hftl_app.help;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.safety.Whitelist;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
@@ -103,9 +104,17 @@ public class NewsResolver {
         s[0]=elements.get(0).child(1).text()+"\n";   //Überschrift
         s[1]=elements.get(0).child(2).text()+"\n";   //Subhead
         s[2]=elements.get(0).child(0).text();        //Zeit
-        s[3]=elements.get(0).child(3).text();        //Text
-
+        s[3]=textFormatieren(doc);        //Text
+        //s[3]=elements.get(0).child(3).text();
         return s;
+    }
+
+    private String textFormatieren(Document doc) {
+        doc.outputSettings(new Document.OutputSettings().prettyPrint(false));
+        doc.select("br").append("\\n");
+        doc.select("p").prepend("\\n");
+        Elements elements = doc.getElementsByClass("news-single-item");
+        return elements.get(0).child(3).text().replaceAll("\\\\n", "\n");
     }
 
 }
