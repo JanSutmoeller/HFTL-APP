@@ -5,6 +5,8 @@ import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.widget.TextView;
 
 import bkmi.de.hftl_app.Fragmente.NewsFragment;
@@ -17,6 +19,7 @@ public class NewsClickedActivity extends ActionBarActivity {
     TextView tv2;
     TextView tv3;
     TextView tv4;
+    TextView tv5;
     ProgressDialog ladebalken;
     String url;
 
@@ -59,13 +62,20 @@ public class NewsClickedActivity extends ActionBarActivity {
                 @Override
                 public void run() {
                     tv1=(TextView)findViewById(R.id.tv_news_date);
+                    tv1.setTextIsSelectable(true);
                     tv1.setText(s[2]);
                     tv2=(TextView)findViewById(R.id.tv_news_hl1);
+                    tv2.setTextIsSelectable(true);
                     tv2.setText(s[0]);
                     tv3=(TextView)findViewById(R.id.tv_news_hl2);
+                    tv3.setTextIsSelectable(true);
                     tv3.setText(s[1]);
                     tv4=(TextView)findViewById(R.id.tv_news_content);
-                    tv4.setText(s[3]);
+                    tv4.setClickable(true);
+                    tv4.setTextIsSelectable(true);
+                    tv4.setMovementMethod((LinkMovementMethod.getInstance()));
+                    tv4.setLinkTextColor(getResources().getColor(R.color.grün));
+                    tv4.setText(Html.fromHtml(s[3]));
                 }
             });
 

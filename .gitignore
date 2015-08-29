@@ -3,3 +3,5 @@ UML/HFTL-APP.ldb
 *.EAP
 *.gradle
 *.iml
+*.iml
+HfTL-App/app/build.gradle
