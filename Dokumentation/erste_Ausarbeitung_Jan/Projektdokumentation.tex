@@ -54,19 +54,22 @@ xleftmargin=\parindent
 }
 
 \lstdefinelanguage{JAVA}{
-morekeywords={public, class, long, return, int, private, import, final, extends, static, if, else, null, void, super, while, new, boolean, protected, default, switch, break, try, catch, for, package},
-keywordstyle=\color{darkblue},
+morekeywords={public, class, long, return, int, private, import, final, extends, static, if, else, null, void, super, while, new, boolean, protected, default, switch, break, try, catch, for, package, true, mark},
+keywordstyle=\bfseries\color{darkblue},
 morestring=[s]{"}{"},
+commentstyle =\itshape\color{grau},
 identifierstyle=\color{schwarz},
 stringstyle=\color{gruen},
-basicstyle=\ttfamily\footnotesize,
-emph={inflater, tv_date, tv_name, context, name, namelist_name, tv_mark, magenta, gruen, gelb, tv_semester, GONE, TERMINDETAIL, notenList, semesterList, fachList, versuchList, newsResolver, intent, datum, tv_category, grau01, dunkelblau, kategorie},
+basicstyle=\footnotesize\ttfamily,
+emph={inflater, tv_date, tv_name, context, name, namelist_name, tv_mark, magenta, gruen, gelb, tv_semester, GONE, TERMINDETAIL, notenList, semesterList, fachList, versuchList, newsResolver, intent, datum, tv_category, grau01, dunkelblau, kategorie, tv1, tv2, tv3, tv4, ladebalken, tv_news_date, tv_news_hl1, tv_news_hl2, tv_news_content, doc},
 emphstyle=\color{lila},
 belowcaptionskip=1\baselineskip,
 breaklines=true,
 showstringspaces=false,
 xleftmargin=\parindent,
-frame=single
+frame=single,
+moredelim=[is][\textcolor{blau}]{\%\%}{\%\%},
+moredelim=[is][\itshape\textcolor{grau}]{$$}{$$},
 }
 
 

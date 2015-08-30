@@ -78,8 +78,26 @@
 \BOOKMARK [4][-]{subsubsubsection.5.2.7.2}{CustomAdapterNews.java}{subsubsection.5.2.7}% 78
 \BOOKMARK [4][-]{subsubsubsection.5.2.7.3}{CustomAdapterNoten.java}{subsubsection.5.2.7}% 79
 \BOOKMARK [4][-]{subsubsubsection.5.2.7.4}{CustomAdapterStundenplan}{subsubsection.5.2.7}% 80
-\BOOKMARK [2][-]{subsection.5.3}{Gantt}{section.5}% 81
-\BOOKMARK [2][-]{subsection.5.4}{App-Layout}{section.5}% 82
-\BOOKMARK [2][-]{subsection.5.5}{Release-Historie}{section.5}% 83
-\BOOKMARK [2][-]{subsection.5.6}{Testprotokollentwurf}{section.5}% 84
-\BOOKMARK [2][-]{subsection.5.7}{Testprotokolle}{section.5}% 85
+\BOOKMARK [3][-]{subsubsection.5.2.8}{XML-Dateien}{subsection.5.2}% 81
+\BOOKMARK [4][-]{subsubsubsection.5.2.8.1}{fragment.xml}{subsubsection.5.2.8}% 82
+\BOOKMARK [4][-]{subsubsubsection.5.2.8.2}{\137list.xml}{subsubsection.5.2.8}% 83
+\BOOKMARK [4][-]{subsubsubsection.5.2.8.3}{activity\137news\137clicked.xml}{subsubsection.5.2.8}% 84
+\BOOKMARK [4][-]{subsubsubsection.5.2.8.4}{settings\137toolbar}{subsubsection.5.2.8}% 85
+\BOOKMARK [4][-]{subsubsubsection.5.2.8.5}{impressum.xml \046 activity\137impressum}{subsubsection.5.2.8}% 86
+\BOOKMARK [4][-]{subsubsubsection.5.2.8.6}{colors.xml}{subsubsection.5.2.8}% 87
+\BOOKMARK [4][-]{subsubsubsection.5.2.8.7}{array.xml}{subsubsection.5.2.8}% 88
+\BOOKMARK [4][-]{subsubsubsection.5.2.8.8}{einstellung.xml}{subsubsection.5.2.8}% 89
+\BOOKMARK [4][-]{subsubsubsection.5.2.8.9}{strings.xml}{subsubsection.5.2.8}% 90
+\BOOKMARK [3][-]{subsubsection.5.2.9}{Layout}{subsection.5.2}% 91
+\BOOKMARK [4][-]{subsubsubsection.5.2.9.1}{Allgemeines}{subsubsection.5.2.9}% 92
+\BOOKMARK [4][-]{subsubsubsection.5.2.9.2}{Schriftarten}{subsubsection.5.2.9}% 93
+\BOOKMARK [4][-]{subsubsubsection.5.2.9.3}{Buttons}{subsubsection.5.2.9}% 94
+\BOOKMARK [3][-]{subsubsection.5.2.10}{Erweiterungen und Verbesserungen f\374r kommende Versionen}{subsection.5.2}% 95
+\BOOKMARK [4][-]{subsubsubsection.5.2.10.1}{Pflege der array.xml}{subsubsection.5.2.10}% 96
+\BOOKMARK [4][-]{subsubsubsection.5.2.10.2}{Raumplan}{subsubsection.5.2.10}% 97
+\BOOKMARK [4][-]{subsubsubsection.5.2.10.3}{Portierung auf andere Systeme}{subsubsection.5.2.10}% 98
+\BOOKMARK [2][-]{subsection.5.3}{Gantt}{section.5}% 99
+\BOOKMARK [2][-]{subsection.5.4}{App-Layout}{section.5}% 100
+\BOOKMARK [2][-]{subsection.5.5}{Release-Historie}{section.5}% 101
+\BOOKMARK [2][-]{subsection.5.6}{Testprotokollentwurf}{section.5}% 102
+\BOOKMARK [2][-]{subsection.5.7}{Testprotokolle}{section.5}% 103
