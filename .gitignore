@@ -5,3 +5,5 @@ UML/HFTL-APP.ldb
 *.iml
 *.iml
 HfTL-App/app/build.gradle
+*.iml
+HfTL-App/app/build.gradle

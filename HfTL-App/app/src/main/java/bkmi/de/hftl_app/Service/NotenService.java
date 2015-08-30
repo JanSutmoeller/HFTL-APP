@@ -22,8 +22,8 @@ import bkmi.de.hftl_app.EinstellungActivity;
 import bkmi.de.hftl_app.Fragmente.NotenFragment;
 import bkmi.de.hftl_app.NewsActivity;
 import bkmi.de.hftl_app.R;
-import bkmi.de.hftl_app.help.NotenResolver;
-import bkmi.de.hftl_app.help.wrongUserdataException;
+import bkmi.de.hftl_app.help.Resolver.NotenResolver;
+import bkmi.de.hftl_app.help.Exceptions.wrongUserdataException;
 
 
 public class NotenService extends Service {

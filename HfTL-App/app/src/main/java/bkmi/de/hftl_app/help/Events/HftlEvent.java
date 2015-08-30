@@ -1,4 +1,4 @@
-package bkmi.de.hftl_app.help;
+package bkmi.de.hftl_app.help.Events;
 
 import java.net.URL;
 /**

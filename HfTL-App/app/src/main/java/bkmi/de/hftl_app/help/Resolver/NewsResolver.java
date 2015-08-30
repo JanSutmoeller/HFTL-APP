@@ -1,13 +1,14 @@
-package bkmi.de.hftl_app.help;
+package bkmi.de.hftl_app.help.Resolver;
 
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.safety.Whitelist;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.ArrayList;
+
+import bkmi.de.hftl_app.help.Events.HftlEvent;
 
 /**
  * Klasse um die News von der HftL-Seite zu laden
@@ -105,16 +106,7 @@ public class NewsResolver {
         s[1]=elements.get(0).child(2).text()+"\n";   //Subhead
         s[2]=elements.get(0).child(0).text();        //Zeit
         s[3]=elements.get(0).child(3).outerHtml().replaceAll("<p>&nbsp;</p>", "");     //Text
-        //s[3]=textFormatieren(doc);
         return s;
     }
-/*
-    private String textFormatieren(Document doc) {
-        doc.outputSettings(new Document.OutputSettings().prettyPrint(false));
-        doc.select("br").append("\\n");
-        doc.select("p").prepend("\\n");
-        Elements elements = doc.getElementsByClass("news-single-item");
-        return elements.get(0).child(3).text().replaceAll("\\\\n", "\n");
-    }
-    */
+
 }

@@ -1,4 +1,4 @@
-package bkmi.de.hftl_app.help;
+package bkmi.de.hftl_app.help.Resolver;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -22,6 +22,8 @@ import javax.net.ssl.HttpsURLConnection;
 
 import bkmi.de.hftl_app.Database.NotenDB;
 import bkmi.de.hftl_app.Database.NotenTabelle;
+import bkmi.de.hftl_app.help.TextSecure;
+import bkmi.de.hftl_app.help.Exceptions.wrongUserdataException;
 
 /**
  * Klasse die eine Verbindung zu HIS/QIS aufbaut und dort die Noten abfragt

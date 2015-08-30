@@ -1,4 +1,4 @@
-package bkmi.de.hftl_app.help;
+package bkmi.de.hftl_app.help.Resolver;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -25,6 +25,8 @@ import javax.net.ssl.HttpsURLConnection;
 import biweekly.Biweekly;
 import biweekly.ICalendar;
 import biweekly.component.VEvent;
+import bkmi.de.hftl_app.help.Events.StundenplanEvent;
+import bkmi.de.hftl_app.help.Exceptions.stundenplanException;
 
 /**
  * Eine Hilfsklasse die die Stundenpläne abruft und bearbeitet
@@ -44,7 +46,7 @@ public class StundenplanResolver {
         CookieHandler.setDefault(cookieManager);
     }
 
-    private void erstelleIcal(@Nullable String woche) throws stundenplanException{
+    private void erstelleIcal(@Nullable String woche) throws stundenplanException {
 
         String urlAdresse; //Hier wird der Link zum jeweiligen Studiengang eingefügt
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);

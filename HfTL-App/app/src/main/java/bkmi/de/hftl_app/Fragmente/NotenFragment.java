@@ -15,8 +15,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.TextView;
-import android.graphics.Typeface;
 import android.widget.Toast;
 
 import java.net.UnknownHostException;
@@ -28,12 +26,10 @@ import bkmi.de.hftl_app.Database.NotenTabelle;
 import bkmi.de.hftl_app.EinstellungActivity;
 import bkmi.de.hftl_app.NewsActivity;
 import bkmi.de.hftl_app.R;
-import bkmi.de.hftl_app.help.CustomAdapterNoten;
-import bkmi.de.hftl_app.help.NotenResolver;
+import bkmi.de.hftl_app.help.Customadapter.CustomAdapterNoten;
+import bkmi.de.hftl_app.help.Resolver.NotenResolver;
 import bkmi.de.hftl_app.help.TextSecure;
-import bkmi.de.hftl_app.help.wrongUserdataException;
-
-import static android.R.layout.simple_list_item_1;
+import bkmi.de.hftl_app.help.Exceptions.wrongUserdataException;
 
 public class NotenFragment extends ListFragment {
 

@@ -1,18 +1,12 @@
-package bkmi.de.hftl_app.help;
+package bkmi.de.hftl_app.help.Customadapter;
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import bkmi.de.hftl_app.Fragmente.NotenFragment;
 import bkmi.de.hftl_app.R;
 
 public class CustomAdapterNoten extends BaseAdapter{

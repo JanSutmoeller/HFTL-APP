@@ -9,7 +9,6 @@ import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -26,7 +25,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Date;
@@ -40,10 +38,10 @@ import bkmi.de.hftl_app.EinstellungActivity;
 import bkmi.de.hftl_app.NewsActivity;
 import bkmi.de.hftl_app.R;
 
-import bkmi.de.hftl_app.help.CustomAdapterStundenplan;
-import bkmi.de.hftl_app.help.StundenplanEvent;
-import bkmi.de.hftl_app.help.StundenplanResolver;
-import bkmi.de.hftl_app.help.stundenplanException;
+import bkmi.de.hftl_app.help.Customadapter.CustomAdapterStundenplan;
+import bkmi.de.hftl_app.help.Events.StundenplanEvent;
+import bkmi.de.hftl_app.help.Resolver.StundenplanResolver;
+import bkmi.de.hftl_app.help.Exceptions.stundenplanException;
 
 
 import static android.R.layout.simple_list_item_1;

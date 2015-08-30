@@ -6,7 +6,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -20,13 +19,12 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import bkmi.de.hftl_app.NewsActivity;
 import bkmi.de.hftl_app.NewsClickedActivity;
 import bkmi.de.hftl_app.R;
-import bkmi.de.hftl_app.help.CustomAdapterNews;
-import bkmi.de.hftl_app.help.NewsResolver;
+import bkmi.de.hftl_app.help.Customadapter.CustomAdapterNews;
+import bkmi.de.hftl_app.help.Resolver.NewsResolver;
 
 import static android.R.layout.simple_list_item_1;
 
@@ -73,7 +71,6 @@ public class NewsFragment extends ListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_news, container, false);
-        //zeigeNews();
 
        return rootView;
     }
@@ -177,13 +174,11 @@ public class NewsFragment extends ListFragment {
         protected void onPostExecute(Long aLong) {
             super.onPostExecute(aLong);
 
-           // arrayAdapter = new ArrayAdapter<String>(getActivity(), simple_list_item_1, stringArray);
-            if(getActivity()==null) return;
+           if(getActivity()==null) return;
             getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                  //  setListAdapter(arrayAdapter);
-                    setListAdapter(new CustomAdapterNews(getActivity(), dateList, headlineList, contentList));
+                                    setListAdapter(new CustomAdapterNews(getActivity(), dateList, headlineList, contentList));
                 }
             });
         }

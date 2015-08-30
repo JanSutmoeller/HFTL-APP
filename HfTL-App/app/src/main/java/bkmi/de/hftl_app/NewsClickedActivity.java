@@ -1,7 +1,6 @@
 package bkmi.de.hftl_app;
 
 import android.app.ProgressDialog;
-import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -10,7 +9,7 @@ import android.text.method.LinkMovementMethod;
 import android.widget.TextView;
 
 import bkmi.de.hftl_app.Fragmente.NewsFragment;
-import bkmi.de.hftl_app.help.NewsResolver;
+import bkmi.de.hftl_app.help.Resolver.NewsResolver;
 
 
 public class NewsClickedActivity extends ActionBarActivity {
@@ -73,7 +72,7 @@ public class NewsClickedActivity extends ActionBarActivity {
                     tv4=(TextView)findViewById(R.id.tv_news_content);
                     tv4.setClickable(true);
                     tv4.setTextIsSelectable(true);
-                    tv4.setMovementMethod((LinkMovementMethod.getInstance()));
+                    tv4.setMovementMethod(LinkMovementMethod.getInstance());
                     tv4.setLinkTextColor(getResources().getColor(R.color.grün));
                     tv4.setText(Html.fromHtml(s[3]));
                 }

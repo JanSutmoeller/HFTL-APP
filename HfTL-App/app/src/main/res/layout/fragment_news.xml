@@ -14,16 +14,6 @@
         android:id="@+id/news_header"
         android:padding="8dp">
 
-        <!-- Dummy TextView für den bulletpoint (Windings) -->
-       <!-- <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/bp_News"
-            android:text="u"
-            android:textColor="@color/grün"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textStyle="bold"/>
-            -->
         <!-- Überschrift -->
         <bkmi.de.hftl_app.help.Typefaces.Ocra
             android:layout_width="wrap_content"

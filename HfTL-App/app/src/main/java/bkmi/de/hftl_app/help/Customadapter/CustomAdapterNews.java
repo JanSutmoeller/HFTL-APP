@@ -1,17 +1,13 @@
-package bkmi.de.hftl_app.help;
+package bkmi.de.hftl_app.help.Customadapter;
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import bkmi.de.hftl_app.Fragmente.NewsFragment;
-import bkmi.de.hftl_app.NewsActivity;
+import android.widget.TextView;
+
 import bkmi.de.hftl_app.R;
 
 public class CustomAdapterNews extends BaseAdapter{
