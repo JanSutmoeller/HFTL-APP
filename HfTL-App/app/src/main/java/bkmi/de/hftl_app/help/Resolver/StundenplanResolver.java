@@ -117,7 +117,7 @@ public class StundenplanResolver {
             }
 
             Elements e = doc.getElementsByAttributeValue("title", "iCalendar Export für Outlook");//suche Ical
-            if (e.size()==0) throw new stundenplanException(); //Falls es kein Stundenplan gibt wird eine Exception geworfen
+            if (e.size()==0) throw new stundenplanException(0); //Falls es kein Stundenplan gibt wird eine Exception geworfen
             s = e.get(0).parent().attr("href"); //ansonsten wird der Link zum Ical-Objekt gespeichert
         } catch (IOException e) {
             e.printStackTrace();
@@ -129,7 +129,7 @@ public class StundenplanResolver {
     public StundenplanEvent[] erzeugeStundenplan(@Nullable String woche) throws stundenplanException{
 
         erstelleIcal(woche); //Ical suchen und erzeugen
-
+        if(ical==null) throw new stundenplanException(1);
         List<VEvent>  events = ical.getEvents(); //alle Events auslesen
         StundenplanEvent[] stundenplan = new StundenplanEvent[events.size()];
 
@@ -149,22 +149,4 @@ public class StundenplanResolver {
 
         return stundenplan;
     }
-
-    /*public String[] icalAusgeben(@Nullable String woche) throws stundenplanException{
-        String temp;
-        erstelleIcal(woche);
-        List<VEvent> events = ical.getEvents();
-        String[] strings = new String[events.size()];
-        int i = 0;
-        for (VEvent event : events) {
-            temp = event.getSummary().getValue() + "\n";
-            temp += String.format("%02d:%02d",event.getDateStart().getValue().getHours(), event.getDateStart().getValue().getMinutes()) + "\n";
-            temp += event.getDateEnd().getValue() + "\n";
-            temp += event.getCategories().get(0).getValues().get(0)+ "\n";
-            temp += event.getLocation().getValue();
-            strings[i++] = temp;
-        }
-        return strings;
-    }
-    */
 }

@@ -14,7 +14,7 @@ import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
 
-import java.net.UnknownHostException;
+import java.io.IOException;
 
 import bkmi.de.hftl_app.Database.NotenDB;
 import bkmi.de.hftl_app.Database.NotenTabelle;
@@ -103,8 +103,8 @@ class ThreadTest extends Thread {
             cursor.close();
             notenDB.close();
 
-        //Falls keine Internetverbindung vorhanden ist wird ein Fehler angezeigt
-        } catch (UnknownHostException e) {
+            //Falls keine Internetverbindung vorhanden ist wird ein Fehler angezeigt
+        } catch (IOException e) {
             Intent internalIntent = new Intent(context, NotenFragment.class);
             final PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, internalIntent, 0);
             NotificationCompat.Builder nBuilder = new NotificationCompat.Builder(context).setContentTitle("HfTL-App Noten Service").setSmallIcon(R.drawable.icon1).setContentText("Fehler beim Laden der Noten").setContentIntent(pendingIntent).setAutoCancel(true);
@@ -114,7 +114,7 @@ class ThreadTest extends Thread {
             NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
             manager.notify(nNotificationId, nBuilder.build());
 
-        //Falls die benutzerdaten falsch sind wird der Push-Service beendet und ein Fehler angezeigt
+            //Falls die benutzerdaten falsch sind wird der Push-Service beendet und ein Fehler angezeigt
         } catch (wrongUserdataException e) {
             //Der laufende Alarm wird deaktivert
             AlarmManager alarmMgr;

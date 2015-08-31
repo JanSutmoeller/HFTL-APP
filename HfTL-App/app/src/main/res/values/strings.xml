@@ -16,6 +16,7 @@
     <!-- Inhalt von der News Seite -->
     <string name="News_headline">News aus der HFT-Leipzig</string>
     <string name="noNetwork">Keine Online-Verbindung!</string>
+    <string name="networkError">Fehler beim Abrufen der Daten</string>
     <string name="btn_news_refresh">Aktualisieren</string>
     <string name="list_news_empty">Keine News verfügbar!</string>
 

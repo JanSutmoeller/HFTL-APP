@@ -121,7 +121,7 @@ public class EinstellungActivity extends PreferenceActivity {
     }
 
     private void keineBenutzerdaten() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(EinstellungActivity.this);
         builder.setMessage("Benutzername/Passwort nicht eingetragen!").setCancelable(false).setPositiveButton(
                 this.getResources().getText(android.R.string.ok),
                 new DialogInterface.OnClickListener() {

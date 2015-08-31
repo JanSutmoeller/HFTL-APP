@@ -15,7 +15,7 @@
             android:title="@string/txt_einstell_cat_stunden">
             <ListPreference
                 android:title="Studiengang"
-                android:summary="Bitte Studiengang auswählen"
+                android:summary="%s"
                 android:key="studiengang"
                 android:entries="@array/listeStudiengang"
                 android:entryValues="@array/werteStudiengang"/>

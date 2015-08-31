@@ -96,7 +96,7 @@ public class NotenResolver {
     }
 
     //Zugriff auf Noten
-    public boolean getNoten() throws wrongUserdataException, UnknownHostException{
+    public boolean getNoten() throws wrongUserdataException, IOException {
 
 
         Element element;
@@ -112,7 +112,7 @@ public class NotenResolver {
 
         //eigentliche Abfrage der Noten --- es werden nur die Elemente ausgewertet die "/QIS/images//his_info3.gif" als src haben. Siehe Html-Code von QIS
         url = null;
-        try {
+
             NotenDB notenDB = NotenDB.getInstance(context);
 
             SQLiteDatabase sqLiteDatabase = notenDB.getWritableDatabase();
@@ -152,11 +152,8 @@ public class NotenResolver {
 
                 sqLiteStatement.executeInsert();  //Schreiben der Werte in die DB
 
-
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
 
         return true;
 

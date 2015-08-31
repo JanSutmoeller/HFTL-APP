@@ -91,9 +91,7 @@ public class StundenplanFragment extends ListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View stundenPlanView = inflater.inflate(R.layout.fragment_stundenplan, container, false);
-
-        return stundenPlanView;
+            return inflater.inflate(R.layout.fragment_stundenplan, container, false);
     }
 
     @Override
@@ -147,8 +145,6 @@ public class StundenplanFragment extends ListFragment {
             }
         });
 
-
-        // new StundenplanHelper().execute(""); // Stundenplan wird abgerufen
     }
 
     @Override
@@ -186,9 +182,35 @@ public class StundenplanFragment extends ListFragment {
                     buttonVor.setEnabled(true);
                 //wenn das Datum zum ersten mal aufgerufen wird, muss der Stundenplan gedownloadet werden
                 if (pruefeStudiengang()) {
-                    if (events[spinner.getSelectedItemPosition()] == null)
-                        new StundenplanHelper().execute(spinner.getSelectedItem().toString());
-                    else erstelleStundenplan();
+                    if (events[spinner.getSelectedItemPosition()] == null) {
+                        if (!NewsFragment.isOnline(getActivity())) {
+                            getActivity().runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                                    builder.setMessage(R.string.noNetwork).setCancelable(false).setPositiveButton(
+                                            getActivity().getResources().getText(android.R.string.ok),
+                                            new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+                                                    // do nothing
+                                                }
+                                            });
+                                    builder.show();
+                                }
+                            });
+                            StundenplanEvent event = new StundenplanEvent();
+                            event.setKeineDaten(true);
+                            StundenplanEvent hilfsArray[] = new StundenplanEvent[1];
+                            hilfsArray[0] = event;
+                            events[spinner.getSelectedItemPosition()] = hilfsArray;
+                        } else {
+                            new StundenplanHelper().execute(spinner.getSelectedItem().toString());
+                        }
+                    } else {
+                        erstelleStundenplan();
+                    }
+
+
                 } else keinStudiengang();
             }
 
@@ -256,7 +278,6 @@ public class StundenplanFragment extends ListFragment {
     protected void erstelleStundenplan() {
         Calendar calendar1 = Calendar.getInstance();
         Calendar calendar2 = Calendar.getInstance();
-        ArrayList<String> liste = new ArrayList<String>();
         StundenplanEvent tempevent;
         //if(events[spinner.getSelectedItemPosition()]==null) return;
 
@@ -311,6 +332,36 @@ public class StundenplanFragment extends ListFragment {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_sync) {
             synchronisiereKalender();
+            return true;
+        }
+
+        if (id == R.id.aktualisieren){
+            if (pruefeStudiengang()) {
+                    if (!NewsFragment.isOnline(getActivity())) {
+                        getActivity().runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                                builder.setMessage(R.string.noNetwork).setCancelable(false).setPositiveButton(
+                                        getActivity().getResources().getText(android.R.string.ok),
+                                        new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                // do nothing
+                                            }
+                                        });
+                                builder.show();
+                            }
+                        });
+                        StundenplanEvent event = new StundenplanEvent();
+                        event.setKeineDaten(true);
+                        StundenplanEvent hilfsArray[] = new StundenplanEvent[1];
+                        hilfsArray[0] = event;
+                        events[spinner.getSelectedItemPosition()] = hilfsArray;
+                    } else {
+                        new StundenplanHelper().execute(spinner.getSelectedItem().toString());
+                    }
+
+            } else keinStudiengang();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -372,6 +423,22 @@ public class StundenplanFragment extends ListFragment {
                 StundenplanEvent hilfsArray[] = new StundenplanEvent[1];
                 hilfsArray[0] = event;
                 events[spinner.getSelectedItemPosition()] = hilfsArray;
+                if(e.fehlerNetzwerk==1){
+                    getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                            builder.setMessage(R.string.networkError).setCancelable(false).setPositiveButton(
+                                    getActivity().getResources().getText(android.R.string.ok),
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            // do nothing
+                                        }
+                                    });
+                            builder.show();
+                        }
+                    });
+                }
             }
 
             return null;

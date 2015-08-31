@@ -95,4 +95,12 @@
         android:layout_below="@id/android:list"
         android:layout_above="@id/news_footer"/>
     <!-- // ListView für empty List -->
+
+    <ProgressBar
+
+        android:id="@+id/ladebalken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:layout_centerInParent="true" />
 </RelativeLayout>

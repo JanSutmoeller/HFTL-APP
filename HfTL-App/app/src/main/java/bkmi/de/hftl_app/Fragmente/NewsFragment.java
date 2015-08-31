@@ -20,6 +20,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import java.io.IOException;
+
 import bkmi.de.hftl_app.NewsActivity;
 import bkmi.de.hftl_app.NewsClickedActivity;
 import bkmi.de.hftl_app.R;
@@ -70,9 +72,7 @@ public class NewsFragment extends ListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_news, container, false);
-
-       return rootView;
+       return inflater.inflate(R.layout.fragment_news, container, false);
     }
 
     @Override
@@ -126,11 +126,11 @@ public class NewsFragment extends ListFragment {
 
     private void zeigeNews() {
 
-        if(isOnline(getActivity())){
+        if (isOnline(getActivity())) {
+            getActivity().findViewById(R.id.ladebalken).setVisibility(View.VISIBLE);
             NewsHelper nh = new NewsHelper();
             nh.execute();
-        }
-        else getActivity().runOnUiThread(new Runnable() {
+        } else getActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -142,6 +142,7 @@ public class NewsFragment extends ListFragment {
                             }
                         });
                 builder.show();
+                getActivity().findViewById(R.id.ladebalken).setVisibility(View.GONE);
             }
         });
     }
@@ -160,27 +161,47 @@ public class NewsFragment extends ListFragment {
 
         @Override
         protected Long doInBackground(String... params) {
-            newsResolver = new NewsResolver("https://www.hft-leipzig.de/de/start.html");
-            dateList=newsResolver.writeNewsListDate();
-            headlineList=newsResolver.writeNewsListHeadline();
-            contentList=newsResolver.writeNewsListContent();
+            try {
+                newsResolver = new NewsResolver("https://www.hft-leipzig.de/de/start.html");
+                dateList = newsResolver.writeNewsListDate();
+                headlineList = newsResolver.writeNewsListHeadline();
+                contentList = newsResolver.writeNewsListContent();
+                return 0L;
+            } catch (IOException e) {
+                if (getActivity() == null) return 1L;
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        getActivity().findViewById(R.id.ladebalken).setVisibility(View.GONE);
+                        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                        builder.setMessage(R.string.networkError).setCancelable(false).setPositiveButton(
+                                getActivity().getResources().getText(android.R.string.ok),
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        // do nothing
+                                    }
+                                });
+                        builder.show();
+                    }
+                });
+                return 1L;
+            }
 
-
-
-            return null;
         }
 
         @Override
         protected void onPostExecute(Long aLong) {
             super.onPostExecute(aLong);
-
-           if(getActivity()==null) return;
-            getActivity().runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                                    setListAdapter(new CustomAdapterNews(getActivity(), dateList, headlineList, contentList));
-                }
-            });
+            if (getActivity() == null || aLong.equals(1L)) return;
+            {
+                getActivity().findViewById(R.id.ladebalken).setVisibility(View.GONE);
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        setListAdapter(new CustomAdapterNews(getActivity(), dateList, headlineList, contentList));
+                    }
+                });
+            }
         }
     }
 

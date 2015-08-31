@@ -2,6 +2,7 @@ package bkmi.de.hftl_app.Fragmente;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -17,6 +18,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.io.IOException;
 import java.net.UnknownHostException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -93,7 +95,7 @@ public class NotenFragment extends ListFragment {
     @Override
     public void onDetach() {
         super.onDetach();
-        notenDB.close();
+
     }
 
     @Override
@@ -297,11 +299,15 @@ public class NotenFragment extends ListFragment {
     }
 
     class NotenHelper extends AsyncTask<String, Integer, Long> {
-
+        ProgressDialog ladebalken;
         @Override
         protected void onPostExecute(Long aLong) {
             super.onPostExecute(aLong);
-
+            if (getActivity() == null)
+                return;
+            ladebalken.dismiss();
+            if(aLong.equals(1L))
+                return;
             setzeListview(false);
         }
 
@@ -311,6 +317,7 @@ public class NotenFragment extends ListFragment {
             try {
                 nr = new NotenResolver(getActivity());
                 nr.getNoten();
+                return 0L;
             } catch (wrongUserdataException e) {
                 getActivity().runOnUiThread(
                         new Runnable() {
@@ -329,16 +336,37 @@ public class NotenFragment extends ListFragment {
                                     }
                                 });
                                 adb.show();
-                                setListAdapter(null);
                             }
                         });
+                return 1L;
             }
-            catch (UnknownHostException e){
-                e.printStackTrace();
+            catch (IOException e){
+                if (getActivity() == null) return 1L;
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                        builder.setMessage(R.string.networkError).setCancelable(false).setPositiveButton(
+                                getActivity().getResources().getText(android.R.string.ok),
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        // do nothing
+                                    }
+                                });
+                        builder.show();
+                    }
+                });
+                return 1L;
             }
 
-            return null;
+
         }
 
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            ladebalken = ProgressDialog.show(getActivity(), "Bitte warten", "Noten werden geladen", true, false);
+        }
     }
+
 }

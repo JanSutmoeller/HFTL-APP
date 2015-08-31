@@ -1,12 +1,16 @@
 package bkmi.de.hftl_app;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.widget.TextView;
+
+import java.io.IOException;
 
 import bkmi.de.hftl_app.Fragmente.NewsFragment;
 import bkmi.de.hftl_app.help.Resolver.NewsResolver;
@@ -47,14 +51,37 @@ public class NewsClickedActivity extends ActionBarActivity {
         @Override
         protected Long doInBackground(String... params) {
 
-            NewsResolver nr= new NewsResolver(url);
-            s = nr.getDetailsStringArray();
+            NewsResolver nr= null;
+            try {
+                nr = new NewsResolver(url);
+                s = nr.getDetailsStringArray();
 
-            return null;
+                return 0L;
+            } catch (IOException e) {
+                if (NewsClickedActivity.this == null) return 1L;
+                ladebalken.dismiss();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(NewsClickedActivity.this);
+                        builder.setMessage(R.string.networkError).setCancelable(false).setPositiveButton(
+                                getApplication().getResources().getText(android.R.string.ok),
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        // do nothing
+                                    }
+                                });
+                        builder.show();
+                    }
+                });
+                return 1L;
+            }
+
         }
 
         @Override
         protected void onPostExecute(Long aLong) {
+            if(NewsClickedActivity.this==null || aLong.equals(1L)) return;
             super.onPostExecute(aLong);
             ladebalken.dismiss();
             runOnUiThread(new Runnable() {

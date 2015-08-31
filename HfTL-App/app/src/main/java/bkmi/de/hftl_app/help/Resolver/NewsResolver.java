@@ -21,20 +21,15 @@ public class NewsResolver {
     /*
     * Konstruktor initialisiert die übergebene URL als Document
      */
-    public NewsResolver(String url) {
+    public NewsResolver(String url) throws IOException {
         getHtmlAsDoc(url);
         getHftlEvent();
     }
 
-    private boolean getHtmlAsDoc(String url) {
-        try {
-            doc = Jsoup.connect(url).get();
-            return true;
+    private boolean getHtmlAsDoc(String url) throws IOException {
+        doc = Jsoup.connect(url).timeout(10*1000).get();
+        return true;
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return false;
     }
 
     // ----- Funktionen für das NewsFragment -----
@@ -55,9 +50,6 @@ public class NewsResolver {
             termin.text=elements.get(i).child(2).child(1).ownText();                                            //Parsen des Textes
 
             termine.add(termin);
-        }
-        if(elements.size()==0){
-            //TODO: Ausgabe in NewsList, wenn Offline
         }
     }
 
