@@ -6,8 +6,8 @@
 Dieses Dokument dient als Grundlage zur Beauftragung des berufsbegleitenden Studienganges, Kommunikations- und Medieninformatik des Matrikel 13, mit der Programmierung einer \acs{HfTL}-\acs{APP}. Es setzt dabei die Rahmenbedingungen fest.
 
 \subsection{\textbf{Hintergründe und Ziele des Projekts}}
-Die \acf{HfTL} ist eine private, staatlich anerkannte Fachhochschule. Träger der \ac{HfTL} ist die \ac{HfTL}-Trägergesellschaft \acs{mbH}, eine Beteiligungsgesellschaft der Deutschen Telekom AG. Die Schule befindet sich im Leipziger Stadtteil Connewitz. Es werden sowohl Direkt- als auch duale Studiengänge und berufsbegleitende Studiengänge angeboten.
-Aufgrund des umständlichen Beschaffens der Noten und Stundenpläne sowie der Termine für Teletutorings, wird eine Smartphone-Applikation benötigt. Diese stellt ein Benutzerinterface für Studenten der \acs{HfTL} dar, mit dem der Zugriff auf die im \acs{QIS} hinterlegten Daten vereinfacht.
+Die \acf{HfTL} ist eine private, staatlich anerkannte Fachhochschule. Träger der \ac{HfTL} ist die \ac{HfTL}-Trägergesellschaft \acs{mbH}, eine Beteiligungsgesellschaft der Deutschen Telekom AG. Die Hochschule befindet sich im Leipziger Stadtteil Connewitz. Es werden sowohl Direkt- als auch duale Studiengänge und berufsbegleitende Studiengänge angeboten.
+Aufgrund des umständlichen Beschaffens der Noten und Stundenpläne sowie der Termine für Teletutorings, wird eine Smartphone-Applikation benötigt. Diese stellt ein Benutzerinterface für Studenten der \acs{HfTL} dar, mit dem der Zugriff auf die im \acs{QIS} hinterlegten Daten vereinfacht werden soll.
 
 \subsection{\textbf{Produktumfang}}
 
@@ -16,11 +16,10 @@ Der Betrieb der \acs{HfTL}-APP muss auf allen gängigen Android-Smartphones ab V
 Durch die APP wird den Studenten der HFTL ermöglicht: 
 
 \begin{itemize}
-      \item die aktuellsten Nachrichten der \acs{HfTL}-Webseite lesen
-      \item auf \acs{QIS} zugreifen
+      \item die aktuellsten Nachrichten der \acs{HfTL}-Webseite zu lesen
+      \item auf \acs{QIS} zuzugreifen
       \item Studenten sollen ihre(-n) Noten(-spiegel) aufrufen können
-      \item Vorlesungspläne zu lesen
-      \item Raumbelegungspläne abzurufen
+      \item Stundenpläne zu lesen
 \end{itemize}
    
 Zusätzlich werden folgende Anforderungen gestellt:
@@ -43,17 +42,17 @@ Zunächst müssen zwingend folgende Punkte des Umfangs erfüllt werden:
 
 \subsection{\textbf{Abgrenzungskriterien}}
 
-Die \acs{APP} soll später auch für zusätzliche Informationen, wie ein Raumplanung erweiterbar sein. Eine spätere Version für IOS-Geräte ist ebenfalls geplant, ist hier aber nicht Bestandteil.				
+Die \acs{APP} soll später auch für zusätzliche Informationen, wie eine Raumplanung erweiterbar sein. Eine spätere Version für IOS-Geräte ist ebenfalls geplant, ist aber kein Bestandteil dieses Projektes.				
 
 \subsubsection{Kostenrahmen}
 
-Für die Entwicklung der \acs{APP} soll auf kostenfreie Opensource-Programme oder auf vordefinierte Klassen der Programmierung zurückgegriffen werden.
+Für die Entwicklung der \acs{APP} soll auf kostenfreie Opensource-Programme oder auf vordefinierte Klassen für die Programmierung zurückgegriffen werden.
 Außer den personellen Aufwand dürfen keine Zusätzlichen Kosten entstehen.
 
 
 \subsection{\textbf{Definitionen, Akronyme, Abkürzungen}}
 \begin{acronym}[UV-Licht]
-\acro{HfTL}{Hochschule für Kommunikation Leipzig}
+\acro{HfTL}{Hochschule für Telekommunikation Leipzig}
 \acro{APP}{Kurzform für Applikation}
 \acro{mbH}{mit beschränkter Haftung}
 \acro{QIS}{Qualitätssteigerung der Hochschulverwaltung im Internet durch Selbstbedienung}
@@ -66,6 +65,8 @@ Außer den personellen Aufwand dürfen keine Zusätzlichen Kosten entstehen.
 \acro{.apk}{Android application package}
 \acro{MTBF}{mean time between failure}
 \acro{CI/CD}{Corperate Identity/Corperate Design}
+\acro{GUI}{Graphical User Interface}
+
 
 \end{acronym}
 
@@ -82,12 +83,12 @@ Außer den personellen Aufwand dürfen keine Zusätzlichen Kosten entstehen.
 
 \subsection{\textbf{Beschreibung der Ausgangssituation (Ist-Zustand) }}
 
-Damit Studenten auf \acs{QIS} zugreifen kann, müssen diese sich über einen Browser auf der \acs{QIS}-Seite einloggen und über das unübersichtliche Menü ihre Daten suchen.
+Damit Studenten auf \acs{QIS} zugreifen können, müssen diese sich über einen Browser auf der \acs{QIS}-Seite einloggen und über das unübersichtliche Menü ihre Daten suchen.
 Studenten haben die Möglichkeit ihre Noten oder einen Notenspiegel einzusehen.
 Für IPhone-Nutzer gibt es bereits eine kostenpflichtige \acs{APP} , namens Grades, die Noten und Informationen über die angemeldete Prüfungen auslesen kann.
-Um die auf \acs{QIS} hinterlegten Vorlesungspläne abzurufen ist kein Login erforderlich, jedoch ist es notwendig sich umständlich zu dem entsprechenden Studiengang zu navigieren. Einzelne Vorlesungen oder Stundenpläne können als \acs{iCal} heruntergeladen werden.
+Um die auf \acs{QIS} hinterlegten Stundenpläne abzurufen ist kein Login erforderlich, jedoch ist es notwendig sich umständlich zu dem entsprechenden Studiengang zu navigieren. Die Termine lassen sich einzeln oder als Block im \acs{iCal}-Format herunterladen. Die Termine der Teletutorien sind ebenfalls im QIS zu finden.
 Ebenso sind die Teletutorien hier zu finden.
-Die aktuellen Nachrichten der Hochschul-Homepage sind auf einer anderen Seite zu finden, welche öffentlich zugänglich ist.
+Die aktuellen Nachrichten der Hochschule sind auf der Webeite selbiger zu finden, welche öffentlich zugänglich ist.
 
 
 \subsection{\textbf{Produkteinsatz}}
@@ -101,19 +102,19 @@ Da bei der Nutzergruppe von Studenten mit Erfahrung im Umgang mit solchen APP's 
 
 \subsection{\textbf{Produktfunktionalität}}
 
-Die APP soll sich mittels regelmäßiger Abfragen der \acs{HfTL}-Homepage, sowie von \acs{QIS}, die News, Noten und Stunden- und ggf. Raumbelegungspläne ziehen und die Noten für den Nutzer lokal auf dem Smartphone speichern und entsprechend darstellen. 
-Es soll sichergestellt werden das auf sensible Daten wie z.B. Noten auch nur autorisierte Nutzer Zugang bekommen. Die APP soll in deutscher Sprache dargestellt werden. Evtl. wird sie im Nachgang in andere Sprachen übersetzt. 
+Die APP soll mittels regelmäßiger Abfragen der \acs{HfTL}-Homepage, sowie von \acs{QIS}, die News, Noten und Stunden- und ggf. Raumbelegungspläne aktualisieren und die Noten für den Nutzer lokal auf dem Smartphone speichern und entsprechend darstellen. 
+Es soll sichergestellt werden das auf sensible Daten wie z.B. Noten auch nur autorisierte Nutzer Zugang erhalten. Die APP soll in deutscher Sprache dargestellt werden. Evtl. wird sie im Nachgang in andere Sprachen übersetzt. 
 
 \subsection{\textbf{Randbedingungen}}
 
 Der zeitliche Rahmen für die Entwicklung und Programmierung dieser APP begrenzt sich auf das \ac{SoSe15} und dem Studienmodul Software-Engineering.
 Für die Entwicklung dieser APP, sowie Vertrieb, Programmierung usw. dürfen keine Kosten entstehen.
-Supportleistungen werden in der Projektphase über das Projektteam geleistet. Die Wartung wird, bis mit der Veröffentlichung die APP der Hochschule kostenfrei zur Verfügung gestellt wird, ebenfalls vom Projektteam übernommen. Die Dokumentation wird ebenfalls vollständig an die Hochschule übergeben.
-Durch das Projektteam wird es keine weitere Softwarebetreuung, Wartung oder der gleichen geben. Es finden ebenfalls keine Schulungen oder Einweisungen statt.
+Supportleistungen werden in der Projektphase über das Projektteam geleistet. Die Wartung wird ebenfalls während der Projektphase vom Projektteam übernommen, bis die APP der Hoschschule  kostenfrei zur Verfügung gestellt wird. Die Dokumentation wird ebenfalls vollständig an die Hochschule übergeben.
+Durch das Projektteam wird es nach Ende des Projektes keine weitere Softwarebetreuung, Wartung oder der gleichen geben. Es finden ebenfalls keine Schulungen oder Einweisungen statt.
 
 \subsection{\textbf{Annahmen und Abhängigkeiten}}
 
-Die APP wird für Android-Geräte ab Version 4.0.3 zur Verfügung stehen.
+Die APP wird für Android-Geräte ab Version 4.0.3 zur Verfügung gestellt.
 Entsprechend der Vorgaben der Deutschen Telekom AG muss bei der Programmierung der APP, explizit beim Design, auf die Konzernrichtlinien geachtet werden. Es soll zusätzlich auf die Designempfehlungen für Androidgeräte geachtet werden.
 
 \subsection{\textbf{Verzögerungen}}
@@ -132,8 +133,8 @@ Eine Implementierung weiterer Funktionen soll auch im Nachhinein möglich sein.
 \section{Anforderungen}
 
 \subsection{\textbf{Fachkonzept}}
-Die \acs{HfTL}-APP  wird in Java programmiert um durch Verwendung bestehender Klassen die Erweiterbarkeit und Realisierbarkeit zu vereinfachen. Für das Design werden \acs{XML}-Stylesheets verwendet.
-Pull-und Push-Service werden zur Benachrichtigung und Abfrage verwendet.
+Die \acs{HfTL}-APP  wird in Java programmiert, um durch Verwendung bestehender Klassen die Erweiterbarkeit und Realisierbarkeit zu vereinfachen. Für das Design werden \acs{XML}-Stylesheets verwendet.
+Pull-und Push-Services werden zur Benachrichtigung und Abfrage verwendet.
 
 
 
@@ -143,14 +144,13 @@ $\;$ \\ %Zeilenumbruch bei Nutzung von paragraph
 
 \textbf{Noten}
 \begin{itemize}
-	\item die APP soll die Noten lokal auf dem Smartphone nach Semester aufgeschlüsselt anzeigen
-	\item Login über die APP
+	\item die APP soll die Noten lokal auf dem Smartphone nach Semester geordnet anzeigen
+	\item Login im \acs{QIS}-System durch die APP
 	\item Anmeldung über gesicherte, verschlüsselte Übertragung (\acs{HTTPS})
 	\item verschlüsselte Speicherung der Daten auf dem Smartphone (\acs{AES})
-	\item verschlüsselte Speicherung der Daten auf dem Smartphone (\acs{AES})
 	\item Pull-Nachrichten (Einstellbares Intervall und/oder manuell)
-	\item Push-Benachrichtigung
-	\item Nutzer wird mit Hinweismeldung informiert, wenn Noten aktualisiert wurden
+	\item Push-Benachrichtigungen
+	\item Nutzer wird mit Hinweismeldungen informiert, wenn Noten aktualisiert wurden
 \end{itemize}
 Optionale Angaben im Menüpunkt Noten:
 \begin{itemize}
@@ -185,12 +185,12 @@ Optionale Angaben im Menüpunkt Noten:
 
 \subsection{\textbf{Anforderungen an die Datenhaltung}}
 
-Alle gespeicherten Daten müssen vor unbefugtem Zugriff geschützt werden, dafür werden Benutzerdaten in einer \acs{SQL}-Datenbank gespeichert und durch das Passwort und den Benutzernamen freigegeben. Passwort und Benutzername wurden mit \acs{AES} verschlüsselt.
+Alle gespeicherten Daten müssen vor unbefugtem Zugriff geschützt werden, dafür werden Benutzerdaten in einer \acs{SQL}-Datenbank gespeichert und durch das Passwort und den Benutzernamen freigegeben. Passwort und Benutzername werden mit \acs{AES} verschlüsselt.
 
 \subsubsection{allgemeine Beschreibung der Daten}
 Sicherheitsrelevante Daten sind in dem Notenteil der App zu finden. Diese sind der Benutzername, das Passwort, die Prüfungs- und Prüfungsvorleistungsergebnisse, der Klassenspiegel und die Creditpoints.
 Die öffentlichen Daten sind in den anderen beiden Teilen der App enthalten.
-Dazu gehören die News mit ihren Terminen und Inhalt und der Stundenplan mit den Veranstaltungen und den dazugehörenden Informationen wie Dozent und Veranstaltungsort.
+Dazu gehören die News mit ihren Terminen und Inhalt und die Stundenpläne mit den Veranstaltungen und den dazugehörenden Informationen wie Dozent und Veranstaltungsort.
 
 
 \subsection{\textbf{Anforderungen an die Benutzeroberfläche}}
@@ -200,7 +200,7 @@ Dazu gehören die News mit ihren Terminen und Inhalt und der Stundenplan mit den
 Das Layout richtet sich nach dem  \ac{CI/CD} der Deutschen Telekom AG, speziell dem der \acs{HfTL} Trägergesellschaft, stand 14.12.12. Entsprechend sind primär die Farben, sowie Schriftarten vorgegeben. Das Layout zieht sich einheitlich (mit funktionsbedingten Abweichungen) durch alle APP-Teile und soll eine leichte Bedienung begünstigen.
 Die Größe der einzelnen Elemente (Buttons, Zeilen, Überschriften etc.) ist an den Designempfehlungen seitens Android angelehnt. 
 Auch die Abstände zwischen den einzelnen Elementen wurden – sofern sie mit dem \ac{CI/CD} in Einklang stehen – entsprechend der Designempfehlung festgelegt.
-Die Reaktionszeit der Benutzereingaben soll mit möglich wenig Verzögerung verarbeitet und dargestellt werden.
+Die Reaktionszeit der Benutzereingaben soll mit möglichst geringer Verzögerung verarbeitet und dargestellt werden.
 
 
 
@@ -211,7 +211,7 @@ Die Reaktionszeit der Benutzereingaben soll mit möglich wenig Verzögerung vera
 
 Die APP wird als Open Source bereitgestellt.
 
-Nicht angemeldete Benutzer können sich die News und den Stundenplan anzeigen lassen. Angemeldete Benutzer können zusätzlich ihre Noten abrufen.
+Nicht angemeldete Benutzer können sich die News und die Stundenpläne anzeigen lassen. Angemeldete Benutzer können zusätzlich ihre Noten abrufen.
 
 Die App braucht folgende Berechtigung auf dem Smartphone:
 \begin{itemize}
@@ -246,7 +246,7 @@ Das Datenaufkommen soll möglichst gering ausfallen.
 \subsection{\textbf{Anfordeungen für Inbetriebnahme und Einsatz}}
 
 \subsubsection{Sicherheitsziele}
-Der Benutzername und das Passwort werden in einen gesicherten Speicherbereich (nur root), mit \acs{AES} verschlüsselt, gespeichert.
+Der Benutzername und das Passwort werden in einem gesicherten Speicherbereich (nur root), mit \acs{AES} verschlüsselt, gespeichert.
 Die Datenbank in der die Noten gespeichert werden, liegt ebenfalls in diesem Bereich und darf nur von der \acs{HfTL}-App geöffnet werden.
 Die Kommunikation mit der \acs{HfTL}-Website und \acs{QIS} erfolgt gesichert per \acs{HTTPS}.
 
@@ -259,6 +259,8 @@ Der Wirkbetrieb soll nach Möglichkeit über den Android-Playstore realisiert we
 
 
 \subsubsection{Pilot- bzw. Probebetrieb}
+
+siehe Anhang \ref{subsec:Release-Historie}
 \textcolor{magenta}{Hier müssen die Versionsmanagementprotokolle rein!}
 
 
@@ -347,6 +349,17 @@ Die Dokumentation wird mittels \LaTeX{} erstellt.
 
 
 \subsubsection{Projekt-Organisation}
+Die Projektorganisation wird wie in folgender Abbildung strukturiert. Als Vorgehensmodell wird das Spiralmodell mit Prototyping gewählt. Es ist ein iteratives Modell, wobei jeder Zyklus in den einzelnen Quadranten folgende Aktivitäten enthält:
+
+\begin{itemize}
+	\item Festlegung von Zielen, Identifikation von Alternativen und Beschreibung von Rahmenbedingungen
+	\item Evaluierung der Alternativen und das Erkennen, Abschätzen und Reduzieren von Risiken, z. B. durch Analysen, Simulationen oder Prototyping
+	\item Realisierung und Überprüfung des Zwischenprodukts
+	\item Planung des nächsten Zyklus der Projektfortsetzung.
+\end{itemize}
+
+Die einzelnen Aufgaben werden Personen zugeordnet. In wöchentlichen Online-Meetings über Teamviewer stellt jeder seine Ergebnisse vor und es werden diese bewertet. Anhand dieser Ergebnisse werden für den neuen Zyklus Aufgaben verteilt. Der Protokollführer hält alle Ergebnisse und Aufgaben fest und legt die Protokolle im Projektordner ab.
+
 \includepdf[pages=-,noautoscale]{04_Anhang/files/swe_organigramm.pdf}
 
 
@@ -354,7 +367,9 @@ Die Dokumentation wird mittels \LaTeX{} erstellt.
 \textcolor{magenta}{Verweis auf Projektstrukturplan im Anhang}
 
 \subsubsection{Änderungsmanagement}
-siehe Anhang \ref{subsec:Release-Historie}
+Zur Versionsverwaltung wurde Git eingesetzt. Als Hosting-Anbieter wurde dabei auf GitHub gesetzt, welcher einen kostenfreien Zugang für nicht kommerzielle Projekte bereitstellt. Ein \ac{GUI} oder ein Konsolenprogramm für Windows und Linux übernehmen dabei die Steuerung der Versionsverwaltung. Konflikte in den einzelnen Versionen können nur über die Konsole behoben werden. Auf der Webseite von GitHub können Milestones erstellt werden und an die jeweiligen Mitarbeiter zugeteilt werden. In den Milestones werden einzelne Aufgaben, sogenannte Issues angelegt und wiederum den Bearbeitern zugeordnet, somit ist der Bearbeitungsstand zu jeder Zeit des Projektes ersichtlich und es kann schnell auf sich ergebende Probleme reagiert werden.
+
+
 
 \subsubsection{Testanforderungen}
 siehe Anhang \ref{subsec:Testprotokollentwurf}
