@@ -437,7 +437,7 @@ setListAdapter(new CustomAdapterNews(getActivity(), ...);
 \end{itemize} 
 \item[onAttach()]~\par
 \begin{itemize}
-\item Diese Methode setzt setzt den Zeiger mCallbacks auf die Activity.
+\item Diese Methode setzt den Zeiger mCallbacks auf die Activity.
 \end{itemize}
  
 \item[onDetach()]~\par
@@ -494,24 +494,24 @@ setListAdapter(new CustomAdapterNews(getActivity(), ...);
 \end{itemize}
 \item[getNoten()]~\par
 \begin{itemize}
-\item Liest in der Notendatenbank alle Werte in der Spalte \textcolor{lila}{NOTENABFRAGE} aus und schreibt diese in das String-Array s, welches auch übergeben wird.
+\item Liest in der Notendatenbank alle Werte in der Spalte \textcolor{lila}{NOTENABFRAGE} aus und schreibt diese in das String-Array "'\textit{s}"', welches auch übergeben wird.
 \end{itemize}
 
  
 \item[getSemester()]~\par
 \begin{itemize}
-\item Liest in der Notendatenbank alle Werte in der Spalte \textcolor{lila}{SEMESTERABFRAGE} aus und schreibt diese in ein String-Array s, welches auch übergeben wird. 
+\item Liest in der Notendatenbank alle Werte in der Spalte \textcolor{lila}{SEMESTERABFRAGE} aus und schreibt diese in ein String-Array "'\textit{s}"', welches auch übergeben wird. 
 \end{itemize} 
 \item[getFach()]~\par
 \begin{itemize}
-\item Liest in der Notendatenbank alle Werte in der Spalte \textcolor{lila}{FACHABFRAGE} aus und schreibt diese in das String-Array s, welches auch übergeben wird.
+\item Liest in der Notendatenbank alle Werte in der Spalte \textcolor{lila}{FACHABFRAGE} aus und schreibt diese in das String-Array "'\textit{s}"', welches auch übergeben wird.
 \end{itemize}
 
 \item[getVersuche()]~\par
 \begin{itemize}
-\item Liest in der Notendatenbank alle Werte in der Spalte \textcolor{lila}{VERSUCHABFRAGE} aus und schreibt diese in das String-Array s, welches auch übergeben wird.
+\item Liest in der Notendatenbank alle Werte in der Spalte \textcolor{lila}{VERSUCHABFRAGE} aus und schreibt diese in das String-Array "'\textit{s}"', welches auch übergeben wird.
 \end{itemize}
-\item[Hinweis:]~\par \textit{Die String-Arrays sind nur lokal in den jeweiligen Methoden definiert, weshalb diese - der Einfachheit halber - alle den Namen "'s"' erhielten. Tatsächlich werden hier vier unterschiedliche String-Arrays befüllt.}
+\item[Hinweis:]~\par \textit{Die String-Arrays sind nur lokal in den jeweiligen Methoden definiert, weshalb diese - der Einfachheit halber - alle den Namen "'\textit{s}"' erhielten. Tatsächlich werden hier vier unterschiedliche String-Arrays befüllt.}
  
 \item[setzeListview()]~\par
 \begin{itemize}
@@ -600,54 +600,54 @@ for(int k=0; k<semesterList.length;k++){
 \item[onCreateView()]~\par
 \begin{itemize}
 \item Laden des entsprechenden XML-Layouts fragment\_ noten.xml
-Laden und Zuweisung der Schriftart für das TextView für die Überschrift des Fragments
+\item Laden und Zuweisung der Schriftart für das TextView für die Überschrift des Fragments.
 \end{itemize}
 
 \item[onViewCreated()]~\par
 \begin{itemize}
-\item Falls im “Stundenplanspeicher” Daten vorhanden sind, werden diese geladen
-\item Methode für das Dropdownmenü wird gerufen und Array für “events” erstellt
-\item anonyme Listener für die Buttons werden erstellt
+\item Falls im "'\textit{Stundenplanspeicher}"' Daten vorhanden sind, werden diese geladen.
+\item Methode für das Dropdownmenü wird gerufen und Array für "'events"' erstellt.
+\item Anonyme Listener für die Buttons werden erstellt.
 \end{itemize}
 
 \item[erzeugeDropdown()]~\par
 \begin{itemize}
-\item Dropdown aus xml einen Objekt zuweisen
-\item Listener für Dropdown (als anonymer Listener) wird erzeugt und registiert
-\item Beim registieren wird die Methode \textit{onItemSelected} aufgerufen und ein StundenplanHelper ausgeführt
-\item Mittels eines “Calendar”, “Date” und zwei “SimpleDateFormat” wird das Dropdownmenü befüllt, indem die Daten in eine String-List eingefügt werden (\textit{list.add(temp)})
-\item Dropdown mit Liste verknüpfen
+\item Dropdown aus xml einem Objekt zuweisen.
+\item Listener für Dropdown (als anonymer Listener) wird erzeugt und registiert.
+\item Beim registieren wird die Methode \textit{onItemSelected} aufgerufen und ein StundenplanHelper ausgeführt.
+\item Mittels eines "'\textit{Calendar}"', "'\textit{Date}"' und zwei "'\textit{SimpleDateFormat}"' wird das Dropdownmenü befüllt, indem die Daten in eine String-List eingefügt werden (\textit{list.add(temp)}).
+\item Dropdown wird mit Liste verknüpft.
 \end{itemize}
  
 \item[keinStudiengang()]~\par
 \begin{itemize}
-\item Prüft ob in den Einstellungen der Studiengang eingetragen wurde, ansosnten wird eine Fehlermeldung ausgegeben:
+\item Prüft ob in den Einstellungen der Studiengang eingetragen wurde, ansonsten wird eine Fehlermeldung ausgegeben:
 \item[] \includegraphics[scale=0.5]{05_Handbuch/img/Studiengang.jpg}
 \end{itemize}
 
 \item[erstelleStundenplan()]~\par
 \begin{itemize}
-\item Erzeugt die Ausgabe des Stundenplans und fügt sie in den ListView ein
-\item Falls keine Daten vorhanden sind, wird "'keine Date"' ausgegeben
+\item Erzeugt die Ausgabe des Stundenplans und fügt sie in den ListView ein.
+\item Falls keine Daten vorhanden sind, wird "'keine Daten"' ausgegeben.
 \end{itemize}
  
 -- StundenplanHelper (class)
  
 \item[onPreExecute()]~\par
 \begin{itemize}
-\item erzeugt einen Ladebalken
+\item erzeugt einen Ladebalken.
 \end{itemize}
 \item[onPostExecute]~\par
 \begin{itemize}
-\item falls das Fragment noch aktiv ist wird die Methode erstelleStundenplan() gerufen
-\item Ladebalken wird entfernt
+\item falls das Fragment noch aktiv ist wird die Methode erstelleStundenplan() gerufen.
+\item Ladebalken wird entfernt.
 \end{itemize}
  
 \item[doInBackground]~\par
 \begin{itemize}
-\item Die Methode erzeugt einen \textit{StundenplanResolver},
-befüllt das “StundenplanEvents-Array Events“ mit Daten durch die Methode \textit{erzeugeStundenplan(String woche)} des StundenplanResolvers.
-\item Falls ein Fehler auftritt wird ein Event erstellt in dem keine Daten sind.
+\item Die Methode erzeugt einen \textit{StundenplanResolver} und
+befüllt das “StundenplanEvents-Array \textit{Events}“ mit Daten durch die Methode \textit{erzeugeStundenplan(String woche)} des StundenplanResolvers.
+\item Falls ein Fehler auftritt, wird ein Event erstellt, in dem keine Daten sind.
 \end{itemize}
 
 \newpage
@@ -679,11 +679,11 @@ Für jeden Customadapter gibt es eine entsprechende \_list.xml:
 \end{itemize}
 
 \item [public View getView()]~\par
-erstellt einen neuen Container 
+erstellt einen neuen Container: 
 \begin{lstlisting}
    Holder holder = new Holder;
 \end{lstlisting}
-erstellt eine View rowView
+erstellt eine View rowView:
 \begin{lstlisting}
    View rowView;
 \end{lstlisting}
@@ -700,7 +700,7 @@ Das TextView wird mit dem entsprechenden Wert des zugehörigen String-Arrays bef
 \begin{lstlisting}
    holder.tv_name.setText(name[position]);
 \end{lstlisting}
-Der nun befüllte Container wird nun als rowView übergeben.
+Der nun befüllte Container wird nun als rowView übergeben:
 \begin{lstlisting}
    return rowView;
 \end{lstlisting}
@@ -748,7 +748,7 @@ Auch für die jeweiligen Noten gibt es eine gesonderte Formatierung:
 \label{CustomAdapterStundenplan}
 Dieser CustomAdapter befüllt die ListView des StundenPlanfragments.\\
 Hier werden fünf StringArrays(\textcolor{lila}{datum},\textcolor{lila}{fach},\textcolor{lila}{zeit},\textcolor{lila}{raum},\textcolor{lila}{kategorie}) übergeben, die zuvor mittels der Methode \textit{erstelleStundenplan()} des StundenplanFragments aus dem HTML-Code der QiS/HiS-Seite ausgelesen wurden.\\
-Auch hier gibt es ein einige spezifische Formatierungen, abhängig vom übergebenen Inhalt.\\
+Auch hier gibt es einige spezifische Formatierungen, abhängig vom übergebenen Inhalt.\\
 Ist der Inhalt des StringArrays \textcolor{lila}{datum} an einer Stelle "'\textcolor{darkblue}{NULL}"', so wird die Sichtbarkeit des zugehörigen TextViews auf  "'\textcolor{lila}{GONE}"' gesetzt.\\
 Analog zum \hyperref[CustomAdapterNoten]{CustomAdapterNoten} werden so die einzelnen Fächer unter dem selben Datum gelistet. Andernfalls würde über jedem Fach ein dunkelgraues TextView stehen.
 \begin{lstlisting}
