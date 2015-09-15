@@ -184,7 +184,7 @@ Optionale Angaben im Menüpunkt Noten:
 
 \subsection{\textbf{Anforderungen an die Datenhaltung}}
 
-Alle gespeicherten Daten müssen vor unbefugtem Zugriff geschützt werden, dafür werden Benutzerdaten in einer \acs{SQL}-Datenbank gespeichert und durch das Passwort und den Benutzernamen freigegeben. Passwort und Benutzername werden mit \acs{AES} verschlüsselt.
+Alle gespeicherten Daten müssen vor unbefugtem Zugriff geschützt werden, dafür werden Benutzerdaten in einer \acs{SQL}-Datenbank gespeichert. Die Datenbank darf nur durch die App abgefragt werden. Passwort und Benutzername werden mit \acs{AES} verschlüsselt.
 
 \subsubsection{allgemeine Beschreibung der Daten}
 Sicherheitsrelevante Daten sind in dem Notenteil der App zu finden. Diese sind der Benutzername, das Passwort, die Prüfungs- und Prüfungsvorleistungsergebnisse, der Klassenspiegel und die Creditpoints.
@@ -218,6 +218,7 @@ Die App braucht folgende Berechtigung auf dem Smartphone:
 	\item Internet: APP greift auf das Internet zu
 	\item Telefonstatus: wird zur Verschlüsselung benötigt
 	\item Kalendereintäge bearbeiten
+	\item darf beim Systemstart ausgeführt werden
 \end{itemize}
 
 
