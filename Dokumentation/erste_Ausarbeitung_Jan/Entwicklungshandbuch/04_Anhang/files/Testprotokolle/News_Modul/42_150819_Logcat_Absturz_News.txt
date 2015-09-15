@@ -1,0 +1,57 @@
+08-19 14:16:30.866    2589-2601/bkmi.de.hftl_app I/art? Background sticky concurrent mark sweep GC freed 8932(250KB) AllocSpace objects, 0(0B) LOS objects, 3% free, 7MB/7MB, paused 33.838ms total 47.767ms
+08-19 14:16:30.897    2589-2601/bkmi.de.hftl_app W/art? Suspending all threads took: 30.757ms
+08-19 14:16:30.930    2589-2596/bkmi.de.hftl_app W/art? Suspending all threads took: 5.938ms
+08-19 14:16:31.374    2589-2589/bkmi.de.hftl_app I/Choreographer? Skipped 36 frames!  The application may be doing too much work on its main thread.
+08-19 14:16:31.494    2589-2606/bkmi.de.hftl_app W/EGL_emulation? eglSurfaceAttrib not implemented
+08-19 14:16:31.494    2589-2606/bkmi.de.hftl_app W/OpenGLRenderer? Failed to set EGL_SWAP_BEHAVIOR on surface 0xa4da6540, error=EGL_SUCCESS
+08-19 14:16:31.648    2589-2606/bkmi.de.hftl_app W/EGL_emulation? eglSurfaceAttrib not implemented
+08-19 14:16:31.648    2589-2606/bkmi.de.hftl_app W/OpenGLRenderer? Failed to set EGL_SWAP_BEHAVIOR on surface 0xa4da6fe0, error=EGL_SUCCESS
+08-19 14:16:31.694    2589-2601/bkmi.de.hftl_app I/art? Background partial concurrent mark sweep GC freed 9244(697KB) AllocSpace objects, 2(129KB) LOS objects, 22% free, 6MB/8MB, paused 2.045ms total 136.427ms
+08-19 14:16:31.714    2589-2601/bkmi.de.hftl_app W/art? Suspending all threads took: 20.132ms
+08-19 14:16:31.937    2589-2596/bkmi.de.hftl_app W/art? Suspending all threads took: 38.781ms
+08-19 14:16:32.323    2589-2601/bkmi.de.hftl_app I/art? Background sticky concurrent mark sweep GC freed 22345(732KB) AllocSpace objects, 9(499KB) LOS objects, 14% free, 7MB/8MB, paused 46.692ms total 98.802ms
+08-19 14:16:32.464    2589-2589/bkmi.de.hftl_app I/Choreographer? Skipped 37 frames!  The application may be doing too much work on its main thread.
+08-19 14:16:34.411    2589-2606/bkmi.de.hftl_app W/EGL_emulation? eglSurfaceAttrib not implemented
+08-19 14:16:34.411    2589-2606/bkmi.de.hftl_app W/OpenGLRenderer? Failed to set EGL_SWAP_BEHAVIOR on surface 0xa3da24c0, error=EGL_SUCCESS
+08-19 14:16:34.894    2589-2596/bkmi.de.hftl_app W/art? Suspending all threads took: 46.388ms
+08-19 14:16:34.944    2589-2601/bkmi.de.hftl_app I/art? Background partial concurrent mark sweep GC freed 18720(704KB) AllocSpace objects, 11(854KB) LOS objects, 21% free, 7MB/9MB, paused 15.898ms total 343.674ms
+08-19 14:16:37.360    2589-2596/bkmi.de.hftl_app W/art? Suspending all threads took: 11.386ms
+08-19 14:16:37.373    2589-2601/bkmi.de.hftl_app I/art? Background sticky concurrent mark sweep GC freed 30890(928KB) AllocSpace objects, 0(0B) LOS objects, 10% free, 8MB/9MB, paused 2.268ms total 285.860ms
+08-19 14:16:37.386    2589-2601/bkmi.de.hftl_app W/art? Suspending all threads took: 12.938ms
+08-19 14:16:39.557    2589-2601/bkmi.de.hftl_app I/art? Background sticky concurrent mark sweep GC freed 20496(837KB) AllocSpace objects, 22(1113KB) LOS objects, 19% free, 7MB/9MB, paused 6.449ms total 35.555ms
+08-19 14:16:40.102    2589-2601/bkmi.de.hftl_app I/art? Background sticky concurrent mark sweep GC freed 7012(287KB) AllocSpace objects, 15(969KB) LOS objects, 15% free, 8MB/9MB, paused 3.461ms total 125.433ms
+08-19 14:16:40.320    2589-2589/bkmi.de.hftl_app I/SQLiteConnectionPool? The connection pool for /data/data/bkmi.de.hftl_app/databases/hftlapp.db has been closed but there are still 1 connections in use.  They will be closed as they are released back to the pool.
+    --------- beginning of crash
+08-19 14:16:40.470    2589-2611/bkmi.de.hftl_app E/AndroidRuntime? FATAL EXCEPTION: AsyncTask #2
+    Process: bkmi.de.hftl_app, PID: 2589
+    java.lang.RuntimeException: An error occured while executing doInBackground()
+            at android.os.AsyncTask$3.done(AsyncTask.java:304)
+            at java.util.concurrent.FutureTask.finishCompletion(FutureTask.java:355)
+            at java.util.concurrent.FutureTask.setException(FutureTask.java:222)
+            at java.util.concurrent.FutureTask.run(FutureTask.java:242)
+            at android.os.AsyncTask$SerialExecutor$1.run(AsyncTask.java:231)
+            at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1112)
+            at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:587)
+            at java.lang.Thread.run(Thread.java:818)
+     Caused by: java.lang.IllegalStateException: Cannot perform this operation because the connection pool has been closed.
+            at android.database.sqlite.SQLiteConnectionPool.throwIfClosedLocked(SQLiteConnectionPool.java:962)
+            at android.database.sqlite.SQLiteConnectionPool.waitForConnection(SQLiteConnectionPool.java:599)
+            at android.database.sqlite.SQLiteConnectionPool.acquireConnection(SQLiteConnectionPool.java:348)
+            at android.database.sqlite.SQLiteSession.acquireConnection(SQLiteSession.java:894)
+            at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:786)
+            at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:86)
+            at bkmi.de.hftl_app.help.NotenResolver.getNoten(NotenResolver.java:151)
+            at bkmi.de.hftl_app.Fragmente.NotenFragment$NotenHelper.doInBackground(NotenFragment.java:317)
+            at bkmi.de.hftl_app.Fragmente.NotenFragment$NotenHelper.doInBackground(NotenFragment.java:303)
+            at android.os.AsyncTask$2.call(AsyncTask.java:292)
+            at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+            at android.os.AsyncTask$SerialExecutor$1.run(AsyncTask.java:231)
+            at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1112)
+            at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:587)
+            at java.lang.Thread.run(Thread.java:818)
+08-19 14:16:41.361    2589-2596/bkmi.de.hftl_app W/art? Suspending all threads took: 32.945ms
+08-19 14:16:41.521    2589-2601/bkmi.de.hftl_app I/art? Background sticky concurrent mark sweep GC freed 22250(767KB) AllocSpace objects, 7(543KB) LOS objects, 15% free, 6MB/8MB, paused 50.926ms total 501.080ms
+08-19 14:16:41.552    2589-2601/bkmi.de.hftl_app W/art? Suspending all threads took: 31.021ms
+08-19 14:16:42.854    2589-2596/bkmi.de.hftl_app W/art? Suspending all threads took: 68.159ms
+08-19 14:16:42.914    2589-2601/bkmi.de.hftl_app I/art? Background partial concurrent mark sweep GC freed 22959(739KB) AllocSpace objects, 6(455KB) LOS objects, 22% free, 6MB/8MB, paused 42.498ms total 146.004ms
+08-19 14:16:42.933    2589-2601/bkmi.de.hftl_app W/art? Suspending all threads took: 18.987ms

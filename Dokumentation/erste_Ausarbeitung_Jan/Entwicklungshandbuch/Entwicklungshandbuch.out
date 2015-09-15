@@ -1,0 +1,47 @@
+\BOOKMARK [0][-]{toc.0}{Inhaltsverzeichnis}{}% 1
+\BOOKMARK [1][-]{section.1}{Allgemeines}{toc.0}% 2
+\BOOKMARK [1][-]{section.2}{Verwendete Software}{toc.0}% 3
+\BOOKMARK [1][-]{section.3}{Aufbau des Projekts}{toc.0}% 4
+\BOOKMARK [2][-]{subsection.3.1}{Manifest.XML}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.2}{Ordnerstruktur}{section.3}% 6
+\BOOKMARK [1][-]{section.4}{Activities}{toc.0}% 7
+\BOOKMARK [2][-]{subsection.4.1}{NewsActivity.java}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.2}{EinstellungsActivity.java}{section.4}% 9
+\BOOKMARK [1][-]{section.5}{NewsClickedActivity.java}{toc.0}% 10
+\BOOKMARK [2][-]{subsection.5.1}{Allgemein}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.2}{Klasse DetailHelper}{section.5}% 12
+\BOOKMARK [1][-]{section.6}{Fragmente}{toc.0}% 13
+\BOOKMARK [2][-]{subsection.6.1}{NewsFragment}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.2}{Klasse NewsHelper}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.3}{NavigationDrawerFragment}{section.6}% 16
+\BOOKMARK [2][-]{subsection.6.4}{Notenfragment}{section.6}% 17
+\BOOKMARK [2][-]{subsection.6.5}{StundenplanFragment}{section.6}% 18
+\BOOKMARK [1][-]{section.7}{CustomAdapter}{toc.0}% 19
+\BOOKMARK [2][-]{subsection.7.1}{Allgemein}{section.7}% 20
+\BOOKMARK [2][-]{subsection.7.2}{CustomAdapterNews.java}{section.7}% 21
+\BOOKMARK [2][-]{subsection.7.3}{CustomAdapterNoten.java}{section.7}% 22
+\BOOKMARK [2][-]{subsection.7.4}{CustomAdapterStundenplan}{section.7}% 23
+\BOOKMARK [1][-]{section.8}{XML-Dateien}{toc.0}% 24
+\BOOKMARK [2][-]{subsection.8.1}{fragment.xml}{section.8}% 25
+\BOOKMARK [2][-]{subsection.8.2}{\137list.xml}{section.8}% 26
+\BOOKMARK [2][-]{subsection.8.3}{activity\137news\137clicked.xml}{section.8}% 27
+\BOOKMARK [2][-]{subsection.8.4}{settings\137toolbar}{section.8}% 28
+\BOOKMARK [2][-]{subsection.8.5}{impressum.xml \046 activity\137impressum}{section.8}% 29
+\BOOKMARK [2][-]{subsection.8.6}{colors.xml}{section.8}% 30
+\BOOKMARK [2][-]{subsection.8.7}{array.xml}{section.8}% 31
+\BOOKMARK [2][-]{subsection.8.8}{einstellung.xml}{section.8}% 32
+\BOOKMARK [2][-]{subsection.8.9}{strings.xml}{section.8}% 33
+\BOOKMARK [1][-]{section.9}{Layout}{toc.0}% 34
+\BOOKMARK [2][-]{subsection.9.1}{Allgemeines}{section.9}% 35
+\BOOKMARK [2][-]{subsection.9.2}{Schriftarten}{section.9}% 36
+\BOOKMARK [2][-]{subsection.9.3}{Buttons}{section.9}% 37
+\BOOKMARK [1][-]{section.10}{Erweiterungen und Verbesserungen f\374r kommende Versionen}{toc.0}% 38
+\BOOKMARK [2][-]{subsection.10.1}{Pflege der array.xml}{section.10}% 39
+\BOOKMARK [2][-]{subsection.10.2}{Raumplan}{section.10}% 40
+\BOOKMARK [2][-]{subsection.10.3}{Portierung auf andere Systeme}{section.10}% 41
+\BOOKMARK [2][-]{subsection.10.4}{Speiseplan}{section.10}% 42
+\BOOKMARK [2][-]{subsection.10.5}{Login und Funktionen f\374r Lehrkr\344fte}{section.10}% 43
+\BOOKMARK [2][-]{subsection.10.6}{Unterst\374tzung von Tabletts}{section.10}% 44
+\BOOKMARK [2][-]{subsection.10.7}{Landscape-Modus}{section.10}% 45
+\BOOKMARK [2][-]{subsection.10.8}{Bekannte Fehler}{section.10}% 46
+\BOOKMARK [1][-]{section.11}{UML}{toc.0}% 47

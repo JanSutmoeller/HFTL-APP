@@ -1,0 +1,47 @@
+\select@language {german}
+\contentsline {section}{\numberline {1}Allgemeines}{4}{section.1}
+\contentsline {section}{\numberline {2}Verwendete Software}{4}{section.2}
+\contentsline {section}{\numberline {3}Aufbau des Projekts}{6}{section.3}
+\contentsline {subsection}{\numberline {3.1}Manifest.XML}{6}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Ordnerstruktur}{7}{subsection.3.2}
+\contentsline {section}{\numberline {4}Activities}{11}{section.4}
+\contentsline {subsection}{\numberline {4.1}NewsActivity.java}{11}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}EinstellungsActivity.java}{12}{subsection.4.2}
+\contentsline {section}{\numberline {5}NewsClickedActivity.java}{13}{section.5}
+\contentsline {subsection}{\numberline {5.1}Allgemein}{13}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Klasse DetailHelper}{13}{subsection.5.2}
+\contentsline {section}{\numberline {6}Fragmente}{15}{section.6}
+\contentsline {subsection}{\numberline {6.1}NewsFragment}{15}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Klasse NewsHelper}{17}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}NavigationDrawerFragment}{18}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Notenfragment}{20}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}StundenplanFragment}{24}{subsection.6.5}
+\contentsline {section}{\numberline {7}CustomAdapter}{26}{section.7}
+\contentsline {subsection}{\numberline {7.1}Allgemein}{26}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}CustomAdapterNews.java}{28}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}CustomAdapterNoten.java}{28}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}CustomAdapterStundenplan}{29}{subsection.7.4}
+\contentsline {section}{\numberline {8}XML-Dateien}{30}{section.8}
+\contentsline {subsection}{\numberline {8.1}fragment.xml}{30}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}\_list.xml}{30}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}activity\_news\_clicked.xml}{30}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}settings\_toolbar}{30}{subsection.8.4}
+\contentsline {subsection}{\numberline {8.5}impressum.xml \& activity\_impressum}{30}{subsection.8.5}
+\contentsline {subsection}{\numberline {8.6}colors.xml}{31}{subsection.8.6}
+\contentsline {subsection}{\numberline {8.7}array.xml}{31}{subsection.8.7}
+\contentsline {subsection}{\numberline {8.8}einstellung.xml}{31}{subsection.8.8}
+\contentsline {subsection}{\numberline {8.9}strings.xml}{31}{subsection.8.9}
+\contentsline {section}{\numberline {9}Layout}{33}{section.9}
+\contentsline {subsection}{\numberline {9.1}Allgemeines}{33}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Schriftarten}{33}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}Buttons}{35}{subsection.9.3}
+\contentsline {section}{\numberline {10}Erweiterungen und Verbesserungen f\IeC {\"u}r kommende Versionen}{37}{section.10}
+\contentsline {subsection}{\numberline {10.1}Pflege der array.xml}{37}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Raumplan}{37}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}Portierung auf andere Systeme}{38}{subsection.10.3}
+\contentsline {subsection}{\numberline {10.4}Speiseplan}{38}{subsection.10.4}
+\contentsline {subsection}{\numberline {10.5}Login und Funktionen f\IeC {\"u}r Lehrkr\IeC {\"a}fte}{38}{subsection.10.5}
+\contentsline {subsection}{\numberline {10.6}Unterst\IeC {\"u}tzung von Tabletts}{38}{subsection.10.6}
+\contentsline {subsection}{\numberline {10.7}Landscape-Modus}{38}{subsection.10.7}
+\contentsline {subsection}{\numberline {10.8}Bekannte Fehler}{38}{subsection.10.8}
+\contentsline {section}{\numberline {11}UML}{39}{section.11}

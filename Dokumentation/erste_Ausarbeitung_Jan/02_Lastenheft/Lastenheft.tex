@@ -42,7 +42,7 @@ Zunächst müssen zwingend folgende Punkte des Umfangs erfüllt werden:
 
 \subsection{\textbf{Abgrenzungskriterien}}
 
-Die \acs{APP} soll später auch für zusätzliche Informationen, wie eine Raumplanung erweiterbar sein. Eine spätere Version für IOS-Geräte ist ebenfalls geplant, ist aber kein Bestandteil dieses Projektes.				
+Die \acs{APP} soll später auch für zusätzliche Informationen, wie eine Raumplanung erweiterbar sein. Versionen für andere Betriebssysteme müssen in einem seperaten Projekt bearbeitet werden und sind nicht Bestandteil dieses Projektes.			
 
 \subsubsection{Kostenrahmen}
 
@@ -87,8 +87,7 @@ Damit Studenten auf \acs{QIS} zugreifen können, müssen diese sich über einen 
 Studenten haben die Möglichkeit ihre Noten oder einen Notenspiegel einzusehen.
 Für IPhone-Nutzer gibt es bereits eine kostenpflichtige \acs{APP} , namens Grades, die Noten und Informationen über die angemeldete Prüfungen auslesen kann.
 Um die auf \acs{QIS} hinterlegten Stundenpläne abzurufen ist kein Login erforderlich, jedoch ist es notwendig sich umständlich zu dem entsprechenden Studiengang zu navigieren. Die Termine lassen sich einzeln oder als Block im \acs{iCal}-Format herunterladen. Die Termine der Teletutorien sind ebenfalls im QIS zu finden.
-Ebenso sind die Teletutorien hier zu finden.
-Die aktuellen Nachrichten der Hochschule sind auf der Webeite selbiger zu finden, welche öffentlich zugänglich ist.
+Die aktuellen Nachrichten der Hochschule sind auf der Webseite selbiger zu finden, welche öffentlich zugänglich ist.
 
 
 \subsection{\textbf{Produkteinsatz}}
@@ -102,7 +101,7 @@ Da bei der Nutzergruppe von Studenten mit Erfahrung im Umgang mit solchen APP's 
 
 \subsection{\textbf{Produktfunktionalität}}
 
-Die APP soll mittels regelmäßiger Abfragen der \acs{HfTL}-Homepage, sowie von \acs{QIS}, die News, Noten und Stunden- und ggf. Raumbelegungspläne aktualisieren und die Noten für den Nutzer lokal auf dem Smartphone speichern und entsprechend darstellen. 
+Die APP soll mittels regelmäßiger Abfragen der \acs{HfTL}-Homepage, sowie von \acs{QIS}, die News, Noten, Stunden- und ggf. Raumbelegungspläne aktualisieren und die Noten für den Nutzer lokal auf dem Smartphone speichern und entsprechend darstellen. 
 Es soll sichergestellt werden das auf sensible Daten wie z.B. Noten auch nur autorisierte Nutzer Zugang erhalten. Die APP soll in deutscher Sprache dargestellt werden. Evtl. wird sie im Nachgang in andere Sprachen übersetzt. 
 
 \subsection{\textbf{Randbedingungen}}
@@ -149,7 +148,7 @@ $\;$ \\ %Zeilenumbruch bei Nutzung von paragraph
 	\item Anmeldung über gesicherte, verschlüsselte Übertragung (\acs{HTTPS})
 	\item verschlüsselte Speicherung der Daten auf dem Smartphone (\acs{AES})
 	\item Pull-Nachrichten (Einstellbares Intervall und/oder manuell)
-	\item Push-Benachrichtigungen
+	\item Benachrichtigung bei Eingang von neuen Noten
 	\item Nutzer wird mit Hinweismeldungen informiert, wenn Noten aktualisiert wurden
 \end{itemize}
 Optionale Angaben im Menüpunkt Noten:
@@ -218,6 +217,7 @@ Die App braucht folgende Berechtigung auf dem Smartphone:
 	\item Netzwerkstatus abrufen: zur Kontrolle ob das Handy online ist
 	\item Internet: APP greift auf das Internet zu
 	\item Telefonstatus: wird zur Verschlüsselung benötigt
+	\item Kalendereintäge bearbeiten
 \end{itemize}
 
 
@@ -248,7 +248,7 @@ Das Datenaufkommen soll möglichst gering ausfallen.
 \subsubsection{Sicherheitsziele}
 Der Benutzername und das Passwort werden in einem gesicherten Speicherbereich (nur root), mit \acs{AES} verschlüsselt, gespeichert.
 Die Datenbank in der die Noten gespeichert werden, liegt ebenfalls in diesem Bereich und darf nur von der \acs{HfTL}-App geöffnet werden.
-Die Kommunikation mit der \acs{HfTL}-Website und \acs{QIS} erfolgt gesichert per \acs{HTTPS}.
+Die Kommunikation mit der \acs{HfTL}-Webseite und \acs{QIS} erfolgt gesichert per \acs{HTTPS}.
 
 
 
@@ -260,8 +260,8 @@ Der Wirkbetrieb soll nach Möglichkeit über den Android-Playstore realisiert we
 
 \subsubsection{Pilot- bzw. Probebetrieb}
 
-siehe Anhang \ref{subsec:Release-Historie}
-\textcolor{magenta}{Hier müssen die Versionsmanagementprotokolle rein!}
+siehe Anhang Versionsmanagementprotokolle \ref{subsec:Release-Historie}
+
 
 
 
@@ -334,9 +334,9 @@ Während des Projektzeitraumes werden sämtliche Meeting, Tests und Kontrollen p
 
 
 \subsubsection{Berichte, Protokolle zum Nachweis des Vorgehens gemäß der Qualitätskontrollpläne}
-\textcolor{magenta}{Hier sollen Sitzungsprotokolle und Testprotokolle rein, schonmal angefangen was einzufügen}
 
-siehe Anhang "Testprotokolle" \ref{subsec:Testprotokolle}
+siehe Anhang "'Testprotokolle"' \ref{subsec:Testprotokolle}
+und Anhang "'Sitzungsprotokolle"' \ref{subsec:Sitzungsprotokolle}
 
 
 
@@ -360,11 +360,12 @@ Die Projektorganisation wird wie in folgender Abbildung strukturiert. Als Vorgeh
 
 Die einzelnen Aufgaben werden Personen zugeordnet. In wöchentlichen Online-Meetings über Teamviewer stellt jeder seine Ergebnisse vor und es werden diese bewertet. Anhand dieser Ergebnisse werden für den neuen Zyklus Aufgaben verteilt. Der Protokollführer hält alle Ergebnisse und Aufgaben fest und legt die Protokolle im Projektordner ab.
 
-\includepdf[pages=-,noautoscale]{04_Anhang/files/swe_organigramm.pdf}
+\includepdf[pages=-,noautoscale]{04_Anhang/files/swe_organigramm2.pdf}
+\includepdf[pages=-,noautoscale]{04_Anhang/files/swe_projektstrukturplan.pdf}
 
 
 \subsubsection{Projekt-Planung}
-\textcolor{magenta}{Verweis auf Projektstrukturplan im Anhang}
+siehe Anhang "'Gantt"' \ref{subsec:Gantt}
 
 \subsubsection{Änderungsmanagement}
 Zur Versionsverwaltung wurde Git eingesetzt. Als Hosting-Anbieter wurde dabei auf GitHub gesetzt, welcher einen kostenfreien Zugang für nicht kommerzielle Projekte bereitstellt. Ein \ac{GUI} oder ein Konsolenprogramm für Windows und Linux übernehmen dabei die Steuerung der Versionsverwaltung. Konflikte in den einzelnen Versionen können nur über die Konsole behoben werden. Auf der Webseite von GitHub können Milestones erstellt werden und an die jeweiligen Mitarbeiter zugeteilt werden. In den Milestones werden einzelne Aufgaben, sogenannte Issues angelegt und wiederum den Bearbeitern zugeordnet, somit ist der Bearbeitungsstand zu jeder Zeit des Projektes ersichtlich und es kann schnell auf sich ergebende Probleme reagiert werden.
@@ -372,19 +373,9 @@ Zur Versionsverwaltung wurde Git eingesetzt. Als Hosting-Anbieter wurde dabei au
 
 
 \subsubsection{Testanforderungen}
-siehe Anhang \ref{subsec:Testprotokollentwurf}
+siehe Anhang "'Testprotokollentwurf"' \ref{subsec:Testprotokollentwurf}
 
 
 
 \section{Anhang}
 
-\textcolor{magenta}{
-\begin{itemize}
-	\item Dialogmasken
-	\item Dokumente
-	\item Liste der Softwarelieferungen
-	\item Projektorganigramm
-	\item Projektstrukturplan
-	\item Haupt-Termindaten
-\end{itemize}
-}
