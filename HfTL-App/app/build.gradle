@@ -26,5 +26,4 @@ dependencies {
     compile files('jsoup-1.8.1/jsoup-1.8.1.jar')
     compile files('/run/media/georg/7C94DBD194DB8BD0/Android/HFTL-APP/HfTL-App/libs/biweekly-0.4.2.jar')
     compile files('/run/media/georg/7C94DBD194DB8BD0/Android/HFTL-APP/HfTL-App/libs/jackson-core-2.5.2.jar')
-    compile files('H:/Studium/HFTL-APP/HfTL-App/libs/biweekly-0.4.2.jar')
 }

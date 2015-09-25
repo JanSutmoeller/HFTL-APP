@@ -24,6 +24,7 @@ import bkmi.de.hftl_app.Database.NotenDB;
 import bkmi.de.hftl_app.Database.NotenTabelle;
 import bkmi.de.hftl_app.help.TextSecure;
 import bkmi.de.hftl_app.help.Exceptions.wrongUserdataException;
+import bkmi.de.hftl_app.help.UTF8Encoder;
 
 /**
  * Klasse die eine Verbindung zu HIS/QIS aufbaut und dort die Noten abfragt
@@ -62,6 +63,7 @@ public class NotenResolver {
         try {
             ts = new TextSecure(context);
             password = ts.decrypt(sp.getString("password", ""));
+            password = UTF8Encoder.encode(password);
             user = ts.decrypt(sp.getString("username", ""));
 
             //Hier erfolgt der eigentliche Login über eine HTTP Post methode
@@ -73,11 +75,12 @@ public class NotenResolver {
             connection.setDoInput(true);
             connection.setDoOutput(true);
             connection.setUseCaches(false);
+            connection.setRequestProperty("Accept-Charset", "UTF-8");
             connection.setRequestProperty("Content-Type",
-                    "application/x-www-form-urlencoded");
-            connection.setRequestProperty("Content-Length", String.valueOf(urlParameters.length()));
+                    "application/x-www-form-urlencoded; charset=utf-8");
+            //connection.setRequestProperty("Content-Length", String.valueOf(urlParameters.length()));
             try{
-                OutputStreamWriter writer = new OutputStreamWriter(connection.getOutputStream());
+                OutputStreamWriter writer = new OutputStreamWriter(connection.getOutputStream(), "UTF-8");
                 writer.write(urlParameters);
                 writer.flush();
                 connection.getContent();}
