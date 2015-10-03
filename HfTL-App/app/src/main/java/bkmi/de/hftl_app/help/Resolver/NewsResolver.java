@@ -1,8 +1,11 @@
 package bkmi.de.hftl_app.help.Resolver;
 
 
+
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
@@ -87,17 +90,33 @@ public class NewsResolver {
         return termine.get(position).url;
     }
 
+
+   /* Methode sucht nach Relativ-Links und setzt die URL der HFT-Seite davor */
+
+    private String absoluteLinks(Element element, String baseUri)    {
+        Elements links = element.select("a[href]");
+        for (Element link : links)  {
+            if (!link.attr("href").toLowerCase().startsWith("https://"))    {
+                link.attr("href", baseUri+link.attr("href"));
+            }
+        }
+        String t = new String(element.outerHtml().replaceAll("<p>&nbsp;</p>", ""));
+        return t;
+    }
     /* ----- Funktion für die NewsClickedActivty -----
     *   Sucht nach den Details auf der HfTl-Seite und gibt sie als String-Array zurück
      */
+
     public String[] getDetailsStringArray(){
         String[] s=new String[6];
         Elements elements = doc.getElementsByClass("news-single-item");
 
+
+
         s[0]=elements.get(0).child(1).text()+"\n";   //Überschrift
         s[1]=elements.get(0).child(2).text()+"\n";   //Subhead
         s[2]=elements.get(0).child(0).text();        //Zeit
-        s[3]=elements.get(0).child(3).outerHtml().replaceAll("<p>&nbsp;</p>", "");     //Text
+        s[3]=absoluteLinks(elements.get(0).child(3), "https://www.hft-leipzig.de/");      //Text
         return s;
     }
 
