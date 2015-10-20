@@ -16,7 +16,6 @@ import java.io.OutputStreamWriter;
 import java.net.CookieHandler;
 import java.net.CookieManager;
 import java.net.URL;
-import java.net.UnknownHostException;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -50,7 +49,7 @@ public class NotenResolver {
     }
 
     //Login im QIS durchführen
-    private void init() throws wrongUserdataException,UnknownHostException{
+    private void init() throws wrongUserdataException, IOException{
 
         String user;
         String password;
@@ -78,24 +77,19 @@ public class NotenResolver {
             connection.setRequestProperty("Accept-Charset", "UTF-8");
             connection.setRequestProperty("Content-Type",
                     "application/x-www-form-urlencoded; charset=utf-8");
-            //connection.setRequestProperty("Content-Length", String.valueOf(urlParameters.length()));
-            try{
+            try {
                 OutputStreamWriter writer = new OutputStreamWriter(connection.getOutputStream(), "UTF-8");
                 writer.write(urlParameters);
                 writer.flush();
-                connection.getContent();}
-            catch (UnknownHostException e){
-                throw new UnknownHostException("");
+                connection.getContent();
+            }catch (IOException e){ //diese Exception wird ausgelöst falls keine Verbindung hergestellt werden kann
+                throw new IOException();
             }
 
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        //testen ob Login erfolgreich
-        if(!testeZugang()) throw new wrongUserdataException();
-
     }
 
     //Zugriff auf Noten
@@ -105,7 +99,11 @@ public class NotenResolver {
         Element element;
         Elements elements;
 
-        init();
+        try{
+            init();
+        }catch (IOException e){
+            throw new IOException();
+        }
 
         //testen ob Login erfolgreich
         if(!testeZugang()) throw new wrongUserdataException();
@@ -186,8 +184,6 @@ public class NotenResolver {
             e = doc.getElementsByAttributeValue("src", "/QIS/images//his_info3.gif");
             return e.get(0).parent().attr("href");//Suche Leistung anzeigen
 
-
-            // iterate HttpCookie object
         } catch (IOException e1) {
             e1.printStackTrace();
 
@@ -198,7 +194,7 @@ public class NotenResolver {
 
     //Die Methode kontrolliert ob der Login auf der QIS-Seite erfolgreich war
     //falls Login erfolgreich wird true zurückgegeben
-    private boolean testeZugang() throws UnknownHostException {
+    private boolean testeZugang() throws IOException {
         Elements e;
         String seite = "https://qisweb.hispro.de/tel/rds?state=user&type=0&category=menu.browse&breadCrumbSource=portal&startpage=portal.vm&chco=y";
         try {
@@ -211,8 +207,8 @@ public class NotenResolver {
             }
 
         }
-        catch (UnknownHostException e2) {
-            throw new UnknownHostException("");
+        catch (IOException e2) {
+            throw new IOException();
         }
         catch (Exception e1){
             e1.printStackTrace();
